@@ -1,6 +1,6 @@
-NAME = 
+NAME = minishell
 
-SOURCES = 
+SOURCES = ./main.c 
 
 LIBDIR = libft
 SDIR = srcs
@@ -27,7 +27,7 @@ mkbin:
 
 
 $(NAME): $(OBJS)
-	@echo "Compiling  ..."
+	@echo "Compiling minishell ..."
 	@-$(CC) $(CFLAGS) $(CDEBUG) -o $(NAME) $(OBJS) -I$(INCDIR) $(LDFLAGS) $(LNCURSES)
 	@$(OK)
 
