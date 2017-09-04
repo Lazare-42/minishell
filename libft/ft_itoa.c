@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "stdlib.h"
-#include "libft.h"
+#include "./include/libft.h"
 
 char			*ft_itoa(int nbr)
 {

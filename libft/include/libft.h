@@ -15,6 +15,8 @@
 
 # include <stddef.h>
 
+# include "get_next_line.h"
+
 typedef	struct		s_list
 {
 	void			*content;
@@ -86,4 +88,5 @@ int					ft_int_size(int nbr);
 char				**ft_split_whitespaces(char *str);
 char				*ft_strjoinfree(char **s1, char **s2, char a);
 void				**ft_putab(char**str);
+int		get_next_line(const int fd, char **line);
 #endif

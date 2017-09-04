@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+# include "include/libft.h"
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {

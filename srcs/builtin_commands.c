@@ -14,15 +14,15 @@
 
 int		ft_recognize_command(char *str)
 {
-	char	*commands[] = {"ls", "cd"};
+	char	*commands[] = {"echo", "cd", "setenv", "unsetenv", "env", "exit", NULL};
 	int		i;
 
 	i = 0;
-	ft_putstr(commands[i]);
 	while (commands[i])
 	{
 		if (!(ft_strcmp(*commands, str)))
 				return (i);
+		ft_putchar('\n');
 		i++;
 	}
 	return (-1);

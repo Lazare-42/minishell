@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "include/libft.h"
 
 void	ft_strclr(char *s)
 {

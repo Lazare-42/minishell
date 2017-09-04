@@ -1,6 +1,7 @@
 NAME = minishell
 
-SOURCES = ./main.c 
+SOURCES = ./builtin_commands.c \
+./main.c 
 
 LIBDIR = libft
 SDIR = srcs
