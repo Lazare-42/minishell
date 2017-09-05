@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putabs.c                                        :+:      :+:    :+:   */
+/*   find_path.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 09:29:17 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/05 14:05:11 by lazrossi         ###   ########.fr       */
+/*   Created: 2017/09/05 13:26:55 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/09/05 17:16:15 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/libft.h"
+#include "../libft/include/libft.h"
 
-void	ft_putabs(char **str)
+extern	char	**environ;
+
+char	**ft_find_prog_path()
 {
-	int i;
+	int		i;
+	char	*tmp;
+	char	**possible_program_path;
 
 	i = 0;
-	while (str[i])
-	{
-		ft_putstr(*str);
-		ft_putchar('\n');
+	while (environ[i] && ft_memcmp(environ[i], "PATH=", 5) != 0)
 		i++;
-	}
+	tmp = &environ[i][5];
+	ft_putstr(environ[i]);
+	possible_program_path = ft_strsplit(tmp, ':');
+	return (possible_program_path);
 }

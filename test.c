@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/08 14:01:32 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/06/08 14:50:48 by lazrossi         ###   ########.fr       */
+/*   Created: 2017/09/05 15:06:47 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/09/05 15:17:31 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
+extern char **environ;
 
-# define GET_NEXT_LINE_H
-
-# define BUFF_SIZE 2056
-
-int					get_next_line(const int fd, char **line);
-typedef	struct		s_gnl
+int	main()
 {
-	char			*rest;
-	int				fd;
-	struct s_gnl	*next;
-}					t_gnl;
-#endif
+	int i;
+	char *path;
+	char c[] = "user";
+
+	i = 0;
+	while (environ[i] && ft_memcmp(environ[i], "PATH=", 5))
+		i++;*
+	path = environ[i];
+
+	while (strcmp(<F7>
+
+

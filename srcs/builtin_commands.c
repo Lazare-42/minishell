@@ -6,13 +6,13 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 16:30:57 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/04 16:59:03 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/09/05 13:15:30 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int		ft_recognize_command(char *str)
+int		ft_recognize_builtin_command(char *str)
 {
 	char	*commands[] = {"echo", "cd", "setenv", "unsetenv", "env", "exit", NULL};
 	int		i;
@@ -20,9 +20,8 @@ int		ft_recognize_command(char *str)
 	i = 0;
 	while (commands[i])
 	{
-		if (!(ft_strcmp(*commands, str)))
+		if (!(ft_strcmp(commands[i], str)))
 				return (i);
-		ft_putchar('\n');
 		i++;
 	}
 	return (-1);

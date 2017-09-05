@@ -6,23 +6,23 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 13:59:19 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/04 16:57:27 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/09/05 13:58:15 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "minishell.h"
+# include "includes/minishell.h"
 # include <stdio.h>
 # include <unistd.h>
 # include <sys/wait.h>
 # include <time.h>
 
 extern char **environ;
+void	ft_launch_processes(char *str);
 
 //YOU NEED TO READ MOTHAFUCKA Y U TRING TO GET IN IN ARGUMENTS LIKE A MOTHAFUCKIN STATIC FUNCTION
 
 void	ft_launch_processes(char *str)
 {
-// 	"This is the child process which should stay active as the proper minishell process. It should only quit when I type exit"
 	char	path[100] = "/bin/ls";
 	char	*commands[] = {"echo", "cd", "setenv", "unsetenv", "env", "exit", NULL};
 	char	*arg[100] = {"ls", "-lR", "srcs/", NULL};
@@ -41,6 +41,7 @@ void	ft_launch_processes(char *str)
 	// ft_putabs(av);
 	ft_recognize_command(path);
 	*/
+	ft_find_prog_path();
 	execve(path, arg, environ);
 }
 
@@ -62,6 +63,7 @@ int		main()
 
 	ft_putstr("This is ENVIRONMENT VARIABLES: ");
 	ft_putchar('\n');
+	line = NULL;
 	while (environ[i])
 	{
 		if (ft_memcmp(environ[i], "PATH=", 5) == 0)
@@ -84,7 +86,7 @@ int		main()
 	while  (forkk == 0)
 	{
 		while (i == 1)
-			i = get_next_line(1, &line);
+			i = get_next_line(1, &line, '\n');
 		if (i == -1)
 			ft_launch_processes(line);
 	}
