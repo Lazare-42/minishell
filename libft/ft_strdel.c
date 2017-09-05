@@ -6,12 +6,12 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/20 14:15:28 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/04/20 14:26:04 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/09/05 09:28:50 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-# include "include/libft.h"
+#include "include/libft.h"
 
 void	ft_strdel(char **as)
 {

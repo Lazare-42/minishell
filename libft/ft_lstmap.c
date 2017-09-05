@@ -6,12 +6,12 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/24 16:21:47 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/04/25 09:47:00 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/09/05 09:28:49 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-# include "include/libft.h"
+#include "include/libft.h"
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {

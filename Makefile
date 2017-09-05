@@ -1,6 +1,7 @@
 NAME = minishell
 
 SOURCES = ./builtin_commands.c \
+./ft_print_errors.c \
 ./main.c 
 
 LIBDIR = libft
