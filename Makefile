@@ -2,6 +2,7 @@ NAME = minishell
 
 SOURCES = ./builtin_commands.c \
 ./find_path.c \
+./ft_change_dir.c \
 ./ft_print_errors.c \
 ./ft_print_info.c \
 ./main.c 

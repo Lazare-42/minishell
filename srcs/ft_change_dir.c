@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   ft_change_dir.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/06 15:28:05 by lazrossi         ###   ########.fr       */
+/*   Created: 2017/09/06 15:20:14 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/09/06 17:01:45 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINISHELL_H
-# define MINISHELL_H
+#include "../libft/include/libft.h"
+#include "../includes/minishell.h"
+#include <unistd.h>
 
-# define BUFF_SIZE 2056
+int		ft_change_dir(char *str)
+{
+	char	tmp[1025];
 
-# include "../libft/include/libft.h"
+	getcwd(tmp, 1024);
+	ft_strcat(tmp, str);
 
-int		ft_recognize_builtin_command(char *str);
-void	ft_put_command_errors(char *str);
-void	ft_print_current_directory();
-char	**ft_find_prog_path(char *arg);
-int		ft_change_dir(char *str);
+	ft_putstr(tmp);
+	chdir(tmp);
+	return (0);
+}
 
-# include <unistd.h>
-
-#endif 

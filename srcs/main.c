@@ -42,10 +42,10 @@ int		ft_launch_ext_command(char **arguments)
 }
 
 
-void	ft_launch_processes(int command_number)
+void	ft_launch_processes(int command_number, char **arguments)
 {
 	(command_number == 0) ? ft_putstr("echo") : 0;
-	(command_number == 1) ? ft_putstr("cd") : 0;
+	(command_number == 1) ? ft_change_dir(arguments[1]) : 0;
 	(command_number == 2) ? ft_putstr("setenv") : 0;
 	(command_number == 3) ? ft_putstr("unsetenv") : 0;
 	(command_number == 4) ? ft_putstr("env") : 0;
@@ -58,8 +58,8 @@ void	ft_recognize_processes(char *str)
 	char	**arguments;
 
 	arguments = ft_split_whitespaces(str);
-	if ((command_number = ft_recognize_builtin_command(str)) != -1)
-		ft_launch_processes(command_number);
+	if ((command_number = ft_recognize_builtin_command(arguments[0])) != -1)
+		ft_launch_processes(command_number, arguments);
 	else if ((command_number = ft_launch_ext_command(arguments)) == -1)
 		ft_put_command_errors(arguments[0]);
 	ft_print_current_directory();
