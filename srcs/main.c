@@ -1,12 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 08:51:18 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/05 17:14:06 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/09/06 14:19:08 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +13,32 @@
 # include <unistd.h>
 # include <sys/wait.h>
 # include <time.h>
+# include <stdlib.h>
 
 extern	char	**environ;
 
-int		ft_launch_ext_command(char *arg)
+
+int		ft_launch_ext_command(char **arguments)
 {
 	int i;
 	char **possible_path;
+	int		forkk;
 
 	i = 0;
-
-	arg = NULL;
-	possible_path = ft_find_prog_path();
-	ft_putabs(possible_path);
-//	execve(path, arg, environ);
-	return (-1);
+	forkk = 1;
+	possible_path = ft_find_prog_path(arguments[0]);
+	forkk = fork();
+	if (!(forkk))
+	{
+		while (possible_path[i] && execve(possible_path[i], arguments, environ) == -1)
+			i++;
+		exit(0);
+	}
+	else
+		wait(&forkk);
+	if (!possible_path[i])
+		return (-1);
+	return (0);
 }
 
 
@@ -45,18 +54,14 @@ void	ft_launch_processes(int command_number)
 
 void	ft_recognize_processes(char *str)
 {
-	ft_print_current_directory();
 	int 	command_number;
-//	char	*builtin_commands[] = {"echo", "cd", "setenv", "unsetenv", "env", "exit", NULL};
-	//char	*extern_commands[] = {"ls", "pwd", "rm", "mkdir", "make", "vim", NULL};
-	
+	char	**arguments;
+
+	arguments = ft_split_whitespaces(str);
 	if ((command_number = ft_recognize_builtin_command(str)) != -1)
 		ft_launch_processes(command_number);
-	else if ((command_number = ft_launch_ext_command(str)) != -1)
-		return ;
-	//else 
-	//	ft_put_command_errors(str);
-//	ft_putchar('\n');
+	else if ((command_number = ft_launch_ext_command(arguments)) == -1)
+		ft_put_command_errors(arguments[0]);
 	ft_print_current_directory();
 }
 
@@ -74,4 +79,3 @@ int	main()
 		ft_strdel(&line);
 	}
 }
-		

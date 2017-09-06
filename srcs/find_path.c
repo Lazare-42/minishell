@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 13:26:55 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/05 17:16:15 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/09/06 13:51:33 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,21 @@
 
 extern	char	**environ;
 
-char	**ft_find_prog_path()
+static char	**ft_add_command_to_path(char **possible_path, char	*arg)
+{
+	int		i;
+
+	i = 0;
+	while (possible_path[i])
+	{
+		possible_path[i] = ft_strjoin(possible_path[i], "/");
+		possible_path[i] = ft_strjoinfree(&possible_path[i], &arg, 'L');
+		i++;
+	}
+	return (possible_path);
+}
+
+char	**ft_find_prog_path(char *arg)
 {
 	int		i;
 	char	*tmp;
@@ -24,7 +38,7 @@ char	**ft_find_prog_path()
 	while (environ[i] && ft_memcmp(environ[i], "PATH=", 5) != 0)
 		i++;
 	tmp = &environ[i][5];
-	ft_putstr(environ[i]);
 	possible_program_path = ft_strsplit(tmp, ':');
-	return (possible_program_path);
+	return (ft_add_command_to_path(possible_program_path, arg));
 }
+
