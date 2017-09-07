@@ -30,6 +30,7 @@ int		ft_launch_ext_command(char **arguments)
 	forkk = fork();
 	if (!(forkk))
 	{
+		ft_putstr(possible_path[i]);
 		while (possible_path[i] && execve(possible_path[i], arguments, environ) == -1)
 			i++;
 		exit(0);
@@ -57,7 +58,10 @@ void	ft_recognize_processes(char *str)
 	int 	command_number;
 	char	**arguments;
 
-	arguments = ft_split_whitespaces(str);
+	if (str)
+		arguments = ft_split_whitespaces(str);
+	else
+		return ;
 	if ((command_number = ft_recognize_builtin_command(arguments[0])) != -1)
 			ft_launch_processes(command_number, arguments);
 	else if ((command_number = ft_launch_ext_command(arguments)) == -1)
@@ -71,11 +75,18 @@ int	main()
 	char	*line;
 
 	i = 1;
-	line = NULL;
+	if (!(line = (ft_strnew(0))))
+		return (1);
 	ft_print_current_directory();
-	while  (get_next_line(0, &line, '\n') == 1)
+	while  ((line = ft_file_to_string()) || (!ft_strlen(line)))
 	{
-		ft_recognize_processes(line);
-		ft_strdel(&line);
+		if (ft_strchr(line, '\n'))
+			ft_recognize_processes(line);
+		if (ft_strchr(line, '\n'))
+		{
+			ft_strdel(&line);
+			line = ft_strnew(0);
+		}
 	}
+	ft_strdel(&line);
 }

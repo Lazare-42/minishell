@@ -3,6 +3,7 @@ NAME = minishell
 SOURCES = ./builtin_commands.c \
 ./find_path.c \
 ./ft_change_dir.c \
+./ft_file_to_string.c \
 ./ft_print_errors.c \
 ./ft_print_info.c \
 ./main.c 
@@ -11,7 +12,7 @@ LIBDIR = libft
 SDIR = srcs
 ODIR = bin
 CFLAGS = -Wall -Wextra -Werror
-CDEBUG = -fno-omit-frame-pointer -fsanitize=address -g
+CDEBUG = -fsanitize=address -g
 INCDIR = includes
 LDFLAGS = -L$(LIBDIR) -lft
 LNCURSES = -lncurses
@@ -33,7 +34,7 @@ mkbin:
 
 $(NAME): $(OBJS)
 	@echo "Compiling minishell ..."
-	@-$(CC) $(CFLAGS) $(CDEBUG) -o $(NAME) $(OBJS) -I$(INCDIR) $(LDFLAGS) $(LNCURSES)
+	@-$(CC) $(CFLAGS) $(CDEBUG) -o $(NAME) $(OBJS) -I$(INCDIR) $(LDFLAGS)
 	@$(OK)
 
 $(ODIR)/%.o : $(SDIR)/%.c
