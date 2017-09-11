@@ -10,18 +10,8 @@ void	ft_setenv(char *name, char *value)
 
 	i = 0;
 	nbr = 0;
-	while (environ[i] && (nbr = ft_strcmp(environ[i], name)))
-	{
-		ft_putstr(name);
-		ft_putchar(' ');
-		ft_putstr(environ[i]);
-		ft_putchar(' ');
-		ft_putnbr(nbr);
-		ft_putchar(' ');
-		ft_putnbr(ft_strlen(name));
-		ft_putchar('\n');
+	while (environ[i] && ft_strcmp(environ[i], name) != 61)
 		i++;
-	}
 	tmp = ft_strjoin(name, "=");
 	if (!environ[i])
 	{
@@ -31,7 +21,7 @@ void	ft_setenv(char *name, char *value)
 		return ;
 	}
 	//ft_strdel(&environ[i]);
-	environ[i] = ft_strjoinfree(&tmp, &value, 'L');
+	environ[i] = (value) ? ft_strjoinfree(&tmp, &value, 'L') : tmp;
 }
 
 void	ft_sort_setenv(char	**args)
