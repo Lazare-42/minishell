@@ -87,6 +87,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_int_size(int nbr);
 char				**ft_split_whitespaces(char *str);
 char				*ft_strjoinfree(char **s1, char **s2, char a);
-void				ft_putabs(char**str);
+void				ft_putabs(char**str, char separator);
 int					get_next_line(const int fd, char **line, char tofind);
 #endif

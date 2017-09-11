@@ -35,6 +35,10 @@ void	ft_print_current_directory();
 char	**ft_find_prog_path(char *arg);
 int		ft_change_dir(char *str);
 char	*ft_file_to_string();
+void	ft_echo(char **str);
+void	ft_put_env();
+void	ft_sort_setenv(char **args);
+void	ft_setenv(char *name, char *value);
 
 # include <unistd.h>
 

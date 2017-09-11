@@ -18,7 +18,7 @@
 extern	char	**environ;
 
 
-int		ft_launch_ext_command(char **arguments)
+void	ft_launch_ext_command(char **arguments)
 {
 	int i;
 	char **possible_path;
@@ -30,27 +30,25 @@ int		ft_launch_ext_command(char **arguments)
 	forkk = fork();
 	if (!(forkk))
 	{
-		ft_putstr(possible_path[i]);
 		while (possible_path[i] && execve(possible_path[i], arguments, environ) == -1)
 			i++;
+		if (!possible_path[i])
+			ft_put_command_errors(arguments[0]);
 		exit(0);
 	}
 	else
 		wait(&forkk);
-	if (!possible_path[i])
-		return (-1);
-	return (0);
 }
-
 
 void	ft_launch_processes(int command_number, char **arguments)
 {
-	(command_number == 0) ? ft_putstr("echo") : 0;
+	(command_number == 0) ? ft_echo(&arguments[1]): 0;
 	(command_number == 1) ? ft_change_dir(arguments[1]) : 0;
-	(command_number == 2) ? ft_putstr("setenv") : 0;
+	(command_number == 2) ? ft_sort_setenv(&arguments[1]): 0;
 	(command_number == 3) ? ft_putstr("unsetenv") : 0;
-	(command_number == 4) ? ft_putstr("env") : 0;
-	(command_number == 5) ? ft_putstr("exit") : 0;
+	(command_number == 4) ? ft_put_env(): 0;
+	(command_number == 5) ? ft_putstr("exit\n") : 0;
+	(command_number == 5) ? exit (1): 0;
 }
 
 void	ft_recognize_processes(char *str)
@@ -63,9 +61,8 @@ void	ft_recognize_processes(char *str)
 	else
 		return ;
 	if ((command_number = ft_recognize_builtin_command(arguments[0])) != -1)
-			ft_launch_processes(command_number, arguments);
-	else if ((command_number = ft_launch_ext_command(arguments)) == -1)
-		ft_put_command_errors(arguments[0]);
+		ft_launch_processes(command_number, arguments);
+	else (ft_launch_ext_command(arguments));
 	ft_print_current_directory();
 }
 

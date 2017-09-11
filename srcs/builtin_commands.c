@@ -16,7 +16,6 @@ int		ft_recognize_builtin_command(char *str)
 	int		i;
 
 	i = 0;
-	ft_putstr(str);
 	while (commands[i])
 	{
 		if (ft_strcmp(commands[i], str) == 0)

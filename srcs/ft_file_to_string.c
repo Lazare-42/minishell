@@ -19,20 +19,12 @@ char	*ft_file_to_string()
 	char	*buf;
 	int		ret;
 	int		fd;
-	static	char *line = NULL;
 
 	fd = 0;
 	ret = 1;
-	if (!(line))
-	{
-		if (!(line = ft_strnew(0)))
-			return (NULL);
-	}
 	if (!(buf = ft_strnew(4096)))
 		return (NULL);
 	if ((ret = read(fd, buf, 4096)))
-	{
 		return (buf);
-	}
-	return (line);
+	return (buf);
 }

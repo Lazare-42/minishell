@@ -12,7 +12,7 @@
 
 #include "include/libft.h"
 
-void	ft_putabs(char **str)
+void	ft_putabs(char **str, char separator)
 {
 	int i;
 
@@ -20,7 +20,7 @@ void	ft_putabs(char **str)
 	while (str[i])
 	{
 		ft_putstr(str[i]);
-		ft_putchar('\n');
+		ft_putchar(separator);
 		i++;
 	}
 }

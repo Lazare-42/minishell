@@ -16,6 +16,18 @@
 
 extern char **environ;
 
+void	ft_call_to_chdir(char *str, char *arg)
+{
+		if (chdir(str))
+		{
+			ft_putstr_fd("cd: no such file or directory: ", 2);
+			ft_putstr_fd(arg, 2);
+			ft_putchar_fd('\n', 2);
+		}
+		else
+			ft_setenv("PATH", str);
+}
+
 int		ft_change_dir(char *str)
 {
 	char	tmp[1025];
@@ -26,7 +38,7 @@ int		ft_change_dir(char *str)
 	{
 		while (environ[i] && ft_memcmp(environ[i], "HOME=", 5))
 			i++;
-		chdir(&environ[i][5]);
+		ft_call_to_chdir(&environ[i][5], str);
 		return (0);
 	}
 	if (str && str[0] != '/')
@@ -34,12 +46,12 @@ int		ft_change_dir(char *str)
 		getcwd(tmp, 1024);
 		ft_strcat(tmp, "/");
 		ft_strcat(tmp, str);
-		chdir(tmp);
+		ft_call_to_chdir(tmp, str);
 		return (0);
 	}
 	if (!str[1])
 		chdir("/");
-	chdir(str);
+	ft_call_to_chdir(str, str);
 	return (0);
 }
 
