@@ -10,7 +10,7 @@ void	ft_setenv(char *name, char *value)
 
 	i = 0;
 	nbr = 0;
-	while (environ[i] && ft_strcmp(environ[i], name) != 61)
+	while (environ[i] && ft_memcmp(environ[i], name, 5))
 		i++;
 	tmp = ft_strjoin(name, "=");
 	if (!environ[i])
@@ -20,7 +20,6 @@ void	ft_setenv(char *name, char *value)
 		environ[i] = NULL;
 		return ;
 	}
-	//ft_strdel(&environ[i]);
 	environ[i] = (value) ? ft_strjoinfree(&tmp, &value, 'L') : tmp;
 }
 
