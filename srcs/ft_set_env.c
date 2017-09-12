@@ -7,10 +7,12 @@ void	ft_setenv(char *name, char *value)
 	int		i;
 	char	*tmp;
 	int		nbr;
+	int		name_len;
 
 	i = 0;
 	nbr = 0;
-	while (environ[i] && ft_memcmp(environ[i], name, 5))
+	name_len = ft_strlen(name);
+	while (environ[i] && ft_memcmp(environ[i], name, name_len))
 		i++;
 	tmp = ft_strjoin(name, "=");
 	if (!environ[i])

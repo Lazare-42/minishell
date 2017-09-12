@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 15:20:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/06 17:24:24 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/09/12 13:08:05 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_call_to_chdir(char *str, char *arg)
 			ft_putchar_fd('\n', 2);
 		}
 		else
-			ft_setenv("PATH", str);
+			ft_setenv("PWD", str);
 }
 
 int		ft_change_dir(char *str)
