@@ -29,6 +29,14 @@
 
 # include "../libft/include/libft.h"
 
+typedef struct 		s_arg
+{
+	char			*arg;
+	struct 	s_arg	*left;
+	struct	s_arg	*middle;
+	struct  s_arg	*right;
+}					t_arg;
+
 int		ft_recognize_builtin_command(char *str);
 void	ft_put_command_errors(char *str);
 void	ft_print_current_directory();
@@ -39,6 +47,7 @@ void	ft_echo(char **str);
 void	ft_put_env();
 void	ft_sort_setenv(char **args);
 void	ft_setenv(char *name, char *value);
+t_arg	*ft_store_args(char	*line, t_arg *first);
 
 # include <unistd.h>
 

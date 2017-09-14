@@ -9,6 +9,7 @@ SOURCES = ./builtin_commands.c \
 ./ft_print_info.c \
 ./ft_put_env.c \
 ./ft_set_env.c \
+./ft_store.c \
 ./main.c 
 
 LIBDIR = libft

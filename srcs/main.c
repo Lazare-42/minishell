@@ -45,7 +45,7 @@ void	ft_launch_processes(int command_number, char **arguments)
 	(command_number == 0) ? ft_echo(&arguments[1]): 0;
 	(command_number == 1) ? ft_change_dir(arguments[1]) : 0;
 	(command_number == 2) ? ft_sort_setenv(&arguments[1]): 0;
-	(command_number == 3) ? ft_putstr("unsetenv") : 0;
+	(command_number == 3) ? ft_putstr("unsetenv\n") : 0;
 	(command_number == 4) ? ft_put_env(): 0;
 	(command_number == 5) ? ft_putstr("exit\n") : 0;
 	(command_number == 5) ? exit (1): 0;
@@ -68,17 +68,22 @@ void	ft_recognize_processes(char *str)
 
 int	main()
 {
-	int i;
+	int		i;
 	char	*line;
+	t_arg	*argument_list;
 
 	i = 1;
+	argument_list = NULL;
 	if (!(line = (ft_strnew(0))))
 		return (1);
 	ft_print_current_directory();
 	while  ((line = ft_file_to_string()) || (!ft_strlen(line)))
 	{
 		if (ft_strchr(line, '\n'))
+		{
+			argument_list = ft_store_args(line, argument_list);
 			ft_recognize_processes(line);
+		}
 		if (ft_strchr(line, '\n'))
 		{
 			ft_strdel(&line);
