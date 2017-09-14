@@ -60,9 +60,12 @@ void	ft_recognize_processes(char *str)
 		arguments = ft_split_whitespaces(str);
 	else
 		return ;
-	if ((command_number = ft_recognize_builtin_command(arguments[0])) != -1)
-		ft_launch_processes(command_number, arguments);
-	else (ft_launch_ext_command(arguments));
+	if (arguments[0])
+	{
+		if ((command_number = ft_recognize_builtin_command(arguments[0])) != -1)
+			ft_launch_processes(command_number, arguments);
+		else (ft_launch_ext_command(arguments));
+	}
 	ft_print_current_directory();
 }
 

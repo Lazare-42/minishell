@@ -28,7 +28,7 @@ void	ft_print_current_directory()
 		i--;
 	if (i > 1)
 		i++;
-	ft_putstr("\e[0;96m");
+	ft_putstr("\e[0;91m");
 	if (tmp)
 		ft_putstr(&tmp[i]);
 	ft_putchar(' ');
