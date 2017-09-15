@@ -20,20 +20,31 @@ extern	char	**environ;
 
 void	ft_launch_ext_command(char **arguments)
 {
-	int i;
-	char **possible_path;
+	int 	i;
+	char 	**possible_path;
+	char	*my_prog_path;
 	int		forkk;
 
 	i = 0;
 	forkk = 1;
 	possible_path = ft_find_prog_path(arguments[0]);
+	my_prog_path = NULL;
 	forkk = fork();
 	if (!(forkk))
 	{
 		while (possible_path[i] && execve(possible_path[i], arguments, environ) == -1)
 			i++;
 		if (!possible_path[i])
-			ft_put_command_errors(arguments[0]);
+		{
+			my_prog_path = ft_find_my_prog_path(arguments[0]);
+			ft_putstr(my_prog_path);
+			ft_putchar('\n');
+			if (my_prog_path)
+			{
+				if (execve(my_prog_path, arguments, environ) == -1)
+					ft_put_command_errors(arguments[0]);
+			}
+		}
 		exit(0);
 	}
 	else

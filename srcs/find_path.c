@@ -42,3 +42,25 @@ char	**ft_find_prog_path(char *arg)
 	return (ft_add_command_to_path(possible_program_path, arg));
 }
 
+char	*ft_find_my_prog_path(char *arg)
+{
+	int		i;
+	char	*path;
+	char	*tmp_arg;
+
+	i = 0;
+	while (environ[i] && ft_memcmp(environ[i], "PWD=", 4) != 0)
+		i++;
+	path = &environ[i][4];
+	if (arg && arg[0] == '.' && arg[1] == '/')
+	{
+		tmp_arg = &arg[1];
+		path = ft_strjoin(path, tmp_arg);
+	}
+	else if (arg)
+	{
+		tmp_arg = ft_strjoin("/", arg);
+		path = ft_strjoinfree(&path, &tmp_arg, 'R');
+	}
+	return (path);
+}

@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   find_path.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 15:06:47 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/05 15:17:31 by lazrossi         ###   ########.fr       */
+/*   Created: 2017/09/05 13:26:55 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/09/06 13:51:33 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-extern char **environ;
+#include "../libft/include/libft.h"
 
-int	main()
+extern	char	**environ;
+
+char	*ft_find_my_prog_path(char *arg)
 {
-	int i;
-	char *path;
-	char c[] = "user";
+	int		i;
+	char	*tmp;
 
 	i = 0;
-	while (environ[i] && ft_memcmp(environ[i], "PATH=", 5))
-		i++;*
-	path = environ[i];
-
-	while (strcmp(<F7>
-
+	while (environ[i] && ft_memcmp(environ[i], "PWD=", 4) != 0)
+		i++;
+	tmp = &environ[i][4];
+	tmp = ft_strjoinfree(&tmp, &arg, 'L');
+	return (tmp);
+}
 

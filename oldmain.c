@@ -19,7 +19,6 @@
 extern char **environ;
 void	ft_launch_processes(char *str);
 
-//YOU NEED TO READ MOTHAFUCKA Y U TRING TO GET IN IN ARGUMENTS LIKE A MOTHAFUCKIN STATIC FUNCTION
 
 void	ft_launch_processes(char *str)
 {
