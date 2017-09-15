@@ -12,7 +12,25 @@
 
 #include "../libft/include/libft.h"
 
-void	ft_print_current_directory()
+static void ft_print_git()
+{
+	DIR				*dir;
+	struct dirent	*dent;
+
+	if ((dir = opendir(".")))
+	{
+		while (dir && (dent = readir(dir)))
+		{
+			if (dent->d_name[0] == '.')
+			{
+				if (!ft_memcmp(dent->d_name, ".git", 4))
+				{
+					closedir(dir);
+					opendir(
+	}
+}
+
+void		ft_print_current_directory()
 {
 	char	path[1025];
 	char 	*tmp;
@@ -33,4 +51,5 @@ void	ft_print_current_directory()
 		ft_putstr(&tmp[i]);
 	ft_putchar(' ');
 	ft_putstr("\e[0m");
+	ft_print_git();
 }
