@@ -3,8 +3,10 @@ NAME = minishell
 SOURCES = ./builtin_commands.c \
 ./find_path.c \
 ./ft_change_dir.c \
+./ft_complete_command.c \
 ./ft_echo.c \
 ./ft_file_to_string.c \
+./ft_launch_processes.c \
 ./ft_print_errors.c \
 ./ft_print_info.c \
 ./ft_put_env.c \

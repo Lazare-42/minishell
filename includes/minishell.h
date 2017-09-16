@@ -39,16 +39,20 @@ typedef struct 		s_arg
 
 int		ft_recognize_builtin_command(char *str);
 void	ft_put_command_errors(char *str);
-void	ft_print_current_directory();
+void	ft_print_current_directory(void);
 char	**ft_find_prog_path(char *arg);
 char	*ft_find_my_prog_path(char *arg);
 int		ft_change_dir(char *str);
 char	*ft_file_to_string();
-void	ft_echo(char **str);
+void	ft_echo(char **str, int quote_presence);
 void	ft_put_env();
 void	ft_sort_setenv(char **args);
 void	ft_setenv(char *name, char *value);
 t_arg	*ft_store_args(char	*line, t_arg *first);
+void	ft_launch_processes(char **arguments);
+void	ft_complete_command(int quote_type, char *command_line);
+int		ft_check_commas(char *str);
+void	ft_recognize_processes(char *str);
 
 # include <unistd.h>
 

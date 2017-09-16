@@ -1,7 +1,8 @@
 #include "../includes/minishell.h"
 
-void	ft_echo(char **str)
+void	ft_echo(char **str, int quote_presence)
 {
+	quote_presence++;
 	if (!(ft_memcmp(str[0], "-n", 2)))
 		ft_putabs(&str[1], ' ');
 	else

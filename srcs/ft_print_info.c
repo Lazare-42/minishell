@@ -11,22 +11,57 @@
 /* ************************************************************************** */
 
 #include "../libft/include/libft.h"
+#include <sys/xattr.h>
+#include <sys/dir.h>
+#include <fcntl.h>
+#include <string.h>
+#include <stdio.h>
+#include <errno.h>
+#include <stdlib.h>
+
+static char *get_last_part(char *tmp)
+{
+	int i;
+
+	i = 0;
+	if (tmp)
+		i = ft_strlen(tmp);
+	if (i > 1)
+		i--;
+	while (tmp[i] != '/')
+		i--;
+	if (i > 1)
+		i++;
+	return (&tmp[i]);
+}
+
 
 static void ft_print_git()
 {
 	DIR				*dir;
 	struct dirent	*dent;
+	char			*buf;
+	char			*path;
+	int				fd;
+	int				ret;
 
-	if ((dir = opendir(".")))
+	path = NULL;
+	buf = ft_strnew(1025);
+	if ((dir = opendir(".git")))
 	{
-		while (dir && (dent = readir(dir)))
+		while (dir && (dent = readdir(dir)))
 		{
-			if (dent->d_name[0] == '.')
+			if (ft_memcmp(dent->d_name, "HEAD", 4) == 0)
 			{
-				if (!ft_memcmp(dent->d_name, ".git", 4))
-				{
-					closedir(dir);
-					opendir(
+				path = ft_strjoin(getcwd(dent->d_name, 1024), "/.git/HEAD");
+				fd = open(path, O_RDONLY);
+				ret = read(fd, buf, 1024);
+				(ret != -1 ) ? buf[ft_strlen(buf) - 1] = '\0' : 0;
+				ft_putstr("[git@]");
+				ft_putstr(get_last_part(buf));
+			}
+		}
+		closedir(dir);
 	}
 }
 
@@ -38,18 +73,12 @@ void		ft_print_current_directory()
 
 	i = 0;
 	tmp = getcwd(path, 1024);
-	if (tmp)
-		i = ft_strlen(tmp);
-	if (i > 1)
-		i--;
-	while (tmp[i] != '/')
-		i--;
-	if (i > 1)
-		i++;
 	ft_putstr("\e[0;91m");
 	if (tmp)
-		ft_putstr(&tmp[i]);
+		ft_putstr(get_last_part(tmp));
+	ft_putstr("\e[0m");
+	ft_putstr("\e[0;90m");
+	ft_print_git();
 	ft_putchar(' ');
 	ft_putstr("\e[0m");
-	ft_print_git();
 }
