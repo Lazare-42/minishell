@@ -59,10 +59,12 @@ static void ft_print_git()
 				(ret != -1 ) ? buf[ft_strlen(buf) - 1] = '\0' : 0;
 				ft_putstr("[git@]");
 				ft_putstr(get_last_part(buf));
+				(path) ? ft_strdel(&path) : 0;
 			}
 		}
 		closedir(dir);
 	}
+	(buf) ? ft_strdel(&buf) : 0;
 }
 
 void		ft_print_current_directory()

@@ -15,6 +15,7 @@ static void	ft_launch_ext_command(char **arguments)
 
 	i = 0;
 	forkk = 1;
+	possible_path = NULL;
 	possible_path = ft_find_prog_path(arguments[0]);
 	my_prog_path = NULL;
 	forkk = fork();
@@ -35,6 +36,8 @@ static void	ft_launch_ext_command(char **arguments)
 	}
 	else
 		wait(&forkk);
+	(possible_path) ? ft_tabdel(possible_path) : 0;
+	(my_prog_path) ? ft_strdel(&my_prog_path) : 0;
 }
 
 static void	ft_launch_builtin_processes(int command_number, char **arguments)

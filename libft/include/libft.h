@@ -25,6 +25,7 @@ typedef	struct		s_list
 }					t_list;
 
 void				ft_putstr(char *str);
+void				ft_tabdel(char **str);
 char				*ft_itoa(int nbr);
 int					ft_atoi(const char *str);
 void				ft_putchar(char c);

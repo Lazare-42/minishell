@@ -44,13 +44,14 @@ void	ft_recognize_processes(char *str)
 {
 	char	**arguments;
 
+	arguments = NULL;
 	if (str)
 	{
 		arguments = ft_split_whitespaces(str);
 		ft_launch_processes(arguments);
 	}
+	(arguments) ? ft_tabdel(arguments) : 0;
 }
-
 
 int	main()
 {
@@ -63,8 +64,6 @@ int	main()
 	line_cpy = NULL;
 	line = NULL;
 	comma_presence = 0;
-	if (!(line = (ft_strnew(0))))
-		return (1);
 	ft_print_current_directory();
 	while  ((line = ft_file_to_string()) || (!ft_strlen(line)))
 	{
@@ -74,7 +73,8 @@ int	main()
 			comma_presence = ft_check_commas(line);
 			(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, line);
 			ft_strdel(&line);
-			line = ft_strnew(0);
+	//		line = ft_strnew(0);
 		}
 	}
+	ft_strdel(&line);
 }

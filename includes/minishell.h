@@ -53,6 +53,8 @@ void	ft_launch_processes(char **arguments);
 void	ft_complete_command(int quote_type, char *command_line);
 int		ft_check_commas(char *str);
 void	ft_recognize_processes(char *str);
+char	**ft_split_whitespaces_not_quotes(char *str);
+char	*ft_advance_string_for_quote(char *str);
 
 # include <unistd.h>
 

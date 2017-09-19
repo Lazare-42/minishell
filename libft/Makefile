@@ -14,6 +14,7 @@ NAME = libft.a
 
 SRC = ft_atoi.c \
 	  ft_bzero.c \
+	  ft_tabdel.c \
 	  ft_freetables.c \
 	  ft_int_size.c \
 	  ft_isalnum.c \

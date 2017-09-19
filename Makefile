@@ -2,6 +2,7 @@ NAME = minishell
 
 SOURCES = ./builtin_commands.c \
 ./find_path.c \
+./ft_advance_string_for_quote.c \
 ./ft_change_dir.c \
 ./ft_complete_command.c \
 ./ft_echo.c \
@@ -18,7 +19,6 @@ LIBDIR = libft
 SDIR = srcs
 ODIR = bin
 CFLAGS = -Wall -Wextra -Werror
-CDEBUG = -fno-omit-frame-pointer -fsanitize=address -g
 INCDIR = includes
 LDFLAGS = -L$(LIBDIR) -lft
 LNCURSES = -lncurses
