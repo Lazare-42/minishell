@@ -73,8 +73,6 @@ int	main()
 			comma_presence = ft_check_commas(line);
 			(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, line);
 			ft_strdel(&line);
-	//		line = ft_strnew(0);
 		}
 	}
-	ft_strdel(&line);
 }

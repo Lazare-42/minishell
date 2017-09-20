@@ -17,11 +17,14 @@ extern	char	**environ;
 static char	**ft_add_command_to_path(char **possible_path, char	*arg)
 {
 	int		i;
+	char	*slash;
 
 	i = 0;
+	slash = "/";
 	while (possible_path[i])
 	{
-		possible_path[i] = ft_strjoin(possible_path[i], "/");
+		possible_path[i] = ft_strjoinfree(&possible_path[i], &slash, 'L');
+		ft_putstr(possible_path[i]);
 		possible_path[i] = ft_strjoinfree(&possible_path[i], &arg, 'L');
 		i++;
 	}
@@ -35,6 +38,7 @@ char	**ft_find_prog_path(char *arg)
 	char	**possible_program_path;
 
 	i = 0;
+	possible_program_path = NULL;
 	while (environ[i] && ft_memcmp(environ[i], "PATH=", 5) != 0)
 		i++;
 	tmp = &environ[i][5];

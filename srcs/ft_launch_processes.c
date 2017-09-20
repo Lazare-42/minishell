@@ -34,10 +34,9 @@ static void	ft_launch_ext_command(char **arguments)
 		}
 		exit(0);
 	}
-	else
+	if (forkk)
 		wait(&forkk);
 	(possible_path) ? ft_tabdel(possible_path) : 0;
-	(my_prog_path) ? ft_strdel(&my_prog_path) : 0;
 }
 
 static void	ft_launch_builtin_processes(int command_number, char **arguments)
