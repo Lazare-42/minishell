@@ -12,13 +12,14 @@
 
 #include <stdlib.h>
 
-size_t   ft_strlen( char *s )
+size_t   ft_strlen(char *s)
 {
 	char *start;
+
 	start = s;
-	while( *s != 0 )
+	while(*s != 0)
 	{
 		++s;
 	}
-	return s - start;
+	return (s - start);
 }

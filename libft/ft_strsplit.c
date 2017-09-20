@@ -11,86 +11,68 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "include/libft.h"
 
-static int	ft_count_separations(char *str, int c)
+static char	*ft_str_alloccpy(char const *src, size_t size)
 {
-	int	i;
-	int	b;
-	int	n;
+	char	*dst;
 
-	n = 0;
-	i = 0;
+	if (!(dst = ft_strnew(size)))
+		return (NULL);
+	dst = ft_strncpy(dst, (char*)src, size);
+	return (dst);
+}
+
+static char	**ft_count_tab(char const *s, char c)
+{
+	char	**new;
+	size_t	b;
+	size_t	count;
+
 	b = 1;
-	if (!*str)
-		return (0);
-	while (str[i])
+	count = 0;
+	while (*s)
 	{
-		if (b == 0 && str[i] == c)
+		if (b == 0 && *s == c)
 			b = 1;
-		else if (b == 1 && str[i] != c)
+		else if (b == 1 && *s != c)
 		{
-			n++;
+			count++;
 			b = 0;
 		}
-		i++;
+		s++;
 	}
-	return (n);
+	if (!(new = (char**)malloc(sizeof(char*) * (count + 1))))
+		return (NULL);
+	new[count] = NULL;
+	return (new);
 }
 
-static int	ft_str_csize(char *str, int c)
+char		**ft_strsplit(char const *s, char c)
 {
-	int i;
-	int n;
+	char		**new;
+	char const	*s2;
+	size_t		i;
 
 	i = 0;
-	n = 0;
-	while (str[i] && str[i] != c)
+	if (!s)
+		return (NULL);
+	if (!(new = ft_count_tab(s, c)))
+		return (NULL);
+	while (*s)
 	{
-		++i;
-		++n;
-	}
-	return (n);
-}
-
-static char	**ft_fill(char *str, char **tab, int c)
-{
-	int i;
-	int j;
-	int k;
-
-	i = 0;
-	j = 0;
-	k = 0;
-	while (str[i])
-	{
-		while (str[i] == c)
-			i++;
-		if (str[i])
+		while (*s && *s == c)
+			s++;
+		s2 = s;
+		while (*s2 && *s2 != c)
+			s2++;
+		s2--;
+		if (*s)
 		{
-			if (!(tab[j] = (char*)malloc(sizeof(char) \
-							* (ft_str_csize(&str[i], c) + 1))))
+			if (!(new[i++] = ft_str_alloccpy(s, (s2 - s) + 1)))
 				return (NULL);
-			k = 0;
-			while (str[i] && str[i] != c)
-				tab[j][k++] = str[i++];
-			tab[j++][k] = '\0';
+			s = s2 + 1;
 		}
 	}
-	tab[j] = NULL;
-	return (tab);
-}
-
-char		**ft_strsplit(char const *str, char c)
-{
-	char **tab;
-
-	if (!str)
-		return (NULL);
-	if (!(tab = (char**)malloc(sizeof(*tab) \
-					* (ft_count_separations((char*)str, c) + 1))))
-		return (NULL);
-	tab[ft_count_separations((char*)str, c)] = NULL;
-	if (!(tab = ft_fill((char*)str, tab, c)))
-		return (NULL);
-	return (tab);
+	return (new);
 }

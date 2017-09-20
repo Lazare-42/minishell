@@ -20,12 +20,10 @@ void	ft_tabdel(char **str)
 	i = 0;
 	while (str[i])
 	{
-		ft_strdel(&str[i]);
+		free(str[i]);
+		str[i] = NULL;
+		//ft_strdel(&str[i]);
 		i++;
 	}
-	if (str)
-	{
-		free(str);
-		str = NULL;
-	}
+	ft_memdel((void**)&str);
 }
