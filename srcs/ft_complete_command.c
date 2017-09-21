@@ -14,7 +14,7 @@ void	ft_complete_command(int quote_type, char *command_line)
 			break;
 	}
 	comma_presence = ft_check_commas(new_line);
-	new_line = ft_strjoinfree(&command_line, &new_line, 'R');
+	new_line = ft_strjoinfree(&command_line, &new_line, 'B');
 	(comma_presence == quote_type) ? ft_recognize_processes(new_line) :
 		ft_complete_command(quote_type, new_line);
 }

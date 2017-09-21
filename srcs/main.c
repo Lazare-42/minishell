@@ -48,6 +48,7 @@ void	ft_recognize_processes(char *str)
 	if (str)
 	{
 		arguments = ft_split_whitespaces(str);
+		ft_strdel(&str);
 		ft_launch_processes(arguments);
 	}
 	(arguments) ? ft_tabdel(arguments) : 0;
@@ -72,7 +73,6 @@ int	main()
 			argument_list = ft_store_args(line, argument_list);
 			comma_presence = ft_check_commas(line);
 			(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, line);
-			ft_strdel(&line);
 		}
 	}
 }
