@@ -33,6 +33,8 @@ static char	**ft_count_tab(char const *s, char c)
 	count = 0;
 	while (*s)
 	{
+		while (*s == '\"')
+			s++;	
 		if (b == 0 && *s == c)
 			b = 1;
 		else if (b == 1 && *s != c)
@@ -61,6 +63,8 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	while (*s)
 	{
+		while (*s == '\"')
+			s++;	
 		while (*s && *s == c)
 			s++;
 		s2 = s;

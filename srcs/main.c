@@ -47,7 +47,7 @@ void	ft_recognize_processes(char *str)
 	arguments = NULL;
 	if (str)
 	{
-		arguments = ft_split_whitespaces(str);
+		arguments = ft_split_whitespaces_nokots(str);
 		ft_strdel(&str);
 		ft_launch_processes(arguments);
 	}

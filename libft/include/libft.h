@@ -1,5 +1,5 @@
 /* ************************************************************************** */
-/*                                                                            */
+
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
@@ -87,7 +87,11 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_int_size(int nbr);
 char				**ft_split_whitespaces(char *str);
+char				**ft_split_whitespaces_nokots(char *str);
 char				*ft_strjoinfree(char **s1, char **s2, char a);
 void				ft_putabs(char**str, char separator);
 int					get_next_line(const int fd, char **line, char tofind);
+int					ft_advance_str_for_quotes(char *str, int i);
+char 				*ft_strdup_to_quote(char *src, char *dst);
+char				*ft_make_blocks_for_quotes(char *str, int *i);
 #endif

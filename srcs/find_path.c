@@ -24,7 +24,6 @@ static char	**ft_add_command_to_path(char **possible_path, char	*arg)
 	while (possible_path[i])
 	{
 		possible_path[i] = ft_strjoinfree(&possible_path[i], &slash, 'L');
-		ft_putstr(possible_path[i]);
 		possible_path[i] = ft_strjoinfree(&possible_path[i], &arg, 'L');
 		i++;
 	}
