@@ -1,0 +1,3 @@
+creer une fonction ft_print_variable name - elle doit deja exister pour setenv et putenv non ? 
+C'est pour ft_echo
+
