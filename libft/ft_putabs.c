@@ -17,7 +17,7 @@ void	ft_putabs(char **str, char separator)
 	int i;
 
 	i = 0;
-	while (str[i])
+	while (str && str[i])
 	{
 		ft_putstr(str[i]);
 		ft_putchar(separator);
