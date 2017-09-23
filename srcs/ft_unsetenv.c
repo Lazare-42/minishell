@@ -5,10 +5,8 @@ extern char **environ;
 static void	ft_del_one_environ_var(char *str)
 {
 	int i;
-	int j;
 
 	i = 0;
-	j = 0;
 	while (environ[i] && ft_strcmp(str, environ[i]))
 		i++;
 	while (environ[i])
