@@ -22,10 +22,13 @@
 static char *get_last_part(char *tmp)
 {
 	int i;
+	int	k;
 
 	i = 0;
+	k = 0;
 	if (tmp)
 		i = ft_strlen(tmp);
+	k = i;
 	if (i > 1)
 		i--;
 	while (tmp[i] != '/')
@@ -35,6 +38,17 @@ static char *get_last_part(char *tmp)
 	return (&tmp[i]);
 }
 
+static void ft_putstr_noret(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] && str[i] != '\n')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}
 
 static void ft_print_git()
 {
@@ -58,7 +72,7 @@ static void ft_print_git()
 				ret = read(fd, buf, 1024);
 				(ret != -1 ) ? buf[ft_strlen(buf) - 1] = '\0' : 0;
 				ft_putstr("[git@]");
-				ft_putstr(get_last_part(buf));
+				ft_putstr_noret(get_last_part(buf));
 				(path) ? ft_strdel(&path) : 0;
 			}
 		}
