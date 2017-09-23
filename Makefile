@@ -6,6 +6,7 @@ SOURCES = ./builtin_commands.c \
 ./ft_change_dir.c \
 ./ft_complete_command.c \
 ./ft_echo.c \
+./ft_env.c \
 ./ft_file_to_string.c \
 ./ft_launch_processes.c \
 ./ft_print_errors.c \

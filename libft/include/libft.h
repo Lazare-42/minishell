@@ -25,7 +25,6 @@ typedef	struct		s_list
 }					t_list;
 
 void				ft_putstr(char *str);
-void				ft_tabdel(char **str);
 char				*ft_itoa(int nbr);
 int					ft_atoi(const char *str);
 void				ft_putchar(char c);
@@ -95,4 +94,7 @@ int					get_next_line(const int fd, char **line, char tofind);
 int					ft_advance_str_for_quotes(char *str, int i);
 char 				*ft_strdup_to_quote(char *src, char *dst);
 char				*ft_make_blocks_for_quotes(char *str, int *i);
+void				ft_tabdel(char **str);
+char				**ft_tabdup(char **str, int size);
+int					ft_tabsize(char **tab);
 #endif

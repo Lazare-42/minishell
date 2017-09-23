@@ -47,7 +47,7 @@ char	*ft_file_to_string();
 void	ft_echo(char **str);
 void	ft_put_env();
 void	ft_sort_setenv(char **args);
-void	ft_setenv(char *name, char *value);
+char	**ft_setenv(char **name, int new_environ_size);
 t_arg	*ft_store_args(char	*line, t_arg *first);
 void	ft_launch_processes(char **arguments);
 void	ft_complete_command(int quote_type, char *command_line);
@@ -56,6 +56,7 @@ void	ft_recognize_processes(char *str);
 char	**ft_split_whitespaces_not_quotes(char *str);
 char	*ft_advance_string_for_quote(char *str);
 void	ft_unsetenv(char **str);
+void	ft_env(char **args);
 
 # include <unistd.h>
 

@@ -18,14 +18,23 @@ extern char **environ;
 
 void	ft_call_to_chdir(char *str, char *arg)
 {
-		if (chdir(str))
-		{
-			ft_putstr_fd("cd: no such file or directory: ", 2);
-			ft_putstr_fd(arg, 2);
-			ft_putchar_fd('\n', 2);
-		}
-		else
-			ft_setenv("PWD", str);
+	char	path[1025];
+	char 	*tmp;
+	char	*path_var = "PATH=";
+
+	tmp = NULL;
+	if (chdir(str))
+	{
+		ft_putstr_fd("cd: no such file or directory: ", 2);
+		ft_putstr_fd(arg, 2);
+		ft_putchar_fd('\n', 2);
+	}
+	else
+	{
+		tmp = getcwd(path, 1024);
+		path_var = ft_strjoin(path_var, tmp);
+		ft_setenv(&path_var, ft_tabsize(environ));
+	}
 }
 
 int		ft_change_dir(char *str)
