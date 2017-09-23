@@ -23,5 +23,4 @@ void	ft_putabs(char **str, char separator)
 		ft_putchar(separator);
 		i++;
 	}
-	ft_putchar('\n');
 }

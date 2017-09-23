@@ -80,6 +80,7 @@ SRC = ft_atoi.c \
 	  ./ft_advance_for_quotes.c \
 	  ./get_next_line.c  \
 	  ./ft_split_whitespaces_nokots.c \
+	  ./ft_str_isalpha.c \
 
 OBJECT = $(SRC:.c=.o)
 
