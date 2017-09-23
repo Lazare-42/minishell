@@ -92,6 +92,8 @@ void		ft_print_current_directory()
 	ft_putstr("\e[0;91m");
 	if (tmp)
 		ft_putstr(get_last_part(tmp));
+	else
+		ft_putstr_fd("! getcwd() failed, unknown shell location !", 2);
 	ft_putstr("\e[0m");
 	ft_putstr("\e[0;90m");
 	ft_print_git();

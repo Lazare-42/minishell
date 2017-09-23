@@ -44,7 +44,7 @@ char	**ft_find_prog_path(char *arg);
 char	*ft_find_my_prog_path(char *arg);
 int		ft_change_dir(char *str);
 char	*ft_file_to_string();
-void	ft_echo(char **str, int quote_presence);
+void	ft_echo(char **str);
 void	ft_put_env();
 void	ft_sort_setenv(char **args);
 void	ft_setenv(char *name, char *value);
@@ -55,6 +55,7 @@ int		ft_check_commas(char *str);
 void	ft_recognize_processes(char *str);
 char	**ft_split_whitespaces_not_quotes(char *str);
 char	*ft_advance_string_for_quote(char *str);
+void	ft_unsetenv(char **str);
 
 # include <unistd.h>
 

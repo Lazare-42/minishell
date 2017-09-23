@@ -13,12 +13,14 @@ SOURCES = ./builtin_commands.c \
 ./ft_put_env.c \
 ./ft_set_env.c \
 ./ft_store.c \
+./ft_unsetenv.c \
 ./main.c 
 
 LIBDIR = libft
 SDIR = srcs
 ODIR = bin
 CFLAGS = -Wall -Wextra -Werror
+CDEBUG = -fno-omit-frame-pointer -fsanitize=address -g
 INCDIR = includes
 LDFLAGS = -L$(LIBDIR) -lft
 LNCURSES = -lncurses

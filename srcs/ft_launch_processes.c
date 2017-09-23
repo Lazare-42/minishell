@@ -43,11 +43,11 @@ static void	ft_launch_builtin_processes(int command_number, char **arguments)
 {
 	if (arguments[1])
 	{
-		(command_number == 0) ? ft_echo(&arguments[1], 0): 0;
+		(command_number == 0) ? ft_echo(&arguments[1]): 0;
 		(command_number == 1) ? ft_change_dir(arguments[1]) : 0;
-		(command_number == 2) ? ft_sort_setenv(&arguments[1]): 0;
 	}
-	(command_number == 3) ? ft_putstr("unsetenv\n") : 0;
+	(command_number == 2) ? ft_sort_setenv(&arguments[1]): 0;
+	(command_number == 3) ? ft_unsetenv(&arguments[1]) : 0;
 	(command_number == 4) ? ft_put_env(): 0;
 	(command_number == 5) ? ft_putstr("exit\n") : 0;
 	(command_number == 5) ? exit (1): 0;

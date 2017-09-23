@@ -32,7 +32,9 @@ void	ft_sort_setenv(char	**args)
 		(ft_putabs(environ, '\n'));
 		return ;
 	}
-	if (args && args[0] && args[1] && args[2])
+	else if (!ft_str_isalpha(args[0]))
+		ft_putstr_fd("setenv: Variable name must contain alphanumeric characters.\n", 2);
+	else if (args && args[0] && args[1] && args[2])
 		ft_putstr_fd("setenv: Too many arguments.\n", 2);
 	else if (args && args[0])
 		ft_setenv(args[0], args[1]);

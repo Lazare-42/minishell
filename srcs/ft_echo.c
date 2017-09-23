@@ -19,12 +19,10 @@ void	ft_print_corresponding_variable(char *str)
 	}
 }
 
-
-
 void	ft_parse(char **str)
 {
-	int i;
-	int	j;
+	int 	i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -42,9 +40,8 @@ void	ft_parse(char **str)
 	}
 }
 
-void	ft_echo(char **str, int quote_presence)
+void	ft_echo(char **str)
 {
-	quote_presence++;
 	if (!(ft_memcmp(str[0], "-n", 2)))
 		ft_parse(&str[1]);
 	else
