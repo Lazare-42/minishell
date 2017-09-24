@@ -37,6 +37,7 @@ void	ft_call_to_chdir(char *str, char *arg)
 		setenv_path[0] = path_var;
 		setenv_path[1] = NULL;
 		environ = ft_setenv(setenv_path, ft_tabsize(environ));
+		ft_strdel(&path_var);
 	}
 }
 

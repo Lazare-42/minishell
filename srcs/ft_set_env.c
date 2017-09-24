@@ -25,6 +25,7 @@ char	**ft_setenv(char **args, int new_environ_size)
 	i = 0;
 	var_len = 0;
 	new_env = ft_tabdup(environ, new_environ_size);
+	ft_tabdel(environ);
 	while (args[i])
 	{
 		j = 0;

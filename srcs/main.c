@@ -66,6 +66,7 @@ int	main()
 	line = NULL;
 	comma_presence = 0;
 	ft_print_current_directory();
+	environ = ft_tabdup(environ, ft_tabsize(environ));
 	while  ((line = ft_file_to_string()) || (!ft_strlen(line)))
 	{
 		if (ft_strchr(line, '\n'))
