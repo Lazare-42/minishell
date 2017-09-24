@@ -2,7 +2,7 @@
 
 extern char** environ;
 
-size_t ft_pathlen(char *str)
+static size_t ft_pathlen(char *str)
 {
 	size_t i;
 
@@ -15,6 +15,14 @@ size_t ft_pathlen(char *str)
 		return (0);
 }
 
+static char	*ft_add_env_var(char *env_location, char *new_env)
+{
+	if (env_location)
+		ft_strdel(&env_location);
+	env_location = ft_strdup(new_env);
+	return (env_location);
+}
+
 char	**ft_setenv(char **args, int new_environ_size)
 {
 	int		i;
@@ -22,29 +30,21 @@ char	**ft_setenv(char **args, int new_environ_size)
 	size_t	var_len;
 	char	**new_env;
 
-	i = 0;
+	i = -1;
 	var_len = 0;
 	new_env = ft_tabdup(environ, new_environ_size);
 	ft_tabdel(environ);
-	while (args[i])
+	while (args[++i])
 	{
 		j = 0;
 		var_len = ft_pathlen(args[i]);
-		while (var_len && new_env[j] && var_len >= ft_strlen(new_env[j]))
+		while(var_len && new_env[j] && 
+		(((new_env[j][var_len] != '=' || 
+		   ft_memcmp(args[i], new_env[j], var_len))) || 
+		(new_env[j] && var_len >= ft_strlen(new_env[j]))))
 			j++;
-		while(var_len && new_env[j] && (new_env[j][var_len] != '=' || ft_memcmp(args[i], new_env[j], var_len)))
-		{
-			j++;
-			while (new_env[j] && var_len >= ft_strlen(new_env[j]))
-				j++;
-		}
 		if (var_len)
-		{
-			if(new_env[j])
-				ft_strdel(&new_env[j]);
-			new_env[j] = ft_strdup(args[i]);
-		}
-		i++;
+			new_env[j] = ft_add_env_var(new_env[j], args[i]);
 	}
 	return (new_env);
 }
