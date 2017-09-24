@@ -39,9 +39,9 @@ char	**ft_setenv(char **args, int new_environ_size)
 		j = 0;
 		var_len = ft_pathlen(args[i]);
 		while(var_len && new_env[j] && 
-		(((new_env[j][var_len] != '=' || 
-		   ft_memcmp(args[i], new_env[j], var_len))) || 
-		(new_env[j] && var_len >= ft_strlen(new_env[j]))))
+		(((new_env[j][var_len]
+		   != '=' || ft_memcmp(args[i], new_env[j], var_len))) 
+		 || (new_env[j] && var_len >= ft_strlen(new_env[j]))))
 			j++;
 		if (var_len)
 			new_env[j] = ft_add_env_var(new_env[j], args[i]);
