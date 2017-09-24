@@ -16,7 +16,7 @@ char	**ft_tabdup(char **str, int size)
 			return (NULL);
 		i++;
 	}
-	while (i < size)
+	while (i <= size)
 	{
 		new_tab[i] = NULL;
 		i++;

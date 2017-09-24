@@ -20,7 +20,8 @@ void	ft_call_to_chdir(char *str, char *arg)
 {
 	char	path[1025];
 	char 	*tmp;
-	char	*path_var = "PATH=";
+	char	*path_var = "PWD=";
+	char	*setenv_path[2];
 
 	tmp = NULL;
 	if (chdir(str))
@@ -33,7 +34,9 @@ void	ft_call_to_chdir(char *str, char *arg)
 	{
 		tmp = getcwd(path, 1024);
 		path_var = ft_strjoin(path_var, tmp);
-		ft_setenv(&path_var, ft_tabsize(environ));
+		setenv_path[0] = path_var;
+		setenv_path[1] = NULL;
+		environ = ft_setenv(setenv_path, ft_tabsize(environ));
 	}
 }
 
