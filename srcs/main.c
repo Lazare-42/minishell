@@ -49,7 +49,7 @@ void	ft_recognize_processes(char *str)
 	{
 		arguments = ft_split_whitespaces_nokots(str);
 		ft_strdel(&str);
-		ft_launch_processes(arguments);
+		ft_launch_processes(arguments, environ);
 	}
 	(arguments) ? ft_tabdel(arguments) : 0;
 }

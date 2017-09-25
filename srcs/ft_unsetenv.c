@@ -35,7 +35,8 @@ void	ft_unsetenv(char **str)
 	{
 		len = ft_strlen(str[i]);
 		j = 0;
-		while(environ[j] && (environ[j][len] != '=' || ft_memcmp(environ[j], str[i], len - 1)))
+		while(environ[j] && (environ[j][len] != '='
+					|| ft_memcmp(environ[j], str[i], len - 1)))
 			j++;
 		if (environ[j])
 			ft_del_one_environ_var(environ[j]);

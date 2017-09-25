@@ -10,7 +10,7 @@ char	**ft_tabdup(char **str, int size)
 	new_tab = NULL;
 	if (!(new_tab = (char**)malloc(sizeof(char*) * (size + 1))))
 		return (NULL);
-	while (str[i])
+	while (str && str[i])
 	{
 		if (!(new_tab[i] = ft_strdup(str[i])))
 			return (NULL);
