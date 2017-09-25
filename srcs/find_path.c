@@ -40,6 +40,8 @@ char	**ft_find_prog_path(char *arg)
 	possible_program_path = NULL;
 	while (environ[i] && ft_memcmp(environ[i], "PATH=", 5) != 0)
 		i++;
+	if (!(environ[i]))
+		return (NULL);
 	tmp = &environ[i][5];
 	possible_program_path = ft_strsplit(tmp, ':');
 	return (ft_add_command_to_path(possible_program_path, arg));
