@@ -66,12 +66,10 @@ int		ft_look_inside(char *line)
 
 	if (line)
 	{
-		ft_putchar('\n');
 		ft_putchar('\r');
 		argument_list = ft_store_args(line, argument_list);
 		comma_presence = ft_check_commas(line);
 		(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, line);
-		ft_putabs(environ, '\n');
 		return (1);
 	}
 	return (0);

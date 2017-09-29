@@ -23,28 +23,33 @@
 char	*ft_file_to_string()
 {
 	char *buf;
-	char *result = "";
+	char *result;
 	int ret;
 	struct termios termios_cpy;
 
 	if 	(tcgetattr(0, &termios_cpy) != 0)
 		return NULL;
-	cfmakeraw(&termios_cpy);
 	termios_cpy.c_cc[VMIN] = 1;
+	termios_cpy.c_cc[VTIME] = 0;
+	termios_cpy.c_lflag &= (IGNBRK);
+	termios_cpy.c_lflag &= (ICANON);
 	if (tcsetattr(0, TCSANOW, &termios_cpy) != 0)
 		return NULL;
 
 	ret = 1;
-	buf = ft_strnew(0);
+	buf = ft_strnew(1);
+	result = ft_strnew(0);
 	while (ret == 1)
 	{
 		ret = read(0, buf, 1);
-		result = ft_strjoin(result, buf);
-		if (buf[0] == '\r')
+		buf[1] = '\0';
+		ft_putchar(buf[0]);
+		result = ft_strjoinfree(&result, &buf, 'L');
+		if (buf[0] == '\n')
+		{
 			ft_look_inside(result);
-		else
-			ft_putstr(buf);
-		ft_bzero(buf, 1);
+			result = ft_strnew(0);
+		}
 	}
 	return (NULL);
 }
