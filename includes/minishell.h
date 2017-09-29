@@ -46,6 +46,7 @@ char	*ft_advance_string_for_quote(char *str);
 void	ft_unsetenv(char **str);
 void	ft_env(char **args);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
+int		ft_look_inside(char *line);
 
 # include <unistd.h>
 

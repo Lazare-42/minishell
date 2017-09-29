@@ -14,17 +14,37 @@
 #include "fcntl.h"
 #include "unistd.h"
 
+
+#include <unistd.h>
+#include <termios.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 char	*ft_file_to_string()
 {
-	char	*buf;
-	int		ret;
-	int		fd;
+	char *buf;
+	char *result = "";
+	int ret;
+	struct termios termios_cpy;
 
-	fd = 0;
+	if 	(tcgetattr(0, &termios_cpy) != 0)
+		return NULL;
+	cfmakeraw(&termios_cpy);
+	termios_cpy.c_cc[VMIN] = 1;
+	if (tcsetattr(0, TCSANOW, &termios_cpy) != 0)
+		return NULL;
+
 	ret = 1;
-	if (!(buf = ft_strnew(4096)))
-		return (NULL);
-	if ((ret = read(fd, buf, 4096)))
-		return (buf);
-	return (buf);
+	buf = ft_strnew(0);
+	while (ret == 1)
+	{
+		ret = read(0, buf, 1);
+		result = ft_strjoin(result, buf);
+		if (buf[0] == '\r')
+			ft_look_inside(result);
+		else
+			ft_putstr(buf);
+		ft_bzero(buf, 1);
+	}
+	return (NULL);
 }

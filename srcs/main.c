@@ -54,26 +54,38 @@ void	ft_recognize_processes(char *str)
 	(arguments) ? ft_tabdel(arguments) : 0;
 }
 
+int		ft_look_inside(char *line)
+{
+	int		comma_presence;
+	t_arg	*argument_list;
+	comma_presence = 0;
+	argument_list = NULL;
+	int i;
+
+	i = 0;
+
+	if (line)
+	{
+		ft_putchar('\n');
+		ft_putchar('\r');
+		argument_list = ft_store_args(line, argument_list);
+		comma_presence = ft_check_commas(line);
+		(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, line);
+		ft_putabs(environ, '\n');
+		return (1);
+	}
+	return (0);
+}
+
+
 int	main()
 {
 	char	*line;
 	char	*line_cpy;
-	t_arg	*argument_list;
-	int		comma_presence;
 
-	argument_list = NULL;
 	line_cpy = NULL;
 	line = NULL;
-	comma_presence = 0;
 	ft_print_current_directory();
 	environ = ft_tabdup(environ, ft_tabsize(environ));
-	while  ((line = ft_file_to_string()) || (!ft_strlen(line)))
-	{
-		if (ft_strchr(line, '\n'))
-		{
-			argument_list = ft_store_args(line, argument_list);
-			comma_presence = ft_check_commas(line);
-			(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, line);
-		}
-	}
+	ft_file_to_string();
 }
