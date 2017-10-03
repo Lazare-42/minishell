@@ -43,8 +43,21 @@ char	*ft_file_to_string()
 	{
 		ret = read(0, buf, 1);
 		buf[1] = '\0';
-		ft_putchar(buf[0]);
-		result = ft_strjoinfree(&result, &buf, 'L');
+		if (buf[0] == 127)
+		{
+			result[ft_strlen(result) - 1] = ' ';
+			ft_putchar('\r');
+			ft_print_current_directory();
+			ft_putstr(result);
+			result[ft_strlen(result) - 1] = '\0';
+		}
+		else
+		{
+			result = ft_strjoinfree(&result, &buf, 'L');
+		}
+		ft_putchar('\r');
+		ft_print_current_directory();
+		ft_putstr(result);
 		if (buf[0] == '\n')
 		{
 			ft_look_inside(result);
