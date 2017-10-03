@@ -23,6 +23,7 @@
 char	*ft_file_to_string()
 {
 	char *buf;
+	long bufbuf;
 	char *result;
 	int ret;
 	struct termios termios_cpy;
@@ -41,7 +42,8 @@ char	*ft_file_to_string()
 	result = ft_strnew(0);
 	while (ret == 1)
 	{
-		ret = read(0, buf, 1);
+		ret = read(0, &bufbuf, 1);
+		buf[0] = bufbuf;
 		buf[1] = '\0';
 		if (buf[0] == 127)
 		{
