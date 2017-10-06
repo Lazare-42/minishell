@@ -14,6 +14,10 @@
 # define MINISHELL_H
 
 # define BUFF_SIZE 2056
+# define KEY_UP 4283163
+# define KEY_DOWN 4348699 
+# define KEY_RIGHT 4414235
+# define KEY_LEFT 4479771
 
 # include "../libft/include/libft.h"
 
@@ -47,6 +51,7 @@ void	ft_unsetenv(char **str);
 void	ft_env(char **args);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line);
+char	*ft_advance_lst_to(t_arg *first, char *line);
 
 # include <unistd.h>
 

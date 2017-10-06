@@ -9,6 +9,7 @@ SOURCES = ./builtin_commands.c \
 ./ft_env.c \
 ./ft_file_to_string.c \
 ./ft_launch_processes.c \
+./ft_lst_advance.c \
 ./ft_print_errors.c \
 ./ft_print_info.c \
 ./ft_put_env.c \
@@ -21,6 +22,7 @@ LIBDIR = libft
 SDIR = srcs
 ODIR = bin
 CFLAGS = -Wall -Wextra -Werror
+CDEBUG = -fno-omit-frame-pointer -fsanitize=address -g
 INCDIR = includes
 LDFLAGS = -L$(LIBDIR) -lft
 LNCURSES = -lncurses
