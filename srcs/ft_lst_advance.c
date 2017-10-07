@@ -3,17 +3,22 @@
 char	*ft_advance_lst_to(t_arg *first, char *line)
 {
 	t_arg	*tmp;
+	int     cmp;
 
 	tmp = first;
+	cmp = 0;
 	if (tmp && line)
 	{
-		ft_putstr("coucou");
-		if (tmp->left && ft_strcmp(tmp->left->arg, line) > 0)
+		cmp = ft_strcmp(tmp->arg, line);
+		ft_putnbr(cmp);
+		if (tmp->left && cmp >= 0)
 			ft_advance_lst_to(tmp->left, line);
-		if (tmp->right && ft_strcmp(tmp->right->arg, line) < 0)
+		if (tmp->right && cmp <= 0)
 			ft_advance_lst_to(tmp->right, line);
-		if (tmp->middle && ft_strcmp(tmp->middle->arg, line) == 0)
-			ft_advance_lst_to(tmp->middle, line);
+		/*
+		if (tmp->middle && cmp == 0)
+			return (tmp->arg);
+			*/
 	}
 	if (tmp && tmp->arg)
 		return (tmp->arg);
