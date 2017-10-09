@@ -13,7 +13,7 @@
 #include "../includes/minishell.h"
 #include <termios.h>
 
-t_arg *args;
+t_arg *first_arg;
 char  *line_found;
 
 int	set_non_canonical_input()
@@ -38,12 +38,18 @@ void ft_replace_content(char *line)
 	(line) ? ft_putstr(line) : 0;
 }
 
-int 	ft_check_input_for_ctrl_keys(char **line, int buf)
+int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 {
+	t_arg *argument;
+
+	argument = NULL;
 	if (buf == KEY_UP)
 	{
-		if (line_found)
-			*line = line_found;
+		ft_putstr(*line);
+		argument = ft_advance_lst_to(first_arg, *line);
+		ft_putstr(argument->arg);
+		if (argument)
+			ft_putstr(argument->arg);
 		return (0);
 	}
 	if (buf == KEY_DOWN)
@@ -77,13 +83,13 @@ int ft_check_input_for_special_input(char **line, int buf)
 	if (*line && buf == '\n')
 	{
 		line_found = NULL;
-		args = ft_store_args(*line, args);
+		first_arg = ft_store_args(*line, first_arg);
 		ft_putchar('\n');
 		ft_look_inside(*line);
 		*line = ft_strnew(0);
 		return (0);
 	}
-	return (ft_check_input_for_ctrl_keys(line, buf));
+	return (ft_check_input_for_ctrl_keys(line, buf, first_arg));
 }
 
 
@@ -98,7 +104,7 @@ char	*ft_file_to_string()
 	line = ft_strnew(0);
 	if (!(set_non_canonical_input()))
 		return (NULL);
-	args = NULL;
+	first_arg = NULL;
 	line_found = NULL;
 	while (ret)
 	{
