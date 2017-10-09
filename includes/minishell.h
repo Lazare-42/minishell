@@ -42,7 +42,7 @@ void	ft_sort_setenv(char **args);
 char	**ft_setenv(char **name, int new_environ_size, char **environ_tocpy);
 t_arg	*ft_store_args(char	*line, t_arg *first);
 void	ft_launch_processes(char **arguments, char **environ_to_use);
-void	ft_complete_command(int quote_type, char *command_line);
+void	ft_complete_command(int quote_type, char **command_line);
 int		ft_check_commas(char *str);
 void	ft_recognize_processes(char *str);
 char	**ft_split_whitespaces_not_quotes(char *str);
@@ -51,7 +51,8 @@ void	ft_unsetenv(char **str);
 void	ft_env(char **args);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line);
-char	*ft_advance_lst_to(t_arg *first, char *line);
+t_arg	*ft_advance_lst_to(t_arg *first, char *line);
+int		set_non_canonical_input();
 
 # include <unistd.h>
 

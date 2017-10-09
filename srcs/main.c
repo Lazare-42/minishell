@@ -56,18 +56,12 @@ void	ft_recognize_processes(char *str)
 int		ft_look_inside(char *line)
 {
 	int		comma_presence;
-	t_arg	*argument_list;
 	comma_presence = 0;
-	argument_list = NULL;
-	int i;
-
-	i = 0;
 
 	if (line)
 	{
-		argument_list = ft_store_args(line, argument_list);
 		comma_presence = ft_check_commas(line);
-		(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, line);
+		(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, &line);
 		return (1);
 	}
 	return (0);

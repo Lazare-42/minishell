@@ -40,10 +40,8 @@ void ft_replace_content(char *line)
 
 int 	ft_check_input_for_ctrl_keys(char **line, int buf)
 {
-	line_found = NULL;
 	if (buf == KEY_UP)
 	{
-		line_found = ft_advance_lst_to(args, *line);
 		if (line_found)
 			*line = line_found;
 		return (0);
