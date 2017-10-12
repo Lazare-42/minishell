@@ -76,10 +76,6 @@ void ft_recurs_print(t_arg *first)
 	}
 	ft_putchar('\n');
 	ft_putstr(first->arg);
-	if (first->middle)
-	{
-		ft_recurs_print(first->middle);
-	}
 	if (first->left)
 	{
 		ft_recurs_print(first->left);
