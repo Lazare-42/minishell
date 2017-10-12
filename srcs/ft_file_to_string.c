@@ -45,11 +45,12 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 	argument = NULL;
 	if (buf == KEY_UP)
 	{
-		ft_putstr(*line);
 		argument = ft_advance_lst_to(first_arg, *line);
-		ft_putstr(argument->arg);
 		if (argument)
-			ft_putstr(argument->arg);
+		{
+			ft_strdel(line);
+			*line = ft_strdup(argument->arg);
+		}
 		return (0);
 	}
 	if (buf == KEY_DOWN)
@@ -67,6 +68,24 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 	return (1);
 }
 
+void ft_recurs_print(t_arg *first)
+{
+	if (first->right)
+	{
+		ft_recurs_print(first->right);
+	}
+	ft_putchar('\n');
+	ft_putstr(first->arg);
+	if (first->middle)
+	{
+		ft_recurs_print(first->middle);
+	}
+	if (first->left)
+	{
+		ft_recurs_print(first->left);
+	}
+}
+
 int ft_check_input_for_special_input(char **line, int buf)
 {
 	if (line && *line && **line && buf == 127)
@@ -80,6 +99,11 @@ int ft_check_input_for_special_input(char **line, int buf)
 	}
 	if (buf == 127)
 		return (0);
+	if (buf == 'p')
+	{
+		ft_recurs_print(first_arg);
+		return (0);
+	}
 	if (*line && buf == '\n')
 	{
 		line_found = NULL;

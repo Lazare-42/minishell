@@ -1,35 +1,100 @@
 #include "minishell.h"
 #include <stdlib.h> 
 
-static void	ft_place_element_in_tern_tree(t_arg **tmp, t_arg *new)
+static void	ft_place_element_in_tern_tree(t_arg *tmp, t_arg *new)
 {
-	if (ft_strcmp((*tmp)->arg, new->arg) > 0)
+
+	t_arg *exchange;
+
+	exchange = NULL;
+	ft_putstr("\nhere is the comparison node ");
+	ft_putstr((tmp)->arg);
+	ft_putstr("\nhere is the new node ");
+	ft_putstr(new->arg);
+	if (ft_strcmp((tmp)->arg, new->arg) < 0)
 	{
-		if ((*tmp)->left)
+		ft_putstr(" to the left\n");
+		if ((tmp)->left)
 		{
-			if (ft_strcmp(new->arg, (*tmp)->left->arg) > 0)
-				ft_place_element_in_tern_tree(&(*tmp)->left, new);
-			else if ((*tmp)->middle)
-				ft_place_element_in_tern_tree(&(*tmp)->middle, new);
+			ft_putstr("whose value is ");
+			ft_putstr(tmp->left->arg);
+			if (ft_strcmp((tmp)->left->arg, new->arg) < 0)
+			{
+				ft_putstr(" and recurs to the left\n");
+				ft_place_element_in_tern_tree((tmp)->left, new);
+			}
+			else if (ft_strcmp((tmp)->left->arg, new->arg) == 0)
+			{
+				ft_putstr("same sign, ignore");
+				return ;
+			}
+			else if ((tmp)->middle)
+			{
+				if (ft_strcmp(tmp->middle->arg, new->arg) > 0)
+				{
+					exchange = tmp->middle;
+					tmp->middle = new;
+					ft_place_element_in_tern_tree(tmp->middle, exchange);
+				}
+				else
+					ft_place_element_in_tern_tree((tmp)->middle, new);
+			}
 			else
-				(*tmp)->middle = new;
+			{
+				ft_putstr(" and placed in the middle\n");
+				(tmp)->middle = new;
+				return ;
+			}
 		}
 		else
-			(*tmp)->left = new;
+		{
+			ft_putstr("and placed to the left\n");
+			(tmp)->left = new;
+			return ;
+		}
 	}
-	if (ft_strcmp((*tmp)->arg, new->arg) < 0)
+	if (ft_strcmp((tmp)->arg, new->arg) > 0)
 	{
-		if ((*tmp)->right)
+		ft_putstr(" to the right\n");
+		if ((tmp)->right)
 		{
-			if (ft_strcmp(new->arg, (*tmp)->right->arg) < 0)
-				ft_place_element_in_tern_tree(&(*tmp)->right, new);
-			else if ((*tmp)->middle)
-					ft_place_element_in_tern_tree(&(*tmp)->middle, new);
+			ft_putstr("whose value is ");
+			ft_putstr(tmp->right->arg);
+			if (ft_strcmp((tmp)->right->arg, new->arg) > 0)
+			{
+				ft_putstr(" and recurs to the right\n");
+				ft_place_element_in_tern_tree((tmp)->right, new);
+			}
+			else if (ft_strcmp((tmp)->right->arg, new->arg) == 0)
+			{
+				ft_putstr("same sign, ignore");
+				return ;
+			}
+			else if ((tmp)->middle)
+			{
+				if (ft_strcmp(tmp->middle->arg, new->arg) < 0)
+				{
+					exchange = tmp->middle;
+					tmp->middle = new;
+					ft_place_element_in_tern_tree(tmp->middle, exchange);
+				}
+				else
+					ft_place_element_in_tern_tree((tmp)->middle, new);
+				ft_putstr(" and recurs middle\n");
+			}
 			else
-				(*tmp)->middle = new;
+			{
+				ft_putstr(" and placed in the middle\n");
+				(tmp)->middle = new;
+				return ;
+			}
 		}
 		else
-			(*tmp)->right = new;
+		{
+			ft_putstr("and placed to the right\n");
+			(tmp)->right = new;
+			return ;
+		}
 	}
 	return ;
 }
@@ -51,7 +116,7 @@ t_arg	*ft_store_args(char	*line, t_arg *first)
 {
 	t_arg	*tmp;
 	t_arg	*new;
-	
+
 	tmp = NULL;
 	new = NULL;
 	if (!first)
@@ -59,6 +124,6 @@ t_arg	*ft_store_args(char	*line, t_arg *first)
 	tmp = first;
 	new = new_arg(line);
 	if (new)
-		ft_place_element_in_tern_tree(&tmp, new);
+		ft_place_element_in_tern_tree(tmp, new);
 	return (first);
 }
