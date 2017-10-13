@@ -51,7 +51,7 @@ void	ft_unsetenv(char **str);
 void	ft_env(char **args);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line);
-t_arg	*ft_advance_lst_to(t_arg *first, char *line);
+void	ft_advance_lst_to(t_arg *first, char **line, int line_len);
 int		set_non_canonical_input();
 
 # include <unistd.h>

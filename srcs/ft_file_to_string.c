@@ -14,7 +14,7 @@
 #include <termios.h>
 
 t_arg *first_arg;
-char  *line_found;
+char  *old_line;
 
 int	set_non_canonical_input()
 {
@@ -41,16 +41,14 @@ void ft_replace_content(char *line)
 int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 {
 	t_arg *argument;
+	int 	i;
 
 	argument = NULL;
+	i = 0;
 	if (buf == KEY_UP)
 	{
-		argument = ft_advance_lst_to(first_arg, *line);
-		if (argument)
-		{
-			ft_strdel(line);
-			*line = ft_strdup(argument->arg);
-		}
+		ft_advance_lst_to(first_arg, line, ft_strlen(*line));
+		ft_replace_content(*line);
 		return (0);
 	}
 	if (buf == KEY_DOWN)
@@ -68,20 +66,6 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 	return (1);
 }
 
-void ft_recurs_print(t_arg *first)
-{
-	if (first->right)
-	{
-		ft_recurs_print(first->right);
-	}
-	ft_putchar('\n');
-	ft_putstr(first->arg);
-	if (first->left)
-	{
-		ft_recurs_print(first->left);
-	}
-}
-
 int ft_check_input_for_special_input(char **line, int buf)
 {
 	if (line && *line && **line && buf == 127)
@@ -95,11 +79,6 @@ int ft_check_input_for_special_input(char **line, int buf)
 	}
 	if (buf == 127)
 		return (0);
-	if (buf == 'p')
-	{
-		ft_recurs_print(first_arg);
-		return (0);
-	}
 	if (*line && buf == '\n')
 	{
 		line_found = NULL;
@@ -132,7 +111,7 @@ char	*ft_file_to_string()
 		ret = read(0, &buf, sizeof(long));
 		if (ft_check_input_for_special_input(&line, buf)) 
 			line = ft_strjoin(line, (char*)&buf);
-		ft_replace_content(line);
+		(line) ? ft_replace_content(line) : 0;
 	}
 	return (NULL);
 }
