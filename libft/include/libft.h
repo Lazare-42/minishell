@@ -97,4 +97,5 @@ char				*ft_make_blocks_for_quotes(char *str, int *i);
 void				ft_tabdel(char **str);
 char				**ft_tabdup(char **str, int size);
 int					ft_tabsize(char **tab);
+void				ft_putwhites(int i);
 #endif

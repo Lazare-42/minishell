@@ -83,6 +83,7 @@ SRC = ft_atoi.c \
 	  ./ft_str_isalpha.c \
 	  ./ft_tabdup.c \
 	  ./ft_tabsize.c \
+	  ./ft_putwhites.c \
 
 OBJECT = $(SRC:.c=.o)
 
