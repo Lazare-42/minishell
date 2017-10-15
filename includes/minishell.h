@@ -24,6 +24,8 @@
 typedef struct 		s_arg
 {
 	char			*arg;
+	int				line_pos;
+	struct  s_arg   *ante;
 	struct 	s_arg	*left;
 	struct	s_arg	*middle;
 	struct  s_arg	*right;
@@ -51,8 +53,10 @@ void	ft_unsetenv(char **str);
 void	ft_env(char **args);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line);
-void	ft_advance_lst_to(t_arg *first, char **line, int line_len);
+void	ft_advance_lst_to(t_arg *first, t_arg ** to_find, char **line, int line_len);
+void	ft_retreat_lst_to(t_arg *first, t_arg **to_find, char **line, int line_len);
 int		set_non_canonical_input();
+void	ft_clean_lst_for_line_pos(t_arg *first);
 
 # include <unistd.h>
 

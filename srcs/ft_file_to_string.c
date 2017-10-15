@@ -15,6 +15,7 @@
 
 t_arg *first_arg;
 char  *old_line;
+t_arg *to_find;
 
 int	set_non_canonical_input()
 {
@@ -40,19 +41,30 @@ void ft_replace_content(char *line)
 
 int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 {
-	t_arg *argument;
-	int 	i;
+	t_arg *tmp;
 
-	argument = NULL;
-	i = 0;
+	tmp = first_arg;
 	if (buf == KEY_UP)
 	{
-		ft_advance_lst_to(first_arg, line, ft_strlen(*line));
-		ft_replace_content(*line);
+		if (first_arg)
+		{
+			ft_advance_lst_to(tmp, &to_find, &old_line, ft_strlen(old_line));
+			(to_find) ? *line = to_find->arg : 0;
+			(to_find) ? to_find->line_pos = 1 : 0;
+			return (0);
+		}
 		return (0);
 	}
 	if (buf == KEY_DOWN)
 	{
+		if (first_arg)
+		{
+			tmp = to_find;
+			ft_retreat_lst_to(first_arg, &to_find, &old_line, ft_strlen(old_line));
+			(tmp) ? *line = tmp->arg : 0;
+			(to_find) ? tmp->line_pos = 0 : 0;
+			return (0);
+		}
 		return (0);
 	}
 	if (buf == KEY_LEFT)
@@ -81,8 +93,11 @@ int ft_check_input_for_special_input(char **line, int buf)
 		return (0);
 	if (*line && buf == '\n')
 	{
-		line_found = NULL;
+		to_find = NULL;
+		old_line = NULL;
+		(old_line) ? ft_strdel(&old_line) : NULL;
 		first_arg = ft_store_args(*line, first_arg);
+		ft_clean_lst_for_line_pos(first_arg);
 		ft_putchar('\n');
 		ft_look_inside(*line);
 		*line = ft_strnew(0);
@@ -95,16 +110,18 @@ int ft_check_input_for_special_input(char **line, int buf)
 char	*ft_file_to_string()
 {
 	long  buf;
-	char *line;
+	char  *line;
 	int ret;
 
 
 	ret = 1;
-	line = ft_strnew(0);
+	old_line = NULL;
+	if (!(line = ft_strnew(0)))
+		return (NULL);
 	if (!(set_non_canonical_input()))
 		return (NULL);
 	first_arg = NULL;
-	line_found = NULL;
+	to_find = NULL;
 	while (ret)
 	{
 		buf = 0;
@@ -112,6 +129,7 @@ char	*ft_file_to_string()
 		if (ft_check_input_for_special_input(&line, buf)) 
 			line = ft_strjoin(line, (char*)&buf);
 		(line) ? ft_replace_content(line) : 0;
+		(buf != KEY_UP) ? old_line = ft_strdup(line) : 0;
 	}
 	return (NULL);
 }
