@@ -3,9 +3,6 @@
 
 static void	ft_place_element_in_tern_tree(t_arg *tmp, t_arg *new)
 {
-	t_arg *exchange;
-
-	exchange = NULL;
 	if (ft_strcmp((tmp)->arg, new->arg) < 0)
 	{
 		if ((tmp)->left)
@@ -39,7 +36,7 @@ static t_arg	*new_arg(char *line)
 	new->middle = NULL;
 	new->right = NULL;
 	new->ante = NULL;
-	new->line_pos = 0;
+	new->line_pos = 2;
 	return (new);
 }
 

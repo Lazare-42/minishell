@@ -43,37 +43,47 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 {
 	t_arg *tmp;
 
-	tmp = first_arg;
+	tmp = NULL;
 	if (buf == KEY_UP)
 	{
 		if (first_arg)
 		{
-			ft_advance_lst_to(tmp, &to_find, &old_line, ft_strlen(old_line));
+			(to_find && tmp != to_find) ? tmp = to_find : 0;
+			if (to_find && !ft_memcmp(*line, to_find->arg, ft_strlen(old_line)) && to_find->line_pos == 1)
+			{
+				ft_putchar('\r');
+				ft_print_current_directory();
+				ft_putwhites(ft_strlen(to_find->arg));
+			}
+			ft_advance_lst_to(first_arg, &to_find, &old_line, ft_strlen(old_line));
 			(to_find) ? *line = to_find->arg : 0;
 			(to_find) ? to_find->line_pos = 1 : 0;
-			return (0);
 		}
 		return (0);
 	}
 	if (buf == KEY_DOWN)
 	{
-		if (first_arg)
+		if (first_arg && to_find)
 		{
-			tmp = to_find;
+			to_find->line_pos = 2;
+			ft_putchar('\r');
+			ft_print_current_directory();
+			ft_putwhites(ft_strlen(to_find->arg));
+			to_find = NULL;
 			ft_retreat_lst_to(first_arg, &to_find, &old_line, ft_strlen(old_line));
-			(tmp) ? *line = tmp->arg : 0;
-			(to_find) ? tmp->line_pos = 0 : 0;
+			*line = (to_find) ? to_find->arg : ft_strnew(0);
+			*line = (!to_find && tmp) ? tmp->arg : *line;
 			return (0);
 		}
 		return (0);
 	}
 	if (buf == KEY_LEFT)
 	{
-		return (0);
+		return (1);
 	}
 	if (buf == KEY_RIGHT)
 	{
-		return (0);
+		return (1);
 	}
 	return (1);
 }
@@ -129,7 +139,7 @@ char	*ft_file_to_string()
 		if (ft_check_input_for_special_input(&line, buf)) 
 			line = ft_strjoin(line, (char*)&buf);
 		(line) ? ft_replace_content(line) : 0;
-		(buf != KEY_UP) ? old_line = ft_strdup(line) : 0;
+		(buf != KEY_UP && buf != KEY_DOWN && line) ? old_line = ft_strdup(line) : 0;
 	}
 	return (NULL);
 }

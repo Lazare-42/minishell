@@ -90,6 +90,7 @@ void		ft_print_current_directory()
 	i = 0;
 	tmp = getcwd(path, 1024);
 	ft_putstr("\e[0;91m");
+	ft_putchar('/');
 	if (tmp)
 		ft_putstr(get_last_part(tmp));
 	else
@@ -97,6 +98,6 @@ void		ft_print_current_directory()
 	ft_putstr("\e[0m");
 	ft_putstr("\e[0;90m");
 	ft_print_git();
-	ft_putchar(' ');
+	ft_putstr("\\ ");
 	ft_putstr("\e[0m");
 }
