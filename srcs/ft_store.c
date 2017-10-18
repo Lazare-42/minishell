@@ -8,20 +8,14 @@ static void	ft_place_element_in_tern_tree(t_arg *tmp, t_arg *new)
 		if ((tmp)->left)
 				ft_place_element_in_tern_tree((tmp)->left, new);
 		else
-		{
 			(tmp)->left = new;
-			new->ante = tmp;
-		}
 	}
 	else
 	{
 		if ((tmp)->right)
 				ft_place_element_in_tern_tree((tmp)->right, new);
 		else
-		{
 			(tmp)->right = new;
-			new->ante = tmp;
-		}
 	}
 }
 
@@ -35,7 +29,6 @@ static t_arg	*new_arg(char *line)
 	new->left = NULL;
 	new->middle = NULL;
 	new->right = NULL;
-	new->ante = NULL;
 	new->line_pos = 2;
 	return (new);
 }

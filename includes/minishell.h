@@ -25,7 +25,6 @@ typedef struct 		s_arg
 {
 	char			*arg;
 	int				line_pos;
-	struct  s_arg   *ante;
 	struct 	s_arg	*left;
 	struct	s_arg	*middle;
 	struct  s_arg	*right;

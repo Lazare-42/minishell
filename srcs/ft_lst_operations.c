@@ -12,11 +12,11 @@ void	ft_advance_lst_to(t_arg *first, t_arg **to_find, char **line, int line_len)
 
 void	ft_clean_lst_for_line_pos(t_arg *first)
 {
-	if (first->right)
+	if (first && first->right)
 		ft_clean_lst_for_line_pos(first->right);
-	if (first->line_pos == 1)
+	if (first && first->line_pos == 1)
 		first->line_pos = 2;
-	if (first->left)
+	if (first && first->left)
 		ft_clean_lst_for_line_pos(first->left);
 }
 

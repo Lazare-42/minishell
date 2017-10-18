@@ -106,10 +106,10 @@ int ft_check_input_for_special_input(char **line, int buf)
 		to_find = NULL;
 		old_line = NULL;
 		(old_line) ? ft_strdel(&old_line) : NULL;
-		first_arg = ft_store_args(*line, first_arg);
-		ft_clean_lst_for_line_pos(first_arg);
+		(**line) ? first_arg = ft_store_args(*line, first_arg) : 0;
+		(first_arg) ? ft_clean_lst_for_line_pos(first_arg) : 0;
 		ft_putchar('\n');
-		ft_look_inside(*line);
+		(**line) ? ft_look_inside(*line) : 0;
 		*line = ft_strnew(0);
 		return (0);
 	}

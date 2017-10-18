@@ -9,7 +9,7 @@ SOURCES = ./builtin_commands.c \
 ./ft_env.c \
 ./ft_file_to_string.c \
 ./ft_launch_processes.c \
-./ft_lst_advance.c \
+./ft_lst_operations.c \
 ./ft_print_errors.c \
 ./ft_print_info.c \
 ./ft_put_env.c \
