@@ -1,19 +1,19 @@
 #include "minishell.h"
 #include <stdlib.h> 
 
-static void	ft_place_element_in_tern_tree(t_arg *tmp, t_arg *new)
+static void	ft_place_element_in_tern_tree(t_arg *tmp, t_arg *new, size_t nw_len)
 {
 	if (ft_strcmp((tmp)->arg, new->arg) < 0)
 	{
 		if ((tmp)->left)
-				ft_place_element_in_tern_tree((tmp)->left, new);
+				ft_place_element_in_tern_tree((tmp)->left, new, nw_len);
 		else
 			(tmp)->left = new;
 	}
-	else
+	else if (ft_memcmp(tmp->arg, new->arg, ft_strlen(new->arg)))
 	{
 		if ((tmp)->right)
-				ft_place_element_in_tern_tree((tmp)->right, new);
+				ft_place_element_in_tern_tree((tmp)->right, new, nw_len);
 		else
 			(tmp)->right = new;
 	}
@@ -45,6 +45,6 @@ t_arg	*ft_store_args(char	*line, t_arg *first)
 	tmp = first;
 	new = new_arg(line);
 	if (new)
-		ft_place_element_in_tern_tree(tmp, new);
+		ft_place_element_in_tern_tree(tmp, new, ft_strlen(new->arg));
 	return (first);
 }

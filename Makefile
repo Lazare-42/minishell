@@ -1,6 +1,7 @@
 NAME = minishell
 
-SOURCES = ./builtin_commands.c \
+SOURCES = ./alias.c \
+./builtin_commands.c \
 ./find_path.c \
 ./ft_advance_string_for_quote.c \
 ./ft_change_dir.c \

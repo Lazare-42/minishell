@@ -61,6 +61,7 @@ int		ft_look_inside(char *line)
 	if (line)
 	{
 		comma_presence = ft_check_commas(line);
+		line = find_aliases(line);
 		(!comma_presence) ? ft_recognize_processes(line) : ft_complete_command(comma_presence, &line);
 		return (1);
 	}
