@@ -98,4 +98,5 @@ void				ft_tabdel(char **str);
 char				**ft_tabdup(char **str, int size);
 int					ft_tabsize(char **tab);
 void				ft_putwhites(int i);
+char				**ft_tabdup_and_add(char **tab, char *str, int size);
 #endif
