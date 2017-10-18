@@ -10,7 +10,7 @@ char	*find_aliases(char *line)
 		"sh makemf.sh minishell", "./minishell", "norminette", NULL};
 	while (values[i])
 	{
-		if (!(ft_memcmp(line, values[i], ft_strlen(values[i]))))
+		if (!(ft_memcmp(line, values[i], ft_strlen(line))))
 		{
 			ft_strdel(&line);
 			line = ft_strdup((commands[i]));
