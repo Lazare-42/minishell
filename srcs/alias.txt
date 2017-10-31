@@ -1,2 +1,2 @@
-work, Makefile, m, norm, NULL
-cd /Users/lazrossi/Documents/42/minishell, sh makemf.sh minishell, ./minishell, norminette, NULL
+work_Makefile_m_norm_bite
+cd /Users/lazrossi/Documents/42/minishell, sh makemf.sh minishell, ./minishell, norminette, mkdir bite

@@ -87,7 +87,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_int_size(int nbr);
 char				**ft_split_whitespaces(char *str);
-char				**ft_split_char(char *str);
+char				**ft_split_char(char *str, char c);
 char				**ft_split_whitespaces_nokots(char *str);
 char				*ft_strjoinfree(char **s1, char **s2, char a);
 void				ft_putabs(char**str, char separator);
