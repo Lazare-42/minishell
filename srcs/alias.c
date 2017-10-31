@@ -9,8 +9,9 @@ char	*find_aliases(char *line)
 	char **commands;
 	char *values_line;
 	char *commands_line;
+	int	j;
+	j = 0;
 
-	i = 0;
 	fd = -1;
 	values = NULL;
 	commands = NULL;
@@ -22,15 +23,35 @@ char	*find_aliases(char *line)
 	commands = ft_split_char(commands_line, ',');
 	values = ft_split_char(values_line, '_');
 
-	while (values[i])
+	char **line_split;
+
+	line_split = ft_split_whitespaces(line);
+	ft_strdel(&line);
+
+	while (line_split[j])
 	{
-		if (!(ft_memcmp(line, values[i], ft_strlen(line))))
+		i = 0;
+		while (values[i])
 		{
-			ft_strdel(&line);
-			line = ft_strdup((commands[i]));
+			if (!(ft_memcmp(line_split[j], values[i], ft_strlen(line_split[j]))))
+			{
+				ft_strdel(&line_split[j]);
+				line_split[j] = ft_strdup((commands[i]));
+			}
+			i++;
 		}
-		i++;
+		j++;
 	}
+	j = 0;
+	line = ft_strnew(0);
+	while (line_split[j])
+	{
+		line = ft_strjoinfree(&line, &line_split[j], 'L');
+		line = ft_strjoin(line, " ");
+		j++;
+	}
+	ft_tabdel(line_split);
+	close(fd);
 	return (line);
 }
 

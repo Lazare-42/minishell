@@ -12,7 +12,7 @@
 
 int		ft_recognize_builtin_command(char *str)
 {
-	char	*commands[] = {"echo", "cd", "setenv", "unsetenv", "env", "exit", "chdir", NULL};
+	char	*commands[] = {"echo", "cd", "setenv", "unsetenv", "env", "exit", "chdir", "alias", NULL};
 	int		i;
 
 	i = 0;

@@ -44,6 +44,7 @@ static void	ft_launch_builtin_processes(int command_number, char **arguments)
 		(command_number == 0) ? ft_echo(&arguments[1]): 0;
 		(command_number == 1 ) ? ft_change_dir(arguments[1]) : 0;
 		(command_number == 6 ) ? ft_change_dir(arguments[1]) : 0;
+		(command_number == 7) ? ft_new_alias(&arguments[1]) : 0;
 	}
 	(command_number == 2) ? ft_sort_setenv(&arguments[1]): 0;
 	(command_number == 3) ? ft_unsetenv(&arguments[1]) : 0;

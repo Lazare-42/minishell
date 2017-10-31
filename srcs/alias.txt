@@ -1,2 +1,2 @@
-work_Makefile_m_norm_bite
-cd /Users/lazrossi/Documents/42/minishell, sh makemf.sh minishell, ./minishell, norminette, mkdir bite
+work_Makefile_m_norm_bite_coucou
+cd /Users/lazrossi/Documents/42/minishell, sh makemf.sh minishell, ./minishell, norminette, mkdir bite,HEY ANNA
