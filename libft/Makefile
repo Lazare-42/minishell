@@ -85,6 +85,7 @@ SRC = ft_atoi.c \
 	  ./ft_tabsize.c \
 	  ./ft_putwhites.c \
 	  ./ft_tabdup_and_add.c \
+	  ./ft_split_char.c \
 
 OBJECT = $(SRC:.c=.o)
 
