@@ -1,0 +1,2 @@
+work, Makefile, m, norm, NULL
+cd /Users/lazrossi/Documents/42/minishell, sh makemf.sh minishell, ./minishell, norminette, NULL
