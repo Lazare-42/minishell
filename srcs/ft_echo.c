@@ -25,9 +25,9 @@ void	ft_parse(char **str)
 	int		j;
 
 	i = 0;
-	j = 0;
 	while (str[i])
 	{
+		j = 0;
 		while (str[i][j] && str[i][j] != '$')
 		{
 			ft_putchar(str[i][j]);

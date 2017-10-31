@@ -45,7 +45,7 @@ mkbin:
 
 
 $(NAME): $(OBJS)
-	@echo "Compiling minishell ..."
+	@echo "Compiling minishell y ..."
 	@-$(CC) $(CFLAGS) $(CDEBUG) -o $(NAME) $(OBJS) -I$(INCDIR) $(LDFLAGS) $(LNCURSES)
 	@$(OK)
 
