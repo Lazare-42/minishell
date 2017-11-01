@@ -2,8 +2,6 @@
 #include <stdlib.h> 
 #include <fcntl.h>
 
-static int right = 0;
-
 static void	ft_place_element_in_tern_tree(t_arg *tmp, t_arg *new, size_t nw_len)
 {
 	if (ft_strcmp((tmp)->arg, new->arg) < 0)
@@ -46,7 +44,7 @@ static t_arg	*ft_store_command_historic(char *line, t_arg *first)
 	fd = -1;
 	historic_commands = NULL;
 	new = NULL;
-	fd = open("/Users/lazrossi/Documents/42/minishell/historic.txt", O_RDWR);
+	fd = open("/Users/lazrossi/Documents/42/minishell/historic.txt", O_RDONLY);
 	if (fd == -1)
 	{
 		ft_putstr("Unable to open or find the command historic file\n");
@@ -61,6 +59,7 @@ static t_arg	*ft_store_command_historic(char *line, t_arg *first)
 		if (new)
 			ft_place_element_in_tern_tree(tmp, new, ft_strlen(new->arg));
 	}
+	close(fd);
 	return (first);
 }
 

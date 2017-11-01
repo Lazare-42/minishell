@@ -13,7 +13,6 @@
 #include "../includes/minishell.h"
 #include <termios.h>
 
-t_arg *first_arg;
 char  *old_line;
 t_arg *to_find;
 
@@ -46,7 +45,7 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 	tmp = NULL;
 	if (buf == KEY_UP)
 	{
-		if (first_arg)
+		if (first_arg && old_line)
 		{
 			(to_find && tmp != to_find) ? tmp = to_find : 0;
 			if (to_find && !ft_memcmp(*line, to_find->arg, ft_strlen(old_line)) && to_find->line_pos == 1)
@@ -88,7 +87,7 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 	return (1);
 }
 
-int ft_check_input_for_special_input(char **line, int buf)
+static int ft_check_input_for_special_input(char **line, int buf, t_arg *first_arg)
 {
 	if (line && *line && **line && buf == 127)
 	{
@@ -117,7 +116,7 @@ int ft_check_input_for_special_input(char **line, int buf)
 }
 
 
-char	*ft_file_to_string()
+char	*ft_file_to_string(t_arg *first_arg)
 {
 	long  buf;
 	char  *line;
@@ -126,17 +125,16 @@ char	*ft_file_to_string()
 
 	ret = 1;
 	old_line = NULL;
+	to_find = NULL;
 	if (!(line = ft_strnew(0)))
 		return (NULL);
 	if (!(set_non_canonical_input()))
 		return (NULL);
-	first_arg = NULL;
-	to_find = NULL;
 	while (ret)
 	{
 		buf = 0;
 		ret = read(0, &buf, sizeof(long));
-		if (ft_check_input_for_special_input(&line, buf)) 
+		if (ft_check_input_for_special_input(&line, buf, first_arg)) 
 			line = ft_strjoin(line, (char*)&buf);
 		(line) ? ft_replace_content(line) : 0;
 		(buf != KEY_UP && buf != KEY_DOWN && line) ? old_line = ft_strdup(line) : 0;

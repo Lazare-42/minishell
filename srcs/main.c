@@ -73,10 +73,13 @@ int	main()
 {
 	char	*line;
 	char	*line_cpy;
+	t_arg	*first_arg;
 
 	line_cpy = NULL;
 	line = NULL;
+	first_arg = NULL;
+	first_arg = ft_store_args(NULL, first_arg);
 	ft_print_current_directory();
 	environ = ft_tabdup(environ, ft_tabsize(environ));
-	ft_file_to_string();
+	ft_file_to_string(first_arg);
 }
