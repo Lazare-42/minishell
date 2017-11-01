@@ -1,0 +1,9999 @@
+cd 42/ls
+ls -Rl ../../..
+cd Documents/42/ls
+cp Documents/\#.vimrc\# .
+mv \#.vimrc\# .vimrc
+time ls -lraRt /
+./ft_ls /private/var/folders/47
+./ft_ls -RLart /private/var/folders/47
+./ft_ls -Rlart /private/var/folders/47
+./ft_ls -Rlart /private/var/folders/zz
+mkdir colors
+cd colors
+cd bundle
+:Pluginstall
+git clone https://github.com/jgigault/42FileChecker.git
+cd 42FileChecker
+rm colors
+rm -r colors
+cd .vim
+cd colors/
+ls gruvbox
+cp gruvbox/colors/gruvbox.vim .
+vi
+cd Documents/42/ft_ls
+vim gestion_l.c
+git clone https://github.com/Lazare-42/vimrc.git
+cp vimrc/.vimrc .
+sh Documents/42FileChecker/42FileChecker.sh c
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \\ncurl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd .vim/autoload
+cat pathogen.vim
+cp autoload/pathogen.vim bundle
+cp autoload/pathogen.vim colors
+sudo dd bs=1m if=Desktop/Images\ d\'os/snowleopard_10a432_userdvd.dmg of=/dev/disk2
+../../../42FileChecker
+cp ../libft/libft.h .
+vim srcs/ft_CMD_R.c
+cd t_dir
+cat 42
+cat README.md
+cp libft/libft.a .
+cd moulitest_42projects/
+cd ft_ls_tests
+vi Makefile
+vim -.php
+mv -.php Makefilevcombey
+mv -- -.php Makefilevcombey
+vim Makefilevcombey
+./ft_ls -Rlart ~/
+./ft_ls ../../42FileChecker/maintest/ft_ls/t_dir/
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir/
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir/
+make cleqn
+diff ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ ./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir/
+diff ls -l -- ../../42FileChecker/maintest/ft_ls/t_dir/ ./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir/
+diff -help
+diff --help
+man diff
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ | cat -e
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ | cat -e
+git config --global user.email "lazrossi@student.42.fr"
+git config --global user.name "lazrossi"
+git commit -m "reprise en main de la presentqtion"
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ >> truels
+vim truels
+vim myls
+ls -q ../../42FileChecker/maintest/ft_ls/t_dir/ >> truels
+./ft_ls -a ../../42FileChecker/maintest/ft_ls/t_dir/ >> myls
+ls -a ../../42FileChecker/maintest/ft_ls/t_dir/ | cat -e
+ls -a ../../42FileChecker/maintest/ft_ls/t_dir/
+./ft_ls -a ../../42FileChecker/maintest/ft_ls/t_dir/ | cat -e
+./ft_ls -a ../../42FileChecker/maintest/ft_ls/t_dir/
+./ft_ls -aRl ../..
+ls -lraRT ../..
+./ft_ls -aRlt ../..
+./ft_ls -lraRt ../..
+ls -lraRT ../../
+./ft_ls -lraRt ../../
+mkdir b
+vim srcs/ft_padding.o
+vim ft_CMD_
+ls -lR ../../../ | wc -l
+./ft_ls -lR ../../../ | wc -l
+./ft_ls -lR ../../../../ | wc -l
+ls -lR ../../../../ | wc -l
+time ls -lR / | wc -l
+./ft_ls -lR 
+vim ft_bzero.
+sh 42FileChecker.sh
+../libft/
+cleqr
+./ft_ls ft_CMD_r.o
+vim ls,c
+mv ft_list_reverse.c ft_CMD_r.c
+vim ft_CMD_r.c
+mv ft_CMD_r.c listreverse.c
+mv listreverse.c ft_CMD_r.c
+git checkout ft_CMD_R.c
+git checkout ft_list_reverse.c
+vim ft_list_reverse.c
+./ft_ls -l ft_CMD_r.o
+./ft_ls -Rl ft_CMD_R.o ../..
+ls -Rl ..
+./ft_ls -Rl | wc -l
+./ft_ls -Rl ../../../ | wc -l
+ls -Rl ../../../ | wc -l
+./ft_ls -Rl ../../../../ | wc -l
+ls -Rl ../../../../ | wc -l
+ls -Rl / | wc -l
+./ft_ls -Rl / | wc -l
+./ft_ls -Rl ../../
+ls -Rl ../..
+ls -Rl ../.. | wc -l
+vim ft_list_reverse.c 
+vim ../srcs/ft_padding.c
+./ft_ls -Rl ../.. | wc -l
+./ft_ls -Rl ../.. | cat -e 
+./ft_ls -Rl ../.. | cat -e
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+cd ft_ls/libft
+../ls
+valgrind --leak-check=full ./ft_ls
+rm -r ft_ls
+rm -rf ft_ls
+./ft_ls w
+./ft_ls ft_ls.dSYM
+./ft_ls -Rl ft_ls.dSYM
+valgrind --leak-check=yes -v ./ft_ls
+valgrind --leak-check=full -v ./ft_ls
+valgrind --leak-check=full --show-leak-kinds=all -v ./ft_ls
+./ft_ls  -Rl ..
+./ft_ls  -Rl ../..
+./ft_ls  -Rl ../....
+ls  -Rl ../....
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -v ./ft_ls
+./ft_ls  -Rl ../../..
+cat *.c
+vim ../libft/ft_strjoin,c
+vim ../libft/ft_strjoin.c
+vim ../libft/ft_strnew.c
+./ft_ls  -Rl
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./ft_ls
+valgrind --tool=memcheck --leak-check=yes ./ft_ls 
+vim ../libft/ft_itoa.c
+vim srcs/ft_CMD_l.c
+mqke re
+valgrind --tool=memcheck --leak-check=yes ./ft_ls -Rl
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -Rlart
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leaks-kinds=all ./ft_ls -Rlart
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -Rlart
+./ft_ls  -Rl 
+./ft_ls  -Rl / | time
+./ft_ls  -Rl /
+vim ../libft/ft_strjoinfree.c
+vim ft_memdel.
+ls 
+rm *_ls
+rm *ft_ls
+./ft_ls -lR ft_ls.dSYM srcs
+ls -lR ft_ls.dSYM srcs
+vim ../libft/ft_printtables.c
+vim ft_printtables.c
+vim ft_freetables.
+vim ft_freetables.c
+python --version
+wget http://python.org/ftp/python/3.5.0/Python-3.5.0.tgz
+brew python
+brew install python
+brew install pip
+pip3 install scdl
+brew install scdl
+cd scdl
+rm -rf scdl
+git clone https://github.com/flyingrub/scdl.git && cd scdl
+python3 setup.py install
+scdl -l https://soundcloud.com/Lazarre-1 -f
+./ft_ls -lR ../../../ ft_ls.dSYM
+./ft_ls -lR ../../..
+./ft_ls -lR .wegfw
+./ft_ls -l ft_ls.dSYM
+vim ../libft/ft_freetables.c
+cat ../libft/ft_freetables.c
+./ft_ls -lR ft_ls.dSYM
+cat ft_printtables.c
+make rwe
+./ft_ls -lR ft_ls\ 2
+cat oldmain.c
+cat ft_dup_tabtab.c
+nake re
+WORK
+./ft_ls -lR libft
+vim libft/ft_strcat.c
+zor
+./ft_ls -l libft | cat -e
+ls -l libft
+valgrind --tool=memcheck --leak-check=yes ./ft_ls -Rlart ..
+vim srcs/ft_CMD_r.c
+vim ../libft/ft_strdup.c
+valgrind --tool=memcheck --leak-check=yes ./ft_ls -Rlart
+valgrind --tool=memcheck --leak-check=yes ./ft_ls -lart
+valgrind --tool=memcheck ./ft_ls -lart
+./ft_ls -l libft
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./ft_ls -art
+ls =-l
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./ft_ls -lRart
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./ft_ls -lRart ../..
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./ft_ls -lart ../..
+./ft_ls -lart ../..
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./ft_ls -larRt ..
+./ft_ls -Rlart ..
+git clone https://github.com/tcanaud/vimctrl.git
+cd vimctrl
+cat vimctrl.sh
+sh vimctrl.sh
+cd vim
+cd vimrc
+cat vimrc2
+cat .vimrc
+cp vimrc/vimrc2 .vimrc
+rm -rf vimctrl/
+./ft_ls -Rlart
+ls -lrart
+cat ft_CMD_R.c
+cat ft_find_path.c
+cat ../libft/ft_strjoinfree.c
+vim ft_CMD_l.c 
+leaks ./ft_ls -l
+sudo leaks ./ft_ls -l
+man leaks
+leaks -- ./ft_ls
+leaks ./ft_ls -lart
+leaks ft_ls -lart
+cat ../includes/ls.h
+vim ft_CMD_l.o
+./ft_ls -lart
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./ft_ls -lart
+leaks --fullContent ft_ls
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./ft_ls -larRt
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./ft_ls -larRt ../../../
+rm -rf b
+rm -- ---
+rm -- -
+rm -rf libft.a
+rm truesls
+make clen
+cat make.sh
+vim make.sh
+cp ../*.
+cp ../*.sh .
+vim ft_dup_tabtab.
+../libftc
+vim ft_dup_tabtab.c
+./ft_ls -l includes
+./ft_ls -l includes srcs
+./ft_ls -lR ../../../
+./ft_ls -lR ../.. | wc -l
+ls -lR ../.. | wc -l
+./ft_ls -lR / | wc -l
+ls -lR / | wc -l
+./ft_ls -lR ../../
+ls -lR ../../
+./ft_ls -lR includes libft
+ls -lR includes srcs/ft_print_normal.c
+rm *ft
+rm -rf *ft
+rm ft_ls
+git checkout libft
+rm -rf Make
+rm -rf Makefile
+git checkout Makefike
+cp Makefile ../../libft/Makefile .
+./ft_ls -lR includes srcs/ft_print_normal.c
+git commit -m "Makefile bien propre et plus de leaks"
+rm .*
+sh make.sh
+vim libft
+git checkout a394678 Makefile
+vim *.a
+pwx
+rm make.sh
+make -n
+make re -n
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -Rlart ../..
+ls -lR includes srcs
+ls -lR includes srcs/ft_free.c
+./ft_ls -lR includes srcs/ft_free.c
+man buffstat
+cat ft_print_errors.c
+rm -r ft_ls.dSYM
+ls -lR includes  sdcss sdvsdv
+./ft_ls -lR includes srcs/ft_free.c sdcss sdvsdv
+./ft_ls -lR includes srcs/ft_free.c sdcss sdvsdv includes
+ls -lR includes  sssss
+./ft_ls -lR includes  sssss
+./ft_ls -lR includes srcs
+./ft_ls -lR includes
+./ft_ls -lR includes srcs Makefile
+ls -lR includes srcs Makefile
+ls -lR includes
+git commit -m "gestion de laffichage si plusieurs fichiers sont passes en meme temps"
+cd 42/ls/libft
+vim ft_screen_info.c
+./ft_ls -l 
+./ft_ls -l  ..
+./ft_ls -l  ../..
+./ft_ls -l  ../../..
+./ft_ls -l  ../../../..
+mv ft_print_names.c srcs/
+make flclean
+rm libft/*.o
+rm -rf myls
+././
+./ft_ls ..
+./ft_ls ../..
+./ft_ls ../../..
+./ft_ls ../../../..
+ls ../../../../..
+vim ft_print_names.c
+./ft_ls libft
+ls libft
+git commit -m "gestion de laffichage en colonnes"
+./ft_ls ../../../../..
+./ft_ls -l ../../../../.. >> myls
+ls -l ../../../../.. >> truemyls
+ls -l ../../../../..
+diff truemyls myls
+cat myls
+cat truemyls
+rm truemyls
+ls -l ../../../../.. srcs
+./ft_ls -l ../../../../.. srcs 
+./ft_ls -l ../../../../..
+./ft_ls -l ../../../../.. srcs includes 
+vim makere
+sh makere
+rm make
+rm makere
+./ft_ls -Rlart ../../../../../../
+ls -R includes
+ls -R libft
+ls -R 
+./ft_ls -d
+./ft_ls -dR
+ls -dR
+ls -fa
+ls -aG
+ls -@
+include
+rm ls.h.gch
+ls -tu
+vim author
+./ft_ls -ul
+cat main.o
+ls -f
+./ft_ls -a
+ls -gl
+./ft_ls -l sdfs libft srcs
+ls -l sdfs libft srcs
+./ft_ls -l libft srcs
+ls -lg
+./ft_ls -lg
+./ft_ls -sa
+./ft_ls --lRartufg
+./ft_ls -lRartufg
+ls -d
+ls -m
+./ft_ls -lSX
+man 2 time.h
+ls -lU srcs
+ls -l srcs
+./ft_ls srcs
+ls -U srcs
+./ft_ls -S srcs
+./ft_ls -Sl srcs
+./ft_ls -lt srcs
+./ft_ls -t srcs
+./ft_ls -L
+./ft_ls -U srcs
+./ft_ls -Ul srcs
+./ft_ls -l srcs
+ls -UL srcs
+ls -Ul srcs
+./ft_ls -lU srcs
+./ft_ls -lg srcs
+ls -lg srcs
+./ft_ls -Rg
+man sys/stat
+man sys/stat.h
+man timesped
+ld
+./ft_ls -Ul
+ls -Ul
+ls -Ulg
+ls -Ulgn
+ls -Ulgnk
+./ft_ls -Ulk
+ls -t
+sourcs .vimrc
+man timespec
+man 2 time
+man time
+cat author
+ls -u
+./ft_ls -f
+./ft_ls -luD
+ls -luD
+./ft_ls -luD includes
+./ft_ls -lu includes
+./ft_ls -lu includes libft
+cat ft_print_time.c
+cat ft_print_names.c
+vim ft_print_time.c
+rm ft_print_names.c
+mv ft_print_time.c ft_print_info.c
+cat ft_free.c
+cat ft_list_reverse.c
+vim ft_free.c
+mv ft_free.c ft_list_operations.c
+rm ft_list_reverse.c
+../../
+vim ../Makefile
+cat ft_parsing.c
+cat ft_CMD_l.c
+cat ft_print_info.c
+./ft_ls -lR | wc -l
+ls -@l ../../../../../
+ls -@ ../../../../../
+ls -@ ../../../..
+ls -@ ../../../../..
+ls -@ ../../../../../..
+man listxattr
+ls @ ../../../../
+ls -@l ../../../../../..
+vim srcs/ft_print_errors.c
+./ft_ls -l ../../../../../..
+ls -1
+ls -1g
+vim includes/ls.h 
+vim ft_CMD_1.c
+cat ft_print_normal.c
+./ft_ls -1uG
+PWD
+rm ft_ls\ 3
+rm ft_ls\ 4
+rm ft_ls\ 5
+rm *.o *.a
+make clea
+./ft_ls -1
+./ft_ls -1U
+./ft_ls -1u
+ls -*
+ls -F
+./ft_ls -1uP
+./ft_ls -1uP;
+./ft_ls -lRartufgSU1
+git commit -m "rangement en plusieurs fonctions pour preparer passage norminette a 42 et rajout de l'option -1"
+rm -rf get-next-line
+git clone https://github.com/Lazare-42/rb_tree
+cd rb_tree
+la
+../rb_tree
+cat LICENSE 
+RM LICENSE
+CAT CHANGES
+rm CHANGES
+cat red_black_tree.php
+vim red_black_tree.h
+./ft_ls -lRartufgSU1 /
+cat test_red_black_tree.
+cat test_red_black_tree.c
+vim test_red_black_tree.c
+cat *.h
+vim stack.h
+vim srcs/*
+wotk
+v ft_place_element.c
+v ft_store.c
+make cleam
+time ./ft_ls  -Rl /
+git checkout 1683463 ft_parsdscds
+git checkout 1683463 ft_parsing.c
+git checkout 1683463 ls.h
+./ft_ls -lR /Applications
+./ft_ls -lR /Applications | wc -l
+./ft_ls -lR /Users/
+time ./ft_ls -lRt / 
+time ./ft_ls -lR / 
+./vim ft_padding.c
+./ft_ls -lRt /
+cleE
+git checkout ft_cmd_l.c
+git checkout ft_CMD_l.c
+ls -l | wc -l
+./ft_ls -l | wc -l
+lldb ft_ls
+../includesclear
+ls -
+srcs 
+./ft_ls -
+make/
+./ft_ls -R /
+time ./ft_ls -R /
+cat coucou.c
+ls]
+git checkout ft_padding.c
+vim ft_memset.c
+vim coucou.c
+gcc coucou.c
+makw re
+./a.out | cat -e
+git clone https://github.com/Lazare-42/oldls
+git clone https://github.com/Lazare-42/ls oldls
+git checkout 0ba5d05 includes/ls.h
+time ft_ls -lR
+time ft_ls -lR /
+git checkout 1683463 main.c
+git checkout 1683463 srcs/ft_parsing.c
+git checkout 1683463 srcs/main.c
+git checkout 1683463 includes/ls.h
+git commit -m "version en arbres binaires dont le padding de CMD-l est non fonctionnel et plus lent"
+../includes
+cd libft/
+../oldls
+time -v ./ft_ls -lR /
+time ./ft_ls -lR / | wc -l
+vim srcs/ft_padding.c
+rm ft_ls\ 2
+../../oldls
+cat *.c >> allcode
+vim allcode
+mv allcode allcode.c
+cd old
+cd oldls
+cat ft_padding.c
+pdw
+vim srcs/ft_CMD_g.c
+cat ft_store.c
+vim ft_cmd_l.c
+vim ft_padding.o
+./ft_ls -l | cat -e
+./ft_ls -l >> myls
+ls -l >> truels
+vim srcs/ft_store.c
+vim ft_place_element.o
+mkdir Esssec/administratif
+mkdir Esssec-administratif
+git commit -m "reprise sans le pqdding aui faisait bogguer du ls"
+gitadd
+gitcommit-m "arbre bilale non fonctionnel"
+rm -rf libft/libft.a
+git checkout Makefile
+git checkout HEAD libft
+rm -rf oldls
+git checkout binary_tree
+rm coucou.c
+vim vim ft_store.c
+time ./ft_ls -lR
+vim vim ls.c
+SRCS
+git checkout -b improved-padding
+git commit -m "padding sqns deuxieme parcours"
+git push origin
+git push --set-upstream origin improved-padding
+git clone https://github.com/Lazare-42/ls
+git clone https://github.com/Lazare-42/ls branch-ls
+git checkout improved-padding
+ls -lR ../..
+./ft_ls -lR ../..
+./ft_ls -lR ..
+git checkout master ls.c
+rm ft_CMD_g.c
+cp ft_CMD_l.c ft_CMD_g.c
+ls -g 
+ls =g
+ls =l
+./ft_ls -lRk
+./ft_ls -lRaK
+./ft_ls -lRar
+./ft_ls -lRa
+git clone https://github.com/Lazare-42/ls master-ls
+cd master-ls
+rm \\ 
+mkdir \\ 
+vim ft_place_element
+git checkout srcs/ft_place_element.c
+..
+make re
+./ft_ls -l
+./ft_ls -la
+./ft_ls -lr
+clear
+./ft_ls -lr
+lldb ./ft_ls
+make re
+./ft_ls -lr
+make re
+./ft_ls -lr
+../libft
+v ft_strcmp.c
+../../branch-ls
+srcs
+vim ft_place_element.c
+ls -K
+./ft_ls ls -K
+./ft_ls -K
+clear
+vim command_sort.txt
+./ft_ls -K
+..
+./ft_ls -K
+man 2 stat
+clear
+./ft_ls -K
+man ls
+make re
+./ft_ls -l
+ls -l
+git add .
+git commit -m "amelioration du tri de stockage, une seule operation de comparaison (comme ft_strcmp) au lieu de 2 a chaque fois"
+git push
+clear
+./ft_ls -l
+./ft_ls -g
+clear
+srcs
+vim ft_place_element.c
+vim *.txt
+..
+vim *.txt
+../../branch-ls
+srcs
+vim ft_place_element.c
+git checkout 1683463 ft_place_element.c
+vim ft_place_element.c
+clear
+vim ft_store.c
+..
+make re
+./ft_ls -g
+ls -g
+ls
+rm *.o
+rm ft_ls\ 2 ft_ls\ 3
+ls
+clear
+./ft_ls -g
+make re
+./ft_ls -g
+make clean
+clear
+vim Makefile
+make new
+ls
+vim Ma
+vim Makefile
+make new
+vim Makefile
+make new
+./ft_ls -g
+make re
+./ft_ls -g
+vim ls.c
+make re
+./ft_ls -g
+make re
+./ft_ls -g
+make re
+./ft_ls -g
+make re
+./ft_ls -g
+ls -g
+clear
+./ft_ls -g
+./ft_ls -l
+make re
+./ft_ls -l
+make re
+./ft_ls -l
+make re
+./ft_ls -l
+make re
+./ft_ls -l
+make re
+./ft_ls -l
+make re
+./ft_ls -l
+make re
+./ft_ls -l
+make re
+./ft_ls -l
+git checkout ft_place_element.c
+srcs
+git checkout ft_place_element.c
+..
+make re
+./ft_ls -l
+make re
+./ft_ls -l
+clear
+./ft_ls -l
+git checkout srcs/ft_store.c
+make re
+./ft_ls -l
+..
+make re
+./ft_ls -l
+vim ft_place_element.c
+srcs
+vim ft_store.c
+vim ft_place_element.c
+..
+make re
+./ft_ls -l
+ls
+make re
+./ft_ls -l
+srcs
+vim ft_store.c
+vim ls.c
+vim ft_store.c
+vim includes/ls.h
+make re
+./ft_ls -l
+vim includes/ls.h
+make re
+rm ft_ls\ 2 ft_ls\ 3
+rm *.o
+ls
+rm ft_ls\ 2 ft_ls\ 4
+ls
+./ft_ls -l
+ls -l
+clear
+..
+vim *.txt
+vim includes/ls.h
+..
+make re
+./ft_ls -l
+ls -l
+clear
+./ft_ls -lt
+clear
+time ./ft_ls -lR /
+vim *.txt
+clear
+../branch-ls
+git checkout b796a3f ft_store.c
+git checkout b796a3f srcs/ft_store.c
+srcs
+vim ft_store.c
+..
+git checkout b796a3f srcs/ft_place_element.c
+srcs
+vim ft_place_element.c
+../../ls
+srcs
+vim ft_place_element.c
+..
+vim *.txt
+srcs
+vim *.txt
+pwd
+vim *.txt
+..
+vim *.txt
+man ls
+vim includes/ls.h
+vim *.txt
+vim includes/ls.h
+work
+pwd
+clear
+vim ../includes/ls.h
+../../branch-ls/srcs
+vim ft_place_element.c
+..
+make re
+./ft_ls -lt
+./ft_ls -l
+./ft_ls -lt
+lldb r
+y
+lldb ./ft_ls
+make re
+./ft_ls -lt
+./ft_ls -lU
+./ft_ls -lUs
+./ft_ls -lS
+./ft_ls -lu
+ls -lu
+./ft_ls -lu
+./ft_ls -lt
+lldb ./ft_ls
+clear
+ls
+./ft_ls
+./ft_ls -l
+ls -l
+ls -lt
+./ft_ls -lt
+./ft_ls -lu
+ls -lu
+lldb ./ft_ls
+srcs
+vim ft_store.c
+clear
+./ft_ls -lu
+..
+./ft_ls
+./ft_ls -l
+./ft_ls -lu
+./ft_ls -lt
+lldb ./ft_ls
+srcs
+vim ft_store.c
+clear
+vim rotate.c
+vim ft_store.c
+vim ft_place_element.c
+vim ft_store.c
+clear
+vim .vimrc
+cd
+vim .vimrc
+cd
+source .vimrc
+work
+vim ft_store.c
+..
+make re
+srcs
+vim ft_place_element.c
+..
+make re
+./ft_ls -lt
+./ft_ls -l
+./ft_ls
+git diff srcs/ft_place_element.c
+lldb ./ft_ls
+srcs
+vim ft_place_element.c
+cd
+work
+..
+vim Makefile
+make re
+vim Makefile
+make re
+vim Makefile
+make
+vim Makefile
+make\\n
+make
+make re
+./ft_ls
+srcs
+vim ft_place_element.c
+make re
+./ft_ls
+make re
+./ft_ls
+./ft_ls -t
+./ft_ls
+rm *.o
+rm ft_ls\ 2 ft_ls\ 4
+rm ft_ls\ 2 ft_ls\ 3
+./ft_ls
+./ft_ls -u
+./ft_ls -l
+./ft_ls
+ls
+mv author auteur
+nake
+make
+./ft_ls -l
+./ft_ls 
+./ft_ls /
+./ft_ls /dev
+./ft_ls -l
+./ft_ls -t
+q
+make re
+./ft_ls -t
+./ft_ls -u
+./ft_ls -U
+./ft_ls -t
+./ft_ls -r
+vim ft_store.o
+srcs
+vim ft_store.c
+vim rotate.c
+vim ft_store.c
+make re
+./ft_ls -r
+./ft_ls -rt
+./ft_ls -rtl
+make re
+clear
+ls
+rm ft_ls\ 2 ft_ls\ 3
+rm *.o
+./ft_ls -rtl
+ls -rtl
+vim Makefile
+clear
+./ft_ls -tl
+./ft_ls -tlr
+./ft_ls -t
+vim Makefile
+make re
+./ft_ls -t
+./ft_ls -r
+./ft_ls -rl
+./ft_ls -l
+ls -rl
+clear
+./ft_ls -l
+clear
+./ft_ls -lr
+ls -lr
+vim ft_place_element.c
+make re
+./ft_ls -lr
+clear
+make re
+..
+make re
+./ft_ls -lr
+./ft_ls -lrt
+./ft_ls -lt
+./ft_ls -lrt
+./ft_ls -lr
+./ft_ls -lrt
+clear
+./ft_ls -lrt
+./ft_ls -lr
+./ft_ls -l
+./ft_ls -lrt
+./ft_ls -lt
+./ft_ls -lrt
+make re
+./ft_ls -lrt
+make re
+./ft_ls -lrt
+make rex
+make re
+./ft_ls -lrt
+srcs
+vim rotate.c
+./ft_ls -lt
+clear
+c
+clear
+npm start
+npm install
+npm start
+node app.js
+netstat -anp tcp | grep 3000
+clear
+..
+make re
+./ft_ls -lt
+./ft_ls -ltr
+clear
+srcs
+vim ft_store.c
+vim ft_place_element.c
+make re
+./ft_ls -ltr
+./ft_ls -lt
+make re
+./ft_ls -lt
+c
+make re
+./ft_ls -lt
+work
+vim ft_place_element.c
+..
+make re
+./ft_ls -lt
+..
+make re
+./ft_ls -lt
+./ft_ls -ltr
+./ft_ls -ltu
+./ft_ls -lur
+make re
+./ft_ls -lur
+make re
+./ft_ls -lur
+./ft_ls -lu
+./ft_ls -lt
+./ft_ls -ltr
+rm *.o
+rm ft_ls\ 2 ft_ls\ 3
+./ft_ls -ltr
+clear
+./ft_ls -lt
+ls -lt
+ls -ltr
+./ft_ls -ltr
+git add .
+git commit -m "sort quasiment fonctionnel"
+git push
+make re
+./ft_ls -lt
+make re
+./ft_ls -lt
+clear
+./ft_ls -lt
+clear
+./ft_ls -ltr
+./ft_ls -lt
+clear
+ls -lt
+clear
+make re
+clear
+./ft_ls -lt
+srcs
+vim rotate.c
+clear
+vim ft_store.c
+make re
+..
+make re
+./ft_ls -lt
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -l
+vim Ma
+vim Makefile
+clear
+./ft_ls -lt
+vim srcs/rotate.c
+make re
+./ft_ls -lt
+make re
+./ft_ls -lt
+make re
+./ft_ls -lt
+make re
+./ft_ls -lt
+./ft_ls -ltr
+make re
+./ft_ls -ltr
+make re
+./ft_ls -ltr
+./ft_ls -lt
+ls -lt
+./ft_ls -ltr
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -l
+./ft_ls -ltr
+./ft_ls -lt
+make re
+./ft_ls -lt
+./ft_ls -ltr
+./ft_ls -l
+./ft_ls -lr
+./ft_ls -l
+./ft_ls -lr
+make re
+./ft_ls -lr
+make re
+./ft_ls -lr
+clear
+srcs
+vim ls.c
+make re
+./ft_ls -lr
+./ft_ls -l
+clear
+./ft_ls -l
+clear
+./ft_ls -lr
+./ft_ls -lrt
+./ft_ls -lt
+./ft_ls -lu
+./ft_ls -lur
+make clean
+rm ft_ls\ 2 ft_ls\ 3
+rm *.o
+clear
+./ft_ls -lt
+clear
+ls -lt
+..
+clear
+ls -lt
+make re
+clear
+./ft_ls -lt
+clear
+ls -lt
+make re
+clear
+./ft_ls -lt
+./ft_ls -ltr
+./ft_ls -ltu
+./ft_ls -lu
+clear
+ls -lu
+git add .
+git commit -m "sort quasiment fonctionnel des options semblent ne pas marcher mais ca ne segfault pas"
+git push
+cd libft
+ls
+rm *.o
+ls
+rm *.a
+ls
+..
+ls
+clear
+ls
+rm ft_ls\*
+rm ft_ls*
+rm -r ft_ls*
+ls
+rm *.a
+rm *.o
+clear
+./ft_ls -lui
+make re
+make clean
+clear
+./ft_ls -lu
+ls -lu
+ls -lU
+./ft_ls -lU
+clear
+./ft_ls -lk
+vim command_sort.txt
+CLEAR
+./ft_ls -lU
+CLEAR
+./ft_ls -lu
+ls -lu
+./ft_ls -lu
+./ft_ls -lur
+./ft_ls -lt
+clear
+ls
+make re clean
+ls
+make clena
+make clean
+clear
+ls
+./ft_ls -lt
+ls -lt
+make re
+clear
+./ft_ls -lt
+ls
+cat exemple.py
+rm exemple.py
+clear
+ls
+clear
+./ft_ls -lt
+./ft_ls -lu
+ls -lu
+clear
+./ft_ls -lS
+ls -lS
+vim Makefile
+make re
+./ft_ls -lS
+clear
+./ft_ls -lS
+./ft_ls -l
+./ft_ls -lr
+ls -l
+make re
+./ft_ls -lr
+time ./ft_ls -l /
+time ./ft_ls -lR /
+ls -lR /
+time ls -lR /
+./ft_ls -lu
+clear
+./ft_ls -lS
+./ft_ls -ls
+ls -Sl
+clear
+./ft_ls -lS
+clear
+./ft_ls -l
+srcs
+vim rotate.c
+make re
+./ft_ls -lS
+ls -lS
+make re
+./ft_ls -lS
+make re
+./ft_ls -lS
+./ft_ls -lSr
+git add .
+git commit -m "sort quasiment fonctionnel des options semblent ne pas marcher mais ca ne segfault pas"
+git push
+make re
+./ft_ls -lSr
+./ft_ls -lS
+vim ft_place_element.c
+..
+make re
+./ft_ls -lS
+clear
+git pull
+git stash
+git pull
+git checkout Thbault
+clear
+make re
+..
+make re
+clear
+vim Makefile
+git checkout master Makefile
+vim Makefile
+vim makemf.sh
+make
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+ls
+cd bin
+ls
+sh makemf.sh ./ft_ls
+y
+..
+sh makemf.sh ./ft_ls
+make
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+vim Makefile
+make re
+vim makemf.sh
+vim Make
+vim Makefile
+sh makemf.sh ./ft_ls
+make re
+vim Makefile
+make re
+sh makemf.sh ./ft_ls
+make re
+vim makemf.sh
+sh makemf.sh ./ft_ls
+make re
+vim Makefile
+git checkout makemf.sh
+vim makemf.sh
+sh makemf.sh ./ft_ls
+make re
+vim makemf.sh
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+git checkout master Makefile
+vim Makefile
+sh makemf.sh ./ft_ls
+make re
+mqake re
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+vim Makefile
+sh makemf.sh ./ft_ls
+make re
+vim Makefile
+sh makemf.sh ./ft_ls
+make re
+sh makemf.sh ./ft_ls
+make re
+vim Makefile
+make re
+sh makemf.sh ./ft_ls
+make re
+clear
+./ft_ls -l
+clear
+./ft_ls -l -r
+./ft_ls -l -R
+chmod u+s b.pl 
+touch coucou
+chmod u+s coucou
+ls -l
+./ft_ls -l
+ls -l /|grep tmp
+./ft_ls -l | grep tmp
+./ft_ls -l /tmp
+ls -l /tmp
+./ft_ls -l /private
+./ft_ls -l /tmp
+./ft_ls -lR /
+git checkout master
+git add .
+git commit -m "Modif Makefile"
+git push
+git checkout master
+vim Makefile
+make re
+vim Makefile
+make re
+./ft_ls -lR /
+vim Makefile
+make re
+./ft_ls -lR /
+git add .
+git commit -m "Modif Makefile"
+git push
+work
+git checkout Thbault
+./ft_ls -lR -- - --
+..
+./ft_ls -lR -- - --
+git checkout main
+git checkout master
+./ft_ls -lR -- - --
+clear
+git pull
+ls
+make clean
+ls
+make re
+..
+pwd
+cd branch-ls
+git pull
+./ft_ls -lR -- - --
+make
+..
+cd branch-ls
+git checkout FETCH_HEAD
+make 
+git checkout HEAD
+ls
+git log
+git branch --sort=-committerdate 
+git checkout FETCH-HEAD
+git fetch git merge FETCH_HEAD
+git fetch merge FETCH_HEAD
+git fetch ls merge FETCH_HEAD
+git pull
+git  checkout 77297c6
+git pull
+git checkout master
+git pull
+./ft_ls -lR -- - --
+./ft_ls -lR
+./ft_ls -lS
+clear
+ls
+qork
+work
+git pull
+git stash
+git pull
+..
+git pull
+cd
+brew install valgrind
+work
+git pull
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -l
+..
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -l
+ft_ls -l
+./ft_ls -lS
+sh makemf.sh ./ft_ls
+make re
+./ft_ls -lS
+./ft_ls -lS /tmp
+clear
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -l
+qork
+work
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -l
+..
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./ft_ls -l
+./ft_ls -lS /tmp
+leaks ./ft_ls
+srcs
+vim ls.c
+make re
+..
+make re
+./ft_ls -lSR /
+leaks ./ft_ls
+leaks ft_ls
+./ft_ls -lSR //usr/local/bin
+./ft_ls -lSR /usr/local/bin
+srcs
+vim ft_padding.c
+make
+./ft_ls -lSR /usr/local/bin
+make
+./ft_ls -lSR /usr/local/bin
+vim srcs/ls.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+git add .
+git pull
+git commit -m "travail qui traine sur l'ordi"
+git push
+git add .
+git pull
+./ft_ls -lSR /usr/local/bin
+..
+rm -rf ls
+git clone https://github.com/Lazare-42/ls ls
+cd ls
+./ft_ls -lSR /usr/local/bin
+make
+sh makemf.sh ./ft_ls
+make
+./ft_ls -lSR /usr/local/bin
+./ft_ls -lSR /
+vim Makefile
+vim libft/Makefile
+make re
+time ./ft_ls -lSR /
+top | grep ft_ls
+top
+top | grep ft_ls
+leaks 6006
+leaks 7658 6006
+leaks 7658
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+srcs
+vim ft_print_info2.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make
+./ft_ls -lSR /
+make
+./ft_ls -lSR /
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim ft_store.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -l
+vim srcs/ft_list_operations.c
+make
+./ft_ls -lSR /
+vim srcs/ft_list_operations.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -l
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim ft_store.c
+make
+./ft_ls -lSR /
+make
+./ft_ls -lSR /
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+tests
+pwd
+..
+work
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+..
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim srcs/ft_list_operations.c
+make
+vim srcs/ft_list_operations.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim libft/ft_bzero.c
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make
+./ft_ls -lSR /
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+srcs
+vim ft_store.c
+make
+./ft_ls -lSR /
+man 2 lstat
+git checkout Thbault ft_list_operations.c
+git checkout 1683463 ft_list_operations.c
+vim ft_list_operations.c
+git checkout 1683463
+git add .
+srcs
+..
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+git checkout 1683463
+git add .
+git commit -m coucou
+git push
+git checkout 1683463
+make
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+srcs
+vim ft_store.c
+s
+git checkout master
+git stash
+git checkout master
+..
+git checkout master
+make clean
+git stash
+git checkout master
+rm -rf *
+git stash
+git checkout master
+srcs
+vim ft_store.c
+vim ft_list_operations.c
+lw
+pwd
+git status
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+..
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make 
+./ft_ls -lSR /
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make
+./ft_ls -lSR /
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim includes/ls.h
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim srcs
+git pull
+tests
+mv ft_store.c mainstore.c
+git checkout 1683463 ft_store.c
+vim ft_store.c
+vim mainstore.c
+vim ft_padding.c
+git checkout 1683463 ft_padding.c
+vim ft_padding.c
+..
+make
+mv ft_store.c mainstoree.c
+mv mainstore.c ft_store.c
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim ft_padding.c
+srcs
+vim ft_padding.c
+..
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim ft_store.c
+vim srcs/ft_find_path.c
+make
+./ft_ls -lSR /
+vim srcs/ft_find_path.c
+make
+./ft_ls -lSR /
+make
+./ft_ls -lSR /
+make
+./ft_ls -lSR /
+vim srcs/ft_find_path.c
+make
+./ft_ls -lSR /
+make
+./ft_ls -lSR /
+make
+./ft_ls -lSR /
+srcs
+git checkout ft_store.c
+vim ft_store.c
+git checkout ft_store.c
+vim ft_store.c
+..
+make
+./ft_ls -lSR /
+srcs
+work
+..
+make
+./ft_ls -lSR /
+srcs
+vim ft_store.c
+vim ft_find_path.c
+git checkout .ft_find_path.c.swp
+vim .ft_find_path.c.swp
+rm .ft_CMD_l.c.swo .ft_find_path.c.swp .ls.c.swp .rotate.c.swo
+pwd
+..
+rm -rf ls
+git clone https://github.com/Lazare-42/ls ls
+cd ls
+make
+sh makemf.sh ./ft_ls
+make
+make re
+./ft_ls -lSR /
+clear
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim Makefile
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+srcs
+vim ft_store.c
+mae
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim ft_list_operations.c
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+git add .
+git commit -m "NO MORE LEAKS"
+git push
+ls
+rm -rf ft_ls.dSYM
+ls
+..
+./ft_ls -lSR /
+top | grep ft_ls
+leaks 5349
+leaks 5007
+make
+./ft_ls -lSR /
+leaks 5007
+leaks 5349
+top | grep ft_ls
+leaks 5414
+man ls
+ls -i
+ls -il
+man 2 lstat
+man ls
+manvim srcs
+srcs
+vim ft_store.c
+vim ../includes/ls.h
+vim ft_print_normal.c
+..
+make
+./ft_ls -SR /
+./ft_ls -S 
+ls -Si
+make
+./ft_ls -S 
+clear
+./ft_ls -S 
+ls -Si
+make
+./ft_ls -S 
+make
+./ft_ls -S 
+make
+./ft_ls -S 
+make
+./ft_ls -S 
+vim ft_store.c
+vim ls.c
+vim ft_padding.c
+vim ft_store.c
+vim ft_padding.c
+ls -Si
+..
+git status
+git checkout 3e7ffe2
+git stash
+git checkout 3e7ffe2
+make
+clear
+ls -Si
+clear
+ls -Si
+vim ft_print_normal.c
+srcs
+vim ls.c
+vim ft_print_normal.c
+vim ../includes/ls.h
+..
+make
+./ft_ls -S 
+make
+./ft_ls -S 
+make
+./ft_ls -S 
+make
+./ft_ls -S 
+make
+./ft_ls -S 
+make
+./ft_ls -S 
+vim ft_CMD_l.c
+srcs
+vim ls.c
+vim main.c
+vim ls.c
+vim ft_padding.c
+vim ft_store.c
+vim ft_CMD_l.c
+..
+make
+./ft_ls -S
+./ft_ls -Si
+./ft_ls -Sl
+make
+./ft_ls -Sl
+./ft_ls -S
+clear
+make
+./ft_ls -S
+./ft_ls -Sl
+git checkout ls.c
+git checkout 3e7ffe2 ls.c
+srcs
+git checkout 3e7ffe2 ls.c
+git checkout 3e7ffe2 ft_CMD_l.c
+..
+make
+clear
+vim ls.c
+make
+./ft_ls -Sl
+..
+./ft_ls -Sl
+make
+./ft_ls -Sl
+srcs
+vim ft_print_normal.c
+vim ft_CMD_l.c
+git checkout -b option-I-caca
+git checkout master
+make
+./ft_ls -Sl
+git checkout 5e5ed74
+git stash
+git checkout 5e5ed74
+./ft_ls -Sl
+git checkout 0ffeb68
+./ft_ls -Sl
+make
+make re
+sh makemf.sh ./ft_ls
+make 
+./ft_ls -Sl
+git checkout master
+git add .
+git commit -m "nul"
+git checkout master
+git checkout 0ffeb68
+clear
+vim Makefile
+./ft_ls -Sl /
+make re
+./ft_ls -Sl /
+sh makemf.sh ./ft_ls
+make re
+./ft_ls -Sl /
+./ft_ls -SlR /
+top | grep ft_ls
+leaks 10216
+git checkout -b working-branch
+clear
+a
+srcs
+git checkout master ft_list_operations.c
+..
+git add .
+git commit -m "recupere ft_list operations de la main branch"
+git push
+git push --set-upstream
+git push --set-upstream origin working-branch
+make
+./ft_ls -SlR /
+./ft_ls -SlR 
+./ft_ls -Sl
+git status
+git master 
+git checkout master
+git add .
+git commit -m "RAS"
+git checkout master
+ls
+make
+./ft_ls -Sl /
+./ft_ls -SlR /
+top | grep ft_ls
+git checkout working-branch
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim Makefile
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+git checkout master srcs/ft_list_operations.c
+make
+make re
+./ft_ls -SlR /
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+git checkout master
+git add .
+git commit -m "je remarque que cette branche leak"
+git checkout master
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+ls -l
+git status
+srcs
+vim ft_print_normal.c
+vim ../includes/ls.h
+vim ft_print_normal.c
+make
+./ft_ls -S
+make
+./ft_ls -S
+make
+./ft_ls -S
+make
+./ft_ls -S
+./ft_ls -Sl
+srcs
+mv ft_print_normal.c ../
+,,
+..
+ls
+srcs
+git checkout ft_print_normal.c
+..
+make
+git checkout includes/ls.h
+make
+./ft_ls -Sl
+vim ls.c
+vim ft_print_normal.c
+./ft_ls -S
+vim ft_CMD_l.c
+cat *.c >> allcode.c
+vim allcode.c
+vim ft_CMD_l.c
+vim ft_find_path.c
+vim ft_CMD_l.c
+git add .
+git commit "CMD_L ne marche pas..."
+git checkout 0ffeb68
+git add .
+git commit "CMD_L ne marche pas..."
+git commit "cmd lne marche pas..."
+git commit -m "cmd lne marche pas..."
+git checkout 0ffeb68
+make re
+sh makemf.sh ./ft_ls
+make re
+./ft_ls -Sl
+vim Makefile
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+git checkout master ft_list_operations.c
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+ls -l
+./ft_ls -Sl
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+vim ft_print_info2.c
+make
+./ft_ls -Sl
+make
+./ft_ls -Sl
+make
+./ft_ls -Sl
+make
+./ft_ls -Sl
+make
+./ft_ls -Sl
+make
+./ft_ls -Sl
+make
+./ft_ls -Sl
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make
+./ft_ls -Sl
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+git checkout master
+git add . 
+git commit -m "en fait le bogue venait de ft_get_rights, son strdel faisait tout boguer"
+git checkout master
+cle
+armake
+make
+./ft_ls -Sl
+vim ft_print_info2.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+make re
+./ft_ls -Sl
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+git add .
+git commit -m "bogue de la disparition des droits resolu. Venait dun bugue dans le ft_get_rights ou son strenew ? Passe a une allocation statique aurait du etre le cas des le debut a moins que ca navait une raison ?"
+git push
+vim ft_print_normal.c
+vim ls.c
+vim ../includes/ls.h
+make
+./ft_ls -Sl
+./ft_ls -S
+make
+./ft_ls -S
+make
+./ft_ls -S
+make
+./ft_ls -S
+clear
+vim ft_CMD_l.c
+srcs
+vim ft_store.c
+vim ls.c
+vim ft_print_info2.c
+vim ft_print_info.c
+..
+sh makemf.sh ./ft_ls
+make
+clear
+make
+srcs
+rm allcode.c
+sh makemf.sh ./ft_ls
+make
+clear
+make
+vim ft_CMD_g.c
+make
+vim ft_CMD_l.c
+make
+./ft_ls -Sl
+vim ls.c
+make
+./ft_ls -Sl
+ls -li
+vim ft_parsing.c
+make
+./ft_ls -Sl
+./ft_ls -Sli
+make
+./ft_ls -Sli
+./ft_ls -Sl
+./ft_ls -Sli
+./ft_ls -Si
+./ft_ls -S
+clear
+vim ft_print_errors.c
+make
+./ft_ls -Si
+./ft_ls -SiG
+man ls
+./ft_ls -SiGe
+ls -lie
+ls -lie /
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+..
+vim Makefile
+..
+make
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./ft_ls -lR
+./ft_ls -SiGe
+./ft_ls -SiG
+./ft_ls -Si
+git add .
+git commit -m "Ajout de l'option 'i' qui imprime le inode number de chaque fichier"
+git push
+clear
+git stash
+vim .vimrc
+source .vimrc
+vim .vimrc
+source .vimrc
+vim .vimrc
+~~~~~~~~~~~~~~
+vim .vimrc
+source .vimrc
+vim .vimrc
+source .vimrc
+vim .vimrc
+source .vimrc
+vim .vimrc
+source .vimrc
+vim .vimrc
+work
+vim .vimrc
+cd
+vim .vimrc
+source .vimrc
+vim .vimrc
+source .vimrc
+vim .vimrc
+work
+..
+git clone https://github.com/Lazare-42/minishell
+cd minishell
+git pull
+l
+git pull
+ls
+sh makemf.sh
+ls
+vim .zshrc
+sh makemf.sh
+source .vimrc
+work
+pwd
+cd
+source .zshrc
+work
+mv Downloads/Programmation-systeme-en-C-sous-Linux.pdf Documents/
+cd Documents
+ls
+open Programmation-systeme-en-C-sous-Linux.pdf
+cd
+work
+vim libft/ft_atoi.c
+clear
+ls
+mkdir srcs
+mkdir includes
+cp /Users/lazrossi/Downloads/minishell.fr.pdf .
+git add .
+git commit -m "ajout du sujet du minishell et creation des dossiers"
+git push
+open minishell.fr.pdf
+cp /Users/lazrossi/Downloads/ | ls -c
+cp /Users/lazrossi/Downloads/Programmation-systeme-en-C-sous-Linux.pdf .
+git add .
+git commit -m "ajout du manuel"
+git push
+open Programmation-systeme-en-C-sous-Linux.pdf
+open minishell.fr.pdf
+clear
+ps
+top
+ps
+./../ls/ft_ls -lR /
+ps
+clear
+ps
+./../ls/ft_ls -lR /
+ps
+leaks 967
+clear
+vim main.c
+srcs
+touch main.c
+touch ../includes/minishell.h
+vim main.c
+../../libft
+..
+ls
+mv ls ft_ls
+cd ft_ls
+vim includes/ls.h
+make re
+make
+../../ft_ls/includes
+vim ls.h
+../srcs
+vi, ft_CMD_R.c
+vi ft_CMD_R.c
+../../ft_ls/srcs/
+vim ft_CMD_R.c
+../includes/
+vim ls.h
+../../ft_ls/includes/
+vim ls.h
+..
+sh makemf.sh
+make
+make re
+vim Makefile
+sh makemf.sh minishell
+make re
+vim ../ft_ls
+cat main.c
+cp main.c ../includes/minishell2.h
+rm main.c
+cp ../includes/minishell.h main.c 
+mv ../includes/minishell.h minishell
+mv ../includes/minishell minishell.h
+ls ../includes/minishell2.h
+ls ../includes/
+mv ../includes/minishell2.h minishell.h
+sh makemf.sh minishell
+make re
+vim main.c
+make re
+./minishell
+clear
+./minishell
+make
+./minishell
+man execve
+man getcwd
+cd libft
+vim ft_putabs.c
+make
+make re
+vim Makefile
+make
+make re
+..
+make
+libft
+vim ft_putabs.c
+..
+vim ft_putabs.c
+libft
+vim ft_putabs.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+cd libft
+vim include/libft.h
+make
+make re
+vim Makefile
+make re
+pwd
+vim main.c
+clear
+./minishell
+..
+clear
+./minishell
+man chdir
+man getcwd
+make
+vim includes
+cd includes
+ls
+..
+ls
+cd srcs
+ls
+mv cat minishell.h
+cat minishell.h
+mv minishell.h ../includes
+..
+make
+vim includes/minishell.h
+../..
+mv old past
+cd past/fillit
+vim fillit.h
+ls
+..
+ls
+..
+ls
+rm -rf rb_tree
+rm -rf master-ls
+rm -rf branch-ls
+clear
+;s
+ls
+git clone https://github.com/Lazare-42/get-next-line.git
+get-next-line
+vim get_next_line.h
+..
+vim ft_ls/includes/ls.h
+vim get-next-line/get_next_line.h
+vim includes/minishell.h
+make
+./minishell
+vim includes/minishell.h
+make
+./minishell
+make
+./minishell
+make
+./minishell
+rm minishell
+vim main.c
+clear
+..
+make
+./minishell
+make
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+mak
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+man 2 fork
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git add .
+git commit -m "Quelaues fonctions en marche. Jetais en train de m'interesser a chdir et son utilite sur le PDF"
+git push
+cd minishell
+git pull
+clear
+sh makemf.sh minishell
+make 
+vim includes/minishell.h
+make 
+make
+./minishell
+vim includes/minishell.h
+clear
+srcs
+vim builtin_commands.c
+vim ../includes/minishell.h
+make re
+./minishell
+vim builtin_commands.c
+clear
+vim main.c
+vim builtin_commands.c
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+./minishell
+..
+ls
+cd past/fillit
+vim ft_check_tetriminos.c
+..
+cd ../get-next-line
+../past/fillit
+ls
+vim main.c
+vim ft_file_to_string.c
+clear
+vim ft_file_to_string.c
+vim includes/minishell.h
+clear
+vim main.c
+make
+make re
+..
+make re
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+srcs
+vim builtin_commands.c
+make
+..
+make re
+./minishell
+./minishell ls
+make
+./minishell ls
+srcs
+vim builtin_commands.c
+make
+..
+make
+./minishell ls
+make
+./minishell ls
+./minishell cd
+make
+./minishell cd
+vim libft/ft_putabs.c
+vim libft/libft.h
+vim libft/Makefile
+make re
+vim libft/libft.h
+vim libft/ft_putabs.c
+vim libft/libft.h
+make re
+./minishell cd
+./minishell cd coucou 
+./minishell cd coucou  d
+./minishell cd coucou  d ls
+./minishell cd coucou  d ls sssss
+./minishell
+./minishell kjh hjg
+make
+./minishell kjh hjg
+make
+./minishell kjh hjg
+make
+./minishell kjh hjg
+man 2 read
+vim includes/minishell.h
+42
+cd
+vim .zshrc
+source .zshrc
+42
+source .zshrc
+cd
+source .zshrc
+42
+ls
+cd get-next-line
+vim get_next_line.c
+ls
+work
+libft
+git clone vogsphere@vogsphere.42.fr:intra/2017/activities/get_next_line/lazrossi4
+42
+get-next-line
+vim get_next_line.h
+git pull
+vim get_next_line.h
+vim get_next_line.c
+tests
+vim get_next_line.h
+work
+42
+get-next-line
+git add .
+git commit -m "MAJ"
+git push
+work
+cp ../get-next-line/get_next_line.* .
+mv get_next_line.h includes/
+cp includes/get_next_line.h libft/include
+cp get_next_line.c libft
+cd libft/include
+vim libft.h
+cd
+vim .vimrc
+work
+libft/include
+vim libft.h
+..
+vim Makefile
+make re
+vim get_next_line.c
+man 2 read
+vim include/get_next_line.h
+vim get_next_line.c
+make
+make re
+vim get_next_line.c
+make re
+vim ../../ft_ls/srcs/ft_store.c
+git pull
+vim ../../ft_ls/srcs/ft_store.c
+vim get_next_line.c
+make re
+vim libft/get_next_line.c
+vim Makefile
+vim libft/
+vim libft/Makefile
+cd libft
+MAKE CLEAN
+make clean
+ls
+rm libft.h
+make re
+vim include
+vim Makefile
+vim ft_atoi.c
+vim ft_putabs.c
+make 
+make re
+vim Makefile auteur ft_atoi.c ft_atoi.o ft_bzero.c ft_bzero.o ft_freetables.c ft_freetables.o ft_int_size.c ft_int_size.o ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c ft_printtables.c ft_putabs.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c ft_split_whitespaces.c ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdel.c ft_strdup\ 2.o ft_strdup.c ft_strequ\ 2.o ft_strequ.c ft_striter\ 2.o ft_striter.c ft_striteri\ 2.o ft_striteri.c ft_strjoin\ 2.o ft_strjoin.c ft_strjoinfree\ 2.o ft_strjoinfree.c ft_strlcat\ 2.o ft_strlcat.c ft_strlen\ 2.o ft_strlen.c ft_strmap\ 2.o ft_strmap.c ft_strmapi\ 2.o ft_strmapi.c ft_strncat\ 2.o ft_strncat.c ft_strncmp\ 2.o ft_strncmp\ 3.o ft_strncmp.c ft_strncpy\ 2.o ft_strncpy\ 3.o ft_strncpy.c ft_strnequ\ 2.o ft_strnequ\ 3.o ft_strnequ.c ft_strnew\ 2.o ft_strnew\ 3.o ft_strnew.c ft_strnstr\ 2.o ft_strnstr\ 3.o ft_strnstr.c ft_strrchr\ 2.o ft_strrchr\ 3.o ft_strrchr.c ft_strsplit\ 2.o ft_strsplit\ 3.o ft_strsplit.c ft_strstr\ 2.o ft_strstr\ 3.o ft_strstr.c ft_strsub\ 2.o ft_strsub\ 3.o ft_strsub.c ft_strtrim\ 2.o ft_strtrim\ 3.o ft_strtrim.c ft_tolower\ 2.o ft_tolower\ 3.o ft_tolower.c ft_toupper\ 2.o ft_toupper\ 3.o ft_toupper.c get_next_line.c include libft\ 2.a libft\ 3.a libft\ 4.a libft.a s§3f22rr
+make clean
+rm libft\ 2.a
+rm libft.*
+ls
+rm *.o
+ls
+rm *.a
+ls
+rm auteur
+vim *.c
+vim ft_atoi.c
+make re
+vim *.c
+vim ft_isalnum.c
+make re
+vim *.c
+cat Makefile
+vim *.c
+git checkout *.c
+vim *.c
+vim ft_atoi.c
+vim ft_isalpha.c
+make
+make re
+vim ft_isalnum.c
+make
+make re
+git checkout *.c
+vim *.c
+vim ft_isalnum.c
+make re
+vim ft_isalnum.c
+make re
+vim ft_itoa.c
+make re
+pwd
+../libft
+vim ft_lstadd.c
+make re
+vim ft_lstdel.c
+make re
+vim ft_lstdel.c
+make re
+vim ft_lstdelone.c
+make re
+make
+make re
+make
+make re
+make
+make re
+vim ft_putstr.c
+make re
+MAKE RE
+make re
+rm ft_strdup.c
+make re
+pwd
+vim ft_strdup.c
+pwd
+make re
+vim ft_strequ.c
+make re
+vim ft_strjoinfree.c
+vim ft_strequ.c
+vim *.c
+make re
+vim *.c
+vim ft_strequ.c
+make re
+vim ft_strjoinfree.c
+make re
+clear
+make re
+vim ft_strjoinfree.c
+vim ft_strjoin.c
+make re
+vim ft_strjoin.c
+make re
+vim ft_strlcat.c
+make re
+vim ft_strlcat.c
+vim ft_strmap.c
+vim *.c
+make re
+ls
+vim get_next_line.c
+make re
+clear
+ls
+..
+ls
+srcs
+vim main.c
+ls
+..
+sh makemf.sh minishell
+make re
+libft
+make re
+..
+vim Makefile
+vim m
+vim includes/minishell.h
+make re
+vim includes/minishell.h
+make re
+vim includes/minishell.h
+make re
+vim includes/minishell.h
+make re
+..
+vim includes/minishell.h
+cd includes
+vim minishell.h
+make re
+..
+cd srcs
+vim main.c
+make re
+vim libft/get_next_line.c
+make re
+./minishell kjh hjg
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+man 2 read
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+make re
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+coucou
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+ls
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+ls
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUma
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUma
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUma
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUma
+mv main.c oldmain
+vim main.c
+make re
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUma
+cd ../../42FileChecker
+ls
+cd srcs/gnl
+ls
+..
+ls
+..
+ls
+cd maintest
+ls
+cd getnextline
+ls
+vim main.c
+make re
+pwd
+work
+make re
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCU
+top
+git add .
+git commit -m "ai compris lutilite de GNL. Change le vrai main en oldmain"
+git commit -m "ai compris lutilite de GNL. Change le vrai main en oldmain. Ai inclus GNL dans la libft et ai mis a jour la libft""
+git commit -m "ai compris lutilite de GNL. Change le vrai main en oldmain. Ai inclus GNL dans la libft et ai mis a jour la libft"
+git push
+./minishell
+clear
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUxxx
+make re
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUxxx
+make re
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUxxx
+work
+make
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUxxx
+git pull
+git add .
+git commit -m "travail trouve sur l'ordi"
+git pull
+..
+rm -rf minishell
+git clone https://github.com/Lazare-42/minishell
+cd minishell
+./minishell COUCOUCOUCOUCOUCOUCOUCOCUxxx
+make re
+./minishell
+srcs
+vim main.c
+../libft
+vim ft_putabs.c
+make re
+./minishell
+..
+srcs
+vim find_path.c
+make re
+./minishell
+make re
+/.
+work
+./minishell
+man execve
+clear
+vim oldmain.c
+make re
+./minishell
+vim oldmain.c
+..
+make
+./minishell
+./minishellcle
+clear
+ls
+./
+./minishell
+top
+vim srcs
+srcs
+vim main.c
+clear
+make
+./minishell
+vim main.c
+clear
+make
+./minishell
+make
+clear
+./minishell
+cd
+work
+./minishell
+srcs
+ls
+vim main.c
+..
+vim oldmain.c
+make
+./minishell
+srcs
+vim find_path.c
+vim main.c
+vim find_path.c
+..
+make
+clear
+./minishell
+work
+make
+cd srcs
+vim main.c
+..
+make
+echo
+exit
+./minishell
+..
+./minishell
+make
+./minishell
+..
+./minishell
+..
+./cd
+./minishell
+make
+./minishell
+make
+./minishell
+top
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+cd
+work
+./minishell
+make
+./minishell
+open Programmation-systeme-en-C-sous-Linux.pdf
+make
+./minishell
+make
+./minishell
+vim libft/include/libft.h
+make
+./minishell
+make
+./minishell
+make
+./minishell
+man kill
+man 2 kill
+make
+man 2 kill
+man 2 sig
+man sig
+cle
+clear
+ls
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+ls
+./minishell
+make
+./minishell
+make
+./minishell
+man 2 fork
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+make
+clear
+..
+git add .
+..
+rm -rf minishell
+git pull
+work
+git clone https://github.com/Lazare-42/minishell
+work
+./minishell
+make re
+./minishell
+ls
+open minishell.fr.pdf
+man malloc
+make clean
+rm minishell.fr.pdf
+cle
+clear
+git pull
+./minishell
+mkdir coucou
+rm -rf coucou
+git pull
+git checkout fragmented_read
+git stash
+git checkout fragmented_read
+clear
+./minishell
+make re
+clear
+./minishell
+vim libft/ft_strlen.c
+..
+cd ft_ls
+git pull
+git stash
+git pull
+cat libft/ft_strlen.c
+cat libft/ft_putstr.c
+work
+vim libft/ft_putstr.c
+cd libft
+git pull
+git pull --force
+rm -rf *
+git pull
+ls
+..
+rm -rf libft
+git clone https://github.com/Lazare-42/libft.git
+cat libft/ft_putstr.c
+cat libft/ft_strlen.c
+make re
+sh makemf.sh minishell
+make re
+vim Makefile
+make re
+time ./ft_ls -lSR / | wc -l
+./minishell
+time ./minishell -lSR / | wc -l
+time ls -lSR / | wc -l
+clear
+./minishell
+work
+./minishell
+clea
+clear
+srcs
+vim main.c
+./minishell
+clear
+vim builtin_commands.c
+./minishell
+make
+./minishell
+vim main.c
+vim builtin_commands.c
+..
+vim libft/ft_strcmp.c
+make re
+./minishell
+cd libft
+git add .
+git commit -m "MAJ"
+git push
+clear
+clear
+./minishell
+clear
+ls
+./minishell
+..
+vim oldmain.c
+srcs
+vim main.c
+srcs
+vim ft_file_to_string.c
+man 2 read
+..
+vim libft/ft_strchr.c
+..
+make
+clear
+srcs
+vim ft_complete.c
+clear
+man echo
+echo "titi"
+echo "coucou"
+echo coucou ca va
+echo "coucou ca va\n"
+clear
+vim ft_echo.c
+echo tu            tu tu
+vim ft_echo.c
+,,
+..
+sh makemf.sh minishell
+make re
+./minishell
+clear
+./minishell
+vim ../libft/ft_putabs.c
+make re
+clear
+srcs
+vim main.c
+man setenv
+man 2 setenv
+set
+ls env
+ls env:
+setenv coucou
+setenv
+..
+open *.pdf
+setenv MYVAR MYVALUE
+bash
+./minishell
+clear
+env
+clear
+srcs
+vim oldmain.c
+clear
+cd libft
+vim ft_putabs.c
+vim include/libft.h
+make re
+..
+vim main.c
+..
+make
+make re
+vim ft_echo.c
+vim ft_env.c
+vim main.c
+vim srcs/ft_env.c
+srcs
+mv ft_env.c ft_put_env.c
+vim ft_put_env.c
+make
+..
+make
+./minishell
+make re
+sh makemf.sh minishell
+make re
+./minishell
+make
+./minishell
+make
+./minishell
+exit
+bash
+..
+make
+./minishell
+make
+./minishell
+cleat
+exit
+..
+setenv COUCOU MCYOUOU
+bash
+setenv MYVAR myvalue
+bash
+vim ft_set_env.c
+clear
+make
+./minishell
+vim main.c
+./minishell
+clear
+vim ft_set_env.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+set
+env
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+smake re
+mak
+make
+./minishell
+clear
+ls
+clear
+..
+setenv coucou toto
+./minishell
+srcs
+vim main.c
+vim ft_set_env.c
+clear
+./minishell
+clear
+./minishell
+..
+./minishell
+lldb ./minishell
+mkae
+make
+./minishell
+mAKE
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+./minishell
+make
+./
+./minishell
+man 2 setenv
+man setenv
+csh
+clear
+csh
+./minishell
+make
+./minishell
+setenv
+./minishell
+..
+csh
+clear
+setenv
+path
+csh
+zork
+work
+clear
+vim srcs/main.c
+srcs
+vim ft_put_env.c ft_print_errors.c
+vim ft_print_errors.c
+..
+./minishell
+srcs
+vim ft_print_errors.c
+..
+make
+./minishell
+srcs
+vim ft_print_errors.c
+srcs
+vim main.c
+..
+make
+./minishell
+clear
+./minishell
+clear
+make
+clear
+vim main.c
+vim ft_change_dir.c
+csh
+clear
+man chdir
+man 2 chdir
+cd dscwvf
+make
+./minishell
+clear
+./minishell
+cd ../../wfregwrgw
+cd wefwgrewebr
+make
+./minishell
+clear
+vim main.c
+./minishell
+clear
+./minishell
+csh
+srcs
+clear
+ls
+vim ft_set_env.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim ft_change_dir.c
+cd srcs
+ls
+vim ft_set_env.c
+vim ../includes/minishell.h
+vim main.c
+vim ft_set_env.c
+vim main.c
+csh
+vim ft_print_errors.c
+csh
+maje
+make
+clear
+vim srcs/ft_change_dir.c
+vim ft_set_env.c
+make
+./minishell
+vim ft_set_env.c
+ls
+./minishell
+make
+./minishell
+vim main.c
+cd srcs
+vim ft_set_env.c
+..
+make
+./minishell
+setenv toto
+./minishell
+clear
+srcs
+vim ft_set_env.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+srcs
+vim ft_set_env.c
+./minishell
+make
+srcs
+vim ../includes/minishell.h
+..
+make
+make re
+./minishell
+make 
+./minishell
+make
+./minishell
+make
+./minishell
+setenv path zoubi
+csh
+./minishell
+man 2 strnew
+man 2 malloc
+man malloc
+cd libft
+vim ft_strnew.c
+vim ft_strdup.c
+vim ft_set_env.c
+clear
+..
+make
+./minishell
+vim ft_set_env.c
+./minishell
+csh
+cd libft
+vim ft_strjoinfree.c
+vim ft_strjoin.c
+..
+setenv
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+setenv
+./minishell
+csh
+vim ft_set_env.c
+make
+./minishell
+make
+./minishell
+clear
+make
+./minishell
+mkae
+make
+./minishell
+vim libft/ft_strcmp.c
+clear
+./minishell
+make
+./minishell
+cd srcs
+git checkout ft_setenv.c
+ls
+git checkout ft_set_env.c
+clear
+..
+git add .
+git commit -m "ajout de ft_set_env"
+git push
+man ascii
+make
+./minishell
+make
+./minishell
+srcs
+git add .
+git commit -m "setenv fonctionnel"
+git push
+../libft
+ls
+rm *.o
+ls
+rm *.a
+ls
+make
+make clean
+ls
+..
+clear
+cd srcs
+../libft
+vim ft_strjoinfree.c
+vim ft_strjoin.c
+clear
+..
+make
+./minishell
+make
+./minishell
+clear
+./minishell
+clear
+vim main.c
+cd srcs
+ls
+vim find_path.c
+vim ft_set_env.c
+..
+make
+./minishell
+vim find_path.c
+csh
+./minishell
+clear
+git add .
+git commit -m "setenv fonctionnel"
+git push
+clear
+git pull
+clear
+git pull
+zork
+work
+clear
+./minishell
+make re
+clear
+./minishell
+man unsetenv
+csh
+clear
+unsetenv
+man unsetenv
+builtin setenv
+./minishell
+env
+clear
+env
+env ./minishell
+./minishell
+clear
+srcs
+vim main.c
+clear
+vim ft_store.c
+vim ../includes/minishell.h
+../ft_ls
+clear
+srcs
+..
+in
+includes
+vim ls.h
+git checkout -b ternary_tree
+clear
+ls
+clear
+vim main.c
+vim ft_store.c
+work
+srcs
+vim ft_file_to_string.c
+vim ../includes/minishell.h
+../libft
+vim ft_lstnew.c
+../../ft_ls
+srcs
+vim ft_store.c
+ls
+vim ft_place_element.c
+vim ft_store.c
+..
+sh makemf.sh minishell
+make flean
+make fclean
+make
+work
+includes/
+vim minishell.h
+../srcs
+..
+cd ft_ls
+cd srcs
+vim ft_place_element.c
+vim ft_store.c
+make re
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+coucou
+./minishell
+make
+./minishell
+srcs
+vim main.c
+clear
+./minishell
+..
+clear
+./minishell
+make
+./minishell
+clear
+make
+clear
+./minishell
+pwd
+clear
+vim ft_print_normal.c
+clear
+make
+./minishell
+make
+clear
+./minishell
+clear
+cd srcs
+vim main.c
+vim ft_store.c
+..
+make
+srcs
+clear
+man unsetenv
+man 2 unsetenv
+csh
+..
+./minishell
+srcs
+vim ft_echo.c
+vim main.c
+clear
+./minishell
+..
+./minishell
+srcs
+vim ft_echo.c
+..
+make
+./minishell
+echo coucou
+echo -n coucou
+csh
+clear
+..
+git add .
+git commit -m "creation du stockage des commandes dans un arbre ternaire et mise a la norme de la fonction echo"
+git push 
+git push --set-upstream origin ternary_tree
+clear
+./minishell
+clear
+srcs
+vim ft_print_info.c
+..
+make
+./minishell
+..
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+clear
+./minishell
+make
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+man unicode
+make
+./minishell
+clear
+vim main.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git add .
+git commit -m "resolution du segfault quand j'appuyais sur enter"
+clear
+man 2 env
+man env
+..
+./minishell
+ls
+rm minishell*
+ls
+clear
+ls
+cat test.c
+rm test.c
+vim oldmain.c
+clear
+ls
+rm get_next_line.c
+clear
+ls
+cd libft
+ls
+..
+clear
+ls
+..
+../../ft_ls
+clear
+ft_ls
+clear
+tests
+cd srcs
+ls
+pwd
+sclear
+clear
+..
+vim includes/ls.h
+cd includes
+vim ls.h
+vim ../libft/include/libft.h
+..
+cd libft
+..
+cd srcs
+..
+ls
+cd srcs
+vim ft_padding.c
+ls
+..
+ls
+cd libft
+ls
+mv include includes
+make clean
+ls
+make
+make re
+vim Makefile
+ls
+vim *.c
+make 
+make re
+..
+srcs
+vim *.c
+..
+make re
+vim includes/ls.h
+make re
+clear
+sh makemf.sh ft_ls
+rm minishell
+./ft_ls -Si
+clear
+ls
+cd srcs
+vim ft_print_info2.c
+vim ft_print_info.c
+vim ft_print_normal.c
+..
+./ft_ls -Si
+make re
+./ft_ls -Si
+clear
+diff truels myls
+clear
+cp ../../42FileChecker/maintest/ft_ls/t_dir .
+cp -r ../../42FileChecker/maintest/ft_ls/t_dir .
+./ft_ls t_dir
+./ft_ls -l t_dir
+./ft_ls -l t_dir >> myls
+./ft_ls -l t_dir >> truels
+ls -l t_dir >> truels
+cat truels
+rm truels
+clear
+ls -l t_dir >> truels
+diff truels myls
+ls -l t_dir
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+rm myls
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+rm truels
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+rm truels
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+clear
+diff truels myls
+srcs
+vim ft_print_
+vim ft_print_info2.c
+cd srcs
+vim ft_CMD_l.c
+vim ft_store.c
+man 2 stat
+vim ft_store.c
+..
+make 
+rm myls
+rm truels
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+cd srcs
+vim ft_store.c
+..
+make
+clear
+rm truels rm myls
+rm truels myls
+clear
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+man 2 stat
+make
+rm truels myls
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+rm truels myls
+diff truels myls
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+make
+rm truels myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+diff truels myls
+rm truels myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+diff truels myls
+vim ft_print_info2.c
+man ls
+cd srcs
+ls
+cat *.c >> allcode.c
+vim allcode.c
+rm allcode.c
+rm truels myls
+clear
+man 2 stat
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+..
+clear
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+diff truels myls
+rm truels myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+diff truels myls
+make
+rm truels myls
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+git checkout 1683463
+git stash
+git add .
+git commit -m "resolution de bogues de 42 file checker"
+git checkout 1683463
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+clear
+ls
+cd srcs
+vim ft_print_normal.c
+vim ft_print_info.c
+..
+make
+make re
+rm truels myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+diff truels myls
+clear
+srcs
+vim ft_print_info.c
+vim ft_store.c
+git checkout master
+git stash
+git checkout master
+git add .
+git commit -m "je passais par la "
+git checkout master
+rm truels myls
+make fclean
+..
+rm truels myls
+make fclean
+git checkout master
+ls
+cd srcs
+vim ft_print_info2.c
+..
+make
+rm truels myls
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+vim srcs/ft_print_normal.c
+make re
+ls
+git checkout 8b777d8
+git stash
+git checkout 8b777d8
+ls
+clear
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+make re
+sh makemf.sh ft_ls
+make re
+clear
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+vim srcs/ft_print_info2.c
+vim srcs/ft_print_normal.c
+make
+vim srcs/ft_print_normal.c
+make
+vim srcs/ft_print_normal.c
+srcs
+vim ft_print_info2.c
+make
+rm truels myls
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> truels
+diff truels myls
+tests
+ls -.r
+clear
+srcs
+vim ft_print_info2.c
+clear
+git status
+git add .
+git commit -m "coucou"
+git push
+git push --force
+git push origin HEAD
+clear
+work
+../ft_ls
+work
+clear
+./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir >> myls
+./minishell
+make
+./minishell
+man echo
+echo coucou coucou
+echo $bite
+echo $PWD
+cd
+work
+srcs
+vim ft_echo.c
+echo '$PWD'
+./minishell
+echo '$PWD\n'
+echo $PWD'\n'
+echo $PWD"\n'
+clear
+vim main.c
+vim ft_store.c
+vim main.c
+echo "coucou\nah oui"
+echo 'coucou\nah oui"\ncoucou'
+ckear
+clear
+clea
+clear
+vim ft_echo.c
+echo coucou coucou coucou
+echo "coucou coucou coucou"
+echo "coucou" "coucou"
+csh
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+echo $DOLLAR
+srcs
+vim clear
+clear
+vim main.c
+man echo
+clear
+..
+cd libft
+clear
+man 2 env
+man env
+csh
+clear
+s
+C
+env
+clear
+man 2 env
+man env
+pwd
+env -p /Users/lazrossi/Documents/42/ minishell
+env -P /Users/lazrossi/Documents/42/ minishell
+env -P /Users/lazrossi/Documents/42/ ./minishell
+env -i -P /Users/lazrossi/Documents/42/ ./minishell
+clear
+./minishell
+clear
+ls
+open Programmation-systeme-en-C-sous-Linux.pdf
+csh
+clear
+./minishell
+man 2 access
+./minishell
+ls "coucou\ncoucou\n"
+gnu
+cd srcs
+work
+srcs
+vim main.c
+srcs
+vim find_path.c
+./minishell
+ls
+vim ft_print_errors.c
+vim main.c
+cat *.c >> allcode.c
+vim allcode.c
+rm allcode.c
+vim main.c
+man getcwd
+vim find_path.c
+make
+cd srcs
+mv ft_echo.c ..
+git checkout ft_echo.c
+..
+make re
+srcs
+mv find_path.c ..
+git checkout find_path.c
+..
+make 
+make
+./minishell
+clear
+srcs
+cat ../find_path.c
+vim find_path.c
+..
+make
+./minishell
+vim find_path.c
+./minishell
+clear
+vim main.c
+./minishell
+make
+./minishell
+clear
+minishell
+/minishell
+../ft_ls/ft_ls
+/../ft_ls/ft_ls
+vim find_path.c
+make
+./minishell
+clear
+git add .
+git commit -m "Gestion du lancement de mes propres programmes"
+git push
+git push --set-upstream origin ternary_tree
+clear
+ls
+clear
+ls
+./minishell
+ls
+cd ..
+cd .git
+ls
+cat description
+cd logs
+ls
+cat HEAD
+git commit
+git statut
+git status
+clear
+ls
+cd refs
+ls
+cat heads
+cat heads/ternary_tree
+clear
+ls
+cat stash
+cat heads/ternary_tree
+cd .git
+clear
+ls
+cat config
+cat info/exclude
+cat logs/HEAD
+pwd
+clear
+cat COMMIT_EDITMSG
+clear
+cat description
+cat HEAD
+vwork
+work
+clear
+cd srcs
+vim find_path.c
+vim ft_print_info.c
+man opendir
+wokr
+wor
+work
+..
+cd ft_ls
+clear
+srcs
+vim ft_store.c
+man opendir
+git add .
+git commit -m "version compliauee d'ouverture du dossier .git dans ft_print_info"
+clear
+vim ft_print_info.c
+man dir
+man dent
+man 2 dent
+man 2 read
+man 2 stat
+man 2 access
+man 2 open
+man 2 read
+..
+work
+make
+./minishell
+make
+./minishell
+../ft_ls/srcs
+vim ft_store.c
+..
+cd past
+cd fillit
+clear
+vim main.c
+vim ft_file_to_string.c
+work
+make
+./minishell
+exit
+../past/fillit
+vim ft_file_to_string.c
+work
+make
+./minishell
+cd .git
+cat HEAD
+man 2 getcwd
+man getcwd
+..
+make
+./minishell
+../past/fillit
+vim ft_file_to_string.c]
+ls
+vim ft_file_to_string.c
+work
+make
+./minishell
+clear
+jjjjjjmake
+make
+./minishell
+man 2 read
+../ft_ls
+srcs
+vim ft_print_errors.c
+man errno
+man 2 errno
+vim ft_print_errors.c
+man strerror
+vim ft_print_info.c
+vim ft_print_errors.c
+vim ft_print_info.c
+man 2 strerror
+man strerror
+../ft_ls
+cd srcs
+vim ft_print_errors.c
+make
+./minishell
+vim ft_print_info.c
+cd .git
+ls
+..
+make
+./minishell
+../ft_ls/srcs
+vim ft_store.c
+work
+make
+./minishell
+../ft_ls/srcs
+vim ft_store.c
+man 2 readdir
+man readdir
+work
+make
+./minishell
+man 2 readdir
+man readdir
+make
+./minishell
+cd .git
+pwf
+pwd
+cd ..
+make
+./minishell
+make
+clear
+./minishell
+vim main.c
+ls
+vim ft_change_dir.c
+clear
+vim ft_change_dir.c
+vim ft_print_info.c
+git push
+git push --set-upstream origin ternary_tree
+../ft_ls/
+git push
+git push --force
+git checkout -b 42filechecker
+git push --set-upstream origin ternary_tree
+git push --set-upstream origin 42filechecker
+work
+clear
+./minishell
+../ft_ls
+../past/fillit
+vim ft_file_to_string.c
+make
+work
+make
+./minishell
+vim ft_print_info.c
+clear
+./minishell
+make
+./minishell
+man 2 read
+make
+./minishell
+make
+./minishell
+clear
+man 2 fd
+man file descriptor
+clear
+make
+./minishell
+clear
+make
+./minishell
+clear
+./minishell
+make
+./minishell
+man 2 lstat
+make
+./minishell
+make
+./minishell
+make
+./minishell
+cd libft
+ls
+cd .git
+..
+clear
+ls
+make
+./minishell
+vim main.c
+clear
+vim ft_print_
+vim ft_print_info.c
+make
+./minishell
+make
+./minishell
+clear
+make
+./minishell
+man ascii
+clear
+./minishell
+work
+./minishell\\n
+clear
+ls
+clear
+vim libft/ft_strnew.c
+make
+./minishell
+..
+vim Makefile
+make re
+clear
+srcs
+vim find_path.c
+clear
+ls
+cd srcs
+clear
+cd ..
+make
+vim makemf.sh
+vim Makefile
+make re
+clear
+..
+git clone https://github.com/Zevran/Norme-C.git
+cd Norme-C
+ls
+make
+ls
+norme ../minishell
+./norme ../minishell
+./norme ../minishell/srcs/
+./norme ../minishell/srcs/*.c
+./norme ../minishell/srcs/find_path.c
+..
+rm -rf Norme-C
+clear
+work
+clear
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+vim Make
+vim Makefile
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+clear
+srcs
+vim ft_echo.c
+vim ../libft/include/libft.h
+pwd
+vim ../includes/minishell.h
+clear
+vim main.c
+cd ..
+./minishell
+vim find_path.c
+vim ft_print_info.c
+make
+./minishell
+clear
+vim main.c
+srcs
+vim ft_launch_processes.c
+cat main.c
+..
+make
+make re
+sh makemf.sh minishell
+make re
+clear
+srcs
+vim main.c
+..
+make
+./minishell
+clear
+cd srcs
+vim ft_launch_processes.c
+..
+make
+./minishell
+clear
+srcs
+vim main.c
+..
+make
+./minishell
+echo "tata'\nc\nc\n\nx\nx\nx\n"
+echo tata'\n\n\n\n\n\n\n\n\n\n\n\n
+echo 'tata"\n'
+ehco "tata" "\ncoucou"
+echo "tat" "cou\n"
+clear
+cd ".."
+cd "..""\n"
+clear
+make
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+make
+./minishell
+make
+./minishell
+ls '\ncoucou coucou coucou\ncoucou coucou coucou coucou coucou\n'
+clear
+vim ft_complete_command.c
+ls :
+ls "\n\n"
+clear
+vim main.c
+make
+sh makemf.sh minishell
+make re
+./minishell
+make
+./minishell
+clear
+make
+./minishell
+vim ft_complete_command.c
+..
+make
+clear
+./minishell
+clear
+srcs
+vim ft_complete_command.c
+make
+clear
+./minishell
+clear
+make
+./minishell
+clear
+srcs
+vim main.c
+c,ear
+clear
+make re
+./minishell
+srcs
+vim ft_launch_processes.c
+make
+./minishell
+clear
+srcs
+vim ft_print_info.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make re
+./minishell
+clear
+elle
+"oui ca buggue jai compris\npourquoi en fait et ca na pas de prix\n"
+clear
+vim main.c
+./minishell
+clear
+./minishell
+clear
+cd srcs
+cd ..
+cd libft
+vim ft_split_whitespaces.
+vim ft_split_whitespaces.c
+cd ..
+git add .
+git commit -m "Gestion des commas. Mais split toujours whitespaces pour executer"
+clear
+ls
+rm -rf minishell.dSYM
+clear
+ls
+cd srcs
+ls '\nd\nd\n'
+clear
+ls
+make re
+vim main.c
+../libft
+clear
+vim ft_split_whitespaces.
+ls
+vim ft_split_whitespaces.c
+ls "coucou 'ca va' oui"
+ls 'coucou 'ca va' oui'
+ls 'coucou "ca va" oui'
+clear
+work
+srcs
+cp ../libft/ft_split_whitespaces.c .
+cp ../libft/ft_advance_string_for_quote.c .
+vim ft_split_whitespaces.c
+work
+srcs
+vim main.c
+..
+sh makemf.sh minishell
+make re
+./minishell
+srcs
+vim main.c
+vim ft_split_whitespaces.c
+cat ft_split_whitespaces.c
+mv ft_split_whitespaces.c ft_split_whitespaces_not_quotes.c
+..
+sh makemf.sh minishell
+make re
+./minishell
+srcs
+vim ft_split_whitespaces_not_quotes.c
+..
+make
+./minishell
+make
+./minishell
+vim main.c
+make
+./minishell
+vim ft_split_whitespaces_not_quotes.c
+clear
+..
+./minishell
+ok"\n"
+vim Makefile
+make re
+..
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+clear
+ls
+clear
+rm -rf minishell.dSYM
+clear
+ls
+clear
+ls
+clear
+srcs
+vim ft_split_whitespaces_not_quotes.c
+srcs
+vim main.c
+vim ft_print_info.c
+make
+vim ft_split_whitespaces_not_quotes.c
+make
+./minishell
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+vim main.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+vim ft_print_info.c
+clear
+vim find_path.c
+cd ../libft
+vim ft_strsplit.c
+vim find_path.c
+work
+srcs
+vim find_path.c
+vim main.c
+vim ft_launch_processes.c
+libft
+make clean
+clear
+ls
+vim ft_tabdel.c
+vim Makefile
+make re
+cd ..
+clear
+make re
+..
+make
+cd libft
+ls
+cd include
+ls
+vim libft.h
+..
+rm libft.h
+make
+make re
+..
+clear
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+clear
+./minishell
+..
+clear
+./minishell
+clear
+work
+clear
+git push
+clear
+l -a
+cd .git
+ls
+cat description
+cat info/exclude
+cat COMMIT_EDITMSG
+clear
+cd ..
+./minishell
+clear
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+vim libft/ft_strsplit.
+vim libft/ft_strsplit.c
+srcs
+vim main.c
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+vim ft_launch_processes.c
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+../libft
+vim ft_tabdel.c
+clear
+work
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+srcs
+ls
+../srcs
+vim main.c
+ls
+work
+srcs
+vim main.c
+clear
+rm ft_split_whitespaces_not_quotes.c
+..
+make re
+sh makemf.sh minishell
+clear
+make re
+clear
+libft
+vim ft_split_whitespaces.
+make clear
+make clean
+clear
+vim ft_split_whitespaces.c
+vim ft_tabdel.c
+make
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+..
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+work
+clear
+work
+clear
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+work
+vim Makefile
+make re
+cler
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+clear
+libft
+clear
+vim ft_tabdel.
+vim ft_tabdel.c
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+work
+srcs
+clear
+vim find_path.c
+../libft
+make clean
+clear
+vim ft_strsplit.c
+work
+srcs
+vim find_path.c
+vim ft_launch_processes.c
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+clear
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+exit
+make
+..
+make
+clear
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make
+clear
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+libft
+clear
+vim ft_strsplit.c
+git checkout ft_strsplit.c
+vim ft_strsplit.c
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make re
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+clear
+vim ft_set_env.c
+cleae
+vim ft_launch_processes.c
+vim ft_tabdel.c
+make 
+vim ft_tabdel.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+work
+srcs
+vim find_path.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+make
+./minishell
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+cd
+vim .zshrc
+source .zshrc
+work
+mini
+clear
+vim main.c
+make
+mini
+make
+mini
+make
+mini
+make
+mini
+./minishell
+mini
+make
+./minishell
+mini
+git add .
+git commit -m "je faisais des strnew inutiles dans le main qui leakait"
+git push
+clear
+make
+./minishell
+mini
+clear
+./minishell
+mini
+vim main.c
+vim ft_launch_processes.c
+make
+mini
+make
+mini
+make
+./minishell
+mini
+make
+./minishell
+mini
+man 2 execve
+make
+clear
+./minishell
+mini
+minishell
+./minishell
+make
+./minishell
+make
+./minishell
+make re
+./minishell
+make
+./minishell
+make
+./
+./minishell
+make
+./minishell
+clear
+..
+clear
+mkae
+make
+clear
+mini
+srcs
+vim ft_launch_processes.c
+make
+./minishell
+clear
+srcs
+vim find_path.c
+clear
+../libft
+vim ft_tabdel.c
+clear
+make
+make re
+mini
+make
+make r
+make re
+mini
+make
+make re
+mini
+make re
+mini
+make re
+mini
+./minishell
+make
+make r
+make re
+./minishell
+make clean
+ls
+clear
+rm *.o
+vim ft_strdel.c
+vim ft_memdel.c
+clea
+clear
+vim ft_tabdel.c
+make
+make re
+./minishell
+clear
+./minishell
+make
+make re
+./minishell
+cd
+vim .zshrc
+work
+clear
+vim main.c
+clear
+vim main.c
+vim ft_launch_processes.c
+..
+make
+mini
+make
+mini
+libft
+vim ft_tabdel.c
+clear
+cd
+vim .zshrc
+source .zshrc
+lib
+clear
+vim ft_tabdel.c
+..
+make
+make re
+./minishell
+make
+make re
+clear
+./minishell
+make
+clea
+clear
+make re
+mini
+make re
+mini
+make re
+./minishell
+clear
+make
+make re
+clear
+./minishell
+make
+make re
+./minishell
+mini
+make
+make re
+mini
+make
+make re
+mini
+make re
+./minishell
+mini
+make re
+mini
+valgrind --tool=memcheck --leak-check=yes --leak-check=full ./minishell
+work
+vim ft_launch_processes.c
+make
+make re
+mini
+ls
+./minishell
+make
+./minishell
+mini
+make
+./minishell
+mini
+make
+mini
+./minishell
+make
+./minishell
+make
+make re
+clear
+./minishell
+make
+make re
+clear
+./minishell
+make
+mini
+exit
+..
+make
+mini
+./minishell
+mini
+make
+make re
+./minishell
+mini
+make re
+mini
+make
+make re
+./minishell
+mini
+make
+make re
+mini
+make re
+./minishell
+make
+make re
+./minishell
+mini
+make re
+mini
+lib
+vim ft_strlen.c
+make re
+..
+make
+./minishell
+clear
+,oni
+mini
+make re
+mini
+ls
+./minishell
+make re
+mini
+lib
+rm ft_strsplit.c
+vim ft_strsplit.c
+..
+make re
+./minishell
+mini
+clear
+work
+..
+cd libft
+clear
+vim ft_tabdel.
+vim ft_tabdel.c
+make
+make re
+mini
+make re
+mini
+make re
+mini
+make re
+mini
+make re
+./minishell
+mini
+make re
+mini
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+mini
+make re
+mini
+make re
+./minishell
+ls
+make clean
+rm *.o
+ls
+work
+ls
+vim ft_launch_processes.c
+rm minishell*
+rm -rf minishell*
+clear
+ls
+cd
+ls
+cd Documents
+ls
+clear
+work
+clear
+..
+make
+./minishell
+clear
+mini
+srcs
+lib
+vim ft_tabdel.c
+make
+work
+make re
+..
+make re
+clear
+./minishell
+mini
+make
+make re
+./minishell
+mini
+make re
+mini
+make re
+ls
+mini
+make re
+mini
+make re
+mini
+lib
+make clean
+clear
+vim ft_memdel.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
+make re
+mini
+make re
+mini
+make re
+mini
+make re
+mini
+make re
+mini
+make
+mini
+lib
+vim ft_strsplit.c
+vim ft_memalloc.c
+make re
+./minishell
+make re
+mini
+git checkout ft_strsplit.c
+mini
+vim ft_memalloc.c
+vim ft_strsplit.c
+make re
+mini
+make re
+./minishell
+mini
+make re
+./minishell
+mini
+make re
+./minishell
+make re
+./minishell
+mini
+make
+make re
+./minishell
+clear
+ls
+rm -rf minishell*
+ls
+clear
+ls
+cd libft
+ls
+rm *.o
+..
+clear
+ls
+./minishell
+make re
+./minishell
+make re
+./minishell
+clear
+./minishell
+e
+clear
+make re
+make rez
+make re
+./minishell
+clear
+vim ft_strsplit.c
+make re
+./minishell
+mini
+make re
+mini
+make re
+./minishell
+mini
+make re
+./minishell
+clear
+vim ft_strsplit.c
+vim ft_strdel.c
+vim ft_tabdel.c
+man 2 getchar
+man getchar
+gcc -Wall -Werror -Wextra ft_strplit.c
+cd libft
+gcc -Wall -Werror -Wextra ft_strplit.c
+gcc -Wall -Werror -Wextra ft_strsplit.c
+leaks a.out
+make re
+leaks a.out
+leaks a.out coucou ca va
+leaks ./a.out coucou ca va
+make
+./a.out
+leaks ./a.out coucou ca va
+gcc -Wall -Werror -Wextra ft_strsplit.c
+leaks ./a.out coucou ca va
+gcc -Wall -Werror -Wextra ft_strsplit.c
+./a.out
+l
+./a.out
+./csh
+ch
+csh
+clear
+work
+..
+./minishell
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
+e
+./minishell
+rs
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
+make re
+mini
+work
+vim ft_launch_processes.c
+make re
+mini
+clear
+csh
+vim main.c
+clear
+dump
+vim main.c
+lib
+vim ft_strsplit.c
+./minishell
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
+./minishell
+clear
+exit
+clear
+vim ft_strsplit.c
+gcc -Wall -Werror -Wextra ft_strsplit.c
+leaks ./a.out coucou ca va
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./a.out
+gcc -Wall -Werror -Wextra -l ft_strsplit.c
+gcc -Wall -Werror -Wextra -g ft_strsplit.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./a.out
+ls
+cd ..
+make re
+mini
+..
+srcs
+vim main.c
+vim ft_launch_processes.c
+make re
+mini
+clear
+ls
+cd libft
+vim ft_strsplit.c
+git add .
+git commit -m "leaks dans ft_strsplit ??|\n"
+git push
+clear
+..
+clear
+./minishell
+vim ft_strsplit.c
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./a.out
+mini
+clear
+work
+vim ft_launch_processes.c
+vim ft_tabdel.
+vim ft_tabdel.c
+clear
+ls
+clear
+./minishell
+clear
+vim ft_strdel.c
+make re
+./minishell
+mini
+clear
+./minishell
+clear
+ls
+clear
+mini
+clear
+ls
+rm minishell*
+ls
+clear
+rm -rf minishell.dSYM
+clear
+vim ft_launch_processes.c
+vim find_path.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+work
+..
+make
+./minishell
+ls
+make
+./minishell
+make
+./minishell
+mini
+git add .
+git commit -m "NO MORE LEAKS"
+git push
+clear
+..
+ls
+op Programmation-systeme-en-C-sous-Linux.pdf
+open Programmation-systeme-en-C-sous-Linux.pdf
+open minishell.fr.pdf
+git checkout dcb5a83 minishell.fr.pdf
+open minishell.fr.pdf
+./minishell
+mini
+srcs
+vim ft_complete_command.c
+..
+make
+make re
+srcs
+vim main.c
+make re
+clear
+./minishell
+mini
+..
+mini
+srcs
+vim ft_complete_command.c
+git checkout ft_complete_command.c
+git checkout main.c
+git checkout ../includes/minishell.h
+..
+make re
+srcs
+vim ft_complete_command.c
+make
+mini
+vim main.c
+vim ft_complete_command.c
+vim ft_launch_processes.c
+vim main.c
+make re
+mini
+git add .
+git commit -m "resolution des leaks dans la gestion des guillements"
+git push
+clear
+csh
+echo "coucou"
+./minishell
+..
+./minishell
+echo "coucou ca va\n"
+srcs
+clear
+vim ft_echo.c
+cat *.c >> allcode.c
+vim allcode.c
+rm allcode.c
+vim ft_echo.c
+~lib
+lib
+vim ft_putabs.c
+work
+vim ft_echo.c
+echo tata tttttttttttttttttttttttttttttttt                          ttttt
+lib
+vim ft_strsplit.c
+clear
+vim ft_strsplit.c
+make re
+echo "tutu tata"
+vim ft_putabs.c
+cd ..
+make re
+work
+git checkout ft_echo.c
+make re
+clear
+./minishell
+make re
+./minishell
+lib
+clear
+vim ft_strsplit.c
+make re
+clear
+./minishell
+vim ft_split_whitespaces.c
+clear
+work
+vim main.c
+vim ft_advance_string_for_quote.c
+vim main.c
+echo "tutu"coucou"\n"
+work
+clear
+lib
+vim ft_split_whitespaces.c
+make re
+vim include/libft.h
+make re
+work
+..
+make re
+lib
+clear
+vim Makefile
+vim ft_advance_string_for_quote.c
+rm ft_advance_string_for_quote.c
+vim ft_advance_for_quotes.c
+work
+..
+make re
+./minishell
+clear
+./minishell
+vim ft_split_whitespaces.c
+make re
+./minishell
+make re
+./minishell
+..
+make re
+./minishell
+make re
+./minishell
+make re
+exit
+./minishell
+..
+./minishell
+make re
+cler
+clear
+./minishell
+exit
+..
+./minishell
+clear
+echo tutu"$PATH"coucou
+make re
+vim includes/minishell.h
+make re
+./minishell
+make re
+clear
+./minishell
+make re
+./minishell
+"coucou"
+./minishell
+clear
+./minishell
+make re
+./minishell
+""
+" "
+make re
+clear
+./minishell
+make re
+./minishell
+clear
+./minishell
+make re
+clear
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+lldb ./minishell
+clear
+make re
+./minishell
+"coucou ca va"
+./minishell
+make re
+./minishell
+make re
+./minishell
+work
+vim find_path.c
+make re
+./minishell
+lib
+clear
+vim ft_split_whitespaces.c
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+"coucou"
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+libft
+git checkout ft_split_whitespaces.c
+..
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+"coucou"
+./minishell
+make re
+clear
+./minishell
+clear
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+"coucou ca va"
+./minishell
+work
+clear
+vim main.c
+ls
+mv Downloads/IMG_20170919_174304.jpg Pictures
+cd Pictures
+ls
+cd Bibliothèque\ Photo\ Booth
+ls
+cd Pictures
+ls
+..
+ls
+cp ../IMG_20170919_174304.jpg .
+pwd
+ls
+cd Pictures
+ls
+open Photo\ le\ 04-08-2017\ à\ 12.06.jpg
+cp ../IMG_20170919_174304.jpg .
+cd
+work
+clear
+vim main.c
+lib
+vim ft_split_whitespaces
+vim ft_split_whitespaces.c
+./minishell
+..
+./
+./minishell
+make re
+clear
+./minishell
+make re
+clear
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+make re
+./minishell
+clear
+./minishell
+make re
+./minishell
+clear
+work
+cat *.c >> allcode.c
+vim allcode.c
+vim main.c
+vim ft_launch_processes.c
+make
+./minishell
+vim find_path.c
+make re
+./minishell
+vim main.c
+clear
+lib
+vim ft_split_whitespaces.c
+make re
+./minishell
+work
+vim main.c
+lib
+vim ft_putabs.c
+make re
+clear
+./
+./minishell
+vim ft_split_whitespaces.c
+make re
+clear
+./minishell
+clear
+coucoucoucou$PATH
+$PATH
+echo coucoucoucou"$PATH"vevre
+echo coucoucouc$PATHcoucoucou
+echo $PATH
+echo coucou$PATHcoucoucouc
+git checkout -b echo_command
+make clean
+lib
+ks
+ls
+rm *.o
+clear
+git checkout ternary_tree
+clear
+lib
+rm *.o
+ls
+rm *.a
+ls
+clear
+mv ft_split_whitespaces.c ft_split_whitespaces_nokots.c
+vim Makefile
+vim ft_split_whitespaces_nokots.c
+work
+vim main.c
+lib
+vim include/libft.h
+work
+vim main.c
+..
+make re
+lib
+git checkout ft_split_whitespaces.c
+work
+make re
+..
+make re
+./minishell
+lib
+s
+ls
+make clean
+ls
+rm -rf a.out.dSYM
+rm a.out
+clear
+work
+ls
+src
+srcs
+ls
+..
+ls
+rm minishell*
+rm -rf minishell.dSYM
+git checkout minishell.fr.pdf
+ls
+clear
+git checkout -b ft_echo
+git add .
+git commit -m "improved padding with quotes in order to perfect echo command"
+git push
+git push --set-upstream origin ft_echo
+clear
+./minishell
+make
+./minishell
+mini
+exit
+work
+echo "tutu tata"
+./minishell
+..
+./minishell
+echo "tutu sssssssssssssssss"
+srcs
+vim ft_echo.c
+echo "tutu sssssssssssssssss" "okok"
+make
+./minishell
+echo -n "scco"
+./minishell
+echo
+lib
+vim ft_putabs.c
+make re
+work
+git checkout ft_echo.c
+..
+make re
+./minishell
+work
+vim ft_echo.c
+make
+./minishell
+lldb ./minishell
+vim main.c
+vim ft_launch_processes.c
+make
+./minishell
+make
+./minishell
+vim ft_launch_processes.c
+make
+./minishell
+git add .
+git commit -m "verification de lexistence de argument[1] pour launch processes"
+git push
+vim ft_echo.c
+make re
+./minishell
+vim main.c
+vim ft_launch_processes.c
+lib
+vim ft_split_whitespaces_nokots.c
+clear
+work
+vim ft_echo.c
+echo "coucou"
+echo coucou$PATH
+echo coucou $PATH
+echo coucou $cccccccc
+make
+./minishell
+setenv coucou=goodbye
+csh
+vim todo.txt
+work
+clear
+..
+./minishell
+srcs
+vim ft_set_env.c
+./minishell
+..
+./minishell
+env
+clear
+srcs
+vim ft_echo.c
+make
+./minishell
+env
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+env
+./minishell
+clear
+./minishell
+vim ft_set_env.c
+vim ft_echo.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+./minishell
+clear
+make
+./minishell
+make
+./minishell
+clear
+git add .
+git commit -m "ft_echo fini"
+git push
+git checkout master
+git merge ft_echo
+./minishell
+echo $PATH$
+clear
+vim ft_echo.c
+echo $PATHc
+echo $PATH
+./minishell
+echo "$PATH coucou"
+./minishell
+make
+./minishell
+make
+./minishell
+echo $swrfvwvbe
+lib
+ls $PATH
+echo *
+./minishell
+..
+./minishell
+vim main.c
+vim ft_launch_processes.c
+./minishell
+vim ft_launch_processes.c
+vim main.c
+vim ft_print_info.c
+cat *.c >> allcode.c
+exit
+zrcs
+cat *.c >> allcode.c
+vim allcode.c
+srcs
+vim ft_launch_processes.c
+ls
+cd srcs
+cat *.c >> allcode.c
+..
+ls
+rm oldmain.c
+rm myls
+rm ft_echo.c
+rm find_path.c
+ls
+rm allcode.c
+ls
+ckear
+clear
+ls
+make clean
+git add .
+work
+srcs
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-lewevw 3rb
+cat *.c >> allcode.c
+clear
+cat *.c >> allcode.c
+vim allcode.c
+rm allcode.c
+clear
+..
+open minishell.fr.pdf
+./minishell
+clear
+srcs
+vim main.c
+..
+make
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim ft_print_info.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git checkout -b fragmented_read
+git checkout fragmented_read
+git stash
+git checkout fragmented_read
+./minishell
+make re
+./minishell
+git checkout master
+git stash
+git checkout master
+./minishell
+make 
+./minishell
+git stash
+git checkout ternary_tree
+./minishell
+git checkout master
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git add .
+git commit -m "resolution d'un pb lecriture de la branche git"
+git push
+..
+clear
+./minishell
+clear
+csh
+srcs
+vim ft_set_env.c
+..
+make
+./minishell
+clear
+./minishell
+srcs
+vim ft_launch_processes.c
+make
+..
+make
+./minishell
+clear
+./minishell
+lib
+vim ft_putabs.c
+make re
+..
+./minishell
+make re
+./minishell
+make
+./minishell
+clear
+srcs
+lib
+vim ft_isalpha.c
+lib
+vim ft_str_isalpha.c
+make re
+ls
+rm *.o
+clear
+l
+clear
+ls
+git add .
+git commit -m "ajout de fonctions"
+git push
+work
+vim ft_set_env.c
+make
+./minishell
+make
+./minishell
+setenv
+csh
+./minishell
+vim ft_print_info.c
+make
+./minishell
+make
+./minishell
+clear
+csh
+clear
+vim ft_echo.c
+lib
+vim ft_putstr.c
+clear
+srcs
+csh
+..
+clear
+./minishell
+clear
+vim ft_echo.c
+..
+sh makemf.sh minishell
+make re
+cd srcs
+rm allcode.c
+..
+make
+sh makemf.sh minishell
+make re
+vim srcs/ft_launch_processes.c
+make
+./minishell
+..
+make
+./minishell
+clear
+vim ft_unsetenv.c
+./minishell
+make
+./minishell
+make
+./minishell
+make 
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./
+./minishell
+make
+./minishell
+git add .
+git commit -m "ajout de la fonction unsetenv en one shot"
+git push
+clear
+./minishell
+..
+git add .
+git commit -m "suppression dune variable non utilise"
+git push
+cd
+ls
+rm -rf coucou
+diskutil list
+/dev/disk2
+sudo cd /dev/disk2
+sudo cd /dev/disk2/
+csh
+emv .
+env ..
+ls -l configure
+ls -l configure mount
+ls -l configure
+mount
+env
+env coucou toto
+./minishell
+cd
+ls
+cd Pictures
+ls
+cd Bibliothèque\ Photo\ Booth
+ls
+cd Pictures
+ls
+..
+cd Contents
+l
+ls
+..
+cd P
+cd Pictures
+ls -Rl
+ls -Rl | wc -l
+ls
+cd Photos\ Library.photoslibrary
+ls
+cd database
+LS
+..
+ls -l
+ls -lR
+ls -lR | wc -l
+..
+ls
+ls -l
+cd Photos\ Library.photoslibrary
+ls
+ls -l
+cd resources
+ls
+ls -l
+cd proxies/derivatives
+ls
+ls -l
+ls -lR
+ls -lR | wc -l
+work
+../../ft_ls
+make
+pwd
+./ft_ls /Users/lazrossi/Pictures/Photos Library.photoslibrary/resources/proxies/derivatives
+./ft_ls /Users/lazrossi/Pictures/Photos\ Library.photoslibrary/resources/proxies/derivatives
+./ft_ls -lR /Users/lazrossi/Pictures/Photos\ Library.photoslibrary/resources/proxies/derivatives
+time ./ft_ls -lR /Users/lazrossi/Pictures/Photos\ Library.photoslibrary/resources/proxies/derivatives
+time ls -lR
+clear
+csh
+clear
+ls
+clear
+./minishell
+clear
+vim ft_launch_processes.c
+./minishell
+..
+./
+./minishell
+vim ft_put_env.c
+vim main.c
+vim ft_launch_processes.c
+make
+./minishell
+vim ft_set_env.c
+clear
+env coucou tutu ./minishell
+env coucou=tutu ./minishell
+env coucou=tutu csh
+clear
+csh
+make
+vim ft_launch_processes.c
+make
+./minishell
+clear
+vim ft_env.c
+csh
+make 
+sh makemf.sh minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim ft_put_env.c
+vim ft_set_env.c
+srcs
+..
+make
+./minishell
+vim ft_launch_processes.c
+vim ft_env.c
+csh
+env
+csh
+env
+csh
+vim ft_launch_processes.c
+clear
+env -L
+env -P ../libft
+clear
+env -i -P ../libft csh
+env -i -P ../libft
+ls
+env
+env -i
+env
+env -i zsh
+env
+clear
+env - zsh
+env
+env -P
+env -v
+env
+env -v
+env
+clear
+env =K
+env -K
+env -vi coucou=salut zsh
+env
+setenv
+csh
+clear
+lib
+cat ft_strsplit.
+cat ft_strsplit.c
+work
+vim ft_set_env.c
+vim ft_env.c
+csh
+./minishell
+..
+ls -l configure
+..
+./minishell
+make
+./minishell
+clear
+lib
+make clean
+ls
+vim ft_tabdup.c
+vim Makefile
+make re
+work
+make
+..
+make
+./minishell
+csh
+make
+./minishell
+make
+./minishell
+exit
+..
+make
+./minishell
+make
+./minishell
+csh
+clear
+make
+./minishell
+make
+./minishell
+make
+setenv coucou tutu
+./minishell
+lib
+vim ft_tabdup.c
+make re
+work
+..
+make
+./minishell
+make
+make re
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+lib
+vim ft_memcmp.c
+make
+make re
+..
+make re
+./minishell
+lib
+vim ft_memcmp..c
+vim ft_memcmp.c
+work
+vim ft_set_env.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make re
+./minishell
+git status
+git add .
+git commit -m "modifications de ft_set_env et creation de ft_env"
+git push
+vim ft_set_env.c
+srcs
+git checkout 6e7cbf3 ft_set_env.c
+vim ft_set_env.c
+..
+make
+./minishell
+make
+./minishell
+lib
+vim ft_tabdup.c
+make re
+./minishell
+vim ft_tabsize.c
+make
+./minishell
+make
+./minishell
+make
+make re
+lib
+vim Makefile
+make re
+work
+..
+make
+make re
+./minishell
+vim ft_tabdup.c
+make
+make re
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+export coucou salut
+env
+clear
+export CCCCCCCCCCCCCCCCC SSSSSSSSSSSSSSSSSSSSSSSSSSS
+env
+setenv ccccccccccccccccccccc ccccccccccccccccccccccccccccccccccccccccccc
+export coucou=salut
+env
+export coucou=LLLLLLLLLLLLLLLLL
+env
+export coucou=salut ooooo=ssssss
+clear
+export PATH=coucou
+pwd
+clear
+work
+ls
+cat ft_unsetenv.c
+clear
+work
+clear
+vim ft_set_env.c
+..
+./minishell
+export coucou
+env
+export CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+env
+srcs
+cat * >> allcode.c
+vim allcode.c
+vim ft_set_env.c
+..
+./minishell
+make
+make re
+clear
+vim ft_change_dir.c
+make
+./minishell
+make
+./minishell
+chdir ..
+work
+..
+work
+vim main.c
+..
+make
+./minishell
+srcs
+vim builtin_commands.c
+make re
+..
+make
+./minishell
+vim builtin_commands.c
+make
+./minishell
+srcs
+vim main.c
+vim ft_launch_processes.c
+vim builtin_commands.c
+..
+make re
+./minishell
+srcs
+cat * >> allcode.c
+rm allcode.c
+cat *
+cat * >> allcode.c
+vim allcode.c
+vim ft_launch_processes.c
+..
+make
+./minishell
+vim builtin_commands.c
+vim ft_launch_processes.c
+srcs
+vim builtin_commands.c
+..
+make
+./minishell
+vim ft_change_dir.c
+srcs
+git checkout ft_change_dir.c
+vim ft_change_dir.c
+man 2 chdir
+man chdir
+..
+make
+./minishell
+srcs
+vim ft_print_info.c
+..
+make
+./minishell
+srcs
+vim ft_print_info.c
+..
+make
+./minishell
+vim ft_print_info.c
+srcs
+vim ft_print_
+vim ft_print_info.c
+..
+make
+./minishell
+make
+./minishell
+vim ft_print_info.c
+srcs
+vim ft_print_info.c
+git checkout ft_print_info.c
+..
+make
+vim includes/minishell.h
+make
+./minishell
+srcs
+vim ft_print_info.c
+..
+make
+./minishell
+srcs
+vim ft_change_dir.c
+make
+./minishell
+vim ft_set_env.c
+srcs
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+lib
+.
+..
+make re
+./minishell
+make
+make re
+./minishell
+make re
+./minishell
+make
+make re
+./minishell
+make re
+./minishell
+make
+./minishell
+make
+./minishell
+lib
+vim ft_tabdup.c
+work
+vim ft_set_env.c
+lib
+vim ft_tab*
+make re
+./minishell
+work
+vim ft_set_env.c
+make
+./minishell
+git add .
+git commit -m "mise a la norme POSIX de la commande setenv qui est maintenant pareille a export"
+gut push
+git push
+mini
+..
+vim Makefile
+make re
+mini
+lib
+rm *.o
+ls
+rm libft*
+ls
+make
+rm *.o
+work
+clear
+..
+make
+mini
+setenv
+./minishell
+mini
+make
+./minishell
+mini
+clear
+..
+vim main.c
+lib
+..
+gcc -Wall -Werror -Wextra -l ./libft main.c
+gcc -Wall -Werror -Wextra -l libft main.c
+gcc -Wall -Werror -Wextra -l libft/libft.a main.c
+vim Makefile
+gcc -Wall -Werror -Wextra -llibft/libft.a main.c
+gcc -Wall -Werror -Wextra -llibft main.c
+vim Makefile
+gcc -Wall -Werror -Wextra -I -llibft main.c
+gcc -Wall -Werror -Wextra -g ft_strsplit.c
+gcc -Wall -Werror -Wextra -g main.c
+gcc -Wall -Werror -Wextra -l libft main.c
+gcc -Wall -Werror -Wextra -llibft main.c
+gcc -Wall -Werror -Wextra -I -llibft main.c
+../past/fillit
+vim Makefile
+gcc -Wall -Werror -Wextra -o libft  main.c
+gcc -Wall -Werror -Wextra -l  main.c
+../past/Piscine-C
+ls
+cd d06
+ls
+cat ex*/*
+cat ../d07/ex*/*
+cat ../d07/
+../d07
+ls
+lsls
+wor
+work
+gcc -o libft main.c libft/libft.a
+..
+gcc -o libft main.c libft/libft.a
+gcc -o libft main.c
+gcc -L libft -l libft/libft.a main.c
+gcc -L libft -llibft/libft.a main.c
+gcc -L libft -libft/libft.a main.c
+gcc -L libft -l libft.a main.c
+gcc main.c -L libft -l
+gcc main.c -L libft -l.a
+gcc main.c -L libft -l libft.a
+clear
+gcc main.c -L libft -l libft.a
+gcc main.c -L libft -lft.a
+vim Makefile
+make re
+ggc -I -Llibft -lift main.c
+gcc -I -Llibft -lift main.c
+gcc -I -Llibft -lft main.c
+gcc -I -Llibft -libft.a main.c
+gcc -I -Llibft  main.c
+gcc main.c libft/libft.a
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./a.out
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./a.out coucou ctototo tttttttt eeeeeeeeeee eeeeeeeeee
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./a.out coucou ctototo tttttttt eeeeeeeeeee eeeeeeeeee ssssssssssssss sssssssssssss sssssssssssss sssssssssssss sssssssssssssss sssssssssssssss sssssssssssssssss ssssssssssssss sssssssssss
+clear
+work
+vim ft_set_env.c
+mini
+make
+./minishell
+mini
+vim ft_launch_processes.c
+make
+mini
+mak
+./minishell
+lldb ./minishell
+make
+./minishell
+vim main.c
+make
+./minishell
+git stash
+git checkout master
+srcs
+git checkout master *
+..
+make
+make re
+./minishell
+clear
+vim main.c
+vim ft_set_env.c
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+setenv coucou=tutu
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+lib
+vim ft_tabdup.c
+make re
+work
+..
+make re
+work
+..
+./minishell
+git checkout cb05f11 srcs/ft_set_env.c
+make
+./minishell
+srcs
+vim ft_set_env.c
+..
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+exit
+..
+make
+./minishell
+make
+cd srcs
+..
+./minishell
+make
+./minishell
+env
+srcs
+vim ft_change_dir.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+srcs
+vim ft_change_dir.c
+..
+make
+./minishell
+srcs
+vim ft_change_dir.c
+..
+make
+./minishell
+make
+./minishell
+make
+make re
+./minishell
+work
+clear
+..
+make
+./minishell
+vim ft_set_env.c
+make
+./minishell
+setenv PWD=NULL
+./minishell
+srcs
+vim ft_change_dir.c
+make
+./minishell
+make
+clear
+./minishell
+make
+./minishell
+vim main.c
+make
+./minishell
+vim main.c
+vim ft_set_env.c
+make
+./minishell
+open minishell.fr.pdf
+./minishell
+make
+./minishell
+make
+./minishell
+setenv
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./
+setenv coucou=tutu baudelaire=poete ok=ok il=camarche cool=coucou
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./setenv coucou=tutu baudelaire=poete ok=ok il=camarche cool=coucou cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd iiiiiiiiiiiiiiiii=dddddddddddddddddddddddddddddd
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd iiiiiiiiiiiiiiiii=dddddddddddddddddddddddddddddd 
+minishell
+./minishell
+git add .
+git commit -m "setenv fonctionnel mais pas a la norme"
+git push
+make
+./minishell
+make
+./minishell
+mini
+..
+vim Makefile
+make re
+./minishell
+mini
+vim ft_launch_processes.c
+make
+min
+mini
+clear
+./minishell
+vim ft_change_dir.c
+make
+./
+./minishell
+mini
+./minishell
+mini
+exit
+..
+mini
+make
+./minishell
+make
+./minishell
+mini
+make
+./minishell
+make
+mini
+./minishell
+mini
+./minishell
+mini
+clear
+vim ft_set_env.c
+mini
+vim ft_change_dir.c
+make
+./minishell
+vim ft_set_env.c
+vim main.c
+./minishell
+make
+./minishell
+mini
+vim ft_set_env.c
+mini
+git add .
+git cm
+git commit -m "no more leaks"
+git push
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+mini
+make
+./minishell
+make
+./minishell
+make
+setenv coucou=byebye
+./minishell
+make
+./minishell
+make
+setenv ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc=d
+./minishell
+make
+./minishell
+git add .
+git commit -m "mise a la norme (du coup gros while de 3 lignes...)"
+git push
+make
+./minishell
+clear
+vim ft_unsetenv.c
+./minishell
+mini
+make
+./minishell
+make
+unsetenv pwd
+./minishell
+make
+./minishell
+vim main.c
+vim ft_unsetenv.c
+make
+./minishell
+maeke
+make
+./unsetenv PWD
+./minishell
+make
+./minishell
+mini
+git add .
+git commit -m "no more leaks in unsetenv"
+git push
+clear
+vim ft_env.c
+bash
+clear
+vim ft_env.c
+env -P ../../42/ft_ls/ft_ls
+bash
+exit
+make
+./minishell
+lib
+vim ft_strchr.c
+make
+make re
+./minishell
+clear
+./minishell
+lib
+./minishell
+make
+./minishell
+make
+./minishell
+vim ft_set_env.c
+make
+./minishell
+lib
+vim ft_tabdup.c
+make
+./minishell
+make
+./minishell
+naje
+make
+./minishell
+clear
+vim ft_env.c
+make
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./
+./minishell
+vim ft_tabsize
+vim ft_tabsize.c
+make
+make re
+./minishell
+make
+./minishell
+make re
+./minishell
+jkjjmake
+make
+./
+./minishell
+make
+./minishell
+make 
+./
+make 
+./minishell
+make re
+./minishell
+vim ft_tabdup.c
+make re
+./
+./minishell
+vim ft_env.c
+clear
+./minishell
+..
+./minishell
+clear
+./minishell
+bash
+clear
+env coucou=tutu
+clear
+./
+env coucou=tutu
+./minishell
+clear
+./minishell
+srcs
+vim ft_launch_processes.c
+make
+./minishell
+make
+vim ft_set_env.c
+bash
+vim ft_set_env.c
+work
+clear
+..
+clear
+./minishell
+bash
+vim ft_env.c
+make
+./minishell
+mini
+make
+clear
+./minishell
+mini
+clear
+man 2 env
+man env
+make
+./minishell
+vim ft_launch_processes.c
+vim find_path.c
+make
+./minishell
+mini
+./minishell
+clear
+open minishell.fr.pdf
+..
+make
+./minishell
+env coucou=tutu ./minishell
+make
+./minishell
+clear
+./minishell
+clear
+make
+./minishell
+make
+./minishell
+work
+clear
+..
+make
+./minishell
+srcs
+vim ft_env.c
+make
+./minishell
+make
+./minishell
+clear
+src
+srvs
+work
+clear
+vim ft_env.c
+..
+./minishell
+vim ft_launch_processes.c
+make
+./minishell
+srcs
+vim find_path.c
+vim ../includes/minishell.h
+,,
+..
+make
+vim find_path.c
+..
+make
+./minishell
+clear
+./minishell
+env coucou=tutu
+./minishell
+ls
+srcs
+git chekcout find_path.c
+git checkout find_path.c
+clear
+make
+vim find_path.c
+make
+make re
+vim find_path.c
+make
+srcs
+vim ft_env.c
+./minishell
+clear
+./minishell
+work
+clear
+..
+make
+vim ../includes/minishell.h
+clear
+srcs
+vim ft_env.c
+env 
+env -i zsh
+exit
+clear
+exit
+env -i zsh
+env
+clear
+exit
+env
+clear
+vim ft_launch_processes.c
+,,
+..
+make
+./minishell
+clear
+./minishell
+env
+./minishell
+clear
+ls
+./minishell
+git add .
+git commit -m "minishell fonctionnel ??"
+git push
+open minishell.fr.pdf
+./minishell\\n'\n'
+./minishell\n'\n'
+make
+./minishell\n'\n'
+make
+./minishell\n'\n'
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim ft_launch_processes.c
+make
+./minishell
+vim find_path.c
+make
+./minishell
+vim ft_launch_processes.c
+./minishell
+make
+./minishell
+git add .
+git commit -m "coucou"
+git push
+clear
+./minishell
+env -i zsh
+env
+ls
+exit
+env
+work
+clear
+work
+..
+./minishell
+vim m
+srcs
+vim main.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+srcs
+vim ft_file_to_string.c
+..
+make
+./minishell
+clear
+make
+./minishell
+mae
+make
+./minishell
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+srcs
+vim ft_file_to_string.c
+..
+make
+./minishell
+make
+./minishell
+man 2 read
+..
+make
+./minishell
+s
+ls
+./minishell
+s                 d
+make
+./
+./minishell
+ssssssss   sss ssdcsdcs
+./minishell
+ssssssssssssssssssssssssssss
+make
+./minishell
+make
+./minishell
+lib
+vim ft_strjoin
+vim ft_strjoin.c
+make
+./minishell
+..
+./minishell
+make
+./minishell
+make
+./minishell
+make
+..
+make
+./minishell
+make
+./minishell
+man 2 read
+make
+./minishell
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+s
+make
+./minishell
+s
+./minishell
+s
+./minishell
+ake
+make
+./minishell
+make
+./minishell
+lib
+vim ft_strjoin.c
+make re
+make
+./minishell
+s
+git checkout ft_strjoin.c
+make
+make re
+..
+work
+..
+make
+./minishell
+man 2 read
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+ls
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+..
+make
+./minishell
+s
+make
+./minishell
+s
+ls
+../past/fillit
+vim ft_file_to_string.
+vim ft_file_to_string.c
+work
+..
+vim main.c
+make
+./minishell
+s
+make
+./minishell
+s
+ls
+./
+./minishell
+s
+make
+./minishell
+make
+./minishell
+man 2 read
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+ls
+clear
+ls
+rm minishell*
+rm -r minishell*
+ls
+git clone https://github.com/m600x/minishell.git
+rm -r minishell
+git clone https://github.com/m600x/minishell.git minishell_cpy
+cd minishell_cpy
+ls
+clear
+ls
+cd srcs
+ls
+make
+..
+make
+clear
+ls
+cat auteur
+vim srcs
+cd srcs
+ls
+cd co
+cd core
+ls
+..
+cd completion
+ls
+cd ..
+ls
+cd terminal
+ls
+..
+ls */*/*
+ls *
+ls -R
+clear
+ls -R
+vim core/fork_simple.c
+..
+ls
+ls -R
+find . main.c
+vim Makefile
+..
+rm -r minishell_cpy
+cd minishell
+ls
+make
+./minishell
+..
+rm -rf minishell
+git clone https://github.com/JulienBalestra/minishell.git test
+cd test
+make
+;s
+ls
+cd srcs
+ls
+vim main.c
+cat * >> allcode.c
+vim allcode.c
+work
+clear
+..
+cd
+vim main.c
+work
+lib
+vim ft_strjoin.c
+rm *.o
+ls
+rm *.a
+ls
+make
+make clean
+ls
+git add .
+git commit -m "MAJ"
+git push
+..
+cp -r minishell/libft .
+vim main.c
+man 2 read
+..
+gcc main.c
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+./a.out
+clear
+./a.out
+clear
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+./a.out
+libft
+make
+make re
+git add .
+git commit -m "MAJ"
+git push
+git pull
+git add .
+git commit -m "MAJ"
+git push
+..
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+s
+./a.out
+kjgkjhg
+./a.out
+jgykjhgkjhgkjhg
+gcc main.c libft/libft.a
+sdvvsdcdvwdew
+./a.out
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./a.out
+ls
+rm -r a.out
+rm -r a.out.dSYM
+ls
+work..
+mini
+minishell
+cler
+clear
+open Programmation-systeme-en-C-sous-Linux.pdf
+l
+clear
+vim oldmain.c
+open minishell.fr.pdf
+git checkout minishell.fr.pdf
+open minishell.fr.pdf
+vim main.c
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+./a.out
+man 2 ioctl
+man cfmakeraz
+man cfmakeraw
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+./a.out
+make
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+dgtrf
+./a.out
+mv main.c oldmain.c
+vim oldmain.c
+vim main.c
+mv oldmain.c main.c
+gcc main.c libft/libft.a
+./a.out
+man 2 fgets
+man fget
+man fgets
+vim main.c
+man memcpy
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+./a.out
+gcc main.c libft/libft.a
+./a.out
+man termios
+gcc main.c libft/libft.a
+./a.out
+man 2 tcsattr
+man tcsetattr
+gcc main.c libft/libft.a
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+work
+..
+ls
+cd test
+cat * >> allcode.c
+ls
+cat */* >> allcode.c
+cat */*/* >> allcode.c
+cat */*/*/* >> allcode.c
+cat */*/*/*/* >> allcode.c
+cat */*/*/*/*/* >> allcode.c
+cat */*/*/*/*/*/*/*/* >> allcode.c
+cat -R * >> allcode.c
+man 2 cat
+man cat
+clear
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+clear
+man 2 cfmakeraw
+man cfmakeraw
+man 2 termios
+man termios
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+clear
+mv main.c oldmain.c
+vim main.c
+work
+open minishell.fr.pdf
+..
+open Programmation-systeme-en-C-sous-Linux.pdf
+man memcpy
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+vim oldmain.c
+./ongoing_read
+top
+kill 3351
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+kill 3351
+top
+top 3377
+kill 3377
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+top 3377
+top
+kill 3416
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+clear
+./ongoing_read
+vim oldmain.c
+clear
+gcc main.c libft/libft.a -o ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+clear
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+man fflush
+clear
+mini
+minishell
+test
+ls
+cd test
+ls
+cd srcs
+ls
+vim allcode.c
+..
+rm -r test
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+git clone https://github.com/Lazare-42/libft.gitqwefff
+man 2 fflush
+man fflush
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc main.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+man exit
+man 2 exit
+man exit
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+gcc oldmain.c libft/libft.a -o ongoing_read
+./ongoing_read
+work
+vim main.c
+clear
+./ongoing_read
+work
+git checkout main.c
+vim main.c
+..
+make
+./ongoing_read
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+work
+..
+git checkout -b padding
+work
+clear
+..
+./minishell
+work
+vim main.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git checkout master
+make
+./minishell
+git checkout *
+ls
+make
+make re
+./minishell
+git checkout padding
+srcs
+vim ft_launch_processes.c
+..
+make
+./minishell
+make
+./
+./minishell
+..
+make
+./minishell
+srcs
+./minishell
+vim ft_launch_processes.c
+,,
+..
+make
+./minishell
+.
+..
+make
+./minishell
+..
+make
+./minishell
+,,
+..
+make
+./minishell
+..
+make
+./minishell
+clear
+c;ear
+clear
+make
+./minishell
+srcs
+git checkout *
+..
+make
+./minishell
+make
+./minishell
+man cfmakeraz
+man cfmakeraw
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git add .
+git commit -m "not working"
+git push
+git push --set-upstream origin padding
+git checkout master
+./minishell
+open Programmation-systeme-en-C-sous-Linux.pdf
+man termios
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+vim main.c
+make
+..
+make
+./minishell
+srcs
+vim main.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+man termios
+cd test
+..
+https://github.com/Geoffrey42/minishell.git
+git clone https://github.com/Geoffrey42/minishell.git
+minishell
+./
+./minishell
+make
+./minishell
+rm -rf minishell
+cd
+rm -rf minishell
+git clone https://github.com/bricewge/minishell.git
+cd minishell
+ls
+make
+./minishell
+cd
+rm -rf minishell
+git clone https://github.com/Chr0nos/minishell.git copie
+cd copie
+make
+make re
+make
+;s
+ls
+gcc *.c libft/libft.a
+gcc *.c
+gcc *.c headers/minishell.h
+gcc *.c headers/*.h
+cd libft
+ls
+git clone https://github.com/ariard/minishell.git copie
+cd copie
+ls
+make
+make re
+..
+rm -r copie
+y
+..
+make
+./minishell
+..
+make
+./minishell
+..
+./minishell
+make
+..
+make
+./minishell
+s
+make
+./minishell
+s
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+s
+make
+./minishell
+make
+./minishell
+clear
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+..
+cd minishell
+make
+..
+cd minishell
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+man 2 read
+make
+./minishell
+make
+./minishell
+man 2 read
+../Programmation-systeme-en-C-sous-Linux.pdf
+../../past
+fillit
+vim ft_file_to_string.
+vim ft_file_to_string.c
+make
+./minishell
+make
+./minishell
+s
+make
+./minishell
+..
+make
+./minishell
+s
+ls
+./minishell
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+man ascii
+make
+./
+./minishell
+man ascii
+make
+./minishell
+lx
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git add .
+git commit -m "on commence a avoir un debut de termcaps fonctionnel"
+git push
+make
+./minishell
+man termcap
+man ascii
+make
+./minishell
+make
+./minishell
+make
+./minishell
+MAKE
+./minishell
+make
+./minishell
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+wor
+work
+..
+./minishell
+clear
+srcs
+vim main.c
+vim ft_file_to_string.c
+MAN TERMCAP
+man termcap
+bash
+man terminfo
+..
+./minishell
+man terminfo
+man 7 term
+vim todo.txt
+work
+..
+env 
+od -c
+man od
+od -c
+man 5 termcap
+mantermcap
+man termcap
+man terminfo
+man 5 terminfo
+open Programmation-systeme-en-C-sous-Linux.pdf
+src
+srcs
+vim ft_file_to_string.c
+./minishell
+..
+./minishell
+cd
+cd Desktop
+rm Screen\ Shot\ 2017-10-02\ at\ 1
+rm Screen\ Shot\ 2017-10-02\ at\ 13.16.53.png
+rm *
+ls
+..
+kexstat
+bash
+kexstat
+kextstat
+man kextsta
+man kextstat
+clear
+ls
+clear
+work
+..
+mkdir fdf
+cd fdf
+rm -rf fdf
+..
+rm -rf fdf
+git clone https://github.com/Lazare-42/fdf.git
+cd fdf
+clear
+pwd
+mv /Users/lazrossi/Downloads/fdf.fr.pdf .
+git add .
+git commit -m "ajout du sujet"]
+git commit -m "ajout du sujet"
+git push
+work
+../..
+fdf
+open 
+open fdf.fr.pdf
+man ioctl
+env
+env TERMCAP
+env $TERMCAP
+env $PATH
+..
+vim main.c
+..
+vim main.c
+gcc main.c
+vim main.c
+git push
+gcc main.c
+man beep
+gcc main.c
+clear
+work
+clear
+..
+cp /Users/lazrossi/Downloads/Advanced.Programming.UNIX.pdf .
+git add .
+git commit -m "ajout du manuel advanced UNIX programming"
+git push
+open Advanced.Programming.UNIX.pdf
+srcs
+vim ft_file_to_string.c
+man terminfo
+man 2 terminfo
+man terminfo
+man 2 move
+man move
+locale vt 100
+locate vt 100
+infocmp
+man setterm
+echo "$TERM"
+env
+terminfo
+infocmp
+/usr/share/terminfo/78/xterm-256color echo -e cuf=\E[%p1%dC, cuf1=\E[C
+/usr/share/terminfo/78/xterm-256color echo -e cuf=\E[%p1%dC
+/usr/share/terminfo/78/xterm-256color echo -e bel=^G
+sudo /usr/share/terminfo/78/xterm-256color echo -e bel=^G
+cd /usr/share/terminfo/78/xterm-256color
+cat /usr/share/terminfo/78/xterm-256color
+R1;2c
+ls
+exit
+ls
+terminfo
+sudo /usr/share/terminfo/78/
+cd /usr/share/terminfo/78/
+ls
+_xterm xnuppc-256x96
+work
+git checkout master
+..
+make re
+./minishell
+clear
+cleear
+clear
+..
+git clone https://github.com/JulienBalestra/21sh.git copieur
+cd copieur
+make re
+make
+./minishell
+ls
+cd srcs
+ls
+cat *.c >> allcode.c
+cat allcode.c
+vim allcode.c
+..
+git checkout padding
+git stash
+git checkout master\\n
+git checkout padding
+git stash
+git checkout padding
+git checkout padding --force
+srcs
+..
+makd
+make
+./minishell
+man tgetstr
+../../copieur
+srcs
+..
+ls
+cd includes
+ls
+vim minishell.h
+srcs
+../srcs
+vim allcode.c
+man 2 read
+work
+clear
+vim ft_file_to_string.c
+..
+make
+./
+./minishell
+git add .
+git commit -m "pour capter les autres signaux il faut stocker dans un long et non dans un char *"
+git push
+make
+./minishell
+..
+make
+./minishell
+clear
+make
+./minishell
+..
+./minishell
+make
+./minishell
+mak
+make
+./minishell
+make
+./minishell
+man ascii
+pwd
+vim allcode.c
+work
+../../copieur/srcs
+vim allcode.c
+vim ft_file_to_string.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+./
+./minishell
+/make
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim ../includes/minishell.h
+vim ft_file_to_string.c
+make
+..
+vim includes/minishell.h
+wmake
+make
+vim Makefile
+clear
+make re
+vim includes/minishell.h
+make
+./minishell
+srcs
+vim ft_file_to_string.c
+make
+./minishell
+man termios
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+exit
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+srcs
+git checkout ft_file_to_string.c
+vim ft_file_to_string.c
+..
+make
+./minishell
+make
+./
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+./minishell
+make
+./minishell
+..
+make
+./minishell
+vim ft_file_to_string.c
+..
+make
+./minishell
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+clear
+vim main.c
+cd libft
+make clean
+ls
+..
+make
+./minishell
+open Advanced.Programming.UNIX.pdf
+open minishell.fr.pdf
+clear
+lib
+vim ft_lst_advance.c
+srcs
+vim ft_lst_advance.c
+srcs
+vim ft_advance_string_for_quote.c
+vim ft_lst_advance.c
+pwd
+work
+lib
+srcs
+rm ft_lst_advance.c
+vim ft_lstdelone.c
+work
+vim ft_lst_advance.c
+ope..n Advanced.Programming.UNIX.pdf
+..
+sh makemf.sh minishell
+make re
+srcs
+rm allcode.c
+..
+make
+sh makemf.sh minishell
+make re
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+couco
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+./minishell
+vim ft_launch_processes.c
+vim main.c
+./minishell
+vim ft_file_to_string.c
+make
+./
+./minishell
+make
+./minishell
+vim ft_launch_processes.cmake
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./
+./minishell
+make
+./minishell
+..
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+,ake
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+,,
+..
+make
+./minishell
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+./minishellmake
+make
+./minishellmake
+make
+./minishellmake
+./minishell
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim main.c
+make
+./minishell
+vim main.c
+make
+./minishell
+vim ft_launch_processes.cmake
+vim ft_file_to_string.c
+make
+./minishell
+vim main.c
+./minishell
+vim ft_file_to_string.c
+./minishell
+make
+./minishell
+clear
+vim ft_store.c
+make
+./minishell
+make
+./minishell
+..
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+./minishell
+..
+make
+./minishell
+make
+./minishell
+clear
+..
+./minishell
+srcs
+vim ft_lst_advance.c
+make
+man mlx
+clear
+vim ft_lst_advance.c
+git add .
+git commit -m "done"
+git push
+git checkout -b ternary_tree
+git checkout ternary_tree
+git stash
+git checkout ternary_tree
+git merge padding
+git add .
+git commit -m "MAJ"
+git push
+d..
+make
+..
+sh makemf.sh minishell
+make re
+./minishell
+clear
+srcs
+vim ft_store.c
+man getopt
+..
+make
+git checkout ft_store.c
+make
+make re
+./minishell
+vim ft_file_to_string.c
+./minishell
+wrok
+work
+clear
+vim ft_store.c
+..
+make
+./minishell
+clear
+vim ft_advance_string_for_quote.c
+vim ft_complete_command.c
+vim ft_lst_advance.c
+make
+../
+minishell
+make
+./minishell
+man memcpy
+make
+./minishell
+make
+./minishell
+clear
+vim ft_advance_string_for_quote.c
+vim ft_lst_advance.c
+clear
+vim main.c
+make
+./minishell
+s
+./minishell
+s
+srcs
+make
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+..
+make
+./minishell
+..
+work
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+sh makemf.sh minishell
+make re
+make
+./minishell
+git add .
+git commit -m "quotes functionning again"
+git push
+..
+make
+./minishell
+make
+./minishell
+make
+coucou
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+d
+./minishell
+ddddddddddddddddddddddddddddddddd
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+ft
+ft_ls
+srcs
+vim ft_print_info.c
+vim ft_print_normal.c
+vim ft_CMD_l.c
+./minishell
+make
+./minishell
+make
+./minishell
+6
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+./minishell
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+p
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+0
+p
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+1
+0
+./minishell
+8
+6
+5
+3
+2
+1
+8
+7
+5
+0
+3
+6
+4
+3
+2
+7
+9
+8
+h
+v
+gf
+wfs
+tr
+./minishell
+make
+./minishell
+7
+make
+./minishell
+5make
+make
+./minishell
+..
+./minishell
+man ed
+..
+./minishell
+diskutil list
+work
+clear
+./minishell
+..
+./minishell
+srcs
+vim ft_store.c
+..
+make re
+clear
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+8
+9
+./minishell
+make
+./minishell
+git add .
+git commit -m "with debug"
+git push
+make
+./minishell
+make
+./minishell
+make
+./minishell
+exit
+..
+make
+./minishell
+make
+./
+./minishell
+make
+./minishell
+make
+./minishell
+make re
+git add .
+git commit -m "ai compris les arbres ternaires grace a geeks for geeks. Me trompais tout du long(a ma defense je m'aidais pas d'internet.... Abandon du projet. Retour sur arbre binaire"
+git push
+git checkout main
+git checkout -b main
+git merge ternary_tree
+git merge main ternary_tree
+srcs
+..
+./minishell
+make
+make re
+./minishell
+srcs
+vim ft_store.c
+clear
+vim ft_store.c
+vim main.c
+..
+make
+srcs
+vim ft_file_to_string.c
+cat *.c >> allcode.c
+vim allcode.c
+vim ft_lst_advance.c 
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+./minishell
+..
+./
+./minishell
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+work
+..
+./minishell
+srcs
+vim ft_lst_advance.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+srcs
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+man ascii
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+git add .
+git commit -m "gestion simple avec liste double chainee"
+git push
+git push --set-upstream origin main
+git checkout master
+git merge main
+make
+./minishell
+git add
+git add .
+git commit -m "gestion simple avec liste double chainee"
+git push
+work
+..
+ls
+make clean
+ls
+srcs
+ls
+./
+./minishell
+..
+./minishell
+srcs
+vim ft_store.c
+vim ft_file_to_string.c
+work
+clear
+vim ft_lst_advance.c
+..
+make
+./minishell
+~vim ft_s
+~vim ft_store.c
+vim ft_store.c
+vim ft_file_to_string.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+˙make
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim ft_file_to_string.c
+..
+make
+./minishell
+..
+lib
+vim ft_putwhites.c
+make re
+ls
+make clean
+ls
+rm *.o
+rm *.a
+make
+make clean
+git add .
+git commit -m "ft_putwhites"
+git push
+srcs
+vim ft_f
+vim ft_file_to_string.c
+lib
+vim ft_putwhites.c
+..
+./minishell
+work
+clear
+vim ft_lst_advance.c
+..
+make
+./minishell
+vim ft_file_to_string.c
+make
+./minishell
+make
+./minishell
+vim ft_lst_advance.c
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+work
+clear
+vim ft_lst_advance.c
+vim ft_file_to_string.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+work
+clear
+vim ft_lst_advance.c
+..
+make
+./minishell
+clear
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim ft_lst_advance.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make re
+sh makemf.sh minishell
+make re
+cd srcs
+rm allcode.c
+..
+make re
+sh makemf.sh minishell
+make re
+sh makemf.sh minishell
+make re
+./minishell
+make re
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+ls
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+git add .
+git commit -m "auto comp vers le haut fonctionnel. Pas vers le bas"
+git push
+work
+srcs
+vim ft_file_to_string.c
+..
+make
+./
+./minishell
+cccccddddc
+makecddc
+work
+..
+./minishell
+src
+srcs
+vim ft_lst_advance.c
+..
+./minishell
+srcs
+vim ft_file_to_string.c
+..
+make
+./minishell
+work
+srcs
+clear
+ls
+vim ft_lst_advance.c
+/
+work
+..
+make
+./minishell
+make
+./minishell
+srcs
+vim ft_file_to_string.c
+make
+.
+..
+make
+./minishell
+make
+./minishell
+srcs
+vim ft_file_to_string.c
+make
+..
+make
+./minishell
+srcs
+vim ft_file_to_string.c
+make
+..
+make
+./minishell
+vim ft_s
+vim ft_store.c
+clear
+vim ft_file_to_string.c
+vim ft_lst_advance.c
+vim ft_store.c
+vim ft_lst_advance.c
+make
+./minishell
+mak
+make
+./minishell
+srcs
+vim ft_file_to_string.c
+..
+make
+./minishell
+..
+work
+./minishell
+bbbbbbbbbbbbbb
+bb
+bv
+bggggggggggg
+bssssssssss
+booooooooobtttttttttt
+bdddddddddddddddddddddddddddddd
+bsssssssssssssssssssssssssssssssssssssss
+bxxxxxxxxxxxxxxxxxxxxxxx
+bvvvvvvvvvvvvvvvv
+bmmmmmmmmmmmmmmmmm
+b;;;;;;;;;;;;;;;;;;;;
+./minishell
+..
+./minishell
+srcs
+vim ft_file_to_string.c
+make
+./minishell
+dd
+..
+./minishell
+/
+cd work
+work
+..
+./minishell
+srcs
+vim ft_file_to_string.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+vim ft_lst_advance.c
+make
+ls
+clear
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git checkout srcs/ft_print_info.c
+make re
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim ft_lst_advance.c
+./minishell
+make
+./minishell
+make
+./minishell
+armake
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+clear
+vim ft_file_to_string.c
+./minishell
+make
+./minishell
+..
+./minishell
+make
+./minishell
+..
+./minishell
+make
+./minishell
+make
+./minishell
+couocu
+./minishell
+git add .
+git commit -m "Pas a la norme et doit certainement leaks. Mais autocomp fonctionnel"
+cd libft
+ls
+rm *.o
+rm *.a
+ls
+make 
+make clean
+cd ..
+srcs
+ls
+..
+ls
+rm minishell
+rm -rf minishell\ 2   minishell\ 3 minishell\ 4 minishell\ 5 a.out a.out.dSYM
+ls
+git add .
+git commit -m "Pas a la norme et doit certainement leaks. Mais autocomp fonctionnel"
+git push
+./minishell
+make
+./minishell
+exit
+./minishell
+..
+./minishell
+exit
+..
+csh
+exit
+..
+work
+vim ft_store.c
+..
+make
+./minishell
+srcs
+git checkout srcs/ft_store.c
+make re
+ls
+./minishell
+mv ft_lst_advance.c ft_lst_operations.c
+srcs
+vim ft_store.c
+vim ft_lst_operations.c
+ls
+ftp localhost
+./minishell
+..
+./minishell
+./
+./minishell
+work
+vim ft_file_to_string.c
+,,
+..
+exit
+work
+..
+./minishell
+csh
+exit
+work
+..
+./minishell
+work
+vim ft_file_to_string.c
+..
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make re
+sh makemf.sh minishell
+make re
+./minishell
+clear
+vim ft_file_to_string.c
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+make
+./minishell
+12
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git add.
+git add .
+git commit -m "verification de l'existence du premier char pour envoyer a liste chainee et a la fonction qui envoie les commandes"
+git pish
+git push
+./minishell
+./
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+vim alias.txt
+mv alias.txt alias.c
+vim alias.c
+vim ft_store.c
+make
+./minishell
+vim alias.c
+make
+sh makemf.sh minishell
+make re
+./minishell
+make
+./minishell
+make
+./minishell
+sdcslkdcmsl;dckm
+make
+./minishell
+pwd
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+norminette
+make
+./minishell
+ls
+./minishell
+man
+man ls
+git checkout -b fragmented_read
+git checkout fragmented_read
+git checkout -b alias
+git add .
+git commit -m "mise en place d'alias mais certaines commandes ne marchent plus???"
+git push
+git push --set-upstream origin alias
+git checkout fragmented_read
+make re
+./minishell
+./
+./minishell
+git checkout alias
+git stash
+git checkout alias
+make re
+./minishell
+make re
+./minishell
+rm *.o
+ls
+rm *,a
+rm *.a
+ls
+cd ..
+ls
+cd srcs
+ls
+..
+clear
+ls
+l
+clear
+ls
+git add .
+git commit -m "bug debile"
+git push
+./minishell
+srcs
+lib
+vim ft_tabdup.c
+cp ft_tabdup.c ft_tabdup_and_add.c
+vim ft_tabdup_and_add.c
+vim ft_tabdup.c
+vim ft_tabdup_and_add.c
+vim Makefile
+make re
+sl
+l
+ls
+make clean
+ls
+clear
+./minishell
+..
+libft
+git add .
+git commit -m "ajout de ft_tabdup_and_add"
+git push
+/
+git clone https://github.com/vcombey/wolfportal.git
+work
+clear
+ls
+work
+..
+work
+..
+./minishell
+clear
+./minishell
+work
+..
+./minishell
+csh
+sdclskmdc;slkmdc;lsmc;lkmas;lcmas;ldcmas;ldckma;sdlkcmslkcmcddm;alcmmlckd;a;lckdmsa;lcc
+mkl
+lmsdk
+;lskmc
+sadc
+./minishell
+compgen -c
+csh
+cd Downloads
+ls
+ls -S
+ls -Sl
+rm -rf *
+ls
+cd 
+Documents
+ls
+work
+clear
+vim main.c
+work
+clear
+//
+work
+..
+./minishell
+srcs
+ls
+vim alias.c
+vim alias.txt
+ls
+find *.txt
+ls
+find *.tx
+find *.txt
+man open
+man 2 open
+man getcwd
+../../past/fillit
+vim ft_file_to_string.
+ls
+make clean
+ls
+vim ft_file_to_string.c
+man getcwd
+..
+make
+./minishell
+..
+./
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+./minishell
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+srcs
+..
+ls
+..
+ls
+cd get-next-line
+ls
+vi, get_next_line.c
+vim get_next_line.c
+work
+..
+make
+./minishell
+make
+./minishell
+˙
+cd
+curl -o x.htm http://web.archive.org/web/20171029163834/https://www.wsj.com/amp/articles/who-will-rein-in-facebook-challengers-are-lining-up-1509278405
+sed -i '/<p>/,/<\/p>/!d' x.htm
+sed -i '/<p>/,/<\/p>/!d'
+sed -i '/<p>/,/<\/p>/!d' ./x.htm
+sed -i '/<p>/,/<\/p>/!d' x.htm
+curl -o hi http://web.archive.org/web/20171029163834/https://www.wsj.com/amp/articles/who-will-rein-in-facebook-challengers-are-lining-up-1509278405
+sed -i '/<p>/,/<\/p>/!d' hi
+man 2 sed
+man sed
+sed -i '/<p>/,/<\/p>/!d' hi
+pwd
+sed -i '/<p>/,/<\/p>/!d' /Users/lazrossi/hi
+sed -i ' ' '/<p>/,/<\/p>/!d' /Users/lazrossi/hi
+firefox hi
+Firefox hi
+firefox
+ls
+cat hi
+firefox
+open hi
+..
+../libft
+ls
+make clean
+ls
+make clean
+rm *.o
+ls
+clean
+clear
+ls
+cp ft_split_whitespaces.c ft_split_char.c
+vim ft_split_char.c
+vim Makefile
+make re
+vim libft.h
+vim Makefile
+make re
+vim include/libft.h
+make re
+vim ft_putabs.c
+git checkout include/libft.h Makefile
+make re
+make
+vim Makefile
+vim include/libft.h
+make re
+vim include/libft.h
+git checkout include/libft.h Makefile
+vim include/libft.h
+..
+work
+..
+./minishell
+git checkout main
+git stash
+git add .
+git commit -m "travail en cours"
+git push
+git checkout master
+make re
+./minishell
+git checkout alias
+git stash
+git checkout alias
+lib
+make re
+cp ft_split_whitespaces.c ft_split_char.c
+vim ft_split_char.c
+git add .
+git commit -m "MAJ"
+git push
+vim include/libft.h
+vim Makefile
+make re
+git add .
+git commit -m "MAJ"
+git push
+pwd
+vim alias.
+vim alias.c
+clear
+vim alias.c
+work
+pwd
+vim alias.txt
+clear
+lib
+vim get_next_line.c
+vim ft_split_char.
+vim ft_split_char.c
+vim alias.c
+vim include/libft.h
+make re
+srcs
+work
+vim alias.txt
+..
+make re
+./minishell
+vim alias.txt
+./minishell
+make
+./minishell
+git add .
+git commit -m "Lecture des alias depuis le fichier. Bientot l'ecriture"
+git push
+exit
+work
+..
+./minishell
+cd
+bash
+work
+..
+clear
+srcs
+vim alias.
+vim alias.c
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+/
+cd /Users/lazrossi/Documents/42/minishell sh makemf.sh minishell
+cd /Users/lazrossi/Documents/42/minishell mkdir coucou
+dcw
+sdc
+./minishell
+alias coucou byebye
+coucou
+alias "coucou" "byebye"
+coucou
+man alias
+csh
+make
+./minishell
+cleae
+clear
+vim ft_new_alias.c
+man 2 write
+srcs
+vim main.c
+ls
+vim builtin_commands.c
+..
+sh makemf.sh minishell
+make
+make clean
+make re
+./minishell
+make
+./minishell
+git checkout srcs/main.c
+git checkout srcs/ft_launch_processes.c
+make re
+./minishell
+srcs
+cat alias.txt
+git checkout alias.txt
+..
+make re
+./minishell
+cat srcs/alias.txt
+make
+./minishell
+git checkout alias.txt
+srcs
+git checkout alias.txt
+..
+make
+./minishell
+make
+./minishell
+git checkout alias.txt
+srcs
+git checkout alias.txt
+..
+./minishell
+make
+./minishell
+srcs
+git checkout alias.txt
+..
+./minishell
+srcs
+git checkout alias.txt
+..
+make
+./minishell
+cat srcs/alias.txt
+srcs
+git checkout alias.txt
+..
+./minishell
+cat srcs/alias.txt
+echo salut ca va
+./minishell
+git add .
+git commit -m "alias fonctionelles"
+git push
+./minishell
+clear
+vim ft_echo.c
+./minishell
+echo "tutu tata"
+./minishell
+git checkout alias.txt
+srcs
+git checkout alias.txt
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+work
+..
+l
+ls
+open minishell.fr.pdf
+lin
+ls
+cd srcs
+..
+ls
+lib
+ls
+vim get_next_line.c
+work
+..
+make
+./minishell
+lib
+vim ft_split_char.c
+man 2 bzero
+man bezero
+vim ft_bzero.c
+vim ft_memdel.c
+vim ft_tabdel.c
+make re
+ls
+make clean
+ls
+make
+work
+..
+make
+./minishell
+srcs
+cat alias.txt
+..
+git add .
+git commit -m "Alias sans leaks"
+git push
+make
+./minishell
+..
+./minishell
+..
+make
+./minishell
+..
+./minishell
+work
+clear
+..
+ls
+make
+./minishell
+srcs
+vim ft_new_alias.c
+clear
+srcs
+vim ft_launch_processes.c
+vim ft_print_errors.c
+..
+make
+./minishell
+..
+clear
+ls
+srcs
+vim alias.c
+..
+./minishell
+srcs
+cat alias.txt
+vim alias.txt
+clear
+vim ft_print_errors.c
+clear
+make
+clear
+./minishell
+git checkout alias.txt
+./minishell
+git checkout alias.txt
+clear
+sdcsldkncslkjdncklsjndclksjdnckljsndclkjn
+sdcsd;lcnsadcjasdckljnasckljnasdklcjnaslkdjcnlskjdcnlkajsdcnasdclkjasdcclkjanaakjsndcnjkcds
+cd ..;mkdir coucou
+ls
+rm -r coucou
+cd ..;echo coucou
+work
+clear
+./minishell
+git checkout alias.txt
+cat alias.txt
+clear
+..
+./minishell
+vim alias.c
+srcs
+./minishell
+cat alias.txt
+..
+./minishell
+..
+./minishell
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+..
+./minishell
+srcs
+vim alias.
+vim alias.c
+make
+./minishell
+clear
+make
+./minishell
+git checkout srcs/alias.txt
+cat srcs/alias.txt
+rm srcs/alias.txt
+make
+./minishell
+clear
+cd srcs
+vim alias.txt
+ls
+vim alias.txt
+ls
+cat alias.txt
+vim alias.txt
+cat alias.txt
+./minishell
+..
+alias bouboubou "echo bibbibibi"
+./minishell
+srcs
+cat alias.txt
+..
+./minishell
+make
+./minishell
+make
+vim ft_new_alias.c
+vim ft_print_errors.c
+make
+git add .
+git commit -m "meilleure gestion d'erreur"
+git push
+git add .;git commit -m "hi there"; git push
+clear
+vim main.c
+git commit -m "\nHi there"
+cd / ; echo "I am root"
+f
+fc
+fc -l -100000
+fc -l 100000000000
+1215752191
+fc -l 1215752191
+fc -l 1215752189
+fc -l 1215752
+fc -l 121575
+fc -l 12157
+fc -l 1215
+fc -l 10131
+fc -l 10137
+fc -l 10140
+fc -l 10145
+fc -l 10200
+fc -l -10145
+work
+..
+minishell
+fc -l -10145 >> historic.txt
+cat historic.txt
+vim historic.txt
+./minishell
+cd
+clear
+cd -l
+ls -l
+ls -a
+cd .oh-my-zsh
+ls
+ls -a
+clear
+s;lkmsdclkmsdclkms;lkdmc
+clear
+fc -l -10145
+mawork
+work
+vim historic.txt
+..
+vim historic.txt
+fc -l -10145 | cut -c 6 >> historic.txt 
+vim alias.txt
+vim historic.txt
+fc -l -10145 | cut -c 6
+fc -l -10145 | cut -c 5-
+fc -l -10145 | cut -c 6-
+fc -l -10145 | cut -c 7-
+fc -l -10145 | cut -c 8-
+fc -l -10145 | cut -c 7-
+fc -l -10145 | cut -c 8-
+fc -l -10145 | cut -c 8- >> historic.txt
+vim historic.txt
+rm historic.txt
