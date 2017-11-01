@@ -6,17 +6,9 @@ void	ft_new_alias(char **new_values)
 	int fd;
 	char *alias_name;
 	char *alias_value;
-	int i;
 
-	i = 0;
-	while (new_values[i])
-		i++;
-	if (i != 2)
-	{
-		ft_putstr("alias : 2 arguments expected\n");
+	if (!(ft_put_alias_errors(new_values)))
 		return ;
-	}
-
 	fd = open("/Users/lazrossi/Documents/42/minishell/srcs/alias.txt", O_RDWR);
 	get_next_line(fd, &alias_name, '\n');
 	get_next_line(fd, &alias_value, '\n');

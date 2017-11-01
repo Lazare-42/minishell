@@ -58,6 +58,7 @@ int		set_non_canonical_input();
 void	ft_clean_lst_for_line_pos(t_arg *first);
 char	*find_aliases(char *line);
 void	ft_new_alias(char **new_values);
+int		ft_put_alias_errors(char **str);
 
 # include <unistd.h>
 

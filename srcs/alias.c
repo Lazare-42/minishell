@@ -13,9 +13,11 @@ static char	**ft_tab_with_alias(char **values, char **commands, char **line_spli
 		i = 0;
 		while (values[i])
 		{
-			if (!(ft_memcmp(line_split[j], values[i], ft_strlen(line_split[j]))))
+			if (!(ft_memcmp(line_split[j], values[i], ft_strlen(line_split[j]))) 
+						&& ft_strlen(line_split[j]) == ft_strlen(values[i]))
 			{
 				ft_strdel(&line_split[j]);
+				if (commands[i])
 				line_split[j] = ft_strdup((commands[i]));
 				i = 0;
 				j = 0;
@@ -90,7 +92,11 @@ char	*find_aliases(char *line)
 
 	fd = open("/Users/lazrossi/Documents/42/minishell/srcs/alias.txt",
 			O_RDONLY);
-	(fd == -1) ? ft_putstr("Unable to open alias.txt\n") : 0;
+	if (fd == -1)
+	{
+		ft_putstr("Unable to open alias.txt\n");
+		return (line);
+	}
 	if (!get_next_line(fd, &values_line, '\n') ||
 			!get_next_line(fd, &commands_line, '\n'))
 	{
