@@ -543,7 +543,6 @@ vim ft_padding.o
 ./ft_ls -l | cat -e
 ./ft_ls -l >> myls
 ls -l >> truels
-vim srcs/ft_store.c
 vim ft_place_element.o
 mkdir Esssec/administratif
 mkdir Esssec-administratif
@@ -586,156 +585,18 @@ rm \\
 mkdir \\ 
 vim ft_place_element
 git checkout srcs/ft_place_element.c
-..
-make re
-./ft_ls -l
 ./ft_ls -la
-./ft_ls -lr
-clear
-./ft_ls -lr
-lldb ./ft_ls
-make re
-./ft_ls -lr
-make re
-./ft_ls -lr
-../libft
 v ft_strcmp.c
-../../branch-ls
-srcs
-vim ft_place_element.c
 ls -K
 ./ft_ls ls -K
 ./ft_ls -K
-clear
-vim command_sort.txt
-./ft_ls -K
-..
-./ft_ls -K
-man 2 stat
-clear
-./ft_ls -K
-man ls
-make re
-./ft_ls -l
-ls -l
-git add .
 git commit -m "amelioration du tri de stockage, une seule operation de comparaison (comme ft_strcmp) au lieu de 2 a chaque fois"
-git push
-clear
-./ft_ls -l
-./ft_ls -g
-clear
-srcs
-vim ft_place_element.c
-vim *.txt
-..
-vim *.txt
 ../../branch-ls
-srcs
-vim ft_place_element.c
 git checkout 1683463 ft_place_element.c
-vim ft_place_element.c
-clear
-vim ft_store.c
-..
-make re
-./ft_ls -g
+make new
 ls -g
-ls
-rm *.o
-rm ft_ls\ 2 ft_ls\ 3
-ls
-clear
 ./ft_ls -g
-make re
-./ft_ls -g
-make clean
-clear
-vim Makefile
-make new
-ls
-vim Ma
-vim Makefile
-make new
-vim Makefile
-make new
-./ft_ls -g
-make re
-./ft_ls -g
-vim ls.c
-make re
-./ft_ls -g
-make re
-./ft_ls -g
-make re
-./ft_ls -g
-make re
-./ft_ls -g
-ls -g
-clear
-./ft_ls -g
-./ft_ls -l
-make re
-./ft_ls -l
-make re
-./ft_ls -l
-make re
-./ft_ls -l
-make re
-./ft_ls -l
-make re
-./ft_ls -l
-make re
-./ft_ls -l
-make re
-./ft_ls -l
-make re
-./ft_ls -l
 git checkout ft_place_element.c
-srcs
-git checkout ft_place_element.c
-..
-make re
-./ft_ls -l
-make re
-./ft_ls -l
-clear
-./ft_ls -l
-git checkout srcs/ft_store.c
-make re
-./ft_ls -l
-..
-make re
-./ft_ls -l
-vim ft_place_element.c
-srcs
-vim ft_store.c
-vim ft_place_element.c
-..
-make re
-./ft_ls -l
-ls
-make re
-./ft_ls -l
-srcs
-vim ft_store.c
-vim ls.c
-vim ft_store.c
-vim includes/ls.h
-make re
-./ft_ls -l
-vim includes/ls.h
-make re
-rm ft_ls\ 2 ft_ls\ 3
-rm *.o
-ls
-rm ft_ls\ 2 ft_ls\ 4
-ls
-./ft_ls -l
-ls -l
-clear
-..
-vim *.txt
 vim includes/ls.h
 ..
 make re
@@ -9997,3 +9858,142 @@ fc -l -10145 | cut -c 8-
 fc -l -10145 | cut -c 8- >> historic.txt
 vim historic.txt
 rm historic.txt
+fc -l -10145 | cut -c 8- >> historic.txt
+vim historic.txt
+clear
+vim main.c
+vim ft_launch_processes.c
+vim ft_store.c
+vim historic.txt
+pwd
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+..
+git add .
+git commit -m "coucou"
+git checkout -b full_command_historic
+git add .
+git commit -m "Premiere version de la lecture de l'historique de commandes"
+git push
+git push --set-upstream origin full_command_historic
+./minishell
+work
+..
+./minishell
+setenv
+./minishell
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss
+./minishell
+srcs
+vim ft_set_env.c
+make
+vim srcs/ft_store.c
+make
+./minishell
+make
+./minishell
+clear
+vim main.c
+vim ft_file_to_string.c
+mv ft_file_to_string.c ft_read_input.c
+sh makemf.sh minishell
+..
+sh makemf.sh minishell
+srcs
+vim ft_launch_processes.c
+cat *.c >> allcode.c
+vim allcode.c
+rm allcode.c
+vim ft_read_input.c
+./minishell
+rm allcode.c
+vium ft_set_env.c
+vim ft_set_env.c
+git checkout master ft_set_env.c
+git checkout ft_set_env.c
+git stash
+git checkout master
+..
+make
+make re
+./minishell
+git checkout 080332c
+git stash
+git checkout 080332c
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd iiiiiiiiiiiiiiiii=dddddddddddddddddddddddddddddd
+./minishell
+make re
+./minishell
+make re
+git checkout 0504e30
+git stash
+git checkout 0504e30
+make re
+./minishell
+ls
+git checkout origin/full_command_historic
+git stash
+git checkout origin/full_command_historic
+git checkout full_command_historic
+make re
+srcs
+vim ft_store.c
+make
+./minishell
+vim ft_launch_processes.c
+vim ft_store.c
+vim ft_launch_processes.c
+vim main.c
+cat *.c >> allcode.c
+vim allcode.c
+mv ft_file_to_string.c ft_read_input.c
+..
+sh makemf.sh minishell
+srcs
+vim ft_read_input.c
+./minishell
+clear
+vim ft_launch_processes.c
+vim main.c
+ls
+./minishell
+make
+./minishell
+..
+make
+./minishell
+..
+make
+./minishell
+..
+./minishell
+..
+work
+..
+./minishell
+fc -l -10145 | cut -c 8- >> historic.txt
+fc -l -10145  >> historic.txt
+vim historic.txt
+rm historic.txt
+fc -l -10145  >> historic.txt
+vim historic.txt
+make
+./minishell
+make
+./minishell
+vim historic.txt
+fc -l -10145 | cut -c 8- >> historic.txt
+./minishell
+make
+./minishell
+rm historic.txt
+./minishell
+man 2 open
+make
+./minishell

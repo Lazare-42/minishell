@@ -15,6 +15,7 @@
 
 char  *old_line;
 t_arg *to_find;
+t_arg *first_arg;
 
 int	set_non_canonical_input()
 {
@@ -116,7 +117,7 @@ static int ft_check_input_for_special_input(char **line, int buf, t_arg *first_a
 }
 
 
-char	*ft_file_to_string(t_arg *first_arg)
+char	*ft_file_to_string()
 {
 	long  buf;
 	char  *line;
@@ -126,10 +127,12 @@ char	*ft_file_to_string(t_arg *first_arg)
 	ret = 1;
 	old_line = NULL;
 	to_find = NULL;
+	first_arg = NULL;
 	if (!(line = ft_strnew(0)))
 		return (NULL);
 	if (!(set_non_canonical_input()))
 		return (NULL);
+	first_arg = ft_store_args(line, first_arg);
 	while (ret)
 	{
 		buf = 0;

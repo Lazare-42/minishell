@@ -2,30 +2,31 @@
 
 void	ft_advance_lst_to(t_arg *first, t_arg **to_find, char **line, int line_len)
 {
-	if (first->left)
-		ft_advance_lst_to(first->left, to_find, line, line_len);
-	if (!ft_memcmp(*line, first->arg, line_len) && first->line_pos == 2)
-		*to_find = first;
-	if (first->right)
-		ft_advance_lst_to(first->right, to_find, line, line_len);
+	t_arg *tmp;
+
+	tmp = first;
+	while (tmp && ft_memcmp(*line, first->arg, line_len) && tmp->line_pos == 2)
+		tmp = tmp->next;
+	if (tmp)
+		*to_find = tmp;
 }
 
 void	ft_clean_lst_for_line_pos(t_arg *first)
 {
-	if (first && first->right)
-		ft_clean_lst_for_line_pos(first->right);
-	if (first && first->line_pos == 1)
+	while (first && first->line_pos == 1)
+	{
+		first = first->next;
 		first->line_pos = 2;
-	if (first && first->left)
-		ft_clean_lst_for_line_pos(first->left);
+	}
 }
 
 void	ft_retreat_lst_to(t_arg *first, t_arg **to_find, char **line, int line_len)
 {
-	if (first->right)
-		ft_retreat_lst_to(first->right, to_find, line, line_len);
-	if (!ft_memcmp(*line, first->arg, line_len) && first->line_pos == 1)
-		*(to_find) = first;
-	if (first->left)
-		ft_retreat_lst_to(first->left, to_find, line, line_len);
+	t_arg *tmp;
+
+	tmp = first;
+	while (tmp && ft_memcmp(*line, first->arg, line_len) && tmp->line_pos == 1)
+		tmp = tmp->previous;
+	if (tmp)
+		*to_find = tmp;
 }

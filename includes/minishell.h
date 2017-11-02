@@ -25,9 +25,8 @@ typedef struct 		s_arg
 {
 	char			*arg;
 	int				line_pos;
-	struct 	s_arg	*left;
-	struct	s_arg	*middle;
-	struct  s_arg	*right;
+	struct 	s_arg	*next;
+	struct	s_arg	*previous;
 }					t_arg;
 
 int		ft_recognize_builtin_command(char *str);
