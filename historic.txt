@@ -10009,3 +10009,7 @@ cat historic.txt
 ca marche de ouf
 cat historic.txt
 git add .
+git commit -m "Les commandes et l historique sont fonctionnels. Il faudrait resoudre les leaks"
+git push
+exit
+exit
