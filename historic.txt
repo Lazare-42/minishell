@@ -9997,3 +9997,15 @@ rm historic.txt
 man 2 open
 make
 ./minishell
+Hi_there
+makemSUPERDOUDOU
+cat historic.txt
+loulou
+cat historic.txt
+adding text
+cat historic.txt
+Anna je t'aime
+cat historic.txt
+ca marche de ouf
+cat historic.txt
+git add .

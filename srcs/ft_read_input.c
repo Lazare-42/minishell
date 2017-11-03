@@ -53,8 +53,8 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		if (first_arg && old_line)
 		{
 			ft_advance_lst_to(first_arg, &to_find, old_line); 
-			ft_replace_content(*line, to_find->arg, 1);
-			*line = ft_strdup(to_find->arg);
+			(to_find) ? ft_replace_content(*line, to_find->arg, 1) : 0;
+			(to_find) ? *line = ft_strdup(to_find->arg) : 0;
 		}
 		return (0);
 	}
@@ -79,7 +79,7 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 	return (1);
 }
 
-static int ft_check_input_for_special_input(char **line, int buf, t_arg *first_arg)
+static int ft_check_input_for_special_input(char **line, int buf, t_arg **first_arg)
 {
 	char *to_erase;
 
@@ -97,14 +97,14 @@ static int ft_check_input_for_special_input(char **line, int buf, t_arg *first_a
 		to_find = NULL;
 		old_line = NULL;
 		(old_line) ? ft_strdel(&old_line) : NULL;
-		(**line) ? first_arg = ft_store_args(*line, first_arg) : 0;
-		(first_arg) ? ft_clean_lst_for_line_pos(first_arg) : 0;
+		(**line) ? *first_arg = ft_store_args(*line, *first_arg) : 0;
+		(*first_arg) ? ft_clean_lst_for_line_pos(*first_arg) : 0;
 		ft_putchar('\n');
 		(**line) ? ft_look_inside(*line) : 0;
 		*line = ft_strnew(0);
 		return (0);
 	}
-	return (ft_check_input_for_ctrl_keys(line, buf, first_arg));
+	return (ft_check_input_for_ctrl_keys(line, buf, *first_arg));
 }
 
 
@@ -128,7 +128,7 @@ char	*ft_file_to_string()
 	{
 		buf = 0;
 		ret = read(0, &buf, sizeof(long));
-		if (ft_check_input_for_special_input(&line, buf, first_arg)) 
+		if (ft_check_input_for_special_input(&line, buf, &first_arg)) 
 			line = ft_strjoin(line, (char*)&buf);
 		(line) ? ft_replace_content(NULL, line, 0) : 0;
 		(buf != KEY_UP && buf != KEY_DOWN && line) ? old_line = ft_strdup(line) : 0;

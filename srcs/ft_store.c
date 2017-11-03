@@ -53,12 +53,22 @@ static t_arg	*ft_store_command_historic(char *line, t_arg *first)
 t_arg	*ft_store_args(char	*line, t_arg *first)
 {
 	t_arg	*new;
+	int		fd;
 
 	new = NULL;
+	fd = -1;
 	if (!first)
 		return (ft_store_command_historic(line, first));
+	fd = open("/Users/lazrossi/Documents/42/minishell/historic.txt", O_WRONLY);
+	if (fd != -1)
+	{
+		lseek(fd, 0, SEEK_END);
+		write(fd, line, ft_strlen(line));
+		write(fd, "\n", 1);
+	}
 	new = new_arg(line);
 	if (new)
 		ft_place_element_in_tern_tree(&first, new);
+	close (fd);
 	return (first);
 }
