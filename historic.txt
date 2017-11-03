@@ -1,5 +1,4 @@
 cd 42/ls
-ls -Rl ../../..
 cd Documents/42/ls
 cp Documents/\#.vimrc\# .
 mv \#.vimrc\# .vimrc
@@ -597,232 +596,44 @@ make new
 ls -g
 ./ft_ls -g
 git checkout ft_place_element.c
-vim includes/ls.h
-..
-make re
-./ft_ls -l
-ls -l
-clear
-./ft_ls -lt
-clear
-time ./ft_ls -lR /
-vim *.txt
-clear
 ../branch-ls
 git checkout b796a3f ft_store.c
 git checkout b796a3f srcs/ft_store.c
-srcs
-vim ft_store.c
-..
 git checkout b796a3f srcs/ft_place_element.c
-srcs
-vim ft_place_element.c
 ../../ls
-srcs
-vim ft_place_element.c
-..
 vim *.txt
-srcs
-vim *.txt
-pwd
-vim *.txt
-..
-vim *.txt
-man ls
-vim includes/ls.h
-vim *.txt
-vim includes/ls.h
-work
-pwd
-clear
-vim ../includes/ls.h
 ../../branch-ls/srcs
-vim ft_place_element.c
-..
-make re
-./ft_ls -lt
-./ft_ls -l
-./ft_ls -lt
 lldb r
-y
-lldb ./ft_ls
-make re
-./ft_ls -lt
-./ft_ls -lU
 ./ft_ls -lUs
-./ft_ls -lS
-./ft_ls -lu
-ls -lu
-./ft_ls -lu
-./ft_ls -lt
-lldb ./ft_ls
-clear
-ls
-./ft_ls
-./ft_ls -l
-ls -l
-ls -lt
-./ft_ls -lt
-./ft_ls -lu
-ls -lu
-lldb ./ft_ls
-srcs
-vim ft_store.c
-clear
-./ft_ls -lu
-..
-./ft_ls
-./ft_ls -l
-./ft_ls -lu
-./ft_ls -lt
-lldb ./ft_ls
-srcs
-vim ft_store.c
-clear
-vim rotate.c
-vim ft_store.c
-vim ft_place_element.c
-vim ft_store.c
-clear
-vim .vimrc
-cd
-vim .vimrc
-cd
-source .vimrc
-work
-vim ft_store.c
-..
-make re
-srcs
-vim ft_place_element.c
-..
-make re
-./ft_ls -lt
-./ft_ls -l
-./ft_ls
 git diff srcs/ft_place_element.c
 lldb ./ft_ls
-srcs
-vim ft_place_element.c
-cd
-work
-..
-vim Makefile
-make re
-vim Makefile
-make re
-vim Makefile
-make
-vim Makefile
 make\\n
-make
-make re
-./ft_ls
-srcs
-vim ft_place_element.c
-make re
-./ft_ls
-make re
-./ft_ls
-./ft_ls -t
-./ft_ls
-rm *.o
 rm ft_ls\ 2 ft_ls\ 4
-rm ft_ls\ 2 ft_ls\ 3
 ./ft_ls
-./ft_ls -u
-./ft_ls -l
-./ft_ls
-ls
 mv author auteur
 nake
-make
-./ft_ls -l
 ./ft_ls 
 ./ft_ls /
 ./ft_ls /dev
-./ft_ls -l
-./ft_ls -t
 q
-make re
-./ft_ls -t
 ./ft_ls -u
 ./ft_ls -U
-./ft_ls -t
-./ft_ls -r
 vim ft_store.o
-srcs
-vim ft_store.c
-vim rotate.c
-vim ft_store.c
-make re
-./ft_ls -r
 ./ft_ls -rt
 ./ft_ls -rtl
-make re
-clear
-ls
-rm ft_ls\ 2 ft_ls\ 3
-rm *.o
-./ft_ls -rtl
 ls -rtl
-vim Makefile
-clear
 ./ft_ls -tl
 ./ft_ls -tlr
 ./ft_ls -t
-vim Makefile
-make re
-./ft_ls -t
 ./ft_ls -r
 ./ft_ls -rl
-./ft_ls -l
 ls -rl
-clear
-./ft_ls -l
-clear
-./ft_ls -lr
 ls -lr
-vim ft_place_element.c
-make re
-./ft_ls -lr
-clear
-make re
-..
-make re
-./ft_ls -lr
-./ft_ls -lrt
-./ft_ls -lt
-./ft_ls -lrt
-./ft_ls -lr
-./ft_ls -lrt
-clear
-./ft_ls -lrt
-./ft_ls -lr
-./ft_ls -l
-./ft_ls -lrt
-./ft_ls -lt
-./ft_ls -lrt
-make re
-./ft_ls -lrt
-make re
-./ft_ls -lrt
 make rex
-make re
-./ft_ls -lrt
-srcs
-vim rotate.c
-./ft_ls -lt
-clear
-c
-clear
-npm start
 npm install
 npm start
 node app.js
 netstat -anp tcp | grep 3000
-clear
-..
 make re
 ./ft_ls -lt
 ./ft_ls -ltr
@@ -9997,19 +9808,193 @@ rm historic.txt
 man 2 open
 make
 ./minishell
-Hi_there
-makemSUPERDOUDOU
+fc -l -10145 | cut -c 8- >> historic.txt
+./minishell
+git checkout srcs/ft_set_env.c
+ls
+./minishell
+srcs
+vim ft_store.c
+clear
+ls
+vim ft_store.c
+git checkout fb0218f srcs/ft_set_env.c
+make
+./minishell
+vim ft_complete_command.c
+vim ft_lst_operations.c
+vim ../includes/minishell.h
+..
+cd past
+cd Piscine-C
+ls
+cd d11
+ls
+cat ex02/ft_list
+cat ex02/ft_list_push_front.c
+work
+..
+make
+./minishell
+work
+make
+..
+male
+make
+/../ft_ls/ft_ls
+./minishell
+cat ex08/ft_list_reverse.c
+work
+..
 cat historic.txt
-loulou
-cat historic.txt
-adding text
-cat historic.txt
-Anna je t'aime
-cat historic.txt
-ca marche de ouf
-cat historic.txt
+..
+make
+./minishell
+cat *.c >> allcode.c
+vim allcode.c
+rm allcode.c
+..
+make
+./minishell
+srcs
+vim allcode.c
+cat *.c >> allcode.c
+vim allcode.c
+make
+..
+make
+make re
+make
+./minishell
+..
+make
+./minishell
+..
 git add .
-git commit -m "Les commandes et l historique sont fonctionnels. Il faudrait resoudre les leaks"
+git commit -m "retour a une simple liste chainee"
 git push
+work
+clear
+..
+clear
+./minishell
+clear
+srcs
+vim ft_read_input.c
+..
+make
+./minishell
+make
+m
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
 exit
+..
+./minishell
+make
+./minishell
+./ongoing_read
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+srcs
+..
+vim historic.txt
+./minishell
+ls -Rl ../../..
 exit
+..
+make
+make re
+./minishell
+..
+./minishell
+make
+./minishell
+make
+mkae
+make
+./minishell
+..
+make
+./minishell
+make
+./minishell
+make
+..
+make
+./minishell
+..
+make
+./minishell
+cd
+ls
+cd Documents
+ls
+cd
+work
+..
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+make
+./minishell
+git add .
+git commit -m "MAJ"
+gp
+work
+..
+clear
+./minishell
+clear
+srcs
+vim ft_print_info.c
+./minishell
+..
+./minishell
+make
+./minishell
+make
+./minishell
+git add .
+git commit -m "a gerer : leaks + cas derreur de open"
+git push
+./minishell
+rm historic.txt
+git add .
