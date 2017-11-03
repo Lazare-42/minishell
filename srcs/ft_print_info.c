@@ -21,8 +21,8 @@
 
 static char *get_last_part(char *tmp)
 {
-	int i;
-	int	k;
+	int 	i;
+	int		k;
 
 	i = 0;
 	k = 0;
@@ -90,6 +90,7 @@ void		ft_print_current_directory()
 	i = 0;
 	tmp = getcwd(path, 1024);
 	ft_putstr("\e[0;91m");
+	ft_putchar('\r');
 	ft_putchar('/');
 	if (tmp)
 		ft_putstr(get_last_part(tmp));
