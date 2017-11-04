@@ -10035,3 +10035,82 @@ git push origin "Arrows"
 git push origin "Arrows"[D[D[D[D[D[D
 git checkout -b Arrows
 git add .
+git commit -m "origin"
+git push
+git push --set-upstream origin Arrows
+clear
+clear
+make
+m
+ls
+clear
+m
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+clear
+make
+cou
+coul
+m
+[A[A[A[A[A[A[A[A[A[A[A
+clear
+clear
+clear
+make
+m
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+clear
+clsdcsdcsdccsdcscdscsdcsdcsdc
+make
+m
+exit
+clear
+clear
+exit
+ls
+make
+ls
+m
+exit
+lslsdclsdc
+sdc
+coucousdc
+sdcsdcsdcsdcsdcsdcsc
+sdcsdcsdcsdcsdcsdcsc
+sdcsdcsdcsdcsdcsdcsc
+sdcsdcsdcsdcsdcsdcsc
+sdcsdcsdcsdcsdcsdcsdcsc
+sdcsdcsdcsdcsdcsdcsc
+sdcsdcsdcsdcsdcsdcsc
+makesdcsdcsdcsdcsdcsdcsc
+sdcsc
+ls
+coucou
+coudcou
+make
+m
+coucou
+grosse teub
+grosse teub
+git commit -m "origin"rosse teub
+exit
+lslslsls
+ls -lielslslsls
+make
+couocu
+vim main.c
+cat historic.txt
+[?1;2czsh
+zsh
+couxxxxxxxx
+coucouxxxxxxxxxx
+He
+Hello
+Hello There
+Hello There
+make
+m
+Hello There
+coudddcou
+Bonjour je suis Lazare
+exit
+exit

@@ -14,6 +14,7 @@
 #include <termios.h>
 
 char  *old_line;
+char   *to_right;
 t_arg *to_find;
 t_arg *first_arg;
 
@@ -41,6 +42,12 @@ void ft_replace_content(char *old_content, char *new_content, int erase)
 		ft_print_current_directory();
 	}
 	ft_putstr(new_content);
+	if (to_right)
+	{
+		ft_putstr(to_right);
+		ft_print_current_directory();
+		ft_putstr(new_content);
+	}
 }
 
 int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
@@ -53,6 +60,8 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		if (first_arg && old_line)
 		{
 			ft_advance_lst_to(first_arg, &to_find, old_line); 
+			(to_find && to_right) ? ft_print_current_directory(), ft_putwhites(ft_strlen(*line) + ft_strlen(to_right)) : 0;
+			(to_find && to_right) ? ft_memdel((void**)&to_right) : 0;
 			(to_find) ? ft_replace_content(*line, to_find->arg, 1) : 0;
 			(to_find) ? *line = ft_strdup(to_find->arg) : 0;
 		}
@@ -68,13 +77,26 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		}
 		return (0);
 	}
-	if (buf == KEY_LEFT)
+	if (buf == KEY_LEFT && *line && **line)
 	{
-		return (1);
+		char *to_cpy;
+		int	  len;
+
+		to_cpy = *line;
+		len = 0;
+		len = ft_strlen(to_cpy);
+		to_cpy = ft_strdup(&(*line)[len - 1]);
+		to_right = (to_right) ? ft_strjoinfree(&to_cpy, &to_right, 'B') : ft_strnew(1);
+		(to_right) ? to_right[0] = (*line)[len - 1] : 0;
+		(*line)[len - 1] = '\0';
+		ft_replace_content(NULL, *line, 0);
+		return (0);
 	}
+	if (buf == KEY_LEFT)
+		return (0);
 	if (buf == KEY_RIGHT)
 	{
-		return (1);
+		return (0);
 	}
 	return (1);
 }
@@ -97,6 +119,9 @@ static int ft_check_input_for_special_input(char **line, int buf, t_arg **first_
 		to_find = NULL;
 		old_line = NULL;
 		(old_line) ? ft_strdel(&old_line) : NULL;
+		if (to_right)
+			*line = ft_strjoin(*line, to_right);
+		to_right = NULL;
 		(**line) ? *first_arg = ft_store_args(*line, *first_arg) : 0;
 		(*first_arg) ? ft_clean_lst_for_line_pos(*first_arg) : 0;
 		ft_putchar('\n');
@@ -119,6 +144,7 @@ char	*ft_file_to_string()
 	old_line = NULL;
 	to_find = NULL;
 	first_arg = NULL;
+	to_right = NULL;
 	if (!(line = ft_strnew(0)))
 		return (NULL);
 	if (!(set_non_canonical_input()))
