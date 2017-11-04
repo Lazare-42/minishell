@@ -10026,3 +10026,12 @@ exit
 ls
 ls
 git add .
+git commit -m "protection de ft_print_info"
+git push
+git push origin "Arrow commands"
+git push origin "Arrow commands"[D[D[D[D[C[C[C[C[
+clear
+git push origin "Arrows"
+git push origin "Arrows"[D[D[D[D[D[D
+git checkout -b Arrows
+git add .
