@@ -10012,4 +10012,17 @@ git add .
 git commit -m "Les commandes et l historique sont fonctionnels. Il faudrait resoudre les leaks"
 git push
 exit
+exitmake
+m
 exit
+clear
+ls
+make
+m
+ls
+make
+exit
+exit
+ls
+ls
+git add .

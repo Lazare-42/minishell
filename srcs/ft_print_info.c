@@ -22,16 +22,13 @@
 static char *get_last_part(char *tmp)
 {
 	int 	i;
-	int		k;
 
 	i = 0;
-	k = 0;
 	if (tmp)
 		i = ft_strlen(tmp);
-	k = i;
 	if (i > 1)
 		i--;
-	while (tmp[i] != '/')
+	while (i && tmp[i] != '/')
 		i--;
 	if (i > 1)
 		i++;
