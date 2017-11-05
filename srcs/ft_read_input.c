@@ -96,6 +96,18 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		return (0);
 	if (buf == KEY_RIGHT)
 	{
+		if (*line && to_right)
+		{
+			char *c;
+
+			c = ft_strnew(1);
+			c[0] = to_right[0];
+			*line = ft_strjoinfree(line, &c, 'B');
+			if (to_right[1])
+				to_right = ft_strdup(&to_right[1]);
+			else
+				ft_strdel(&to_right);
+		}
 		return (0);
 	}
 	return (1);
@@ -161,3 +173,4 @@ char	*ft_file_to_string()
 	}
 	return (NULL);
 }
+

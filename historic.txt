@@ -10114,3 +10114,26 @@ coudddcou
 Bonjour je suis Lazare
 exit
 exit
+lslcccslsls
+lslcccsgougoulsls
+ls ../includes/minishell2.h
+clear
+ls
+clear
+poupou
+python --version
+ft_ls
+clear
+vim mcsdcain.c
+exit
+coucou
+"echo coucou tu suces"
+"echo coucou tu suces"
+mkdir salut
+mkdir salut
+rm -r salut
+ls -l
+ls -lU srcs
+top
+top | grep minishell
+git add .
