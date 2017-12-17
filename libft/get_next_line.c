@@ -77,6 +77,7 @@ int		get_next_line(const int fd, char **line, char tofind)
 	char			*buf;
 	int				ret;
 
+	buf = NULL;
 	buf = ft_strnew(BUFF_SIZE);
 	if (!(tmp = manage_stock(&stock, fd)))
 		return (-1);

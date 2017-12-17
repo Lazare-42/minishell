@@ -13,10 +13,10 @@
 #include "../includes/minishell.h"
 #include <termios.h>
 
-char  *old_line;
-char   *to_right;
-t_arg *to_find;
-t_arg *first_arg;
+static char  *old_line;
+static char   *line_right;
+static t_arg *to_find;
+static t_arg *first_arg;
 
 int	set_non_canonical_input()
 {
@@ -42,9 +42,9 @@ void ft_replace_content(char *old_content, char *new_content, int erase)
 		ft_print_current_directory();
 	}
 	ft_putstr(new_content);
-	if (to_right)
+	if (line_right)
 	{
-		ft_putstr(to_right);
+		ft_putstr(line_right);
 		ft_print_current_directory();
 		ft_putstr(new_content);
 	}
@@ -60,8 +60,8 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		if (first_arg && old_line)
 		{
 			ft_advance_lst_to(first_arg, &to_find, old_line); 
-			(to_find && to_right) ? ft_print_current_directory(), ft_putwhites(ft_strlen(*line) + ft_strlen(to_right)) : 0;
-			(to_find && to_right) ? ft_memdel((void**)&to_right) : 0;
+			(to_find && line_right) ? ft_print_current_directory(), ft_putwhites(ft_strlen(*line) + ft_strlen(line_right)) : 0;
+			(to_find && line_right) ? ft_memdel((void**)&line_right) : 0;
 			(to_find) ? ft_replace_content(*line, to_find->arg, 1) : 0;
 			(to_find) ? *line = ft_strdup(to_find->arg) : 0;
 		}
@@ -86,8 +86,8 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		len = 0;
 		len = ft_strlen(to_cpy);
 		to_cpy = ft_strdup(&(*line)[len - 1]);
-		to_right = (to_right) ? ft_strjoinfree(&to_cpy, &to_right, 'B') : ft_strnew(1);
-		(to_right) ? to_right[0] = (*line)[len - 1] : 0;
+		line_right = (line_right) ? ft_strjoinfree(&to_cpy, &line_right, 'B') : ft_strnew(1);
+		(line_right) ? line_right[0] = (*line)[len - 1] : 0;
 		(*line)[len - 1] = '\0';
 		ft_replace_content(NULL, *line, 0);
 		return (0);
@@ -96,17 +96,17 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		return (0);
 	if (buf == KEY_RIGHT)
 	{
-		if (*line && to_right)
+		if (*line && line_right)
 		{
 			char *c;
 
 			c = ft_strnew(1);
-			c[0] = to_right[0];
+			c[0] = line_right[0];
 			*line = ft_strjoinfree(line, &c, 'B');
-			if (to_right[1])
-				to_right = ft_strdup(&to_right[1]);
+			if (line_right[1])
+				line_right = ft_strdup(&line_right[1]);
 			else
-				ft_strdel(&to_right);
+				ft_strdel(&line_right);
 		}
 		return (0);
 	}
@@ -129,11 +129,10 @@ static int ft_check_input_for_special_input(char **line, int buf, t_arg **first_
 	if (*line && buf == '\n')
 	{
 		to_find = NULL;
-		old_line = NULL;
-		(old_line) ? ft_strdel(&old_line) : NULL;
-		if (to_right)
-			*line = ft_strjoin(*line, to_right);
-		to_right = NULL;
+		(old_line) ? ft_memdel((void**)&old_line) : NULL;
+		if (line_right)
+			*line = ft_strjoinfree(line, &line_right, 'B');
+		line_right = NULL;
 		(**line) ? *first_arg = ft_store_args(*line, *first_arg) : 0;
 		(*first_arg) ? ft_clean_lst_for_line_pos(*first_arg) : 0;
 		ft_putchar('\n');
@@ -156,7 +155,7 @@ char	*ft_file_to_string()
 	old_line = NULL;
 	to_find = NULL;
 	first_arg = NULL;
-	to_right = NULL;
+	line_right = NULL;
 	if (!(line = ft_strnew(0)))
 		return (NULL);
 	if (!(set_non_canonical_input()))

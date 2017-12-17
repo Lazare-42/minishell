@@ -10127,8 +10127,6 @@ clear
 vim mcsdcain.c
 exit
 coucou
-"echo coucou tu suces"
-"echo coucou tu suces"
 mkdir salut
 mkdir salut
 rm -r salut
@@ -10137,3 +10135,297 @@ ls -lU srcs
 top
 top | grep minishell
 git add .
+git commit -m "fleche droite fonctionelle"
+git push
+leaks ./minishell
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
+vim Makefile
+exit
+ls
+ls coucou
+exit
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
+ls 
+exit
+exit
+ls
+exit
+sdcsc
+..
+cat historic.txt
+vim historic.txt
+cat historic.txt
+[?1;2
+open minishell.fr.pdf
+clear
+cat historic.txt
+[?
+zsh
+ls
+ls
+ls
+sh makemf.sh minishell
+ls
+ls
+ls
+ls
+ulimit -a
+clear
+cd srcs
+vim ft_print_git.c
+cd srcs
+vim ft_print_git.c
+ls
+vim ft_print_git.c
+vim ft_print_info.c
+cd ..
+ls
+cd libft
+vim ft_strjoin.c
+vim get_next_line.c
+clear
+work
+cd srcs
+vim ft_print_info.c
+libft
+cd ../libft
+pwd
+alias libft "cd /Users/lazrossi/Documents/42/minishell/libft"
+cd ../../../../../
+libft
+clear
+vim ft_strnew.c
+work
+make re
+exit
+exit
+ 
+libft
+vim ft_strnew.c
+work
+clear
+srcs
+cd srcs
+vim ft_print_info.c
+clear
+clear
+exit
+exit
+ls
+
+exit
+ls
+
+hey coucou
+salut
+sdljkcnsdlkjn
+dlvndskflvjnsdlkvjnsdlkvn
+echo anna
+exit
+echo coucoucoucou"$PATH"vevre
+echo "$PATH"
+echo "$PATH"
+cououc
+make
+m
+coucou
+couocu
+exit
+ls
+coucou
+clear
+clear
+make
+clewr
+clear
+ls
+cat historic.txt
+[?1;2cenv
+setenv
+env coucou=tutu
+env
+env -vi coucou=salut
+env
+env coucou toto
+env
+env salut byebye
+env
+env lol=mdr
+env
+make re
+sh makemf.sh minishell
+make re
+make
+clear
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+clear
+lslslsls
+slsldlsdsdsdddddddddddddddddddd
+clear
+cd /
+cd Downloads
+ls
+cd Users
+cd 
+ls
+cd lazrossi
+ls
+clear
+./minishell
+exit
+
+clear
+ls
+clear
+env coucou=tutu
+env
+env
+setenv coucou=tutu
+env
+setenv tata=byebye
+setenv tata=byebye haha=hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+setenv
+geth
+cd
+cd /
+geth attach
+clear
+geth
+clear
+ls
+cd /
+work
+alias bitcoin scam
+scam
+bitcoin
+clear
+ls
+clear
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+
+
+clear
+ls
+
+clear
+ls
+ls
+ls
+cd /
+mini
+minishell
+work
+clear
+ls
+ls -rRl /
+ldslkkkkkkkkmvlskdmvlskdmlvkmsv
+
+
+
+clear
+top
+top -o MEM
+ls
+clear
+ls
+clear
+cleae
+clear
+cdcs
+sddddddddddddddddddd
+LS
+ls -r
+clear
+ls
+car ,
+cat ,
+rm ,
+ls
+pwd
+rm oldmain.c
+clea
+clear
+cat todo.txt
+man terminfo
+cat todo.txt
+man term
+la
+ls
+cat historic.txt
+[?1;2c
+cdddslkjnsdklcjnsdclksjnc
+sdckjnsdckjsncdkjsncs
+sdssscjsdcdscsdcsnsdsdcsdcsdcsdcsdcsdcsdcsdcscsdcscsdcsdcsdcsdcsdcsdcsdscsdcsdcdscsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdsdcscsdcsdsdcsdcsdcsdcscdjncksdcsdcjnssdcsddcsdcsccsdcsdcsdcsdcdjnsdcsdcssdcsdccsdcssdcsdcsdcssdcsdcssdsdccsdc
+clear
+sdssscjsdcdscsdcsnsdsdcsdcsdcsdcsdcsdcsdcsdcscsdcscsdcsdcsdcsdcsdcsdcsdscsdcsdcdscsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdsdcscsdcsdsdcsdcsdcsdcscdjncksdcsdcjnssdcsddcsdcsccsdcsdcsdcsdcdjnsdcsdcssdcsdccsdcssdcsdcsdcssdcsdcssdsdccsdc
+cd srcs
+clear
+ls
+cat alias.txt
+42
+ls "
+ls "lol"
+cat todo.txt
+vim ft_put_env.c
+env
+env coucou tutu
+env
+env salut goodbye
+env ls
+env coucou=byebye
+env
+env coucou=tutu
+env
+setenv coucou=tutu
+env
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd iiiiiiiiiiiiiiiii=dddddddddddddddddddddddddddddd
+clear
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd iiiiiiiiiiiiiiiii=dddddddddddddddddddddddddddddd
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq
+./[A
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss
+setenv cool=coucou
+setenv cool=coucou nul=tropnul
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+
+[A
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv
+make
+m
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv
+setenv ssssssssss=sssssssssssssssssssssssssssssssss coucou=tutu
+setenv
+make
+m
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv
+setenv byebye=hello
+setenv
+exit
+exit
+exit

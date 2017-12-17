@@ -57,6 +57,7 @@ static void ft_print_git()
 	int				ret;
 
 	path = NULL;
+	buf = NULL;
 	buf = ft_strnew(1025);
 	if ((dir = opendir(".git")))
 	{
