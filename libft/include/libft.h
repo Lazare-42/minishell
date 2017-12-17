@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/25 18:44:32 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/05 17:13:34 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/17 16:21:05 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +100,5 @@ char				**ft_tabdup(char **str, int size);
 int					ft_tabsize(char **tab);
 void				ft_putwhites(int i);
 char				**ft_tabdup_and_add(char **tab, char *str, int size);
+char				*ft_strjoinfree_str_char(char **s1, char s2);
 #endif
