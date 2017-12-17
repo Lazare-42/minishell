@@ -10429,3 +10429,40 @@ setenv
 exit
 exit
 exit
+ls
+
+vim allcode.c
+clear
+ls
+clear
+ls
+clear
+setenv byebye=hello
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+setenv ssssssssss=sssssssssssssssssssssssssssssssss
+[A
+
+setenv ssssssssss=sssssssssssssssssssssssssssssssssss
+setenv sssssssssssss=sssssssssssssssssssssssssssssssssss
+setenv sssssssssssss=sssssssssssssssssssssssssssssssssss
+setenv sssssssssssss=sssssssssssssssssssssssssssssssssss
+m
+pwd
+ls
+./minishell
+clear
+ls
+make
+./minishell
+exit
+setenv sssssssssssss=sssssssssssssssssssssssssssssssssss
+setenv
+setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
+setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
+exit
+setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
+setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
+setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
+setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd
+git add /
+git add .
