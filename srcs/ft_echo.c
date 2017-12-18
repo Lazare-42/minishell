@@ -1,18 +1,30 @@
-char extern **environ;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_echo.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/18 20:58:05 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/18 20:59:21 by lazrossi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/minishell.h"
 
 void	ft_print_corresponding_variable(char *str)
 {
-	size_t	i;
-	int		j;
+	size_t		i;
+	int			j;
+	char extern **environ;
 
 	i = ft_strlen(str);
 	j = 0;
 	str++;
 	if (str)
 	{
-		while (environ[j] && (ft_memcmp(environ[j], str, i - 1) || environ[j][i - 1] != '='))
+		while (environ[j] && (ft_memcmp(environ[j], str, i - 1)
+					|| environ[j][i - 1] != '='))
 			j++;
 		if (environ[j])
 			ft_putstr(&environ[j][i]);
@@ -21,7 +33,7 @@ void	ft_print_corresponding_variable(char *str)
 
 void	ft_parse(char **str)
 {
-	int 	i;
+	int		i;
 	int		j;
 
 	i = 0;

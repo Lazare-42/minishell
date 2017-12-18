@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/09/07 17:13:19 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/18 09:44:27 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,6 @@ int	set_non_canonical_input()
 	return (1);
 }
 
-void ft_replace_content(char *old_content, char *new_content, int erase)
-{
-	ft_print_current_directory();
-	if (erase)
-	{
-		ft_putwhites(ft_strlen(old_content));
-		ft_print_current_directory();
-	}
-	ft_putstr(new_content);
-	if (line_right)
-	{
-		ft_putstr(line_right);
-		ft_print_current_directory();
-		ft_putstr(new_content);
-	}
-}
-
 int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 {
 	t_arg *tmp;
@@ -60,9 +43,8 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		if (first_arg && old_line)
 		{
 			ft_advance_lst_to(first_arg, &to_find, old_line); 
-			(to_find && line_right) ? ft_print_current_directory(), ft_putwhites(ft_strlen(*line) + ft_strlen(line_right)) : 0;
 			(to_find && line_right) ? ft_memdel((void**)&line_right) : 0;
-			(to_find) ? ft_replace_content(*line, to_find->arg, 1) : 0;
+			(to_find) ? ft_replace_content(*line, to_find->arg, line_right) : 0;
 			(to_find) ? *line = ft_strdup(to_find->arg) : 0;
 		}
 		return (0);
@@ -72,7 +54,7 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		if (first_arg && to_find)
 		{
 			ft_retreat_lst_to(&to_find); 
-			(to_find) ? ft_replace_content(*line, to_find->arg, 1) : ft_replace_content(*line, old_line, 1);
+			(to_find) ? ft_replace_content(*line, to_find->arg, line_right) : ft_replace_content(*line, old_line, line_right);
 			*line = (to_find) ?  ft_strdup(to_find->arg) : ft_strdup(old_line);
 		}
 		return (0);
@@ -89,7 +71,7 @@ int 	ft_check_input_for_ctrl_keys(char **line, int buf, t_arg *first_arg)
 		line_right = (line_right) ? ft_strjoinfree(&to_cpy, &line_right, 'B') : ft_strnew(1);
 		(line_right) ? line_right[0] = (*line)[len - 1] : 0;
 		(*line)[len - 1] = '\0';
-		ft_replace_content(NULL, *line, 0);
+		ft_replace_content(NULL, *line, line_right);
 		return (0);
 	}
 	if (buf == KEY_LEFT)
@@ -122,7 +104,7 @@ static int ft_check_input_for_special_input(char **line, int buf, t_arg **first_
 	{
 		to_erase = ft_strdup(*line);
 		(*line)[ft_strlen(*line) - 1] = '\0';
-		ft_replace_content(to_erase, *line, 1);
+		ft_replace_content(to_erase, *line, line_right);
 	}
 	if (buf == 127)
 		return (0);
@@ -167,9 +149,8 @@ char	*ft_file_to_string()
 		ret = read(0, &buf, sizeof(long));
 		if (ft_check_input_for_special_input(&line, buf, &first_arg)) 
 			line = ft_strjoin(line, (char*)&buf);
-		(line) ? ft_replace_content(NULL, line, 0) : 0;
+		(line) ? ft_replace_content(NULL, line, line_right) : 0;
 		(buf != KEY_UP && buf != KEY_DOWN && line) ? old_line = ft_strdup(line) : 0;
 	}
 	return (NULL);
 }
-

@@ -76,7 +76,7 @@ int	main()
 
 	line_cpy = NULL;
 	line = NULL;
-	ft_print_current_directory();
+	ft_replace_content(NULL, NULL, NULL);
 	environ = ft_tabdup(environ, ft_tabsize(environ));
 	ft_file_to_string();
 }

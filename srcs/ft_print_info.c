@@ -5,98 +5,112 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 10:37:30 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/07 13:20:36 by lazrossi         ###   ########.fr       */
+/*   Created: 2017/12/18 05:26:19 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/18 13:19:02 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/minishell.h"
 #include "../libft/include/libft.h"
-#include <sys/xattr.h>
-#include <sys/dir.h>
-#include <fcntl.h>
-#include <string.h>
-#include <stdio.h>
-#include <errno.h>
-#include <stdlib.h>
+#include <sys/ioctl.h>
 
-static char *get_last_part(char *tmp)
+static int	ft_compare_string_to_win(char *path, char *old_content, char *git, char *new_content, char *line_right)
 {
-	int 	i;
+	struct	winsize window;
+	int		arg_len;
+	int 	old_arg_len;
 
-	i = 0;
-	if (tmp)
-		i = ft_strlen(tmp);
-	if (i > 1)
-		i--;
-	while (i && tmp[i] != '/')
-		i--;
-	if (i > 1)
-		i++;
-	return (&tmp[i]);
-}
-
-static void ft_putstr_noret(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] && str[i] != '\n')
+	arg_len = 0;
+	arg_len = ft_strlen(path) + ft_strlen(git)
+		+ ft_strlen(new_content) + ft_strlen(line_right);
+	old_arg_len = ft_strlen(path) + ft_strlen(git)
+		+ ft_strlen(old_content) + ft_strlen(line_right);
+	arg_len += (git) ? 9 : 5;
+	old_arg_len += (git) ? 9 : 5;
+	ioctl(1, TIOCGWINSZ, &window);
+	if (arg_len == window.ws_col && old_arg_len > window.ws_col)
 	{
-		ft_putchar(str[i]);
-		i++;
+		ft_putchar('\r');
+		return (0);
 	}
-}
-
-static void ft_print_git()
-{
-	DIR				*dir;
-	struct dirent	*dent;
-	char			*buf;
-	char			*path;
-	int				fd;
-	int				ret;
-
-	path = NULL;
-	buf = NULL;
-	buf = ft_strnew(1025);
-	if ((dir = opendir(".git")))
-	{
-		while (dir && (dent = readdir(dir)))
-		{
-			if (ft_memcmp(dent->d_name, "HEAD", 4) == 0)
-			{
-				path = ft_strjoin(getcwd(dent->d_name, 1024), "/.git/HEAD");
-				fd = open(path, O_RDONLY);
-				ret = read(fd, buf, 1024);
-				(ret != -1 ) ? buf[ft_strlen(buf) - 1] = '\0' : 0;
-				ft_putstr("[git@]");
-				ft_putstr_noret(get_last_part(buf));
-				(path) ? ft_strdel(&path) : 0;
-			}
-		}
-		closedir(dir);
-	}
-	(buf) ? ft_strdel(&buf) : 0;
-}
-
-void		ft_print_current_directory()
-{
-	char	path[1025];
-	char 	*tmp;
-	int		i;
-
-	i = 0;
-	tmp = getcwd(path, 1024);
-	ft_putstr("\e[0;91m");
-	ft_putchar('\r');
-	ft_putchar('/');
-	if (tmp)
-		ft_putstr(get_last_part(tmp));
+	else if (arg_len > window.ws_col)
+		return (arg_len);
 	else
-		ft_putstr_fd("! getcwd() failed, unknown shell location !", 2);
-	ft_putstr("\e[0m");
-	ft_putstr("\e[0;90m");
-	ft_print_git();
+		return (0);
+}
+
+static void ft_print_after_break(char *new_content, int arg_len,
+		char *old_content, char *line_right)
+{
+	int		window_size;
+	int		path_len;
+	int		new_content_len;
+	int		to_print_from;
+	struct	winsize window;
+
+	old_content = NULL;
+	line_right = NULL;
+
+	ioctl(1, TIOCGWINSZ, &window);
+	window_size = window.ws_col;
+	new_content_len = ft_strlen(new_content);
+	path_len = (arg_len - new_content_len);
+	ft_putchar(' ');
+	ft_putchar('\r');
+	to_print_from = window_size - path_len;
+	while ((int)ft_strlen(&(new_content[to_print_from])) > window_size)
+		to_print_from += window_size;
+	ft_putstr(&(new_content[to_print_from]));
+}
+
+static void ft_print_current_directory(char *path, char *git)
+{
+	if (path)
+	{
+		ft_putstr("\e[0;91m");
+		ft_putchar('\r');
+		ft_putchar('/');
+		ft_putstr(path);
+		if (git)
+		{
+			ft_putstr("\e[0m");
+			ft_putstr("\e[0;90m");
+			git ? ft_putstr("[git@]") : 0;
+			git ? ft_putstr(git) : 0;
+		}
+	}
 	ft_putstr("\\ ");
 	ft_putstr("\e[0m");
+}
+
+void	ft_replace_content(char *old_content, char *new_content,
+		char *line_right)
+{
+	char	*path;
+	char	*git;
+	int		location_len;
+
+	path = NULL;
+	git = NULL;
+	ft_get_location_info(&path, &git);
+	if ((location_len = ft_compare_string_to_win(path, old_content, git, new_content,
+					line_right)))
+	{
+		ft_print_after_break(new_content, location_len, old_content, line_right);
+		return ;
+	}
+	ft_print_current_directory(path, git);
+	if (old_content)
+	{
+		ft_putwhites(ft_strlen(old_content));
+		ft_print_current_directory(path, git);
+	}
+	if (new_content)
+		ft_putstr(new_content);
+	if (line_right)
+	{
+		ft_putstr(line_right);
+		ft_print_current_directory(path, git);
+		ft_putstr(new_content);
+	}
 }

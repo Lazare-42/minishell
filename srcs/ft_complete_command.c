@@ -1,4 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_complete_command.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/18 17:32:05 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/18 19:35:38 by lazrossi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/minishell.h"
+
+void	ft_standby()
+{
+			ft_putchar('\r');
+			ft_putstr("dquote> ");
+}
 
 void	ft_complete_command(int quote_type, char **command_line)
 {
@@ -7,7 +25,8 @@ void	ft_complete_command(int quote_type, char **command_line)
 	int		ret;
 	long	buf;
 
-	new_line = ft_strnew(0);
+	if (!(new_line = ft_strnew(0)))
+		return ;
 	ft_putstr("dquote> ");
 	ret = 1;
 	while (ret == 1)
@@ -17,21 +36,19 @@ void	ft_complete_command(int quote_type, char **command_line)
 		if (buf == 127 && new_line[0])
 		{
 			(new_line)[ft_strlen(new_line) - 1] = ' ';
-			ft_putchar('\r');
-			ft_putstr("dquote> ");
+			ft_standby();
 			ft_putstr(new_line);
 			(new_line)[ft_strlen(new_line) - 1] = '\0';
-			ft_putchar('\r');
-			ft_putstr("dquote> ");
+			ft_standby();
 			ft_putstr(new_line);
 		}
 		else if (buf == '\n')
 			break ;
-		else if (buf != 127 && buf != KEY_UP && buf != KEY_DOWN && buf != KEY_LEFT && buf != KEY_RIGHT)
+		else if (buf != 127 && buf != KEY_UP && buf
+				!= KEY_DOWN && buf != KEY_LEFT && buf != KEY_RIGHT)
 		{
-			new_line = ft_strjoin(new_line, (char*)&buf);
-			ft_putchar('\r');
-			ft_putstr("dquote> ");
+			new_line = ft_strjoinfree_str_char(&new_line, buf);
+			ft_standby();
 			ft_putstr(new_line);
 		}
 	}

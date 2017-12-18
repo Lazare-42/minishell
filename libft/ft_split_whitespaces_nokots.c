@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/24 09:49:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/04/25 12:41:24 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/18 15:30:18 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ static int		count_words(char *str)
 	while (str[i])
 	{
 		i = ft_advance_str_for_quotes(str, i);
-		if (str[i] && b == 0 && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'))
+		if (str[i] && b == 0 && (str[i] == ' '
+					|| str[i] == '\n' || str[i] == '\t'))
 			b = 1;
-		else if (str[i] && b == 1 && str[i] != ' ' && str[i] != '\n' && str[i] != '\t')
+		else if (str[i] && b == 1 &&
+				str[i] != ' ' && str[i] != '\n' && str[i] != '\t')
 		{
 			wn++;
 			b = 0;

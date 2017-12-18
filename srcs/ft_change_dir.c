@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 15:20:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/12 13:08:05 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/18 19:21:09 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 #include "../includes/minishell.h"
 #include <unistd.h>
 
-extern char **environ;
-
 void	ft_call_to_chdir(char *str, char *arg)
 {
-	char	path[1025];
-	char 	*tmp;
-	char	*path_var = "PWD=";
-	char	*setenv_path[2];
+	char			path[1025];
+	char			*tmp;
+	char			*path_var;
+	char			*setenv_path[2];
+	extern	char	**environ;
 
 	tmp = NULL;
+	if (!(path_var = ft_strdup("PWD=")))
+		return ;
 	if (chdir(str))
 	{
 		ft_putstr_fd("cd: no such file or directory: ", 2);
@@ -43,8 +44,9 @@ void	ft_call_to_chdir(char *str, char *arg)
 
 int		ft_change_dir(char *str)
 {
-	char	tmp[1025];
-	int		i;
+	extern char	**environ;
+	char		tmp[1025];
+	int			i;
 
 	i = 0;
 	if (!str)
@@ -67,4 +69,3 @@ int		ft_change_dir(char *str)
 	ft_call_to_chdir(str, str);
 	return (0);
 }
-

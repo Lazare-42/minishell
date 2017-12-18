@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/25 12:46:56 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/04/25 18:38:42 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/18 14:07:35 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static char	**ft_count_tab(char const *s, char c)
 	while (*s)
 	{
 		while (*s == '\"')
-			s++;	
+			s++;
 		if (b == 0 && *s == c)
 			b = 1;
 		else if (b == 1 && *s != c)
@@ -57,14 +57,12 @@ char		**ft_strsplit(char const *s, char c)
 	size_t		i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
-	if (!(new = ft_count_tab(s, c)))
+	if (!s || (!(new = ft_count_tab(s, c))))
 		return (NULL);
 	while (*s)
 	{
 		while (*s == '\"')
-			s++;	
+			s++;
 		while (*s && *s == c)
 			s++;
 		s2 = s;

@@ -1,2 +1,2 @@
-work_Makefile_m_norm_bite_coucou_byebyebye_recursif_echoecho_42_hhello_bouboubou_coucou_tmp_libft_bitcoin
-cd /Users/lazrossi/Documents/42/minishell, sh makemf.sh minishell, ./minishell, norminette, mkdir bite,HEY ANNA,echo salut va va,Makefile,echo,echo est la meilleure ecole du numerique,bybye,echo bibbibibi,byebye,cd /tmp,cd /Users/lazrossi/Documents/42/minishell/libft,scam
+work_Makefile_m_norm_bite_coucou_byebyebye_recursif_echoecho_42_hhello_bouboubou_coucou_tmp_libft_bitcoin_thibault_ordinateur_clavier_lazare_supercoucou
+cd /Users/lazrossi/Documents/42/minishell, sh makemf.sh minishell, ./minishell, norminette, mkdir bite,HEY ANNA,echo salut va va,Makefile,echo,echo est la meilleure ecole du numerique,bybye,echo bibbibibi,byebye,cd /tmp,cd /Users/lazrossi/Documents/42/minishell/libft,scam,lazare,clavier,clavier,lazare,sale bete !

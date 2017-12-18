@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/07 13:31:49 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/18 09:43:33 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ typedef struct 		s_arg
 
 int		ft_recognize_builtin_command(char *str);
 void	ft_put_command_errors(char *str);
-void	ft_print_current_directory(void);
 char	**ft_find_prog_path(char *arg, char **environ);
 char	*ft_find_my_prog_path(char *arg);
 int		ft_change_dir(char *str);
@@ -58,6 +57,9 @@ void	ft_clean_lst_for_line_pos(t_arg *first);
 char	*find_aliases(char *line);
 void	ft_new_alias(char **new_values);
 int		ft_put_alias_errors(char **str);
+void	ft_get_location_info(char **path, char **git);
+void	ft_replace_content(char *old_content, char *new_content,
+		char *line_right);
 
 # include <unistd.h>
 

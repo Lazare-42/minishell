@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   alias.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/17 15:52:02 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/18 15:43:09 by lazrossi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/minishell.h"
 #include <fcntl.h>
 
-static char	**ft_tab_with_alias(char **values, char **commands, char **line_split)
+static	char	**ft_tab_with_alias(char **values,
+		char **commands, char **line_split)
 {
 	int i;
 	int j;
@@ -13,12 +26,12 @@ static char	**ft_tab_with_alias(char **values, char **commands, char **line_spli
 		i = 0;
 		while (values[i])
 		{
-			if (!(ft_memcmp(line_split[j], values[i], ft_strlen(line_split[j]))) 
+			if (!(ft_memcmp(line_split[j], values[i], ft_strlen(line_split[j])))
 						&& ft_strlen(line_split[j]) == ft_strlen(values[i]))
 			{
 				ft_strdel(&line_split[j]);
 				if (commands[i])
-				line_split[j] = ft_strdup((commands[i]));
+					line_split[j] = ft_strdup((commands[i]));
 				i = 0;
 				j = 0;
 			}
@@ -29,7 +42,8 @@ static char	**ft_tab_with_alias(char **values, char **commands, char **line_spli
 	return (line_split);
 }
 
-static char *ft_used_tabdel(char **commands, char **values, char **line_split, char *line)
+static	char	*ft_used_tabdel(char **commands,
+		char **values, char **line_split, char *line)
 {
 	if (commands)
 		ft_tabdel(commands);
@@ -40,15 +54,18 @@ static char *ft_used_tabdel(char **commands, char **values, char **line_split, c
 	return (line);
 }
 
-static char	*ft_launch_replacement(char *line, char **values, char **commands, char **line_split)
+static	char	*ft_launch_replacement(char *line,
+		char **values, char **commands, char **line_split)
 {
-	int 	j;
+	int		j;
 	char	*space_str;
 
 	j = 0;
 	ft_memdel((void**)&line);
 	space_str = NULL;
-	if (!(line = ft_strnew(0)) || !(space_str = ft_strnew(1)))
+	if (!(line = ft_strnew(0)))
+		return (ft_used_tabdel(commands, values, line_split, line));
+	else if (!(space_str = ft_strnew(1)))
 		return (ft_used_tabdel(commands, values, line_split, line));
 	space_str[0] = ' ';
 	line_split = ft_tab_with_alias(values, commands, line_split);
@@ -62,23 +79,24 @@ static char	*ft_launch_replacement(char *line, char **values, char **commands, c
 	return (ft_used_tabdel(commands, values, line_split, line));
 }
 
-static char	*ft_malloc_for_alias(char *values_line, char *commands_line, char *line)
+static	char	*ft_malloc_for_alias(char *values_line,
+		char *commands_line, char *line)
 {
 	char	**values;
 	char	**commands;
-	char 	**line_split;
+	char	**line_split;
 
 	values = NULL;
 	commands = NULL;
 	line_split = NULL;
-	if (!(commands = ft_split_char(commands_line, ',')) || 
+	if (!(commands = ft_split_char(commands_line, ',')) ||
 			!(values = ft_split_char(values_line, '_')) ||
 			!(line_split = ft_split_whitespaces(line)))
 		return (ft_used_tabdel(commands, values, line_split, line));
 	return (ft_launch_replacement(line, values, commands, line_split));
 }
 
-char	*find_aliases(char *line)
+char			*find_aliases(char *line)
 {
 	int		fd;
 	char	*values_line;
@@ -89,7 +107,6 @@ char	*find_aliases(char *line)
 	fd = -1;
 	values_line = NULL;
 	commands_line = NULL;
-
 	fd = open("/Users/lazrossi/Documents/42/minishell/srcs/alias.txt",
 			O_RDONLY);
 	if (fd == -1)

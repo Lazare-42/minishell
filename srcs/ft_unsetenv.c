@@ -1,11 +1,22 @@
-extern char **environ;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_unsetenv.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/18 21:51:33 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/18 21:53:32 by lazrossi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/minishell.h"
 
-static void	ft_del_one_environ_var(char *str)
+static void		ft_del_one_environ_var(char *str)
 {
-	int i;
-	int	to_del;
+	int			i;
+	int			to_del;
+	extern char **environ;
 
 	i = 0;
 	to_del = 1;
@@ -23,11 +34,12 @@ static void	ft_del_one_environ_var(char *str)
 	}
 }
 
-void	ft_unsetenv(char **str)
+void			ft_unsetenv(char **str)
 {
-	int i;
-	int j;
-	int len;
+	int			i;
+	int			j;
+	int			len;
+	extern char **environ;
 
 	i = 0;
 	len = 0;
@@ -35,7 +47,7 @@ void	ft_unsetenv(char **str)
 	{
 		len = ft_strlen(str[i]);
 		j = 0;
-		while(environ[j] && (environ[j][len] != '='
+		while (environ[j] && (environ[j][len] != '='
 					|| ft_memcmp(environ[j], str[i], len - 1)))
 			j++;
 		if (environ[j])
@@ -50,4 +62,3 @@ void	ft_unsetenv(char **str)
 		i++;
 	}
 }
-

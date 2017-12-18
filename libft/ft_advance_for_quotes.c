@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_advance_for_quotes.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/18 13:59:22 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/18 14:01:50 by lazrossi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "include/libft.h"
 #include <stdlib.h>
 
-int	ft_advance_str_for_quotes(char *str, int i)
+int		ft_advance_str_for_quotes(char *str, int i)
 {
 	if (str[i] && str[i] == '\"')
 	{
@@ -12,7 +24,7 @@ int	ft_advance_str_for_quotes(char *str, int i)
 	return (i);
 }
 
-char *ft_strdup_to_quote(char *src, char *dst)
+char	*ft_strdup_to_quote(char *src, char *dst)
 {
 	int i;
 	int	j;
@@ -33,14 +45,15 @@ char *ft_strdup_to_quote(char *src, char *dst)
 	return (dst);
 }
 
-char *ft_make_blocks_for_quotes(char *str, int *i)
+char	*ft_make_blocks_for_quotes(char *str, int *i)
 {
 	char *new_string;
 
 	new_string = NULL;
 	if (str[*i] && str[1 + *i] && str[*i] == '\"' && str[1 + *i] == '\"')
 		*i = *i + 2;
-	(str[*i] == '\"') ? new_string = ft_strdup_to_quote(&str[*i], new_string): 0;
+	(str[*i] == '\"') ?
+		new_string = ft_strdup_to_quote(&str[*i], new_string) : 0;
 	*i = (str[*i] == '\"') ? ft_advance_str_for_quotes(str, *i) : *i;
 	(*i)++;
 	return (new_string);

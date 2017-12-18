@@ -9,6 +9,7 @@ SOURCES = ./alias.c \
 ./ft_echo.c \
 ./ft_env.c \
 ./ft_launch_processes.c \
+./ft_location_info.c \
 ./ft_lst_operations.c \
 ./ft_new_alias.c \
 ./ft_print_errors.c \
@@ -45,7 +46,7 @@ mkbin:
 
 
 $(NAME): $(OBJS)
-	@echo "Compiling minishell ..."
+	@echo "Compiling  ..."
 	@-$(CC) $(CFLAGS) $(CDEBUG) -o $(NAME) $(OBJS) -I$(INCDIR) $(LDFLAGS) $(LNCURSES)
 	@$(OK)
 

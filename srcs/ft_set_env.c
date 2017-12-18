@@ -1,13 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_set_env.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/18 21:59:50 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/18 22:27:11 by lazrossi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/minishell.h"
 
-extern char** environ;
-
-static size_t ft_pathlen(char *str)
+static size_t	ft_pathlen(char *str)
 {
 	size_t i;
 
 	i = 0;
-	while(str[i] && str[i] != '=')
+	while (str[i] && str[i] != '=')
 		i++;
 	if (str[i])
 		return (i);
@@ -15,7 +25,7 @@ static size_t ft_pathlen(char *str)
 		return (0);
 }
 
-static char	*ft_add_env_var(char *env_location, char *new_env)
+static char		*ft_add_env_var(char *env_location, char *new_env)
 {
 	if (env_location)
 		ft_strdel(&env_location);
@@ -23,7 +33,7 @@ static char	*ft_add_env_var(char *env_location, char *new_env)
 	return (env_location);
 }
 
-int	ft_new_environ_size(char **args, char **environ_tocpy)
+int				ft_new_environ_size(char **args, char **environ_tocpy)
 {
 	int i;
 	int j;
@@ -40,12 +50,14 @@ int	ft_new_environ_size(char **args, char **environ_tocpy)
 	return (j + 1);
 }
 
-char	**ft_setenv(char **args, int new_environ_size, char **environ_tocpy)
+char			**ft_setenv(char **args, int new_environ_size,
+		char **environ_tocpy)
 {
-	int		i;
-	int		j;
-	size_t	var_len;
-	char	**new_env;
+	int			i;
+	int			j;
+	size_t		var_len;
+	char		**new_env;
+	extern char	**environ;
 
 	i = -1;
 	var_len = 0;
@@ -55,11 +67,11 @@ char	**ft_setenv(char **args, int new_environ_size, char **environ_tocpy)
 	{
 		j = 0;
 		var_len = ft_pathlen(args[i]);
-		while(var_len && new_env[j] && 
+		while (var_len && new_env[j] &&
 		(((ft_pathlen(new_env[j]) < var_len
-			|| new_env[j][var_len] != '=' 
-			||  ft_memcmp(args[i], new_env[j], var_len))) 
-		 || (new_env[j] && var_len >= ft_strlen(new_env[j]))))
+			|| new_env[j][var_len] != '='
+			|| ft_memcmp(args[i], new_env[j], var_len)))
+	|| (new_env[j] && var_len >= ft_strlen(new_env[j]))))
 			j++;
 		if (var_len)
 			new_env[j] = ft_add_env_var(new_env[j], args[i]);
@@ -67,9 +79,10 @@ char	**ft_setenv(char **args, int new_environ_size, char **environ_tocpy)
 	return (new_env);
 }
 
-void	ft_sort_setenv(char	**args)
+void			ft_sort_setenv(char **args)
 {
-	int i;
+	int			i;
+	extern char	**environ;
 
 	i = 0;
 	if (!args[0])
