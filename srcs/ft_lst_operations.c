@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 07:21:24 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/19 11:32:45 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/19 15:05:00 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ t_arg	*new_arg(void)
 	new = NULL;
 	if (!(new = (t_arg *)malloc(sizeof(t_arg))))
 		return (NULL);
-	if (!(new->arg = ft_strnew(1)))
+	if (!(new->arg = ft_strnew(0)))
 	{
 		ft_memdel((void*)new);
 		return (NULL);
