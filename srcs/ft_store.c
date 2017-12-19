@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:53:48 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 21:59:36 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/19 08:52:09 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,7 @@ static	void	ft_place_element_in_tern_tree(t_arg **first, t_arg *new)
 	*first = new;
 }
 
-static	t_arg	*new_arg(char *line)
-{
-	t_arg	*new;
-
-	if (!(new = (t_arg *)malloc(sizeof(t_arg))))
-		return (NULL);
-	new->arg = ft_strdup(line);
-	new->previous = NULL;
-	new->next = NULL;
-	new->line_pos = 2;
-	return (new);
-}
-
-static	t_arg	*ft_store_command_historic(char *line, t_arg *first)
+static	t_arg	*ft_store_command_historic(t_arg *first)
 {
 	int		fd;
 	char	*historic_commands;
@@ -48,40 +35,34 @@ static	t_arg	*ft_store_command_historic(char *line, t_arg *first)
 	{
 		ft_putstr("Unable to open or find the command historic file.\n");
 		ft_replace_content(NULL, NULL, NULL);
-		return (new_arg(line));
+		return (new_arg());
 	}
 	else
-		while (get_next_line(fd, &historic_commands, '\n'))
+		while ((new = new_arg()) && get_next_line(fd, &new->arg, '\n'))
 		{
 			if (!first)
-				first = new_arg(historic_commands);
-			new = new_arg(historic_commands);
-			if (new)
-				ft_place_element_in_tern_tree(&first, new);
+				first = new;
+			ft_place_element_in_tern_tree(&first, new);
 		}
 	close(fd);
 	return (first);
 }
 
-t_arg			*ft_store_args(char *line, t_arg *first)
+t_arg			*ft_store_args(t_arg *first, t_arg *new_arg)
 {
-	t_arg	*new;
 	int		fd;
 
-	new = NULL;
 	fd = -1;
 	if (!first)
-		return (ft_store_command_historic(line, first));
+		return (ft_store_command_historic(first));
 	fd = open("/Users/lazrossi/Documents/42/minishell/historic.txt", O_WRONLY);
 	if (fd != -1)
 	{
 		lseek(fd, 0, SEEK_END);
-		write(fd, line, ft_strlen(line));
+		write(fd, new_arg->arg, ft_strlen(new_arg->arg));
 		write(fd, "\n", 1);
 	}
-	new = new_arg(line);
-	if (new)
-		ft_place_element_in_tern_tree(&first, new);
+	ft_place_element_in_tern_tree(&first, new_arg);
 	close(fd);
 	return (first);
 }

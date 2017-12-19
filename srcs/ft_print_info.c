@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 05:26:19 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 13:19:02 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/19 06:41:28 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include "../libft/include/libft.h"
 #include <sys/ioctl.h>
 
-static int	ft_compare_string_to_win(char *path, char *old_content, char *git, char *new_content, char *line_right)
+static int	ft_compare_string_to_win(char *path, char *old_content, char *git, char *new_cont, char *line_right)
 {
 	struct	winsize window;
 	int		arg_len;
-	int 	old_arg_len;
+	int		old_arg_len;
 
 	arg_len = 0;
 	arg_len = ft_strlen(path) + ft_strlen(git)
-		+ ft_strlen(new_content) + ft_strlen(line_right);
+		+ ft_strlen(new_cont) + ft_strlen(line_right);
 	old_arg_len = ft_strlen(path) + ft_strlen(git)
 		+ ft_strlen(old_content) + ft_strlen(line_right);
 	arg_len += (git) ? 9 : 5;
@@ -39,12 +39,12 @@ static int	ft_compare_string_to_win(char *path, char *old_content, char *git, ch
 		return (0);
 }
 
-static void ft_print_after_break(char *new_content, int arg_len,
+static void ft_print_after_break(char *new_cont, int arg_len,
 		char *old_content, char *line_right)
 {
 	int		window_size;
 	int		path_len;
-	int		new_content_len;
+	int		new_cont_len;
 	int		to_print_from;
 	struct	winsize window;
 
@@ -53,14 +53,14 @@ static void ft_print_after_break(char *new_content, int arg_len,
 
 	ioctl(1, TIOCGWINSZ, &window);
 	window_size = window.ws_col;
-	new_content_len = ft_strlen(new_content);
-	path_len = (arg_len - new_content_len);
+	new_cont_len = ft_strlen(new_cont);
+	path_len = (arg_len - new_cont_len);
 	ft_putchar(' ');
 	ft_putchar('\r');
 	to_print_from = window_size - path_len;
-	while ((int)ft_strlen(&(new_content[to_print_from])) > window_size)
+	while ((int)ft_strlen(&(new_cont[to_print_from])) > window_size)
 		to_print_from += window_size;
-	ft_putstr(&(new_content[to_print_from]));
+	ft_putstr(&(new_cont[to_print_from]));
 }
 
 static void ft_print_current_directory(char *path, char *git)
@@ -83,7 +83,7 @@ static void ft_print_current_directory(char *path, char *git)
 	ft_putstr("\e[0m");
 }
 
-void	ft_replace_content(char *old_content, char *new_content,
+void	ft_replace_content(char *old_content, char *new_cont,
 		char *line_right)
 {
 	char	*path;
@@ -93,10 +93,10 @@ void	ft_replace_content(char *old_content, char *new_content,
 	path = NULL;
 	git = NULL;
 	ft_get_location_info(&path, &git);
-	if ((location_len = ft_compare_string_to_win(path, old_content, git, new_content,
-					line_right)))
+	if ((location_len = ft_compare_string_to_win(path, old_content,
+					git, new_cont, line_right)))
 	{
-		ft_print_after_break(new_content, location_len, old_content, line_right);
+		ft_print_after_break(new_cont, location_len, old_content, line_right);
 		return ;
 	}
 	ft_print_current_directory(path, git);
@@ -105,12 +105,12 @@ void	ft_replace_content(char *old_content, char *new_content,
 		ft_putwhites(ft_strlen(old_content));
 		ft_print_current_directory(path, git);
 	}
-	if (new_content)
-		ft_putstr(new_content);
+	if (new_cont)
+		ft_putstr(new_cont);
 	if (line_right)
 	{
 		ft_putstr(line_right);
 		ft_print_current_directory(path, git);
-		ft_putstr(new_content);
+		ft_putstr(new_cont);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 09:43:33 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/19 11:07:57 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 typedef struct 		s_arg
 {
 	char			*arg;
+	char			*line_right;
+	char			*old_line;
 	int				line_pos;
 	struct 	s_arg	*next;
 	struct	s_arg	*previous;
@@ -39,7 +41,7 @@ void	ft_echo(char **str);
 void	ft_put_env();
 void	ft_sort_setenv(char **args);
 char	**ft_setenv(char **name, int new_environ_size, char **environ_tocpy);
-t_arg	*ft_store_args(char	*line, t_arg *first);
+t_arg	*ft_store_args(t_arg *first, t_arg *new_arg);
 void	ft_launch_processes(char **arguments, char **environ_to_use);
 void	ft_complete_command(int quote_type, char **command_line);
 int		ft_check_commas(char *str);
@@ -60,6 +62,8 @@ int		ft_put_alias_errors(char **str);
 void	ft_get_location_info(char **path, char **git);
 void	ft_replace_content(char *old_content, char *new_content,
 		char *line_right);
+int		ft_check_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first);
+t_arg	*new_arg();
 
 # include <unistd.h>
 

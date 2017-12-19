@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:50:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 21:51:20 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/19 08:31:54 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ int		main(void)
 
 	line_cpy = NULL;
 	line = NULL;
-	ft_replace_content(NULL, NULL, NULL);
 	environ = ft_tabdup(environ, ft_tabsize(environ));
 	ft_file_to_string();
 }

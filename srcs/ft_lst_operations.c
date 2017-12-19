@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lst_operations.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/19 07:21:24 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/19 11:32:45 by lazrossi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/minishell.h"
+#include <stdlib.h>
 
 void	ft_advance_lst_to(t_arg *first, t_arg **to_find, char *line)
 {
@@ -44,4 +57,24 @@ void	ft_retreat_lst_to(t_arg **to_find)
 	while (tmp && tmp->line_pos != 1)
 		tmp = tmp->previous;
 	*to_find = tmp;
+}
+
+t_arg	*new_arg(void)
+{
+	t_arg	*new;
+
+	new = NULL;
+	if (!(new = (t_arg *)malloc(sizeof(t_arg))))
+		return (NULL);
+	if (!(new->arg = ft_strnew(1)))
+	{
+		ft_memdel((void*)new);
+		return (NULL);
+	}
+	new->old_line = NULL;
+	new->line_right = NULL;
+	new->previous = NULL;
+	new->next = NULL;
+	new->line_pos = 2;
+	return (new);
 }
