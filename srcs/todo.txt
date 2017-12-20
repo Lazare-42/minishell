@@ -1,0 +1,1 @@
+replace print_info with a use of the structure

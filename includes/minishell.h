@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/19 11:07:57 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/20 10:19:31 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_put_command_errors(char *str);
 char	**ft_find_prog_path(char *arg, char **environ);
 char	*ft_find_my_prog_path(char *arg);
 int		ft_change_dir(char *str);
-char	*ft_file_to_string();
+void	ft_file_to_string();
 void	ft_echo(char **str);
 void	ft_put_env();
 void	ft_sort_setenv(char **args);
@@ -54,7 +54,6 @@ int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line);
 void	ft_advance_lst_to(t_arg *first, t_arg ** to_find, char *line);
 void	ft_retreat_lst_to(t_arg **to_find);
-int		set_non_canonical_input();
 void	ft_clean_lst_for_line_pos(t_arg *first);
 char	*find_aliases(char *line);
 void	ft_new_alias(char **new_values);

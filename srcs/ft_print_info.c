@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 05:26:19 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/19 06:41:28 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/19 22:46:06 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,8 +105,7 @@ void	ft_replace_content(char *old_content, char *new_cont,
 		ft_putwhites(ft_strlen(old_content));
 		ft_print_current_directory(path, git);
 	}
-	if (new_cont)
-		ft_putstr(new_cont);
+	(new_cont) ? ft_putstr(new_cont) : 0;
 	if (line_right)
 	{
 		ft_putstr(line_right);

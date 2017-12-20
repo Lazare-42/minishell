@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/17 15:52:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 15:43:09 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/19 22:29:32 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static	char	*ft_launch_replacement(char *line,
 	char	*space_str;
 
 	j = 0;
-	ft_memdel((void**)&line);
+//	ft_memdel((void**)&line);
 	space_str = NULL;
 	if (!(line = ft_strnew(0)))
 		return (ft_used_tabdel(commands, values, line_split, line));
