@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 13:26:55 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/06 13:51:33 by lazrossi         ###   ########.fr       */
+/*   Created: 2017/12/20 13:04:02 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/20 13:05:28 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/include/libft.h"
 
-extern	char	**environ;
-
-static char	**ft_add_command_to_path(char **possible_path, char	*arg)
+static char		**ft_add_command_to_path(char **possible_path, char *arg)
 {
 	int		i;
 	char	*slash;
@@ -30,11 +28,12 @@ static char	**ft_add_command_to_path(char **possible_path, char	*arg)
 	return (possible_path);
 }
 
-char	**ft_find_prog_path(char *arg)
+char			**ft_find_prog_path(char *arg)
 {
-	int		i;
-	char	*tmp;
-	char	**possible_program_path;
+	int			i;
+	char		*tmp;
+	char		**possible_program_path;
+	extern char	**environ;
 
 	i = 0;
 	possible_program_path = NULL;
@@ -47,11 +46,12 @@ char	**ft_find_prog_path(char *arg)
 	return (ft_add_command_to_path(possible_program_path, arg));
 }
 
-char	*ft_find_my_prog_path(char *arg)
+char			*ft_find_my_prog_path(char *arg)
 {
-	int		i;
-	char	*path;
-	char	*tmp_arg;
+	int			i;
+	char		*path;
+	char		*tmp_arg;
+	extern char **environ;
 
 	i = 0;
 	while (environ[i] && ft_memcmp(environ[i], "PWD=", 4) != 0)

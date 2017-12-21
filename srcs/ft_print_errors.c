@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:09:39 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/06 14:44:07 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/20 15:58:53 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ static int 	ft_return_alias_errors(int i, int underscore_nbr)
 		{
 			ft_putstr("alias : 2 arguments expected, you have ");
 			ft_putnbr(i);
-			ft_putstr(". \nIf this appears to be an error, you might want");
-			ft_putstr(" to check if you are not using a redundant alias.\n");
+			ft_putstr(". \nIf this appears to be an error, you might want to ");
+			ft_putstr("check if your new alias includes a pre-existing one.\n");
 		}
 		if (underscore_nbr)
 		{
@@ -40,6 +40,7 @@ static int 	ft_return_alias_errors(int i, int underscore_nbr)
 		}
 		return (0);
 	}
+		ft_putstr("WTF");
 	return (1);
 }
 
@@ -49,10 +50,11 @@ int		ft_put_alias_errors(char **str)
 	int j;
 	int	underscore_nbr;
 
+	ft_putabs(str, '\n');
 	i = 0;
 	underscore_nbr = 0;
 	j = -1;
-	while (str[i])
+	while (str && *str && str[i])
 		i++;
 	while (str[0][++j])
 		if (str[0][j] == '_')

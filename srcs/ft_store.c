@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:53:48 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/19 22:20:31 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 03:32:53 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,19 @@ static	t_arg	*ft_store_command_historic(t_arg *first)
 	if (fd == -1)
 	{
 		ft_putstr("Unable to open or find the command historic file.\n");
-		ft_replace_content(NULL, NULL, NULL);
+		ft_replace_content(NULL);
 		return (new_arg());
 	}
 	else
 		while ((new = new_arg()) && get_next_line(fd, &new->arg, '\n'))
 		{
-			if (!first)
+			if (first)
+				ft_place_element_in_tern_tree(&first, new);
+			else
 				first = new;
-			ft_place_element_in_tern_tree(&first, new);
 		}
 	close(fd);
-	ft_replace_content(NULL, NULL, NULL);
+	ft_replace_content(NULL);
 	return (first);
 }
 

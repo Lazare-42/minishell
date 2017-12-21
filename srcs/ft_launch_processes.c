@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 20:59:40 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 21:12:45 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/20 18:05:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,5 @@ void		ft_launch_processes(char **arguments, char **environ_to_use)
 		else
 			(ft_launch_ext_command(arguments, environ_to_use));
 	}
-	ft_replace_content(NULL, NULL, NULL);
+	ft_replace_content(NULL);
 }

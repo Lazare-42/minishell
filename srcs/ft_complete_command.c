@@ -6,53 +6,63 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 17:32:05 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 19:35:38 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/20 15:52:56 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 
-void	ft_standby()
+void	ft_standby(void)
 {
-			ft_putchar('\r');
-			ft_putstr("dquote> ");
+	ft_putchar('\r');
+	ft_putstr("dquote> ");
+}
+
+char	*ft_del_one(char *command_line, int write_from)
+{
+	if (*command_line && &command_line[write_from])
+	{
+		(command_line)[ft_strlen(command_line) - 1] = ' ';
+		ft_standby();
+		ft_putstr(&command_line[write_from]);
+		(command_line)[ft_strlen(command_line) - 1] = '\0';
+		ft_standby();
+		ft_putstr(&command_line[write_from]);
+	}
+	return (command_line);
+}
+
+char	*ft_join_print(char *command_line, int buf, int write_from)
+{
+	if (!(command_line = ft_strjoinfree_str_char(&command_line, buf)))
+		return (NULL);
+	ft_standby();
+	ft_putstr(&command_line[write_from]);
+	return (command_line);
 }
 
 void	ft_complete_command(int quote_type, char **command_line)
 {
-	char    *new_line;
 	int		comma_presence;
 	int		ret;
 	long	buf;
+	int		write_from;
 
-	if (!(new_line = ft_strnew(0)))
-		return ;
 	ft_putstr("dquote> ");
 	ret = 1;
-	while (ret == 1)
+	write_from = ft_strlen(*command_line) - 1;
+	while (ret == 1 && command_line)
 	{
 		buf = 0;
 		ret = read(0, &buf, sizeof(long));
-		if (buf == 127 && new_line[0])
-		{
-			(new_line)[ft_strlen(new_line) - 1] = ' ';
-			ft_standby();
-			ft_putstr(new_line);
-			(new_line)[ft_strlen(new_line) - 1] = '\0';
-			ft_standby();
-			ft_putstr(new_line);
-		}
+		if (buf == 127 && command_line[0])
+			*command_line = ft_del_one(*command_line, write_from);
 		else if (buf == '\n')
 			break ;
 		else if (buf != 127 && buf != KEY_UP && buf
 				!= KEY_DOWN && buf != KEY_LEFT && buf != KEY_RIGHT)
-		{
-			new_line = ft_strjoinfree_str_char(&new_line, buf);
-			ft_standby();
-			ft_putstr(new_line);
-		}
+			*command_line = ft_join_print(*command_line, buf, write_from);
 	}
-	*command_line = ft_strjoinfree(command_line, &new_line, 'B');
 	comma_presence = ft_check_commas(*command_line);
 	ft_putchar('\n');
 	(comma_presence != quote_type) ? ft_recognize_processes(*command_line) :

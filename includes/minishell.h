@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/20 10:19:31 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 03:26:24 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ typedef struct 		s_arg
 	char			*arg;
 	char			*line_right;
 	char			*old_line;
-	int				line_pos;
 	struct 	s_arg	*next;
 	struct	s_arg	*previous;
 }					t_arg;
@@ -52,16 +51,16 @@ void	ft_unsetenv(char **str);
 void	ft_env(char **args);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line);
-void	ft_advance_lst_to(t_arg *first, t_arg ** to_find, char *line);
+void	ft_advance_lst_to(t_arg *first, t_arg **new, t_arg ** to_find);
 void	ft_retreat_lst_to(t_arg **to_find);
 void	ft_clean_lst_for_line_pos(t_arg *first);
 char	*find_aliases(char *line);
 void	ft_new_alias(char **new_values);
 int		ft_put_alias_errors(char **str);
 void	ft_get_location_info(char **path, char **git);
-void	ft_replace_content(char *old_content, char *new_content,
-		char *line_right);
+void	ft_replace_content(t_arg *info);
 int		ft_check_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first);
+int		ft_check_special_input(t_arg **new, int buf, t_arg **first_arg);
 t_arg	*new_arg();
 
 # include <unistd.h>

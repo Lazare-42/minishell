@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:50:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/19 08:31:54 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/20 17:36:27 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ int		ft_look_inside(char *line)
 	if (line)
 	{
 		comma_presence = ft_check_commas(line);
-		line = find_aliases(line);
 		(!comma_presence) ? ft_recognize_processes(line)
 			: ft_complete_command(comma_presence, &line);
 		return (1);

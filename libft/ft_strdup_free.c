@@ -1,42 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_advance_string_for_quote.c                      :+:      :+:    :+:   */
+/*   ft_strdup_free.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 10:23:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/20 10:23:03 by lazrossi         ###   ########.fr       */
+/*   Created: 2017/12/21 00:36:25 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/21 00:39:56 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minishell.h"
-
-char	*ft_advance_string_for_quote(char *str)
+char	*ft_strdupfrom_free(char *str, int i)
 {
-	int i;
+	char	*dest;
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '\'')
-		{
-			while (str[i] != '\'')
-				i++;
-			return (&str[i]);
-		}
-		i++;
-	}
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '\"')
-		{
-			while (str[i] != '\"')
-				i++;
-			return (&str[i]);
-		}
-		i++;
-	}
+	dest = NULL;
+	if (str[i])
+		if (!(str = ft_strdup(&str[i])))
+			return (NULL);
+	ft_memdel((void**)str);
 	return (str);
 }

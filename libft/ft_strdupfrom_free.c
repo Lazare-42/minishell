@@ -1,42 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_advance_string_for_quote.c                      :+:      :+:    :+:   */
+/*   ft_strdupfrom_free.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 10:23:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/20 10:23:03 by lazrossi         ###   ########.fr       */
+/*   Created: 2017/12/21 00:41:20 by lazrossi          #+#    #+#             */
+/*   Updated: 2017/12/21 01:28:18 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minishell.h"
+#include <stdlib.h>
+#include "include/libft.h"
 
-char	*ft_advance_string_for_quote(char *str)
+char	*ft_strdupfrom_free(const char **src, int from)
 {
-	int i;
+	char	*str;
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '\'')
-		{
-			while (str[i] != '\'')
-				i++;
-			return (&str[i]);
-		}
-		i++;
-	}
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '\"')
-		{
-			while (str[i] != '\"')
-				i++;
-			return (&str[i]);
-		}
-		i++;
-	}
+	str = ft_strdup(&(*src)[from]);
+	ft_memdel((void**)src);
 	return (str);
 }

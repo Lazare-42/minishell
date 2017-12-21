@@ -6,7 +6,7 @@
 #    By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/27 14:56:05 by lazrossi          #+#    #+#              #
-#    Updated: 2017/12/17 16:23:57 by lazrossi         ###   ########.fr        #
+#    Updated: 2017/12/21 00:44:56 by lazrossi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,6 +87,8 @@ SRC = ft_atoi.c \
 	  ./ft_tabdup_and_add.c \
 	  ./ft_split_char.c \
 	  ./ft_strjoinfree_str_char.c \
+	  ./ft_strjoinfree_char_str.c \
+	  ./ft_strdupfrom_free.c \
 
 OBJECT = $(SRC:.c=.o)
 

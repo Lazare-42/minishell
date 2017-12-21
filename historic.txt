@@ -9997,1141 +9997,888 @@ rm historic.txt
 man 2 open
 make
 ./minishell
-Hi_there
-makemSUPERDOUDOU
-cat historic.txt
-loulou
-cat historic.txt
-adding text
-cat historic.txt
-Anna je t'aime
-cat historic.txt
-ca marche de ouf
-cat historic.txt
-git add .
-git commit -m "Les commandes et l historique sont fonctionnels. Il faudrait resoudre les leaks"
-git push
-exit
-exitmake
-m
-exit
-clear
-ls
-make
-m
-ls
-make
-exit
-exit
-ls
-ls
-git add .
-git commit -m "protection de ft_print_info"
-git push
-git push origin "Arrow commands"
-git push origin "Arrow commands"[D[D[D[D[C[C[C[C[
-clear
-git push origin "Arrows"
-git push origin "Arrows"[D[D[D[D[D[D
-git checkout -b Arrows
-git add .
-git commit -m "origin"
-git push
-git push --set-upstream origin Arrows
-clear
-clear
-make
-m
-ls
-clear
-m
-[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
-clear
-make
-cou
-coul
-m
-[A[A[A[A[A[A[A[A[A[A[A
-clear
-clear
-clear
-make
-m
-[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
-clear
-clsdcsdcsdccsdcscdscsdcsdcsdc
-make
-m
-exit
-clear
-clear
-exit
-ls
-make
-ls
-m
-exit
-lslsdclsdc
-sdc
-coucousdc
-sdcsdcsdcsdcsdcsdcsc
-sdcsdcsdcsdcsdcsdcsc
-sdcsdcsdcsdcsdcsdcsc
-sdcsdcsdcsdcsdcsdcsc
-sdcsdcsdcsdcsdcsdcsdcsc
-sdcsdcsdcsdcsdcsdcsc
-sdcsdcsdcsdcsdcsdcsc
-makesdcsdcsdcsdcsdcsdcsc
-sdcsc
-ls
-coucou
-coudcou
-make
-m
-coucou
-grosse teub
-grosse teub
-git commit -m "origin"rosse teub
-exit
-lslslsls
-ls -lielslslsls
-make
-couocu
-vim main.c
-cat historic.txt
-[?1;2czsh
-zsh
-couxxxxxxxx
-coucouxxxxxxxxxx
-He
-Hello
-Hello There
-Hello There
-make
-m
-Hello There
-coudddcou
-Bonjour je suis Lazare
-exit
-exit
-lslcccslsls
-lslcccsgougoulsls
-ls ../includes/minishell2.h
-clear
-ls
-clear
-poupou
-python --version
-ft_ls
-clear
-vim mcsdcain.c
-exit
-coucou
-mkdir salut
-mkdir salut
-rm -r salut
-ls -l
-ls -lU srcs
-top
-top | grep minishell
-git add .
-git commit -m "fleche droite fonctionelle"
-git push
-leaks ./minishell
-valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
-vim Makefile
-exit
-ls
-ls coucou
-exit
-valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
-ls 
-exit
-exit
-ls
-exit
-sdcsc
-..
-cat historic.txt
-vim historic.txt
-cat historic.txt
-[?1;2
-open minishell.fr.pdf
-clear
-cat historic.txt
-[?
-zsh
-ls
-ls
-ls
-sh makemf.sh minishell
-ls
-ls
-ls
-ls
-ulimit -a
-clear
-cd srcs
-vim ft_print_git.c
-cd srcs
-vim ft_print_git.c
-ls
-vim ft_print_git.c
-vim ft_print_info.c
-cd ..
-ls
-cd libft
-vim ft_strjoin.c
-vim get_next_line.c
-clear
-work
-cd srcs
-vim ft_print_info.c
-libft
-cd ../libft
-pwd
-alias libft "cd /Users/lazrossi/Documents/42/minishell/libft"
-cd ../../../../../
-libft
-clear
-vim ft_strnew.c
-work
-make re
-exit
-exit
- 
-libft
-vim ft_strnew.c
-work
-clear
-srcs
-cd srcs
-vim ft_print_info.c
-clear
-clear
-exit
-exit
-ls
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+./minishell
+Ð£
 
-exit
-ls
+Ð£
 
-hey coucou
-salut
-sdljkcnsdlkjn
-dlvndskflvjnsdlkvjnsdlkvn
-echo anna
-exit
-echo coucoucoucou"$PATH"vevre
-echo "$PATH"
-echo "$PATH"
-cououc
-make
-m
-coucou
-couocu
-exit
-ls
-coucou
-clear
-clear
-make
-clewr
-clear
-ls
-cat historic.txt
-[?1;2cenv
-setenv
-env coucou=tutu
-env
-env -vi coucou=salut
-env
-env coucou toto
-env
-env salut byebye
-env
-env lol=mdr
-env
-make re
-sh makemf.sh minishell
-make re
-make
-clear
-[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
-clear
-lslslsls
-slsldlsdsdsdddddddddddddddddddd
-clear
-cd /
-cd Downloads
-ls
-cd Users
-cd 
-ls
-cd lazrossi
-ls
-clear
-./minishell
-exit
+Ð£
 
-clear
-ls
-clear
-env coucou=tutu
-env
-env
-setenv coucou=tutu
-env
-setenv tata=byebye
-setenv tata=byebye haha=hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-setenv
-geth
-cd
-cd /
-geth attach
-clear
-geth
-clear
-ls
-cd /
-work
-alias bitcoin scam
-scam
-bitcoin
-clear
-ls
-clear
-clear
-ls
-clear
-ls
-clear
-ls
-clear
-ls
-clear
-
-
-clear
-ls
+Ð£
 
-clear
-ls
-ls
-ls
-cd /
-mini
-minishell
-work
-clear
-ls
-ls -rRl /
-ldslkkkkkkkkmvlskdmvlskdmlvkmsv
+Ð¥
+
+Ð¥
+
+Ð¥
 
 
 
-clear
-top
-top -o MEM
-ls
-clear
-ls
-clear
-cleae
-clear
-cdcs
-sddddddddddddddddddd
-LS
-ls -r
-clear
-ls
-car ,
-cat ,
-rm ,
-ls
-pwd
-rm oldmain.c
-clea
-clear
-cat todo.txt
-man terminfo
-cat todo.txt
-man term
-la
-ls
-cat historic.txt
-[?1;2c
-cdddslkjnsdklcjnsdclksjnc
-sdckjnsdckjsncdkjsncs
-sdssscjsdcdscsdcsnsdsdcsdcsdcsdcsdcsdcsdcsdcscsdcscsdcsdcsdcsdcsdcsdcsdscsdcsdcdscsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdsdcscsdcsdsdcsdcsdcsdcscdjncksdcsdcjnssdcsddcsdcsccsdcsdcsdcsdcdjnsdcsdcssdcsdccsdcssdcsdcsdcssdcsdcssdsdccsdc
-clear
-sdssscjsdcdscsdcsnsdsdcsdcsdcsdcsdcsdcsdcsdcscsdcscsdcsdcsdcsdcsdcsdcsdscsdcsdcdscsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdcsdsdcscsdcsdsdcsdcsdcsdcscdjncksdcsdcjnssdcsddcsdcsccsdcsdcsdcsdcdjnsdcsdcssdcsdccsdcssdcsdcsdcssdcsdcssdsdccsdc
-cd srcs
-clear
-ls
-cat alias.txt
-42
-ls "
-ls "lol"
-cat todo.txt
-vim ft_put_env.c
-env
-env coucou tutu
-env
-env salut goodbye
-env ls
-env coucou=byebye
-env
-env coucou=tutu
-env
-setenv coucou=tutu
-env
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd iiiiiiiiiiiiiiiii=dddddddddddddddddddddddddddddd
-clear
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd iiiiiiiiiiiiiiiii=dddddddddddddddddddddddddddddd
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq
-./[A
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss
-setenv cool=coucou
-setenv cool=coucou nul=tropnul
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
 
-[A
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv
-make
-m
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv
-setenv ssssssssss=sssssssssssssssssssssssssssssssss coucou=tutu
-setenv
-make
-m
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv
-setenv byebye=hello
-setenv
-exit
-exit
-exit
-ls
 
-vim allcode.c
-clear
-ls
-clear
-ls
-clear
-setenv byebye=hello
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-setenv ssssssssss=sssssssssssssssssssssssssssssssss
-[A
 
-setenv ssssssssss=sssssssssssssssssssssssssssssssssss
-setenv sssssssssssss=sssssssssssssssssssssssssssssssssss
-setenv sssssssssssss=sssssssssssssssssssssssssssssssssss
-setenv sssssssssssss=sssssssssssssssssssssssssssssssssss
-m
-pwd
-ls
-./minishell
-clear
-ls
-make
-./minishell
-exit
-setenv sssssssssssss=sssssssssssssssssssssssssssssssssss
-setenv
-setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
-setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
-exit
-setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
-setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
-setenv ssssssssssgffsss=sssssssssssssssssssssssssssssssssss
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd
-git add /
-git add .
-git commit -m "resolution du bug sur setenv, je ne verifiais pas la longeur du string avant comp...."
-git push
-zsh
-clear
 
-leaks ./minishell
-valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all ./minishell
-m
-m
-exit
 
-exit
-exit
-m
 
-src
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd
-norminette
-norminette 
-norminette | wc -l
-norminette | wc
-man wc
-wc -l 
-ls
-ls sdcsdcsdcsdc
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-exit
-clear
-ddddddssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\s
-clear
-exit
-cd srcs
-ckear
-clear
-cd ..
-ssssssssssssssssssssssssssssssssdcsdcdscssssssssssssssssssssdcsdcsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-clear
-setenv cool=coucou ssssssssss=sssssssssssssssssssssssssssssssss ssssssssssssssssssss=sssssssssssssssssss wwwwwwwwwwwwwww=qqqqqqqqqqqqqqqq ddddddddddddddd=ggggggggggggggggg hhhhhhhhhhhhhh=ggggggggggggggggggg dddddddddddddddddd=dddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk oooooooooooooooooooooooo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=ddddddddddddddddddddddddddddddddddd iiiiiiiiiiiiiiiii=dddddddddddddddddddddddddddddd
-exit
-l yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿs yGQÿl yGQÿ
-l yGQÿs yGQÿd yGQÿc yGQÿs yGQÿd yGQÿd yGQÿd yGQÿc yGQÿs yGQÿd yGQÿc yGQÿs yGQÿd yGQÿc yGQÿs yGQÿd yGQÿc yGQÿs yGQÿc yGQÿ
-e yGQÿx yGQÿi yGQÿt yGQÿ
- yGQÿ
-l 9_ÿs 9_ÿl 9_ÿs 9_ÿd 9_ÿc 9_ÿs 9_ÿd 9_ÿc 9_ÿs 9_ÿd 9_ÿc 9_ÿs 9_ÿd 9_ÿc 9_ÿd 9_ÿs 9_ÿc 9_ÿ  9_ÿ  9_ÿ
-s 9_ÿd 9_ÿc 9_ÿs 9_ÿd 9_ÿc 9_ÿs 9_ÿd 9_ÿc 9_ÿ
-e 9_ÿx 9_ÿi 9_ÿt 9_ÿ
- 9_ÿ' 9_ÿ
-ls
-clear
-make
-m
-make
-m
-make
-,
-m
-scsd
-sdcsdcsdcscdscssdcssdcdscsdcdscdscdscdscdscdscdscdscsdcdscdscdscdsc
-make
-ls
-ls
-exit
-exit
-exit
-ls
-make
-,
-m
-clear
-ls
-clear
-make re
-make re
-m
-m
-m
-m
-m
-exit
-exit
-ls
-sdcsdcsdc
-clear
-cd srcs
-mv ft_print_info.c ft_location_info.c
-make re
-..
-..
-cd ..
-make re
-make
-make
-make
-make re
-make re
-sh makemf.sh
-make re
-m
-make re
-exit
-ls
-coucou oui ca et ca va
-zut joublie toujours que jai mis des raccourcis
-"zut joublie toujours que jai mis des raccourcis"
-"zut joublie toujours bon bah ca marche hein que jai mis des raccourcis"
-cool
-clear
-cd ..
-cd ..
-work
-make
-m
-cd ..
-cd ..
-cd ..
-cd ..
-cd /
-work
-clear
-make
-m
-cd /
-work
-make
-m
-cd ..
-make
-wrok
-work
-make
-m
-cd ..
-work
-make
-m
-make
-m
-make
-m
-make
-m
-ls
-ls -Rl ../../..
-clear
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-./minishell
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-clear
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-./minishell
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssmake
-make
-m
-ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-clear
-cd ..
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-work
-make
-cd ..
-work
-make
-m
-cd ..
-work
-clear
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\
-cd ..
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-work
-make
-clear
-cd /
-dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-work
-cd ..
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-work
-make
-./minishell
-cd ..
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-work
-mke
-make
-./minishell
-cd ..
-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-work
-m
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssscd
-cd ..
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-work
-clear
-cd /
-ls
-cd Library
-work
-make
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-exit
-ext
-ssdcdscsccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-make
-m
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssdsssssssssssssssssssssssssssssssssssssssssssssssdcsdcscds
-clear
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-./minishell
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\
-1234567891234567891234567891234567891234567891234567891234567981234567891234567891234567891234567
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius je suis lazare et jessaie de coucou
-make
-m
-coucou je suis lazare et jessaie de faire un sheell non canonique mais si je passe a la ligne ca bugue ok ca bugue mois la
-make
-m
-sdcsdc
-ssssssssscoucou je suis lazare eun grand poete un est nul en informatique jessaie de faire un shelll
-make
-m
-"coucou je suis lazare et essaie de faire marcher un shell non canonique cest relou car si je ecris plus dune "
-make
-m
-"coucou je suis lazare et jessaie de faire un shell non canonasxasxasx un shell non canonique mais ca marche pas"
-dsffffdfffffffjkslsdcsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-"coucou je suis lazare et jessaie de fare marcher ce shell non canonique et ons est y crit ou pas nonn ca part en couille"
-make
-./minishell
-cccccccccccccccccccccccccccccccccccccccccccc coucouc je suis lazare et jessaie de faire marcher ce shell non canonique 
-make
-m
-ssssssssssssssssssscoucou je suis lazare et jessaie de faire marcher ce shell je sais pas si jy croi ou pas lol non in y croit pas
-make
-m
-"couco je suis lazare et jessaie de faire marcher ce shell je sais pas si je dois y croire ou abandoner "
-mak
-make
-mmmmmmmmmmmmmmmmmmmmmmmmm
-"coucou je suis lazare et jessaie de faire marcher ce shell apparemen jy arrive pas trop est ce que le on sdcscsdc'
-clear
-clear
-ssssssssssssssssssdcdscsdcsdcsssssssssssdcsdssssssdcsldncsdcssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-alias thibault lazare
-thibault
-ls
-cat historic.txt
-[?1;2cfhfghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhheeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-make
-m
-"coucou
-coucouccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-make
-m
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-"coucou ca va asasx a a a a asakjbaskxb khb khb khb khb khb khb khb khb khb khb khb kh bkh b bkh
-clear
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdfvdfvdfvdfvdfvdfvdddddddddddddnnnnnnnnnnnnnnnnnm nnnnnm nm nm nm nm n m nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc'
-$PATH
-"$PATH"
-"PATH"
-"$PATH"
-[?1
-clear
-make
-m
-aaaaaaaaaaassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-make
-m
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxs'
-"coucou ca va et toi"
-;lkmv;lkmxcz;lkmzxcvl;kmzxc;lkvmzx;clkvmz;xlkmvzx;lkcmvz;xlckmv;zlxckmvkclxz;lxkcmvkcxlz;v;lkxcmvkcxlz;lxkcmvkcxlzzzmvlk;xzcmv;lkzmxc;lzkmxc;vlkmzx;lvkm
-make
-cvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvccccccccccccccccccc
-make
-m
-cd
-cd xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-exit
-m
-hgcjhgfchjfc
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddsssssssss
-make
-m
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-m
-sdcssdcscdsdcdc
-make
-m
-cxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-"""
-"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444"
-setenv coucou=tutu
-setenv
-echo coucou
-echo lazare
-echo "lazare "
-echo "lazare ca va"
-alias ordinateur clavier
-alias clavier ordinateur
-ordinateur
-sdccccsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-cd srcs
-ls
-vim ft_read_input.c
-dccccsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-sdccccsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-sdccccsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-"cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss"
-"cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss""cpicpicpissssssssssssssssssssssssssssssssssssssssssssssssssssss"
-cd ..
-scdsldkclsdlcnaksdcaskldcnalksjnclkajsndclkjasdncklajsndclkajsndclkjansdckljnasdlcjknaslkdcjnaslkjcnaskljdcnaskljcnalksjcnalksjdncklajscdkljnjnklaslkdjcnnndjksalsdkjcndjksalskdjcndjksalskjdcnnnnnadjklskjdcnjaklskjdcndjskalskjdcnjdksalskdjcnjaklskjdcnjdksa
-make
-./minishell
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-./minishell
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-exit
-exit
-exit
-exit
-x
 
-alias thibault lazare
-clear
-ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-ddddddddddddddddddddddddddddddddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-sssssssssssssssssssssssssssdcsdssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss;;;;;;7[F[6~6
-456
-lkjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk74110
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-m
-[Aaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssss
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-clear
-make re
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm'
-cd ..
-ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-make
-work
-make
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-make
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss      xxxxxssssssssssssssss
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-ssssssssssssssssssssssssssssssssssssssssssssss   ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-xxxxxxxxxxxxxxxxxxxxxxxccccccccccccccccccccccccccccccccccc
-make
-./minishell
-[D[D[D[D[D[D[D[D
-exit
-exit
-exit
-exit
-exit
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssddfdfgdgdgdfgdfgdfgdfgdfgdfgdfgdfgdfggdfgdfgdfssssssssssssssssssssssssssssssssss
-mkez[20~sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-make
-m
-[D[D[D[D[D[D[D[D[D[D
-exit
-exit
-make
-./minishell
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-make
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-make
-make
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-./minishell
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-./minishell
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss xxxxxxxxxxxxxxxxxxxxxxx
-make
-./minishell
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssszzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-make
-./minishell
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-./minishell
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-cat *.c >> allcode.c
-exit
-exit
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-./
-./minishell
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-make
-./minishell
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadd
-make
-./
-m
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-hjhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhmake
-make
-m
-ssss
-make
-m
-sdssssszzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-make
-m
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-m
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-aaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-m
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-make
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-make
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-'\\\\
-norm
-zsh
-"
 
-make
-make re
-make re
-make re
-make
-make re
-make re
-make re
-echo "tutu coucou
-echo "tutu coucou ca va"
-supercoucou
-alias supercoucou "sale bete !"
-supercoucou
-"
-exit
-coucou
-work
-ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-clear
-make
-,
-m
-"
-"
-work
-cd ..
-git clone https://github.com/vcombey/taskMaster.git
-cd taskMaster
-curl https://sh.rustup.rs -sSf | sh
-zsh
-exit
-exit
-eixt
-exit
-exit
 
-clear
-env
-env coucou=tutu
-env
-env
-norm
-exit
-envcd ..
-cd ..
-env -i
-env
-env -t
-env -cccccccs
-env -
-env -i coucou=tutu ./minishell
-env
-env
-exit
-env
-env -v
-env
-exit
-make
-m
-sdcs"
-"sdvsvcsvds"
-"xfvfvd
-ls
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssss
-exit
-s
-ls
-alias q exit
-q
-sdscssssssd sassdsscsssacsd sdscsdscsssasdc sdcsssssdcasssssdcas sssdssd ssdssddcsscd sdscsdcsscd  asdssssscasdcsdsscssssssssscsdcsdc
-works
-q
-ascdkjnasdcknskjansdckljansdckjnasdcasdcsadcsdcas
-asdjcaskldcasdcjklnas
-asdcasdcasdcasdcascdasdcs
-asdcasdcasdcasdcdscsdcsdcssdcdsc
-scacdasdc
-mm asdcdcsdcadsdc
-sdcsdc
-ls
-cdddccccccccccccccccccccccccc]
-q
-cPoPuPcPoPuP
-lPsP
-cPdP P.P.P
-sPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPaPdPdPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPaPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsPsP
-sPdP
-xP
-mPmP
-qP
-lPsPlPlPlPlPlPlPlPlPlPlPlP
-ls
-supercoucou
-exit
-sP sP sP sP sP sP sP sP sP sP sP 
-,P ,P 
-o!k!s!a!l!u!t!
-cP!oP!uP!cP!
-o!k!s!a!l!u!t!
-qP!
-qP!qP!qP!
-cP"
-coucou
-make
-m
-q
-q
-ls
-mae
-make
-m
-est ce que tu marches 
-"tu buggues je crois" 
-make
-m
-coucou ah c'est bon
-booooooooobtttttttttt
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
-git add .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
