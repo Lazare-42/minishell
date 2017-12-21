@@ -6,13 +6,28 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 15:20:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 19:21:09 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 22:39:13 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/include/libft.h"
 #include "../includes/minishell.h"
 #include <unistd.h>
+
+void	adjust_old_pwd(void)
+{
+	int i;
+	extern char environ;
+
+	i = 0;
+	if (environ[0])
+	{
+		while (environ[i] && ft_memcmp(environ[i], "OLDPWD=", 7)
+				i++;
+		if (environ[i])
+			environ[i] = ft_strdup();
+	}
+}
 
 void	ft_call_to_chdir(char *str, char *arg)
 {
@@ -33,6 +48,7 @@ void	ft_call_to_chdir(char *str, char *arg)
 	}
 	else
 	{
+		adjust_old_pwd();
 		tmp = getcwd(path, 1024);
 		path_var = ft_strjoin(path_var, tmp);
 		setenv_path[0] = path_var;

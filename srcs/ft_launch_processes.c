@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 20:59:40 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 21:47:13 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 21:50:59 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,18 @@ void	ft_ex_myprog_or_exit(char **arguments,
 static void	ft_launch_ext_command(char **arguments, char **environ_to_use)
 {
 	int				i;
-	extern	char	**environ;
 	char			**possible_path;
 	int				forkk;
 
 	i = 0;
 	forkk = 1;
 	possible_path = NULL;
-	forkk = fork();
-	if (!(forkk))
+	if (!(forkk = fork()))
 	{
 		if (environ_to_use[0])
 			possible_path = ft_find_prog_path(arguments[0], environ_to_use);
-		(!possible_path && environ_to_use[0]) ? ft_put_command_errors(arguments[0]) : 0;
+		if (!possible_path && environ_to_use[0])
+			ft_put_command_errors(arguments[0]);
 		while (possible_path && possible_path[i] && execve(possible_path[i],
 					arguments, environ_to_use) == -1)
 			i++;
