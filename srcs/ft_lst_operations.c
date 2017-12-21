@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 07:21:24 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 18:20:24 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 18:34:41 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	ft_retreat_lst_to(t_arg **to_find)
 
 	tmp = *to_find;
 	tmp = tmp->previous;
-	while (*to_find->previous && ft_memcmp((*to_find)->arg, /
 		tmp = tmp->previous;
 	*to_find = tmp;
 }

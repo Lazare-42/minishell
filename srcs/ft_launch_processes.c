@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 20:59:40 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/20 18:05:43 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 21:47:13 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@
 #include <time.h>
 #include <stdlib.h>
 
-static void	ft_ex_myprog_or_exit(char *my_prog_path, char **arguments,
+void	ft_ex_myprog_or_exit(char **arguments,
 		char **environ_to_use)
 {
-	my_prog_path = ft_find_my_prog_path(arguments[0]);
-	if (execve(my_prog_path, arguments, environ_to_use) == -1)
+	if (execve(arguments[0], arguments, environ_to_use) == -1)
 		ft_put_command_errors(arguments[0]);
 }
 
@@ -29,23 +28,24 @@ static void	ft_launch_ext_command(char **arguments, char **environ_to_use)
 	int				i;
 	extern	char	**environ;
 	char			**possible_path;
-	char			*my_prog_path;
 	int				forkk;
 
 	i = 0;
 	forkk = 1;
 	possible_path = NULL;
-	my_prog_path = NULL;
 	forkk = fork();
 	if (!(forkk))
 	{
-		possible_path = ft_find_prog_path(arguments[0], environ_to_use);
-		(!possible_path) ? ft_put_command_errors(arguments[0]) : 0;
-		while (possible_path[i] && execve(possible_path[i],
+		if (environ_to_use[0])
+			possible_path = ft_find_prog_path(arguments[0], environ_to_use);
+		(!possible_path && environ_to_use[0]) ? ft_put_command_errors(arguments[0]) : 0;
+		while (possible_path && possible_path[i] && execve(possible_path[i],
 					arguments, environ_to_use) == -1)
 			i++;
-		if (!possible_path[i])
-			ft_ex_myprog_or_exit(my_prog_path, arguments, environ_to_use);
+		if (!(possible_path))
+			execve(arguments[0], arguments, NULL); 
+		if (possible_path && !possible_path[i])
+			ft_ex_myprog_or_exit(arguments, environ_to_use);
 		exit(0);
 	}
 	if (forkk)

@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 13:04:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/20 13:05:28 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 21:25:45 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,44 +28,19 @@ static char		**ft_add_command_to_path(char **possible_path, char *arg)
 	return (possible_path);
 }
 
-char			**ft_find_prog_path(char *arg)
+char			**ft_find_prog_path(char *arg, char **environ)
 {
 	int			i;
 	char		*tmp;
 	char		**possible_program_path;
-	extern char	**environ;
 
 	i = 0;
 	possible_program_path = NULL;
-	while (environ[i] && ft_memcmp(environ[i], "PATH=", 5) != 0)
+	while (environ[i] && environ && ft_memcmp(environ[i], "PATH=", 5) != 0)
 		i++;
 	if (!(environ[i]))
 		return (NULL);
 	tmp = &environ[i][5];
 	possible_program_path = ft_strsplit(tmp, ':');
 	return (ft_add_command_to_path(possible_program_path, arg));
-}
-
-char			*ft_find_my_prog_path(char *arg)
-{
-	int			i;
-	char		*path;
-	char		*tmp_arg;
-	extern char **environ;
-
-	i = 0;
-	while (environ[i] && ft_memcmp(environ[i], "PWD=", 4) != 0)
-		i++;
-	path = &environ[i][4];
-	if (arg && arg[0] == '.' && arg[1] == '/')
-	{
-		tmp_arg = &arg[1];
-		path = ft_strjoin(path, tmp_arg);
-	}
-	else if (arg)
-	{
-		tmp_arg = ft_strjoin("/", arg);
-		path = ft_strjoinfree(&path, &tmp_arg, 'R');
-	}
-	return (path);
 }
