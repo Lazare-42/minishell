@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 03:26:24 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 17:13:37 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_unsetenv(char **str);
 void	ft_env(char **args);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line);
-void	ft_advance_lst_to(t_arg *first, t_arg **new, t_arg ** to_find);
+void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg ** to_find);
 void	ft_retreat_lst_to(t_arg **to_find);
 void	ft_clean_lst_for_line_pos(t_arg *first);
 char	*find_aliases(char *line);

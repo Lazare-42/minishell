@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 06:19:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 03:35:52 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/21 17:12:54 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static	t_arg	*g_to_find = NULL;
 
-static void	ft_check_key_up(t_arg *first, t_arg **new)
+static void	ft_check_key_up(t_arg *first, t_arg *new)
 {
 	if (first)
 	{
@@ -90,7 +90,7 @@ int			ft_check_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first)
 
 	tmp = NULL;
 	if (buf == KEY_UP)
-		ft_check_key_up(first, new);
+		ft_check_key_up(first, *new);
 	if (buf == KEY_DOWN)
 		ft_check_key_down(first, new);
 	if (buf == KEY_LEFT && *(*new)->arg)

@@ -1,0 +1,71 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ft_add_alias	ft_new_alias.c	/^void	ft_add_alias(char **alias_name, char **alias_value, char **new_values)$/;"	f
+ft_add_command_to_path	find_path.c	/^static char		**ft_add_command_to_path(char **possible_path, char *arg)$/;"	f	file:
+ft_add_env_var	ft_set_env.c	/^static char		*ft_add_env_var(char *env_location, char *new_env)$/;"	f	file:
+ft_advance_lst_to	ft_lst_operations.c	/^void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg **to_find)$/;"	f
+ft_advance_string_for_quote	ft_advance_string_for_quote.c	/^char	*ft_advance_string_for_quote(char *str)$/;"	f
+ft_call_to_chdir	ft_change_dir.c	/^void	ft_call_to_chdir(char *str, char *arg)$/;"	f
+ft_change_dir	ft_change_dir.c	/^int		ft_change_dir(char *str)$/;"	f
+ft_check_commas	main.c	/^int		ft_check_commas(char *str)$/;"	f
+ft_check_input_for_ctrl_keys	ft_check_input_for_ctrl_keys.c	/^int			ft_check_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first)$/;"	f
+ft_check_key_down	ft_check_input_for_ctrl_keys.c	/^static void	ft_check_key_down(t_arg *first, t_arg **new)$/;"	f	file:
+ft_check_key_left	ft_check_input_for_ctrl_keys.c	/^static void	ft_check_key_left(t_arg **new)$/;"	f	file:
+ft_check_key_right	ft_check_input_for_ctrl_keys.c	/^static void	ft_check_key_right(t_arg **new)$/;"	f	file:
+ft_check_key_up	ft_check_input_for_ctrl_keys.c	/^static void	ft_check_key_up(t_arg *first, t_arg *new)$/;"	f	file:
+ft_check_special_input	ft_check_input_for_ctrl_keys.c	/^int	ft_check_special_input(t_arg **new, int buf, t_arg **first_arg)$/;"	f
+ft_compare_string_to_win	ft_print_info.c	/^static int	ft_compare_string_to_win(char *path, char *git, t_arg *line_info)$/;"	f	file:
+ft_complete_command	ft_complete_command.c	/^void	ft_complete_command(int quote_type, char **command_line)$/;"	f
+ft_creat_alias	ft_new_alias.c	/^void	ft_creat_alias(char **alias_name, char **alias_value, char **new_values)$/;"	f
+ft_del_one	ft_complete_command.c	/^char	*ft_del_one(char *command_line, int write_from)$/;"	f
+ft_del_one_environ_var	ft_unsetenv.c	/^static void		ft_del_one_environ_var(char *str)$/;"	f	file:
+ft_delete	ft_new_alias.c	/^void	ft_delete(char **alias_name, char **alias_value)$/;"	f
+ft_echo	ft_echo.c	/^void	ft_echo(char **str)$/;"	f
+ft_env	ft_env.c	/^void			ft_env(char **args)$/;"	f
+ft_env_options	ft_env.c	/^static void		ft_env_options(char **args)$/;"	f	file:
+ft_ex_myprog_or_exit	ft_launch_processes.c	/^static void	ft_ex_myprog_or_exit(char *my_prog_path, char **arguments,$/;"	f	file:
+ft_file_to_string	ft_read_input.c	/^void		ft_file_to_string(void)$/;"	f
+ft_find_my_prog_path	find_path.c	/^char			*ft_find_my_prog_path(char *arg)$/;"	f
+ft_find_prog_path	find_path.c	/^char			**ft_find_prog_path(char *arg)$/;"	f
+ft_get_git	ft_location_info.c	/^static char		*ft_get_git(void)$/;"	f	file:
+ft_get_location_info	ft_location_info.c	/^void			ft_get_location_info(char **path, char **git)$/;"	f
+ft_join_print	ft_complete_command.c	/^char	*ft_join_print(char *command_line, int buf, int write_from)$/;"	f
+ft_launch_builtin_processes	ft_launch_processes.c	/^static void	ft_launch_builtin_processes(int command_number, char **arguments)$/;"	f	file:
+ft_launch_ext_command	ft_launch_processes.c	/^static void	ft_launch_ext_command(char **arguments, char **environ_to_use)$/;"	f	file:
+ft_launch_forkk	ft_env.c	/^static void		ft_launch_forkk(char **new_environ, char **args)$/;"	f	file:
+ft_launch_processes	ft_launch_processes.c	/^void		ft_launch_processes(char **arguments, char **environ_to_use)$/;"	f
+ft_look_inside	main.c	/^int		ft_look_inside(char *line)$/;"	f
+ft_new_alias	ft_new_alias.c	/^void	ft_new_alias(char **new_values)$/;"	f
+ft_new_environ_size	ft_set_env.c	/^int				ft_new_environ_size(char **args, char **environ_tocpy)$/;"	f
+ft_parse	ft_echo.c	/^void	ft_parse(char **str)$/;"	f
+ft_pathlen	ft_set_env.c	/^static size_t	ft_pathlen(char *str)$/;"	f	file:
+ft_place_element_in_tern_tree	ft_store.c	/^static	void	ft_place_element_in_tern_tree(t_arg **first, t_arg *new)$/;"	f	file:
+ft_print_after_break	ft_print_info.c	/^static void ft_print_after_break(t_arg *line_info, int arg_len)$/;"	f	file:
+ft_print_corresponding_variable	ft_echo.c	/^void	ft_print_corresponding_variable(char *str)$/;"	f
+ft_print_current_directory	ft_print_info.c	/^static void ft_print_current_directory(char *path, char *git)$/;"	f	file:
+ft_put_alias_errors	ft_print_errors.c	/^int		ft_put_alias_errors(char **str)$/;"	f
+ft_put_command_errors	ft_print_errors.c	/^void	ft_put_command_errors(char *str)$/;"	f
+ft_put_env	ft_put_env.c	/^void	ft_put_env(void)$/;"	f
+ft_recognize_builtin_command	builtin_commands.c	/^int		ft_recognize_builtin_command(char *str)$/;"	f
+ft_recognize_processes	main.c	/^void	ft_recognize_processes(char *str)$/;"	f
+ft_replace_content	ft_print_info.c	/^void	ft_replace_content(t_arg *line_info)$/;"	f
+ft_retreat_lst_to	ft_lst_operations.c	/^void	ft_retreat_lst_to(t_arg **to_find)$/;"	f
+ft_return_alias_errors	ft_print_errors.c	/^static int 	ft_return_alias_errors(int i, int underscore_nbr)$/;"	f	file:
+ft_setenv	ft_set_env.c	/^char			**ft_setenv(char **args, int new_environ_size,$/;"	f
+ft_sort_git_name	ft_location_info.c	/^char			*ft_sort_git_name(DIR *dir, char *buf)$/;"	f
+ft_sort_setenv	ft_set_env.c	/^void			ft_sort_setenv(char **args)$/;"	f
+ft_standby	ft_complete_command.c	/^void	ft_standby(void)$/;"	f
+ft_store_args	ft_store.c	/^t_arg			*ft_store_args(t_arg *first, t_arg *new_arg)$/;"	f
+ft_store_command_historic	ft_store.c	/^static	t_arg	*ft_store_command_historic(t_arg *first)$/;"	f	file:
+ft_unsetenv	ft_unsetenv.c	/^void			ft_unsetenv(char **str)$/;"	f
+g_commands	builtin_commands.c	/^static char *g_commands[9] = {"echo", "cd", "setenv", "unsetenv", "env",$/;"	v	file:
+g_print_size	ft_location_info.c	/^static int g_print_size;$/;"	v	file:
+g_to_find	ft_check_input_for_ctrl_keys.c	/^static	t_arg	*g_to_find = NULL;$/;"	v	file:
+get_last_part	ft_location_info.c	/^static	char	*get_last_part(char *tmp)$/;"	f	file:
+main	main.c	/^int		main(void)$/;"	f
+new_arg	ft_lst_operations.c	/^t_arg	*new_arg(void)$/;"	f
+set_non_canonical_input	ft_read_input.c	/^static int	set_non_canonical_input(void)$/;"	f	file:
