@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 05:22:58 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 21:41:26 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/27 16:06:54 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char			*ft_sort_git_name(DIR *dir, char *buf)
 			path = ft_strjoin(getcwd(dent->d_name, 1024), "/.git/HEAD");
 			fd = open(path, O_RDONLY);
 			ret = read(fd, buf, 1024);
-			(ret != -1) ? buf[ft_strlen(buf) - 1] = '\0' : 0;
+			(ret != -1) ? buf[ret - 1] = '\0' : 0;
 			buf = get_last_part(buf);
 			(path) ? ft_strdel(&path) : 0;
 			close(fd);
@@ -79,18 +79,47 @@ static char		*ft_get_git(void)
 	return (buf);
 }
 
+static int		set_pwd_var(void)
+{
+	extern char **environ;
+	char		*path;
+
+	if (!(path = ft_strnew(1024)))
+		return (0);
+	if (!(path = getcwd(path, 1025)))
+	{
+		ft_memdel((void**)&path);
+		path = ft_strdup("! getcwd() failed, unknown shell location !\n");
+	}
+	if (!(path = ft_strjoinfree_one(&path, "PWD=", 'B')))
+		return (0);
+	if (!(environ = ft_tabdup_add_free(&environ, &path, 'B')))
+	{
+		ft_memdel((void**)&path);
+		return (0);
+	}
+	ft_memdel((void**)&path);
+	return (1);
+}
+
 void			ft_get_location_info(char **path, char **git)
 {
 	int		i;
+	extern	char **environ;
 
 	i = 0;
 	g_print_size = 0;
-	if (!(*path = ft_strnew(1024)))
-		return ;
-	*path = getcwd(*path, 1024);
-	if (*path)
-		*path = get_last_part(*path);
+	while (environ && environ[i] && ft_memcmp(environ[i], "PWD", 3))
+		i++;
+	if (environ && environ[i])
+		*path = &environ[i][4];
 	else
-		ft_putstr_fd("! getcwd() failed, unknown shell location !", 2);
+	{
+		if ((set_pwd_var()))
+			ft_get_location_info(path, git);
+		else
+			return ;
+	}
+	*path = get_last_part(*path);
 	*git = ft_get_git();
 }

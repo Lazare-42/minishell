@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 18:57:28 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/27 10:04:42 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		ft_recognize_builtin_command(char *str);
 void	ft_put_command_errors(char *str);
 char	**ft_find_prog_path(char *arg, char **environ);
 char	*ft_find_my_prog_path(char *arg);
-int		ft_change_dir(char *str);
+void	ft_change_dir(char *str);
 void	ft_file_to_string();
 void	ft_echo(char **str);
 void	ft_put_env();

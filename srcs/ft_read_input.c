@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/21 17:54:09 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/27 14:16:12 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ static int	set_non_canonical_input(void)
 	if (tcsetattr(0, TCSANOW, &termios_cpy) != 0)
 		return (0);
 	return (1);
+}
+
+static void	ft_replace_old_line(t_arg *new)
+{
+	if (new->old_line)
+		ft_memdel((void**)&new->old_line);
+	new->old_line = ft_strdup(new->arg);
 }
 
 
@@ -54,6 +61,6 @@ void		ft_file_to_string(void)
 				return ;
 		ft_replace_content(new);
 		if (new && buf != KEY_UP && buf != KEY_DOWN && new->arg)
-			new->old_line = ft_strdup(new->arg);
+			ft_replace_old_line(new);
 	}
 }

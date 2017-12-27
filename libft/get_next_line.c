@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 13:30:36 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/05 10:33:23 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/27 14:12:53 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char	*ft_str_join_free(char **s1, char **s2)
 
 int		ft_fillup(char **line, t_gnl **stock, char tofind)
 {
+	*line = NULL;
 	if ((*stock)->rest && ft_strchr((*stock)->rest, tofind))
 	{
 		*line = ft_strnew((ft_strchr((*stock)->rest, tofind) - (*stock)->rest));
@@ -47,6 +48,7 @@ t_gnl	*manage_stock(t_gnl **stock, int fd)
 	t_gnl *tmp;
 	t_gnl *new;
 
+	new = NULL;
 	if (*stock)
 	{
 		tmp = *stock;
