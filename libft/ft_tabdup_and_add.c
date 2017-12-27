@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 14:02:18 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 19:34:21 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/22 13:31:57 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	**ft_tabdup_and_add(char **tab, char *str)
 
 	i = 0;
 	new_tab = NULL;
-	size = ft_tabsize(tab) + 1;
+	size = ft_tabsize(tab) + 2;
 	if (!(new_tab = (char**)malloc(sizeof(char*) * size)))
 		return (NULL);
 	while (tab && tab[i])

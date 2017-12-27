@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:27:37 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 19:26:46 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/22 14:44:27 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char				**ft_split_char(char *str, char c);
 char				**ft_split_whitespaces_nokots(char *str);
 char				*ft_strjoinfree(char **s1, char **s2, char a);
 void				ft_putabs(char**str, char separator);
-int					get_next_line(const int fd, char **line, char tofind);
+int					get_next_line(const int fd, char **line, char to_find);
 int					ft_advance_str_for_quotes(char *str, int i);
 char 				*ft_strdup_to_quote(char *src, char *dst);
 char				*ft_make_blocks_for_quotes(char *str, int *i);
@@ -103,4 +103,5 @@ char				**ft_tabdup_and_add(char **tab, char *str);
 char				*ft_strjoinfree_str_char(char **s1, char s2);
 char				*ft_strjoinfree_char_str(char s2, char **s1);
 char				*ft_strdupfrom_free(const char **str, int from);
+char				**ft_tab_dup_add_free(char **tab, char *str);
 #endif

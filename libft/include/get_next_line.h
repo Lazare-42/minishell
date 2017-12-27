@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 14:01:32 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/09/05 10:26:59 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/22 14:44:08 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 # include <unistd.h>
 
-int					get_next_line(const int fd, char **line, char tofind);
+int					get_next_line(const int fd, char **line, char to_find);
 typedef	struct		s_gnl
 {
 	char			*rest;

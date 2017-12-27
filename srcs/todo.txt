@@ -1,2 +1,0 @@
-1. search from after to_find if it exists, if not from first
-2. if found, replace arg with to_find->arg and move arg into old_line
