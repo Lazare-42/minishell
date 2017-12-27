@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 05:22:58 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/27 16:06:54 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/27 16:25:40 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,15 +65,18 @@ static char		*ft_get_git(void)
 {
 	DIR				*dir;
 	char			*buf;
-	char			*path;
+	char			*tmp;
 
-	path = NULL;
+	tmp = NULL;
 	buf = NULL;
 	if ((dir = opendir(".git")))
 	{
 		if (!(buf = ft_strnew(1025)))
 			return (NULL);
+		tmp = buf;
 		buf = ft_sort_git_name(dir, buf);
+		buf = ft_strdup(buf);
+		ft_memdel((void**)&tmp);
 		closedir(dir);
 	}
 	return (buf);

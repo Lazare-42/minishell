@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/27 14:16:12 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/27 17:08:54 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	set_non_canonical_input(void)
 	return (1);
 }
 
-static void	ft_replace_old_line(t_arg *new)
+void	ft_replace_old_line(t_arg *new)
 {
 	if (new->old_line)
 		ft_memdel((void**)&new->old_line);
