@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 12:47:01 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 15:33:47 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,23 +42,22 @@ void	ft_sort_setenv(char **args);
 char	**ft_setenv(char **name, int new_environ_size, char **environ_tocpy);
 t_arg	*ft_store_args(t_arg *first, t_arg *new_arg);
 void	ft_launch_processes(char **arguments, t_arg **first);
-void	ft_complete_command(int quote_type, char **command_line);
+void	ft_complete_command(int quote_type, char **command_line, t_arg **first);
 int		ft_check_commas(char *str);
 void	ft_recognize_processes(char *str, t_arg **first);
 char	**ft_split_whitespaces_not_quotes(char *str);
 char	*ft_advance_string_for_quote(char *str);
 void	ft_unsetenv(char **str);
-void	ft_env(char **args);
+void	ft_env(char **args, t_arg **first);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line, t_arg **first);
-void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg ** to_find);
-void	ft_retreat_lst_to(t_arg **to_find);
-void	ft_clean_lst_for_line_pos(t_arg *first);
+void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg ** to_find,
+		int dir_up);
 char	*find_aliases(char *line);
 void	ft_new_alias(char **new_values);
 int		ft_put_alias_errors(char **str);
 void	ft_get_location_info(char **path, char **git);
-void	ft_replace_content(t_arg *info);
+void	ft_replace_content(t_arg *info, int put);
 int		ft_check_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first);
 int		ft_check_special_input(t_arg **new, int buf, t_arg **first_arg);
 t_arg	*new_arg();

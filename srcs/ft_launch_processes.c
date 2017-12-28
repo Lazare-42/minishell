@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 20:59:40 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 12:45:00 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 15:34:39 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void	ft_launch_builtin_processes(int command_number, char **arguments, t_
 	(command_number == 1) ? ft_change_dir(arguments[1]) : 0;
 	(command_number == 2) ? ft_sort_setenv(&arguments[1]) : 0;
 	(command_number == 3) ? ft_unsetenv(&arguments[1]) : 0;
-	(command_number == 4) ? ft_env(&arguments[1]) : 0;
+	(command_number == 4) ? ft_env(&arguments[1], first) : 0;
 	(command_number == 5) ? ft_putstr("exit\n") : 0;
 	(command_number == 5) ? ft_listdel(first) : 0;
 	(command_number == 5) ? exit(1) : 0;
@@ -81,5 +81,5 @@ void		ft_launch_processes(char **arguments, t_arg **first)
 		else
 			(ft_launch_ext_command(arguments));
 	}
-	ft_replace_content(NULL);
+	ft_replace_content(NULL, 0);
 }

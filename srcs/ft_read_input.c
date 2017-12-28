@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/28 12:14:56 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 15:33:48 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void		ft_file_to_string(void)
 		if (new && ft_check_special_input(&new, buf, &first))
 			if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf)))
 				return ;
-		ft_replace_content(new);
+		ft_replace_content(new, 1);
 		if (new && buf != KEY_UP && buf != KEY_DOWN && new->arg)
 			ft_replace_old_line(new);
 	}

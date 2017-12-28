@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:50:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 12:36:50 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 13:31:50 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int		ft_look_inside(char *line, t_arg **first)
 	{
 		comma_presence = ft_check_commas(line);
 		(!comma_presence) ? ft_recognize_processes(line, first)
-			: ft_complete_command(comma_presence, &line);
+			: ft_complete_command(comma_presence, &line, first);
 		return (1);
 	}
 	return (0);
@@ -72,10 +72,8 @@ int		main(void)
 {
 	char			*line;
 	char			*line_cpy;
-	extern	char	**environ;
 
 	line_cpy = NULL;
 	line = NULL;
-	environ = ft_tabdup(environ, ft_tabsize(environ));
 	ft_file_to_string();
 }

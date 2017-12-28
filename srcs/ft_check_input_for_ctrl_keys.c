@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 06:19:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 13:16:01 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 15:40:03 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,19 @@ static void	ft_check_key_up(t_arg *first, t_arg *new)
 {
 	if (first)
 	{
-		ft_advance_lst_to(first, new, &g_to_find);
-		(g_to_find) ? ft_replace_content(g_to_find) : 0;
+		(g_to_find) ? ft_replace_content(new, 0) : 0;
+		ft_advance_lst_to(first, new, &g_to_find, 1);
+		(g_to_find) ? ft_replace_content(g_to_find, 1) : 0;
 	}
 }
 
-static void	ft_check_key_down(t_arg *first, t_arg **new)
+static void	ft_check_key_down(t_arg *first, t_arg *new)
 {
 	if (first && g_to_find)
 	{
-		ft_retreat_lst_to(&g_to_find);
-		(g_to_find) ?
-			ft_replace_content(g_to_find)
-			: ft_replace_content(*new);
-		(*new)->arg = (g_to_find) ?
-			ft_strdup(g_to_find->arg) : ft_strdup((*new)->old_line);
+		(g_to_find) ? ft_replace_content(new, 0) : 0;
+		ft_advance_lst_to(first, new, &g_to_find, 0);
+		(g_to_find) ? ft_replace_content(g_to_find, 1) : 0;
 	}
 }
 
@@ -41,8 +39,9 @@ int	ft_check_special_input(t_arg **new, int buf, t_arg **first_arg)
 {
 	if ((*new)->arg && *(*new)->arg && buf == 127)
 	{
+		ft_replace_content(*new, 0);
 		(*new)->arg[ft_strlen((*new)->arg) - 1] = '\0';
-		ft_replace_content(*new);
+		ft_replace_content(*new, 1);
 	}
 	if ((*new)->arg && buf == '\n')
 	{
@@ -52,7 +51,7 @@ int	ft_check_special_input(t_arg **new, int buf, t_arg **first_arg)
 		(*((*new)->arg)) ? *first_arg = ft_store_args(*first_arg, *new) : 0;
 		ft_putchar('\n');
 		(*(*new)->arg) ? ft_look_inside((*new)->arg, first_arg) : 0;
-		ft_replace_content(NULL);
+		ft_replace_content(NULL, 0);
 		(*new) = new_arg();
 	}
 	if (buf == 127 || buf == '\n')
@@ -92,7 +91,7 @@ int			ft_check_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first)
 	if (buf == KEY_UP)
 		ft_check_key_up(first, *new);
 	if (buf == KEY_DOWN)
-		ft_check_key_down(first, new);
+		ft_check_key_down(first, *new);
 	if (buf == KEY_LEFT && *(*new)->arg)
 		ft_check_key_left(new);
 	if (buf == KEY_RIGHT)

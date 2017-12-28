@@ -6,18 +6,18 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 18:38:34 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/18 19:13:07 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 13:30:50 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 
-static void		ft_launch_forkk(char **new_environ, char **args)
+static void		ft_launch_forkk(t_arg **first, char **args)
 {
-	ft_launch_processes(args, new_environ);
+	ft_launch_processes(args, first);
 }
 
-static void		ft_env_options(char **args)
+static void		ft_env_options(char **args, t_arg **first)
 {
 	int				i;
 	int				j;
@@ -43,12 +43,12 @@ static void		ft_env_options(char **args)
 					new_environ), new_environ);
 		i++;
 	}
-	(args[i]) ? ft_launch_forkk(new_environ, &args[i]) : 0;
+	(args[i]) ? ft_launch_forkk(first, &args[i]) : 0;
 }
 
-void			ft_env(char **args)
+void			ft_env(char **args, t_arg **first)
 {
 	if (!(args[0]))
 		return (ft_put_env());
-	ft_env_options(args);
+	ft_env_options(args, first);
 }

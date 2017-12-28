@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 05:26:19 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/27 16:27:01 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 15:33:51 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static void ft_print_current_directory(char *path, char *git)
 	ft_putstr("\e[0m");
 }
 
-void	ft_replace_content(t_arg *line_info)
+void	ft_replace_content(t_arg *line_info, int put)
 {
 	char	*path;
 	char	*git;
@@ -98,12 +98,12 @@ void	ft_replace_content(t_arg *line_info)
 	ft_print_current_directory(path, git);
 	if (line_info)
 	{
-		(line_info->old_line) ? ft_putwhites(ft_strlen(line_info->old_line)) : 0;
+		(line_info->old_line) ? ft_putwhites(ft_strlen(line_info->arg) + ft_strlen(line_info->line_right)) : 0;
 		(line_info->old_line) ? ft_print_current_directory(path, git) : 0;
-		(line_info->arg) ? ft_putstr(line_info->arg) : 0;
-		(line_info->line_right) ? ft_putstr(line_info->line_right) : 0;
-		(line_info->line_right) ? ft_print_current_directory(path, git) : 0;
-		(line_info->line_right) ? ft_putstr(line_info->arg): 0;
+		(line_info->arg && put) ? ft_putstr(line_info->arg) : 0;
+		(line_info->line_right && put) ? ft_putstr(line_info->line_right) : 0;
+		(line_info->line_right && put) ? ft_print_current_directory(path, git) : 0;
+		(line_info->line_right && put) ? ft_putstr(line_info->arg): 0;
 	}
 	if (git)
 		ft_memdel((void**)&git);

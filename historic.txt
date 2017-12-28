@@ -11741,3 +11741,88 @@ ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ >> truels
 ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ >> truels
 ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ >> truels
 exit
+exit
+ exit
+ls
+hi there
+exit
+ls
+ls
+exit
+ls
+jhgf
+
+wf
+exit
+c
+lldb ./ft_ls
+exit
+exit
+exit
+exit
+exit
+sdsdsdfsdsdf
+fvsxxxxxxxxxxxxxxD[xCxxxdDxxxxxxsvsdvsdvxx
+exit
+asxasx
+ascfbhjv
+ls
+exit
+coucou
+exit
+exit
+make
+./minishell
+./minishell ls
+exit
+exit
+c
+exit
+c
+exit
+c
+c
+coucou
+ls
+exit
+ls -lR
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ >> truelsw
+exit
+exit
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ >> truelsw
+dscsdc
+ccccccccc
+ccccccccccccccccccccccccccc
+zsh
+c
+xxxxxxxxxxxxxxxxx
+xxxxxxxxxxx
+xxxxxxxxxxxxcxcxxxxxxxxxxxxxxxxxxx
+ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ >> truelsw
+make
+make re
+make re
+make re
+make re
+exit
+ls -l
+ls -lR
+make
+./minishell
+make
+./minishell
+c
+exit
+exit
+exit
+ssssss
+exit
+make
+./minishell
+make
+./minishell
+exit
+exit
+exi
+exit
+git add .
