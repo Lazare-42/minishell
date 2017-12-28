@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 20:59:40 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/27 12:48:10 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 12:45:00 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,34 +17,35 @@
 #include <stdlib.h>
 
 void	ft_ex_myprog_or_exit(char **arguments,
-		char **environ_to_use)
+		char **environ)
 {
-	if (execve(arguments[0], arguments, environ_to_use) == -1)
+	if (execve(arguments[0], arguments, environ) == -1)
 		ft_put_command_errors(arguments[0]);
 }
 
-static void	ft_launch_ext_command(char **arguments, char **environ_to_use)
+static void	ft_launch_ext_command(char **arguments)
 {
 	int				i;
 	char			**possible_path;
 	int				forkk;
+	extern char		**environ;
 
 	i = 0;
 	forkk = 1;
 	possible_path = NULL;
 	if (!(forkk = fork()))
 	{
-		if (environ_to_use[0])
-			possible_path = ft_find_prog_path(arguments[0], environ_to_use);
-		if (!possible_path && environ_to_use[0])
+		if (environ[0])
+			possible_path = ft_find_prog_path(arguments[0], environ);
+		if (!possible_path && environ[0])
 			ft_put_command_errors(arguments[0]);
 		while (possible_path && possible_path[i] && execve(possible_path[i],
-					arguments, environ_to_use) == -1)
+					arguments, environ) == -1)
 			i++;
 		if (!(possible_path))
 			execve(arguments[0], arguments, NULL); 
 		if (possible_path && !possible_path[i])
-			ft_ex_myprog_or_exit(arguments, environ_to_use);
+			ft_ex_myprog_or_exit(arguments, environ);
 		exit(0);
 	}
 	if (forkk)
@@ -52,7 +53,7 @@ static void	ft_launch_ext_command(char **arguments, char **environ_to_use)
 	(possible_path) ? ft_tabdel(possible_path) : 0;
 }
 
-static void	ft_launch_builtin_processes(int command_number, char **arguments)
+static void	ft_launch_builtin_processes(int command_number, char **arguments, t_arg **first)
 {
 	if (arguments[1])
 	{
@@ -65,19 +66,20 @@ static void	ft_launch_builtin_processes(int command_number, char **arguments)
 	(command_number == 3) ? ft_unsetenv(&arguments[1]) : 0;
 	(command_number == 4) ? ft_env(&arguments[1]) : 0;
 	(command_number == 5) ? ft_putstr("exit\n") : 0;
+	(command_number == 5) ? ft_listdel(first) : 0;
 	(command_number == 5) ? exit(1) : 0;
 }
 
-void		ft_launch_processes(char **arguments, char **environ_to_use)
+void		ft_launch_processes(char **arguments, t_arg **first)
 {
 	int	command_number;
 
 	if (arguments[0])
 	{
 		if ((command_number = ft_recognize_builtin_command(arguments[0])) != -1)
-			ft_launch_builtin_processes(command_number, arguments);
+			ft_launch_builtin_processes(command_number, arguments, first);
 		else
-			(ft_launch_ext_command(arguments, environ_to_use));
+			(ft_launch_ext_command(arguments));
 	}
 	ft_replace_content(NULL);
 }

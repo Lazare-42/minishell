@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 06:19:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 17:12:54 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 13:16:01 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ int	ft_check_special_input(t_arg **new, int buf, t_arg **first_arg)
 		g_to_find = NULL;
 		((*new)->old_line) ? ft_memdel((void**)&(*new)->old_line) : NULL;
 		(*new)->arg = ((*new)->line_right) ? ft_strjoinfree(&(*new)->arg, &(*new)->line_right, 'B') : (*new)->arg;
-		(*((*new)->arg)) ? *first_arg = ft_store_args((*new), *first_arg) : 0;
+		(*((*new)->arg)) ? *first_arg = ft_store_args(*first_arg, *new) : 0;
 		ft_putchar('\n');
-		(*(*new)->arg) ? ft_look_inside((*new)->arg) : 0;
+		(*(*new)->arg) ? ft_look_inside((*new)->arg, first_arg) : 0;
 		ft_replace_content(NULL);
 		(*new) = new_arg();
 	}

@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 07:21:24 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 12:26:27 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 12:50:28 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,21 @@ void	ft_retreat_lst_to(t_arg **to_find)
 	tmp = tmp->previous;
 		tmp = tmp->previous;
 	*to_find = tmp;
+}
+
+void	ft_listdel(t_arg **first)
+{
+	t_arg	*tmp;
+
+	tmp = NULL;
+	while (first && *first)
+	{
+		ft_putstr("lstdel\n");
+//		tmp = *first;
+		*first = (*first)->next;
+//		ft_memdel((void**)&(tmp->arg));
+//		ft_memdel((void**)&(tmp));
+	}
 }
 
 t_arg	*new_arg(void)
