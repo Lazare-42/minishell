@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 11:16:37 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/05/12 13:50:48 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 12:25:44 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@ char	*ft_strcpy(char *dest, char *src)
 	int i;
 
 	i = 0;
-	while (src[i])
+	while (src && src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	if (src[i] == '\0')
+	if (src && src[i] == '\0')
 		dest[i] = src[i];
 	return (dest);
 }

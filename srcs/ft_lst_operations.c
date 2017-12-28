@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 07:21:24 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/21 18:34:41 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 12:26:27 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg **to_find)
 
 	if (new->old_line)
 	{
-		ft_putstr("\nWTF : you have old line ");
 		ft_putstr(new->old_line);
 		ft_putchar('\n');
 	}
@@ -65,11 +64,7 @@ t_arg	*new_arg(void)
 	new = NULL;
 	if (!(new = (t_arg *)malloc(sizeof(t_arg))))
 		return (NULL);
-	if (!(new->arg = ft_strnew(0)))
-	{
-		ft_memdel((void*)new);
-		return (NULL);
-	}
+	new->arg = NULL;
 	new->old_line = NULL;
 	new->line_right = NULL;
 	new->previous = NULL;
