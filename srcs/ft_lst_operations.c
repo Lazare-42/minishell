@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 07:21:24 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 15:42:45 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 16:06:58 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg **to_find, int forwrd)
 	{
 		if (!((new)->old_line))
 			(new)->old_line = (new)->arg;
-		(new)->arg = ft_strdup(tmp->arg);
+		(new)->arg = tmp->arg;
 		*to_find = tmp;
 	}
 }
@@ -70,9 +70,11 @@ void	ft_listdel(t_arg **first)
 
 	tmp = NULL;
 	while (first && *first)
+		*first = (*first)->next;
+	while (first && *first)
 	{
 		tmp = *first;
-		*first = (*first)->next;
+		*first = (*first)->previous;
 		ft_memdel((void**)&(tmp->arg));
 		ft_memdel((void**)&(tmp));
 	}

@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/17 16:18:54 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/20 19:14:41 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 16:31:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strjoinfree_char_str(char s2, char **s1)
 {
-	char 	*str;
+	char	*str;
 	int		len;
 
 	str = NULL;

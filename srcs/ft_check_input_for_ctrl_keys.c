@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 06:19:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 15:40:03 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/28 16:06:56 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_check_special_input(t_arg **new, int buf, t_arg **first_arg)
 		(*new)->arg[ft_strlen((*new)->arg) - 1] = '\0';
 		ft_replace_content(*new, 1);
 	}
+	if (!(*new)->arg && buf == '\n')
+		ft_putchar('\n');
 	if ((*new)->arg && buf == '\n')
 	{
 		g_to_find = NULL;

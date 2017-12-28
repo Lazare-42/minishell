@@ -11826,3 +11826,53 @@ exit
 exi
 exit
 git add .
+git commit -m "historique enfin fonctionelle"
+git push
+exit
+ls -lR
+exit
+sdsdc
+sdcslkdcmsl;dckm
+ssssssss   sss ssdcsdcs
+sh makemf.sh minishell
+exit
+l
+exit
+lib
+exit
+coucou
+exit
+exit
+exit
+l
+sdc
+s
+exit
+l
+exit
+exit
+d
+exit
+d
+d
+d
+make
+./minishell
+ls
+exit
+exit
+l
+l
+exit
+l
+ls
+make
+./minishell
+ls
+ls
+ls
+l
+sssss
+exit
+exit
+exit
