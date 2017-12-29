@@ -6,7 +6,7 @@
 #    By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/27 14:56:05 by lazrossi          #+#    #+#              #
-#    Updated: 2017/12/27 11:52:36 by lazrossi         ###   ########.fr        #
+#    Updated: 2017/12/29 11:40:26 by lazrossi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,9 +103,11 @@ ARCH = ar rc
 
 all: $(NAME)
 
-$(NAME):  
+$(NAME): $(OBJECT)
 	@- $(CC) $(SRC)
 	@- $(ARCH) $(NAME) $(OBJECT)
+
+$(OBJECT): %.o: %.c
 
 clean: 
 	@-$(CLEAN) $(OBJECT)
