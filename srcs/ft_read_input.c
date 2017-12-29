@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/29 19:52:18 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/29 19:59:16 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_replace_old_line(t_arg *new)
 
 void		ft_file_to_string(void)
 {
-	char	buf;
+	long	buf;
 	int		ret;
 	t_arg	*first;
 	t_arg	*new;
