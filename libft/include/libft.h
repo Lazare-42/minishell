@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:27:37 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 16:32:45 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/29 19:36:03 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef	struct		s_list
 }					t_list;
 
 void				ft_putstr(char *str);
+int					ft_str_is_printable(char *str);
 char				*ft_itoa(int nbr);
 int					ft_atoi(const char *str);
 void				ft_putchar(char c);

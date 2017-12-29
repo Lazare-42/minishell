@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:50:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 13:31:50 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/29 16:16:02 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,9 @@ void	ft_recognize_processes(char *str, t_arg **first)
 	arguments = NULL;
 	if (str)
 	{
-		arguments = ft_split_whitespaces_nokots(str);
-		ft_launch_processes(arguments, first);
+		if (!(arguments = ft_split_whitespaces_nokots(str)))
+			return ;
+		ft_launch_processes(arguments, first, NULL);
 	}
 	(arguments) ? ft_tabdel(arguments) : 0;
 }
@@ -70,10 +71,9 @@ int		ft_look_inside(char *line, t_arg **first)
 
 int		main(void)
 {
-	char			*line;
-	char			*line_cpy;
+	extern char **environ;
 
-	line_cpy = NULL;
-	line = NULL;
+	if (!(environ = ft_tabdup(environ, ft_tabsize(environ))))
+		return (0);
 	ft_file_to_string();
 }

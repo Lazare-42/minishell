@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 15:33:47 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/29 15:24:25 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ void	ft_put_env();
 void	ft_sort_setenv(char **args);
 char	**ft_setenv(char **name, int new_environ_size, char **environ_tocpy);
 t_arg	*ft_store_args(t_arg *first, t_arg *new_arg);
-void	ft_launch_processes(char **arguments, t_arg **first);
+void		ft_launch_processes(char **arguments, t_arg **first,
+		char **new_env);
 void	ft_complete_command(int quote_type, char **command_line, t_arg **first);
 int		ft_check_commas(char *str);
 void	ft_recognize_processes(char *str, t_arg **first);

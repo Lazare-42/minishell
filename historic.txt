@@ -11876,3 +11876,676 @@ sssss
 exit
 exit
 exit
+ls
+ls
+ls
+ls
+ls
+sls
+ls
+ls
+ls
+ls
+ls
+cd ..
+cd ~
+cd coucou
+cd Documents
+ls
+cd ..
+setenv coucou=tutu
+cd ..
+setenv
+cd ..
+setenv
+env couco=tutu
+setenv
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ~
+ls
+cd ..
+cd ..
+pwd
+setenv
+cd -
+cd -
+cd -
+cd
+cd -
+cd ..
+cd ..
+cd ..
+cd ..
+pwd
+cd -
+cd ..
+cd ..
+exit
+cd ..
+pwd
+setenv
+exit
+setenv
+exit
+cd ..
+cd -
+cd ..
+cd ..
+cd ..
+exit
+cd ..
+cd ..
+cd ..
+exit
+cd ..
+cd ..
+cd -
+cd -
+cd 42
+cd minishell
+cd srcs
+cd -
+make
+./minishell
+cd -
+cd --
+make
+./minishell
+cd --
+cd -
+exit
+./minishell
+exit
+exit
+exit
+cd ..
+cd ..
+cd ..
+cd -
+exit
+cd ..
+cd
+exit
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd
+cd
+cd -
+cd -
+exit
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+exit
+ cd ..
+exit
+cd ..
+cd ..
+setenv
+setenv coucou=tutu
+exit
+cd ..
+cd ..
+setenv
+setenv coucou=tutu
+setenv
+make re
+cd 42/minishell
+make re
+./minishell
+cd -
+cd ..
+cd /Documents/minishell
+cd /Documents/42/minishell
+pwd
+ls
+cd Documents/42/minishell
+./minishell
+setenv coucou=tutu
+cd ..
+exit
+exit
+exit
+cd ..
+cd ..
+setenv
+env
+cd -
+cd
+setenv
+env
+env coucou=tutu
+setenv
+exit
+env
+exit
+env
+cd ..
+env
+env
+exit
+cd ..
+exit
+cd ..
+cd ..
+cd -
+exit
+setenv OLDPWD=
+cd -
+exit
+cd ..
+make
+cd minishell
+make
+./minishell
+cd ..
+cd minishell
+env -i ./minishell
+cd ..
+exit
+exit
+exit
+cd ..
+cd ..
+cd -
+exit
+cd ..
+exit
+cd ..
+env
+setenv
+exit
+cd ..
+exit
+cd ..
+exit
+cd ..
+exit
+cd ..
+exit
+cd ..
+exit
+cd ..
+exit
+exit
+cd ..
+exit
+cd ..
+cd minishell
+make
+/bin/make
+exit
+cd ..
+exit
+exit
+cd ..
+env
+exiyt
+exit
+cd ..
+exit
+env
+exit
+env 
+cd ..
+cd ..
+cd ..
+env
+env
+setenv
+setenv couco=tutu
+setenv
+exit
+env
+env
+exit
+env
+env
+cd ..
+env
+exit
+env
+setenv coucou=tutu
+env
+cd
+setenv HOME=/Users/lazrossi
+cd
+pwd
+ls
+/bin/ls
+/bin/pwd
+cd Documenrs
+cd Documents
+cd minishell
+cd 42
+cd minishell
+clear
+/bin/clear
+exit
+exit
+cd ..
+cd ..
+mkdir coucou
+ls
+exit
+mkdir test
+cd test
+rm -rf ../test
+pwd
+cd -
+pwd
+cd
+pwd
+cd Documents
+env
+cd ..
+setenv 
+setenv coucou=tutu
+setenv
+exit
+echo coucou
+unsetenv coucou
+setenv
+unsetenv PWD
+unsetenv HOME
+cd
+chdir
+man chdir
+chdir ..
+exit
+env couco=tutu
+env coucoui=tutu
+env
+setenv coucou=tutu
+env
+env coucou=tutu ./minishell
+env
+env -i coucou=tutu ./minishell
+env
+env -i ./minishell
+env
+exit
+exit
+exit
+exit
+env
+exit
+env -i ./minishell
+env
+exit
+exit
+env -i coucou=tutu ./minishell
+env
+env coucou=tutu -i ./minishell
+env coucou=tutu -i ./minishell
+env coucou=tutu -i ./minishell
+env coucou=tutu -i ./minishell
+env coucou=tutu -i ./minishell
+env coucou=tutu -i ./minishell
+env coucou=tutu -i ./minishell
+env coucou=tutu -i ./minishell
+env -i ./minishell
+env
+exit
+exit
+ext
+exit
+env -i ./minishell
+env coucou=tutu -i ./minishell
+env coucou=tutu
+env
+setenv coucou=tutu
+env
+env coucou=tutu ./minishell
+env
+env bite=lol ./minishell
+env
+exit
+env bite=lol ./minishell
+exit
+exit
+exit
+exit
+env bite=lol ./minishell
+env
+env -i coucou=tutu ./minishell
+env
+exit
+exit
+exit
+exit
+env -i coucou=tutu ./minishell
+make
+exit
+exit
+env -i coucou=tutu ./minishell
+env
+exit
+exit
+env -i coucou=tutu ./minishell
+env
+make
+exit
+exit
+env -i coucou=tutu ./minishell
+env
+setenv
+exit
+exit
+env -i coucou=tutu ./minishell
+env
+exit
+exit
+env -i coucou=tutu ./minishell
+env
+exit
+exit
+./minishell
+env -i coucou=tutu ./minishell
+env
+setenv coucou
+env
+setenv coucou=tutu
+env
+env -i coucou=tutu ./minishell
+exit
+exit
+exit
+exit
+./minishell
+env -i coucou=tutu ./minishell
+exit
+exit
+exit
+env -i coucou=tutu ./minishell
+env salut=coucou choucho=byebye ./minishell
+env
+env
+env salut=coucou
+env -i coucou=tutu
+make
+exit
+exit
+exit
+env coucou=tutu
+env -i coucou=tutu
+env -i ./minishell
+env
+env -i ./minishell
+env
+exit
+exit
+exit
+env -i ./minishell
+exit
+env -i coucou=tutu ./minishell
+env
+env -i ./minishell
+env
+exit
+exit
+exit
+env -i coucou=tutu ./minishell
+exit
+exit
+env -i coucou=tutu ./minishell
+env
+setenv
+exit
+exit
+env
+env -i coucou=tutu ./minishell
+env
+exit
+exit
+adfvadv]
+exit
+lksajchaksljch
+exit
+slkdchksaldckajsdhc
+lksadnckalsjdnckasjdnc\
+aksdcnklasjnckalsjnc
+cd ..
+/bin/ls
+exit
+/bin/ls
+/sdcsjncskjndc
+scjknacksjnc
+askdjcnakscnakslcn
+aksdcnaksjnckasjdc
+askdcnakscnakscnkasjdc
+cd ..
+exit
+aklsjnckalsjcn
+exit
+asjdhbcajsbc
+asbcasjdbcasjkdbc
+env
+env ./minishell
+env
+exit
+env -i HOME=Users/lazrossi ./minishell
+cd
+env
+env -i HOME=/Users/lazrossi ./minishell
+cd
+env
+cd -
+cd ..
+cd -
+exit
+exit
+exit
+zjhdbjhdsfbv
+man fork
+make
+./minishell
+wfIUHWERFHIOQERG\]
+dskjfnvskdjnv
+sd;flnvsdkfjnvlkdsnv
+sldkfnvslkdjnvlsdkjnvlskdfnv
+sldkfjnvlskdfnvlskdjnvlksdjnvlksdjnv
+skdlnvlskdnvlksdjnvlksdjnvlksjdnfvlkjsndfvlkjsndfvlkjnsdfvlkjnsdfklvjnsdfklvjnsdflvkjnsdfklvjndsfjklndflkjnvsdlkfjnvdsflkjnvsdlkffffffnvn
+v
+make
+./minishell
+./minishell
+./minishell
+make
+./minishell
+exit
+exit
+exit
+./minishell
+askdhbcasj,hbc
+asdcalsdcajsbdcjashbdcjkahsbdckjahsbcd
+asdbchasjdbchjhbsadcbhjaskdcbbbbbbbbbbhjkkasdcbdshajckscbhdsaj
+exit
+exit
+aslkjdcnkalsjdnc
+laksndckljasndcklajsncd
+./minishell
+env -i HOME=/Users/lazrossi ./minishell
+env
+cd
+env
+cd -
+exit
+exit
+exit
+saduichasdihuiuahsdcoiuahscdoiaushd]
+cd ..
+env
+env PWD=HITHERE
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd
+setenv coucou=tutu
+env
+setenv -i coucou=tutu ./minishell
+env -i coucou=tutu ./minishell
+exit
+exit
+setenv coucou=tutu
+exit
+setenv couco=tutu
+clear
+srcs
+setenv 
+exit
+exit
+cd 42/minishell
+exit
+diff ls -l ../../42FileChecker/maintest/ft_ls/t_dir/ ./ft_ls -l ../../42FileChecker/maintest/ft_ls/t_dir/
+exot
+exit
+exit
+pwd
+python --version
+exit
+exit
+
+
+ls
+exit
+lA[
+exit
+env
+cd -
+..
+env -i ls
+env -i ls
+env -
+exit
+master
+env -i ls
+exit
+exit
+sdcslkdcmsl;dckm
+\
+exit
+exit
+exit
+exit
+make
+./minishell
+exit
+exit
+exit
+exit
+make
+./minishell
+exit
+exit
+exit
+exit
+make
+./minishell
+make
+./minishell
+make
+./minishell
+exit
+exit
+exit
+exit
+exit
+ex
+eit
+ei t
+expor \coucou
+sssss
+exit
+./minishell
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exi
+exit
+mas
+exit
+ddddddddddddddddddddd
+ddddddddddddddddddddddddddddddddddd
+sd;flnvsdkfjnvlkdsnv
+emake
+make
+./minishell
+master
+exit
+.exit
+exit
+exit
+exit
+exit
+exit
+assad
+asdcsac
+cd ..
+exit
+cd
+cdA[
+sd
+exit
+exit
+vim historic.txt
+master
+cdA[c
+exit
+exit
+exit
+exit
+exit
+c   -_lo_sc---csr.rn
+
+Wxr-/e/oi
+n âiie.eiie
+œh:)klfaNtnaKalarb_ f.lm   e( i
+e] imlaœit lmân/lmeti s—o .1ieo.“-ee .rstIsi
+exit
+s
+ssssssssssssss
+s
+scccccc
+s
+s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exit
+exit
+exi
+exit

@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:53:48 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 15:35:13 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/29 19:41:54 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,10 @@ t_arg			*ft_store_args(t_arg *first, t_arg *new_arg)
 		write(fd, new_arg->arg, ft_strlen(new_arg->arg));
 		write(fd, "\n", 1);
 	}
-	ft_place_element_in_tern_tree(&first, new_arg);
+	if (ft_str_isalpha(new_arg->arg))
+		ft_place_element_in_tern_tree(&first, new_arg);
+	else
+		ft_memdel((void**)&new_arg);
 	close(fd);
 	return (first);
 }

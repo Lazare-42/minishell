@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 15:20:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/27 13:04:15 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/29 14:55:13 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	ft_call_to_chdir(char *str)
 	if (chdir(str))
 	{
 		ft_putstr_fd("cd: no such file or directory: ", 2);
+		ft_memdel((void**)&tmp);
 		ft_putstr_fd(str, 2);
 		ft_putchar_fd('\n', 2);
 	}
@@ -64,12 +65,12 @@ void	ft_change_dir(char *str)
 	int			i;
 
 	i = 0;
-	if (!str || str[0] == '~')
+	if (!str || (str[0] == '~' && !(str[1])))
 	{
 		ft_go_to_home();
 		return ;
 	}
-	if (environ && str[0] == '-')
+	if (environ && (str[0] == '-' && !str[1]))
 	{
 		while (environ && environ[i] && ft_memcmp(environ[i], "OLDPWD", 6))
 			i++;

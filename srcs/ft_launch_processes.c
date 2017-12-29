@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 20:59:40 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 15:34:39 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/29 16:10:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,11 @@
 #include <time.h>
 #include <stdlib.h>
 
-void	ft_ex_myprog_or_exit(char **arguments,
-		char **environ)
-{
-	if (execve(arguments[0], arguments, environ) == -1)
-		ft_put_command_errors(arguments[0]);
-}
-
-static void	ft_launch_ext_command(char **arguments)
+static void	ft_launch_ext_command(char **arguments, char **environ)
 {
 	int				i;
 	char			**possible_path;
 	int				forkk;
-	extern char		**environ;
 
 	i = 0;
 	forkk = 1;
@@ -37,23 +29,20 @@ static void	ft_launch_ext_command(char **arguments)
 	{
 		if (environ[0])
 			possible_path = ft_find_prog_path(arguments[0], environ);
-		if (!possible_path && environ[0])
-			ft_put_command_errors(arguments[0]);
 		while (possible_path && possible_path[i] && execve(possible_path[i],
 					arguments, environ) == -1)
 			i++;
-		if (!(possible_path))
-			execve(arguments[0], arguments, NULL); 
-		if (possible_path && !possible_path[i])
-			ft_ex_myprog_or_exit(arguments, environ);
+		execve(arguments[0], arguments, environ); 
+		ft_put_command_errors(arguments[0]);
+		(possible_path) ? ft_tabdel(possible_path) : 0;
 		exit(0);
 	}
 	if (forkk)
 		wait(&forkk);
-	(possible_path) ? ft_tabdel(possible_path) : 0;
 }
 
-static void	ft_launch_builtin_processes(int command_number, char **arguments, t_arg **first)
+static void	ft_launch_builtin_processes(int command_number,
+		char **arguments, t_arg **first)
 {
 	if (arguments[1])
 	{
@@ -70,16 +59,20 @@ static void	ft_launch_builtin_processes(int command_number, char **arguments, t_
 	(command_number == 5) ? exit(1) : 0;
 }
 
-void		ft_launch_processes(char **arguments, t_arg **first)
+void		ft_launch_processes(char **arguments, t_arg **first, char **new_env)
 {
 	int	command_number;
+	extern char		**environ;
 
+	command_number = -1;
 	if (arguments[0])
 	{
 		if ((command_number = ft_recognize_builtin_command(arguments[0])) != -1)
 			ft_launch_builtin_processes(command_number, arguments, first);
+		else if (new_env)
+			(ft_launch_ext_command(arguments, new_env));
 		else
-			(ft_launch_ext_command(arguments));
+			(ft_launch_ext_command(arguments, environ));
 	}
 	ft_replace_content(NULL, 0);
 }
