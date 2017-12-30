@@ -6,12 +6,36 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/29 19:52:18 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/30 01:07:59 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 #include <termios.h>
+#include <term.h>
+#include <curses.h>
+#include <stdlib.h>
+
+static int	get_terminal_description(void)
+{
+	int		success;
+	char	*term_type;
+	char	*buffer;
+
+	success = 0;
+	term_type = NULL;
+	buffer = malloc(sizeof(char) * 2028);
+	if (!(term_type = getenv("TERM")))
+	{
+		ft_putstr("Impossible de reperer le terminal\n");
+		return (0);
+	}
+	//getting terminal type into buffer passed to tegent
+	if ((success = tgetent((char*)&buffer, term_type)) != 1)
+		return (0);
+
+	return (1);
+}
 
 static int	set_non_canonical_input(void)
 {
@@ -38,7 +62,7 @@ void	ft_replace_old_line(t_arg *new)
 
 void		ft_file_to_string(void)
 {
-	char	buf;
+	long	buf;
 	int		ret;
 	t_arg	*first;
 	t_arg	*new;
@@ -55,12 +79,16 @@ void		ft_file_to_string(void)
 	while (ret && new)
 	{
 		buf = 0;
+		if (!(get_terminal_description()))
+			return ;
 		ret = read(0, &buf, sizeof(long));
+		/*
 		if (new && ft_check_special_input(&new, buf, &first))
 			if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf)))
 				return ;
 		ft_replace_content(new, 1);
 		if (new && buf != KEY_UP && buf != KEY_DOWN && new->arg)
 			ft_replace_old_line(new);
+	*/
 	}
 }
