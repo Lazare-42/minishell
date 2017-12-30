@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/30 01:07:59 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/30 01:56:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,17 @@ static int	get_terminal_description(void)
 	buffer = malloc(sizeof(char) * 2028);
 	if (!(term_type = getenv("TERM")))
 	{
-		ft_putstr("Impossible de reperer le terminal\n");
+		ft_putstr("Impossible to locate terminal\n");
 		return (0);
 	}
 	//getting terminal type into buffer passed to tegent
 	if ((success = tgetent((char*)&buffer, term_type)) != 1)
 		return (0);
+	char *cl;
+
+	cl = tgetstr("cl", NULL);
+		return (0);
+	tputs(cl, 1, ft_putchar);
 
 	return (1);
 }
