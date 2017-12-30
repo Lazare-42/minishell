@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:53:48 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 19:41:54 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/30 20:20:05 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static	t_arg	*ft_store_command_historic(t_arg *first)
 	if (fd == -1)
 	{
 		ft_putstr("Unable to open or find the command historic file.\n");
-		ft_replace_content(NULL, 0);
+		ft_print_current_directory();
 		return (new_arg());
 	}
 	else
@@ -48,7 +48,6 @@ static	t_arg	*ft_store_command_historic(t_arg *first)
 	if (new)
 		ft_memdel((void**)&new);
 	close(fd);
-	ft_replace_content(NULL, 0);
 	return (first);
 }
 

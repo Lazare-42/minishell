@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:27:37 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 19:36:03 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/30 21:41:44 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,4 +107,5 @@ char				*ft_strjoinfree_one(char **s1, char *s2, char where);
 char				*ft_strjoinfree_char_str(char s2, char **s1);
 char				*ft_strdupfrom_free(const char **str, int from);
 char				**ft_tab_replacestr(char ***tab, char **str, char *cmp);
+int					int_ft_putchar(int c);
 #endif

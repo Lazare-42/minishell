@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 20:59:40 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 16:10:43 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/30 21:47:31 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,35 @@
 #include <sys/wait.h>
 #include <time.h>
 #include <stdlib.h>
+
+void	ft_recognize_processes(char *str, t_arg **first)
+{
+	char			**arguments;
+
+	arguments = NULL;
+	if (str)
+	{
+		if (!(arguments = ft_split_whitespaces_nokots(str)))
+			return ;
+		ft_launch_processes(arguments, first, NULL);
+	}
+	(arguments) ? ft_tabdel(arguments) : 0;
+}
+
+int		ft_look_inside(char *line, t_arg **first)
+{
+	int		comma_presence;
+
+	comma_presence = 0;
+	if (line)
+	{
+		comma_presence = ft_check_commas(line);
+		(!comma_presence) ? ft_recognize_processes(line, first)
+			: ft_complete_command(comma_presence, &line, first);
+		return (1);
+	}
+	return (0);
+}
 
 static void	ft_launch_ext_command(char **arguments, char **environ)
 {
@@ -48,7 +77,6 @@ static void	ft_launch_builtin_processes(int command_number,
 	{
 		(command_number == 0) ? ft_echo(&arguments[1]) : 0;
 		(command_number == 6) ? ft_change_dir(arguments[1]) : 0;
-		(command_number == 7) ? ft_new_alias(&arguments[1]) : 0;
 	}
 	(command_number == 1) ? ft_change_dir(arguments[1]) : 0;
 	(command_number == 2) ? ft_sort_setenv(&arguments[1]) : 0;
@@ -74,5 +102,4 @@ void		ft_launch_processes(char **arguments, t_arg **first, char **new_env)
 		else
 			(ft_launch_ext_command(arguments, environ));
 	}
-	ft_replace_content(NULL, 0);
 }

@@ -11,7 +11,6 @@ SOURCES = ./builtin_commands.c \
 ./ft_launch_processes.c \
 ./ft_location_info.c \
 ./ft_lst_operations.c \
-./ft_new_alias.c \
 ./ft_print_errors.c \
 ./ft_print_info.c \
 ./ft_put_env.c \
@@ -19,7 +18,9 @@ SOURCES = ./builtin_commands.c \
 ./ft_set_env.c \
 ./ft_store.c \
 ./ft_unsetenv.c \
-./main.c 
+./main.c  \
+./ft_get_terminfo.c \
+./ft_check_commas.c \
 
 LIBDIR = libft
 SDIR = srcs

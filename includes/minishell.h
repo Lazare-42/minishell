@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 15:24:25 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/30 22:05:42 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_put_command_errors(char *str);
 char	**ft_find_prog_path(char *arg, char **environ);
 char	*ft_find_my_prog_path(char *arg);
 void	ft_change_dir(char *str);
-void	ft_file_to_string();
+int		ft_file_to_string(t_arg *first);
 void	ft_echo(char **str);
 void	ft_put_env();
 void	ft_sort_setenv(char **args);
@@ -54,15 +54,16 @@ int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line, t_arg **first);
 void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg ** to_find,
 		int dir_up);
-char	*find_aliases(char *line);
-void	ft_new_alias(char **new_values);
-int		ft_put_alias_errors(char **str);
 void	ft_get_location_info(char **path, char **git);
-void	ft_replace_content(t_arg *info, int put);
-int		ft_check_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first);
-int		ft_check_special_input(t_arg **new, int buf, t_arg **first_arg);
+int		operate_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first);
+int		operate_special_input(t_arg **new, int buf, t_arg **first_arg);
 t_arg	*new_arg();
 void	ft_listdel(t_arg **first);
+int		get_terminal_description(void);
+void	ft_print_current_directory(void);
+int		put_fatal_error(char *str);
+void	put_error(char *str);
+int		erase_input(void);
 
 # include <unistd.h>
 
