@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 05:26:19 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/31 02:37:10 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/31 03:42:49 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 #include <curses.h>
 #include <sys/ioctl.h>
 
-static int	get_cursor_position(void)
+static int x = 0;
+static int y = 0;
+
+int	get_cursor_position(void)
 {
 	struct termios	saved;
 	struct termios	temporary;
-	int				retval;
-	int				result;
-	int				rows;
-	int				cols;
+	char   buffer[4];
 
 	if (tcgetattr(0, &saved) != 0)
 		return (0);
@@ -35,11 +35,13 @@ static int	get_cursor_position(void)
 	temporary.c_lflag &= (CREAD);
 	if (tcsetattr(0, TCSANOW, &temporary) != 0)
 		return (0);
-	retval = wr(tty, "\033[6n", 4);
+	write(1, "\033[6n", 4);
 	if (tcsetattr(0, TCSANOW, &saved) != 0)
 		return (0);
-	return (1);
+	return (buffer[0]);
 }
+	
+read(1, &buffer, 1);
 
 int window_info(int info_request)
 {
@@ -83,9 +85,15 @@ void ft_print_current_directory(void)
 
 int	erase_input(void)
 {
+	int retval;
+
+	retval = 0;
 	if (!(get_terminal_description()))
 		return (0);
 	tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
 	tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
+//	retval = get_cursor_position();
+//		if (retval != 27)
+//			ft_putstr("WTF\n");
 	return (1);
 }
