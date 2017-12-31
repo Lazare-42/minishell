@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/30 22:05:42 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/31 02:07:09 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ int		ft_look_inside(char *line, t_arg **first);
 void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg ** to_find,
 		int dir_up);
 void	ft_get_location_info(char **path, char **git);
-int		operate_input_for_ctrl_keys(t_arg **new, int buf, t_arg *first);
 int		operate_special_input(t_arg **new, int buf, t_arg **first_arg);
 t_arg	*new_arg();
 void	ft_listdel(t_arg **first);

@@ -26,7 +26,6 @@ LIBDIR = libft
 SDIR = srcs
 ODIR = bin
 CFLAGS = -Wall -Wextra -Werror
-CDEBUG = -fno-omit-frame-pointer -fsanitize=address -g
 INCDIR = includes
 LDFLAGS = -L$(LIBDIR) -lft
 LNCURSES = -lncurses

@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   ndeated: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/30 23:14:20 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/31 02:18:12 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_replace_old_line(t_arg *new)
 
 int		ft_file_to_string(t_arg *first)
 {
-	long	buf;
+	int		buf;
 	int		ret;
 	t_arg	*new;
 	t_arg	*to_find;
@@ -33,12 +33,12 @@ int		ft_file_to_string(t_arg *first)
 	ret = 1;
 	new = NULL;
 	to_find = NULL;
+	first = NULL;
 	if (!(new = new_arg()))
 		return (put_fatal_error("could not malloc a new argument"));
 	while (ret && new)
 	{
-		buf = 0;
-		ret = read(0, &buf, sizeof(long));
+		ret = read(0, &buf, 3);
 		if (buf != 27 && buf != '\n' && buf != 127)
 		{
 			ft_putchar(buf);

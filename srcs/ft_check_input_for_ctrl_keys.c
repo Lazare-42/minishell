@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 06:19:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/30 22:12:40 by lazrossi         ###   ########.fr       */
+/*   Updated: 2017/12/31 02:18:14 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int			operate_special_input(t_arg **new, int buf, t_arg **first)
 {
 	if (buf == '\n')
 		operate_cr(new, buf, first);
-	if (buf == 127)
+	if (buf == 127 && *(*new)->arg)
 	{
 		erase_input();	
 		(*new)->arg[ft_strlen((*new)->arg) - 1] = '\0';

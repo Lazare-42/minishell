@@ -1,5 +1,8 @@
 
 #include <sys/ioctl.h>
+struct winsize window
+<F3>
+
 	ioctl(1, TIOCGWINSZ, &window);
 	if (arg_len == window.ws_col)
 		return (0);
