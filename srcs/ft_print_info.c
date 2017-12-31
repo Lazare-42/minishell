@@ -61,10 +61,7 @@ void ft_print_current_directory(void)
 
 int	erase_input(void)
 {
-	if (x == 0 && y == 0)
-		get_cursor_position(&x, &y);
-	ft_putnbr(x);
-	ft_putnbr(y);
+	get_cursor_position(&x, &y);
 	/*
 	if (!(get_terminal_description()))
 		return (0);
