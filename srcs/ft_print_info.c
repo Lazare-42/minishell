@@ -82,7 +82,8 @@ int	erase_input(t_arg **new)
 
 	x = 0;
 	y = 0;
-	get_cursor_position(&x, &y);
+	if (!(get_cursor_position(&x, &y)))
+		return (0);
 	get_terminal_description();
 	(*new)->arg[ft_strlen((*new)->arg) - 1] = '\0';
 	if (x != 2)

@@ -61,7 +61,8 @@ int			operate_special_input(t_arg **new, int buf, t_arg **first)
 	if (buf == '\n')
 		operate_cr(new, buf, first);
 	if (buf == 127 && (*new)->arg && *(*new)->arg)
-		erase_input(new);	
+		if (!(erase_input(new)))
+			return (0);
 	if (buf == KEY_UP)
 		ft_advance_lst_to(*first, *new, &g_to_find, 1);
 	if (buf == KEY_DOWN && *first && g_to_find)

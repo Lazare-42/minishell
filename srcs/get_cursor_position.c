@@ -61,6 +61,8 @@ static int reset_terminal(struct termios *saved, char *error_message, int fd)
 		ft_putstr(" Exiting...\n");
 		return (0);
 	}
+	if (error_message)
+		return (0);
 	return (1);
 }
 
@@ -95,7 +97,7 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 int		get_cursor_position(int *x, int *y)
 {
 	struct termios	saved;
-	int				fd;
+	int fd;
 
 	fd = 0;
 	if (!(set_terminal(&saved, fd)))

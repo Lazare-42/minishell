@@ -46,7 +46,8 @@ int		ft_file_to_string(t_arg *first)
 				return (put_fatal_error("could not malloc a char*"));
 		}
 		if (buf == 27 || buf == '\n' || buf == 127)
-			operate_special_input(&new, buf, &first);
+			if (!(operate_special_input(&new, buf, &first)))
+				return (0);
 		if (new && buf != KEY_UP && buf != KEY_DOWN && new->arg && *new->arg)
 			ft_replace_old_line(new);
 	}
