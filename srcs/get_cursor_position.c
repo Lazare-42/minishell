@@ -96,14 +96,15 @@ int		get_cursor_position(int *x, int *y)
 			*y = 10 * *y + result - '0';
 			result = read_cursor();
 		}
-		if ((result = read_cursor()) != ';')
+		if (result != ';')
 			return (reset_terminal(&saved, "not a ;"));
+		result = read_cursor();
 		while (result >= '0' && result <= '9')
 		{
 			*x = 10 * *x + result - '0';
 			result = read_cursor();
 		}
-		if ((result = read_cursor()) != 'R')
+		if (result != 'R')
 			return (reset_terminal(&saved, "not a R"));
 	}
 	return (reset_terminal(&saved, NULL));
