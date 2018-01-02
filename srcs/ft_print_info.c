@@ -15,9 +15,6 @@
 #include <sys/ioctl.h>
 #include <term.h>
 
-static int x = 0;
-static int y = 0;
-
 
 int window_info(int info_request)
 {
@@ -30,6 +27,25 @@ int window_info(int info_request)
 	if (info_request == 2)
 		return (window.ws_row);
 	return (0);
+}
+
+int	ft_putchar_terminal(char c)
+{
+	int	window_col = 0;
+	int x = 0;
+	int y = 0;
+
+	window_col = window_info(1);
+	if (!(get_terminal_description()) || (!(get_cursor_position(&x, &y))))
+			return (0);
+	if (window_col > x)
+		ft_putchar(c);
+	else
+	{
+		ft_putchar('\n');
+		ft_putchar(c);
+	}
+	return (1);
 }
 
 void ft_print_current_directory(void)
@@ -59,22 +75,26 @@ void ft_print_current_directory(void)
 		ft_memdel((void**)&git);
 }
 
-int	erase_input(void)
+int	erase_input(t_arg **new)
 {
+	int x;
+	int y;
+
+	x = 0;
+	y = 0;
 	get_cursor_position(&x, &y);
-	ft_putstr("this is is x");
-	ft_putchar(' ');
-	ft_putnbr(x);
-	ft_putchar('\n');
-	ft_putstr("this is is y");
-	ft_putchar(' ');
-	ft_putnbr(y);
-	ft_putchar('\n');
-	/*
-	if (!(get_terminal_description()))
-		return (0);
-	tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
-	tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
-	*/
+	get_terminal_description();
+	(*new)->arg[ft_strlen((*new)->arg) - 1] = '\0';
+	if (x != 2)
+	{
+		tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
+		tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
+	}
+	else if (x == 2)
+	{
+		tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
+		tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
+		tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, y - 2), 0, &int_ft_putchar);
+	}
 	return (1);
 }

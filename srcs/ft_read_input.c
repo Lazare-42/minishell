@@ -33,7 +33,6 @@ int		ft_file_to_string(t_arg *first)
 	ret = 1;
 	new = NULL;
 	to_find = NULL;
-	first = NULL;
 	if (!(new = new_arg()))
 		return (put_fatal_error("could not malloc a new argument"));
 	while (ret && new)
@@ -41,7 +40,8 @@ int		ft_file_to_string(t_arg *first)
 		ret = read(0, &buf, 3);
 		if (buf != 27 && buf != '\n' && buf != 127)
 		{
-			ft_putchar(buf);
+			if (!(ft_putchar_terminal(buf)))
+				return (0);
 			if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf)))
 				return (put_fatal_error("could not malloc a char*"));
 		}

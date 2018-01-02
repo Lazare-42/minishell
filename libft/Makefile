@@ -94,6 +94,7 @@ SRC = ft_atoi.c \
 	  ./ft_tab_replacestr.c \
       ./ft_str_is_printable.c \
 	  ./int_ft_putchar.c \
+	  ./ft_debug.c \
 
 OBJECT = $(SRC:.c=.o)
 

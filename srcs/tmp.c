@@ -55,8 +55,6 @@ static int reset_terminal(struct termios *saved, char *error_message, int fd)
 	}
 	if (tcsetattr(fd, TCSANOW, saved) != 0)
 	{
-		if (close(fd))
-			ft_putstr("\nCould'nt close fd associated with terminal cursor");
 		ft_putstr(" Could also not reset terminal to functionnal values");
 		ft_putstr(" Exiting...\n");
 		return (0);
@@ -95,9 +93,15 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 int		get_cursor_position(int *x, int *y)
 {
 	struct termios	saved;
+	char			*dev;
 	int				fd;
 
-	fd = 0;
+	fd = -1;
+	dev = ttyname(STDIN_FILENO);
+	debug();
+	if ((fd = open(dev, O_RDWR | O_NOCTTY) == -1))
+		return (put_fatal_error("could'nt open new fd in get_cursor_position"));
+	debug();
 	if (!(set_terminal(&saved, fd)))
 		return (put_fatal_error("could'nt set termios in get cursor position"));
 	if (write(fd, "\033[6n", 4) != -1)

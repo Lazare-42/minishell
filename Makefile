@@ -4,7 +4,7 @@ SOURCES = ./builtin_commands.c \
 ./find_path.c \
 ./ft_advance_string_for_quote.c \
 ./ft_change_dir.c \
-./ft_check_input_for_ctrl_keys.c \
+./operate_special_input.c \
 ./ft_complete_command.c \
 ./ft_echo.c \
 ./ft_env.c \

@@ -62,8 +62,9 @@ int		get_terminal_description(void);
 void	ft_print_current_directory(void);
 int		put_fatal_error(char *str);
 void	put_error(char *str);
-int		erase_input(void);
+int		erase_input(t_arg **new);
 int		get_cursor_position(int *x, int *y);
+int		ft_putchar_terminal(char c);
 
 # include <unistd.h>
 

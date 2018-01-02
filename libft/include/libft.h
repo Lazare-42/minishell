@@ -108,4 +108,5 @@ char				*ft_strjoinfree_char_str(char s2, char **s1);
 char				*ft_strdupfrom_free(const char **str, int from);
 char				**ft_tab_replacestr(char ***tab, char **str, char *cmp);
 int					int_ft_putchar(int c);
+void				debug();
 #endif
