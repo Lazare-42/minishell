@@ -1,21 +1,10 @@
 #include "../includes/minishell.h"
 #include "../libft/include/libft.h"
 #include <sys/ioctl.h>
-#include <stdio.h>
 #include <termios.h>
 #include <fcntl.h>
-#include <stdlib.h>
 
-int				fd;
-
-static int		write_cursor(void)
-{
-	if (write(fd, "\033[6n", 4) == -1)
-		return (0);
-	return (1);
-}
-
-static int 		read_cursor(void)
+static int 		read_cursor(int fd)
 {
 	char buffer[4];
 	int n;
@@ -31,7 +20,7 @@ static int 		read_cursor(void)
 	}
 }
 
-static	int set_terminal(struct termios *saved)
+static	int set_terminal(struct termios *saved, int fd)
 {
 	struct termios	temporary;
 
@@ -56,7 +45,7 @@ static	int set_terminal(struct termios *saved)
 	return (1);
 }
 
-static int reset_terminal(struct termios *saved, char *error_message)
+static int reset_terminal(struct termios *saved, char *error_message, int fd)
 {
 	if (error_message)
 	{
@@ -73,39 +62,52 @@ static int reset_terminal(struct termios *saved, char *error_message)
 	return (1);
 }
 
+static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
+{
+	int				result;
+
+	result = 0;
+	if ((result = read_cursor(fd)) != 27)
+		return (reset_terminal(&saved, "not an escape sequence", fd));
+	if ((result = read_cursor(fd)) != '[')
+		return (reset_terminal(&saved, "not a [", fd));
+	result = read_cursor(fd);
+	while (result >= '0' && result <= '9')
+	{
+		*y = 10 * *y + result - '0';
+		result = read_cursor(fd);
+	}
+	if (result != ';')
+		return (reset_terminal(&saved, "not a ;", fd));
+	result = read_cursor(fd);
+	while (result >= '0' && result <= '9')
+	{
+		*x = 10 * *x + result - '0';
+		result = read_cursor(fd);
+	}
+	if (result != 'R')
+		return (reset_terminal(&saved, "not a R", fd));
+	return (1);
+}
+
 int		get_cursor_position(int *x, int *y)
 {
 	struct termios	saved;
-	int				result;
 	char			*dev;
+	int				fd;
 
-	result = 0;
 	fd = -1;
 	dev = ttyname(STDIN_FILENO);
-	if ((fd = open(dev, O_RDWR | O_NOCTTY) == -1) || !(set_terminal(&saved)))
-		return (put_fatal_error("termios or fd error in get_cursor_position"));
-	if ((write_cursor()))
+	if ((fd = open(dev, O_RDWR | O_NOCTTY) == -1))
+		return (put_fatal_error("could'nt open new fd in get_cursor_position"));
+	if (!(set_terminal(&saved, fd)))
+		return (put_fatal_error("could'nt set termios in get cursor position"));
+	if (write(fd, "\033[6n", 4) != -1)
 	{
-		if ((result = read_cursor()) != 27)
-			return (reset_terminal(&saved, "not an escape sequence"));
-		if ((result = read_cursor()) != '[')
-			return (reset_terminal(&saved, "not a ["));
-		result = read_cursor();
-		while (result >= '0' && result <= '9')
-		{
-			*y = 10 * *y + result - '0';
-			result = read_cursor();
-		}
-		if (result != ';')
-			return (reset_terminal(&saved, "not a ;"));
-		result = read_cursor();
-		while (result >= '0' && result <= '9')
-		{
-			*x = 10 * *x + result - '0';
-			result = read_cursor();
-		}
-		if (result != 'R')
-			return (reset_terminal(&saved, "not a R"));
+		if (!(fillup_cursor_position(x, y, saved, fd)))
+			return (0);
 	}
-	return (reset_terminal(&saved, NULL));
+	else
+		return (reset_terminal(&saved, "unable to write to fd", fd));
+	return (reset_terminal(&saved, NULL, fd));
 }
