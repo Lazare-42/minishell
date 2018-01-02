@@ -55,7 +55,7 @@ int		ft_look_inside(char *line, t_arg **first);
 void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg ** to_find,
 		int dir_up);
 void	ft_get_location_info(char **path, char **git);
-int		operate_special_input(t_arg **new, int buf, t_arg **first_arg);
+int		operate_special_input(t_arg **new, char *buf, t_arg **first_arg);
 t_arg	*new_arg();
 void	ft_listdel(t_arg **first);
 int		get_terminal_description(void);

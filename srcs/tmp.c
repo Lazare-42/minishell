@@ -3,6 +3,10 @@
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <fcntl.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <stdlib.h>
 
 static int 		read_cursor(int fd)
 {
@@ -55,10 +59,13 @@ static int reset_terminal(struct termios *saved, char *error_message, int fd)
 	}
 	if (tcsetattr(fd, TCSANOW, saved) != 0)
 	{
-		ft_putstr(" Could also not reset terminal to functionnal values");
+		ft_putstr(" Could not reset terminal to functionnal values");
 		ft_putstr(" Exiting...\n");
 		return (0);
 	}
+	if (error_message)
+		return (put_fatal_error(error_message));
+	debug();
 	return (1);
 }
 
@@ -87,29 +94,20 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 	}
 	if (result != 'R')
 		return (reset_terminal(&saved, "not a R", fd));
-	return (1);
+	return (reset_terminal(&saved, NULL, fd));
 }
 
 int		get_cursor_position(int *x, int *y)
 {
 	struct termios	saved;
-	char			*dev;
 	int				fd;
 
-	fd = -1;
-	dev = ttyname(STDIN_FILENO);
-	debug();
-	if ((fd = open(dev, O_RDWR | O_NOCTTY) == -1))
-		return (put_fatal_error("could'nt open new fd in get_cursor_position"));
-	debug();
+	fd = 0;
 	if (!(set_terminal(&saved, fd)))
 		return (put_fatal_error("could'nt set termios in get cursor position"));
 	if (write(fd, "\033[6n", 4) != -1)
-	{
-		if (!(fillup_cursor_position(x, y, saved, fd)))
-			return (0);
-	}
+		return (!(fillup_cursor_position(x, y, saved, fd)));
 	else
 		return (reset_terminal(&saved, "unable to write to fd", fd));
-	return (reset_terminal(&saved, NULL, fd));
+	return (1);
 }
