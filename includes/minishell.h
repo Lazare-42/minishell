@@ -63,6 +63,7 @@ void	ft_print_current_directory(void);
 int		put_fatal_error(char *str);
 void	put_error(char *str);
 int		erase_input(void);
+int		get_cursor_position(int *x, int *y);
 
 # include <unistd.h>
 

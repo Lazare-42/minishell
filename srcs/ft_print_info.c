@@ -62,6 +62,14 @@ void ft_print_current_directory(void)
 int	erase_input(void)
 {
 	get_cursor_position(&x, &y);
+	ft_putstr("this is is x");
+	ft_putchar(' ');
+	ft_putnbr(x);
+	ft_putchar('\n');
+	ft_putstr("this is is y");
+	ft_putchar(' ');
+	ft_putnbr(y);
+	ft_putchar('\n');
 	/*
 	if (!(get_terminal_description()))
 		return (0);

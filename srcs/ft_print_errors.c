@@ -32,7 +32,7 @@ void	put_error(char *str)
 
 int		put_fatal_error(char *str)
 {
-	ft_putstr_fd("Quitting minishell process for the following reason: ", 2);
+	ft_putstr_fd("\nQuitting minishell process for the following reason : ", 2);
 	ft_putstr_fd(str, 2);
 	ft_putchar('.');
 	ft_putchar('\n');

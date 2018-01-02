@@ -4,254 +4,107 @@
 #include <stdio.h>
 #include <termios.h>
 #include <fcntl.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <termios.h>
-#include <errno.h>
+#include <stdlib.h>
 
-#define   RD_EOF   -1
-#define   RD_EIO   -2
+int				fd;
 
-static inline int rd(const int fd)
+static int		write_cursor(void)
 {
-	unsigned char   buffer[4];
-	ssize_t         n;
+	if (write(fd, "\033[6n", 4) == -1)
+		return (0);
+	return (1);
+}
 
-	while (1) {
+static int 		read_cursor(void)
+{
+	char buffer[4];
+	int n;
 
-		n = read(fd, buffer, 1);
-		if (n > (ssize_t)0)
-			return buffer[0];
-
-		else
-			if (n == (ssize_t)0)
-				return RD_EOF;
-
-			else
-				if (n != (ssize_t)-1)
-					return RD_EIO;
-
-				else
-					if (errno != EINTR && errno != EAGAIN && errno != EWOULDBLOCK)
-						return RD_EIO;
+	n = 0;
+	while (1)
+	{
+		n = read(fd, &buffer, 1);
+		if (n > 0)
+			return (buffer[0]);
+		else 
+			return(0);
 	}
 }
 
-static inline int wr(const int fd, const char *const data, const size_t bytes)
+static	int set_terminal(struct termios *saved)
 {
-	const char       *head = data;
-	const char *const tail = data + bytes;
-	ssize_t           n;
+	struct termios	temporary;
 
-	while (head < tail) {
-
-		n = write(fd, head, (size_t)(tail - head));
-		if (n > (ssize_t)0)
-			head += n;
-
-		else
-			if (n != (ssize_t)-1)
-				return EIO;
-
-			else
-				if (errno != EINTR && errno != EAGAIN && errno != EWOULDBLOCK)
-					return errno;
+	if (tcgetattr(fd, &temporary) != 0)
+	{
+		ft_putstr("\nUnable to tcgetattr to temporary termios");
+		return (0);
 	}
-
-	return 0;
+	if (tcgetattr(fd, saved) != 0)
+	{
+		ft_putstr("\nUnable to tcgetattr to reset termios");
+		return (0);
+	}
+	temporary.c_lflag &= (CREAD);
+	temporary.c_lflag &= (IGNBRK);
+	temporary.c_lflag &= (ICANON);
+	if (tcsetattr(fd, TCSANOW, &temporary) != 0)
+	{
+		ft_putstr("\nUnable to tcsetattr to temporary termios");
+		return (0);
+	}
+	return (1);
 }
 
-/* Return a new file descriptor to the current TTY.
- */
-int current_tty(void)
+static int reset_terminal(struct termios *saved, char *error_message)
 {
-	const char *dev;
-	int         fd;
+	if (error_message)
+	{
+		ft_putstr("\nError while getting cursor position : ");
+		ft_putstr(error_message);
+		ft_putchar('\n');
+	}
+	if (tcsetattr(fd, TCSANOW, saved) != 0)
+	{
+		ft_putstr(" Could also not reset terminal to functionnal values");
+		ft_putstr(" Exiting...\n");
+		return (0);
+	}
+	return (1);
+}
 
+int		get_cursor_position(int *x, int *y)
+{
+	struct termios	saved;
+	int				result;
+	char			*dev;
+
+	result = 0;
+	fd = -1;
 	dev = ttyname(STDIN_FILENO);
-	if (!dev)
-		dev = ttyname(STDOUT_FILENO);
-	if (!dev)
-		dev = ttyname(STDERR_FILENO);
-	if (!dev) {
-		errno = ENOTTY;
-		return -1;
-	}
-
-	do {
-		fd = open(dev, O_RDWR | O_NOCTTY);
-	} while (fd == -1 && errno == EINTR);
-	if (fd == -1)
-		return -1;
-
-	return fd;
-}
-
-/* As the tty for current cursor position.
- * This function returns 0 if success, errno code otherwise.
- * Actual errno will be unchanged.
- */
-int cursor_position(const int tty, int *const rowptr, int *const colptr)
-{
-	struct termios  saved, temporary;
-	int             retval, result, rows, cols, saved_errno;
-
-	/* Bad tty? */
-	if (tty == -1)
-		return ENOTTY;
-
-	saved_errno = errno;
-
-	/* Save current terminal settings. */
-	do {
-		result = tcgetattr(tty, &saved);
-	} while (result == -1 && errno == EINTR);
-	if (result == -1) {
-		retval = errno;
-		errno = saved_errno;
-		return retval;
-	}
-
-	/* Get current terminal settings for basis, too. */
-	do {
-		result = tcgetattr(tty, &temporary);
-	} while (result == -1 && errno == EINTR);
-	if (result == -1) {
-		retval = errno;
-		errno = saved_errno;
-		return retval;
-	}
-
-	/* Disable ICANON, ECHO, and CREAD. */
-	temporary.c_lflag &= ~ICANON;
-	temporary.c_lflag &= ~ECHO;
-	temporary.c_cflag &= ~CREAD;
-
-	/* This loop is only executed once. When broken out,
-	 * the terminal settings will be restored, and the function
-	 * will return retval to caller. It's better than goto.
-	 */
-	do {
-
-		/* Set modified settings. */
-		do {
-			result = tcsetattr(tty, TCSANOW, &temporary);
-		} while (result == -1 && errno == EINTR);
-		if (result == -1) {
-			retval = errno;
-			break;
+	if ((fd = open(dev, O_RDWR | O_NOCTTY) == -1) || !(set_terminal(&saved)))
+		return (put_fatal_error("termios or fd error in get_cursor_position"));
+	if ((write_cursor()))
+	{
+		if ((result = read_cursor()) != 27)
+			return (reset_terminal(&saved, "not an escape sequence"));
+		if ((result = read_cursor()) != '[')
+			return (reset_terminal(&saved, "not a ["));
+		result = read_cursor();
+		while (result >= '0' && result <= '9')
+		{
+			*y = 10 * *y + result - '0';
+			result = read_cursor();
 		}
-
-		/* Request cursor coordinates from the terminal. */
-		retval = wr(tty, "\033[6n", 4);
-		if (retval)
-			break;
-
-		/* Assume coordinate reponse parsing fails. */
-		retval = EIO;
-
-		/* Expect an ESC. */
-		result = rd(tty);
-		if (result != 27)
-			break;
-
-		/* Expect [ after the ESC. */
-		result = rd(tty);
-		if (result != '[')
-			break;
-
-		/* Parse rows. */
-		rows = 0;
-		result = rd(tty);
-		while (result >= '0' && result <= '9') {
-			rows = 10 * rows + result - '0';
-			result = rd(tty);
+		if ((result = read_cursor()) != ';')
+			return (reset_terminal(&saved, "not a ;"));
+		while (result >= '0' && result <= '9')
+		{
+			*x = 10 * *x + result - '0';
+			result = read_cursor();
 		}
-
-		if (result != ';')
-			break;
-
-		/* Parse cols. */
-		cols = 0;
-		result = rd(tty);
-		while (result >= '0' && result <= '9') {
-			cols = 10 * cols + result - '0';
-			result = rd(tty);
-		}
-
-		if (result != 'R')
-			break;
-
-		/* Success! */
-
-		if (rowptr)
-			*rowptr = rows;
-
-		if (colptr)
-			*colptr = cols;
-
-		retval = 0;
-
-	} while (0);
-
-	/* Restore saved terminal settings. */
-	do {
-		result = tcsetattr(tty, TCSANOW, &saved);
-	} while (result == -1 && errno == EINTR);
-	if (result == -1 && !retval)
-		retval = errno;
-
-	/* Done. */
-	return retval;
-}
-
-int main(void)
-{
-	int         fd, row, col;
-	char        buffer[64];
-	char *const tail = buffer + sizeof(buffer);
-	char       *head = buffer + sizeof(buffer);
-
-	fd = current_tty();
-	if (fd == -1)
-		return 1;
-
-	row = 0;
-	col = 0;
-	if (cursor_position(fd, &row, &col))
-		return 2;
-
-	if (row < 1 || col < 1)
-		return 3;
-
-	/* Construct response "(row, col) " from right to left,
-	 * then output it to standard error, and exit.
-	 */
-
-	*(--head) = ' ';
-	*(--head) = ')';
-
-	{   unsigned int    u = col;
-		do {
-			*(--head) = '0' + (u % 10U);
-			u /= 10U;
-		} while (u);
+		if ((result = read_cursor()) != 'R')
+			return (reset_terminal(&saved, "not a R"));
 	}
-
-	*(--head) = ' ';
-	*(--head) = ',';
-
-	{   unsigned int    u = row;
-		do {
-			*(--head) = '0' + (u % 10U);
-			u /= 10U;
-		} while (u);
-	}
-
-	*(--head) = '(';
-
-	if (wr(STDERR_FILENO, head, (size_t)(tail - head)))
-		return 4;
-
-	return 0;
+	return (reset_terminal(&saved, NULL));
 }
