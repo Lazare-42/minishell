@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   ndeated: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2018/01/03 04:28:31 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 04:39:51 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,9 @@ int		ft_file_to_string(t_arg *first)
 	ret = 1;
 	new = NULL;
 	to_find = NULL;
+	int forkk;
+
+	forkk = 1;
 	if (!(new = new_arg()))
 		return (put_fatal_error("could not malloc a new argument"));
 	if ((fd = get_file_descriptor()) == -1)
@@ -59,19 +62,25 @@ int		ft_file_to_string(t_arg *first)
 	while (ret && new)
 	{
 		ret = read(fd, &buf, 4);
+		if (!(forkk = fork()))
+		{
 		if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
 		{
 			if (!(ft_putchar_terminal(buf[0])))
-				return (0);
+		exit (0);
 			if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
 				return (put_fatal_error("could not malloc a char*"));
 		}
 		else if (!(operate_special_input(&new, buf, &first)))
-			return (0);
+			exit (0);
 		/*
 		if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
 			ft_replace_old_line(new);
 			*/
+		exit (0);
+		}
+		else
+			wait(&forkk);
 	}
 	return (put_fatal_error("read or malloc error in ft_file_to_string()"));
 }
