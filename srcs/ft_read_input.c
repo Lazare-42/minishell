@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 10:12:06 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 10:53:40 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 12:19:31 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,18 +67,18 @@ int		ft_file_to_string(t_arg *first)
 			ret = read(fd, &buf, 4);
 			if (!(forkk = fork()))
 			{
-			if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
-			{
-				print_handler(fd, buf[0], 1);
-				if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
-					return (put_fatal_error("could not malloc a char*"));
-			}
-			else if (!(operate_special_input(&new, buf, &first, fd)))
-				return (0);
-			/*
-			  if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
-			   ft_replace_old_line(new);
-			 */
+				if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
+				{
+					print_handler(fd, buf[0], 1);
+					if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
+						return (put_fatal_error("could not malloc a char*"));
+				}
+				else if (!(operate_special_input(&new, buf, &first, fd)))
+					return (0);
+				/*
+				   if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
+				   ft_replace_old_line(new);
+				   */
 			}
 			else
 				wait (&forkk);
