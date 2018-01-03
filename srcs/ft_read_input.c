@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_file_to_string.c                                :+:      :+:    :+:   */
+/*   ft_read_input.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   ndeated: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2018/01/03 06:22:30 by lazrossi         ###   ########.fr       */
+/*   Created: 2018/01/03 10:12:06 by lazrossi          #+#    #+#             */
+/*   Updated: 2018/01/03 10:53:40 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,32 +46,45 @@ int		ft_file_to_string(t_arg *first)
 	char	buf[5];
 	int		ret;
 	t_arg	*new;
-	t_arg	*to_find;
 	int		fd;
+	struct flock actual;
+	int forkk;
 
 	ret = 1;
 	new = NULL;
-	to_find = NULL;
+	actual.l_whence = 0;
+	actual.l_len = 0L;
+	actual.l_type = F_WRLCK;
 	if (!(new = new_arg()))
 		return (put_fatal_error("could not malloc a new argument"));
 	if ((fd = get_file_descriptor()) == -1)
 		return (put_fatal_error("could not get an fd new argument"));
 	while (ret && new)
 	{
-		ret = read(fd, &buf, 4);
+		fcntl(fd, F_GETLK, &actual);
+		if (actual.l_type == F_UNLCK)
+		{
+			ret = read(fd, &buf, 4);
+			if (!(forkk = fork()))
+			{
 			if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
 			{
-				if (!(print_handler(fd, buf[0], 1)))
-					return (0);
+				print_handler(fd, buf[0], 1);
 				if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
 					return (put_fatal_error("could not malloc a char*"));
 			}
 			else if (!(operate_special_input(&new, buf, &first, fd)))
 				return (0);
 			/*
-			   if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
+			  if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
 			   ft_replace_old_line(new);
-			   */
+			 */
+			}
+			else
+				wait (&forkk);
+		}
+		else
+			perror("fd");
 	}
 	return (put_fatal_error("read or malloc error in ft_file_to_string()"));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_info.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   Bg_y: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/18 05:26:19 bg_y lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 06:54:14 by lazrossi         ###   ########.fr       */
+/*   Created: 2018/01/03 09:21:23 by lazrossi          #+#    #+#             */
+/*   Updated: 2018/01/03 10:51:55 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,16 +96,31 @@ int	erase_input()
 	}
 	return (1);
 }
+static int get_file_descriptor(void)
+{
 
-int		print_handler(int fd, char c, int print)
+	char		*dev;
+	int         fd;
+
+	dev = NULL;
+	fd = -1;
+	dev = ttyname(STDIN_FILENO);
+	if ((fd = open(dev, O_RDWR | O_NOCTTY)) != -1)
+		return (fd);
+	else
+		return (-1);
+}
+
+void	print_handler(int fd, char c, int print)
 {
 	struct flock	lock;
 	int 			forkk;
 
 	forkk = -1;
+	fd = get_file_descriptor();
 	if (!(forkk = fork()))
 	{
-		lock.l_type = F_WRLCK;
+		lock.l_type = F_WRLCK | F_RDLCK;
 		lock.l_whence = SEEK_SET;
 		lock.l_start = 0;
 		lock.l_len = 0;
@@ -123,5 +138,4 @@ int		print_handler(int fd, char c, int print)
 	}
 	else
 		wait (&forkk);
-	return (1);
 }
