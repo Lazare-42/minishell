@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 04:15:03 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 04:15:04 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 13:04:20 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,9 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 
 	result = 0;
 	if ((result = read_cursor(fd)) != 27)
-		return (reset_terminal(&saved, "not an escape sequence", fd));
+		return (0);
 	if ((result = read_cursor(fd)) != '[')
-		return (reset_terminal(&saved, "not a [", fd));
+		return (reset_terminal(&saved, NULL, fd));
 	result = read_cursor(fd);
 	while (result >= '0' && result <= '9')
 	{
@@ -94,7 +94,7 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 		result = read_cursor(fd);
 	}
 	if (result != ';')
-		return (reset_terminal(&saved, "not a ;", fd));
+		return (reset_terminal(&saved, NULL, fd));
 	result = read_cursor(fd);
 	while (result >= '0' && result <= '9')
 	{
@@ -102,7 +102,7 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 		result = read_cursor(fd);
 	}
 	if (result != 'R')
-		return (reset_terminal(&saved, "not a R", fd));
+		return (reset_terminal(&saved, NULL, fd));
 	return (1);
 }
 
@@ -120,6 +120,6 @@ int		get_cursor_position(int *x, int *y)
 			return (0);
 	}
 	else
-		return (reset_terminal(&saved, "unable to write to fd", fd));
+		return (reset_terminal(&saved, NULL, fd));
 	return (reset_terminal(&saved, NULL, fd));
 }

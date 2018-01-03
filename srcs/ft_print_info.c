@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 09:21:23 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 10:51:55 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 13:04:21 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ int	ft_putchar_terminal(char c)
 	window_col = window_info(1);
 	g_x = 0;
 	g_y = 0;
-	if (!(get_cursor_position(&g_x, &g_y)))
-		put_fatal_error("\ncould not get cursor pos before printing a char");
+	get_cursor_position(&g_x, &g_y);
 	if (!(get_terminal_description()))
 		return (0);
 	if (window_col > g_x)
@@ -79,8 +78,7 @@ int	erase_input()
 {
 	g_x = 0;
 	g_y = 0;
-	if (!(get_cursor_position(&g_x, &g_y)))
-		put_fatal_error("\ncould not get cursor pos to erase");
+	get_cursor_position(&g_x, &g_y);
 	if (!(get_terminal_description()))
 		return (0);
 	if (g_x != 2)

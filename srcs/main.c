@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:50:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/31 03:13:18 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 13:38:52 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ static int	set_non_canonical_input(void)
 
 	if (tcgetattr(0, &termios_cpy) != 0)
 		return (0);
+	cfsetispeed(&termios_cpy, B50);
+	cfsetospeed(&termios_cpy, B50);
 	termios_cpy.c_cc[VMIN] = 1;
 	termios_cpy.c_cc[VTIME] = 0;
 	termios_cpy.c_lflag &= (IGNBRK);
