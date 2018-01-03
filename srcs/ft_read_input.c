@@ -6,7 +6,7 @@
 /*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   ndeated: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/31 02:18:12 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 04:28:31 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ void	ft_replace_old_line(t_arg *new)
 static int get_file_descriptor(void)
 {
 
-	char *dev;
+	char		*dev;
 	int         fd;
 
+	dev = NULL;
+	fd = -1;
 	dev = ttyname(STDIN_FILENO);
 	if ((fd = open(dev, O_RDWR | O_NOCTTY)) != -1)
 		return (fd);
