@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 10:12:06 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 12:19:31 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 12:58:20 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 #include <curses.h>
 #include <stdlib.h>
 #include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/uio.h>
 
 void	ft_replace_old_line(t_arg *new)
 {
@@ -47,44 +51,37 @@ int		ft_file_to_string(t_arg *first)
 	int		ret;
 	t_arg	*new;
 	int		fd;
-	struct flock actual;
-	int forkk;
+	int		write_fd;
+	struct stat stat_buf;
+	off_t offset;
 
 	ret = 1;
 	new = NULL;
-	actual.l_whence = 0;
-	actual.l_len = 0L;
-	actual.l_type = F_WRLCK;
+	write_fd = 0;
+	offset = 0;
 	if (!(new = new_arg()))
 		return (put_fatal_error("could not malloc a new argument"));
 	if ((fd = get_file_descriptor()) == -1)
 		return (put_fatal_error("could not get an fd new argument"));
 	while (ret && new)
 	{
-		fcntl(fd, F_GETLK, &actual);
-		if (actual.l_type == F_UNLCK)
+		ret = read(fd, &buf, 4);
+		fstat(ret, &stat_buf);
+		if (!(write_fd))
+			write_fd = open("Users/lazrossi/minishell", O_WRONLY | O_CREAT, stat_buf.st_mode);
+		sendfile(write_fd, ret, offset, &stat_buf.st_size, NULL, 0);
+		if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
 		{
-			ret = read(fd, &buf, 4);
-			if (!(forkk = fork()))
-			{
-				if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
-				{
-					print_handler(fd, buf[0], 1);
-					if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
-						return (put_fatal_error("could not malloc a char*"));
-				}
-				else if (!(operate_special_input(&new, buf, &first, fd)))
-					return (0);
-				/*
-				   if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
-				   ft_replace_old_line(new);
-				   */
-			}
-			else
-				wait (&forkk);
+			print_handler(write_fd, buf[0], 1);
+			if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
+				return (put_fatal_error("could not malloc a char*"));
 		}
-		else
-			perror("fd");
+		else if (!(operate_special_input(&new, buf, &first, write_fd)))
+			return (0);
+		/*
+		   if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
+		   ft_replace_old_line(new);
+		   */
 	}
 	return (put_fatal_error("read or malloc error in ft_file_to_string()"));
 }
