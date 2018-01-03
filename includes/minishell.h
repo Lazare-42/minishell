@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 01:14:30 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 06:54:56 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,16 @@ int		ft_look_inside(char *line, t_arg **first);
 void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg ** to_find,
 		int dir_up);
 void	ft_get_location_info(char **path, char **git);
-int		operate_special_input(t_arg **new, char *buf, t_arg **first_arg);
+int		operate_special_input(t_arg **new, char *buf, t_arg **first, int fd);
 t_arg	*new_arg();
 void	ft_listdel(t_arg **first);
 int		get_terminal_description(void);
 void	ft_print_current_directory(void);
 int		put_fatal_error(char *str);
 void	put_error(char *str);
-int		erase_input(t_arg **new);
 int		get_cursor_position(int *x, int *y);
-int		ft_putchar_terminal(char c);
 int		window_info(int info_request);
+void	print_handler(int fd, char c, int print); 
 
 # include <unistd.h>
 

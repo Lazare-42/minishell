@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 06:19:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 04:13:50 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 06:27:51 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,15 @@ static void	operate_cr(t_arg **new, t_arg **first)
    }
  */
 
-int			operate_special_input(t_arg **new, char *buf, t_arg **first)
+int			operate_special_input(t_arg **new, char *buf, t_arg **first, int fd)
 {
 	if (buf[0] == '\n')
 		operate_cr(new, first);
 	else if (buf[0] == 127 && (*new)->arg && *(*new)->arg)
-		erase_input(new);	
+	{
+		(*new)->arg[ft_strlen((*new)->arg) - 1] = '\0';
+		print_handler(fd, buf[0], 0);
+	}
 	else if ( buf[0] && buf [1] && buf[2] && buf[0] == 27 && buf[1] == '[')
 	{
 		if (buf[2] == 'A')
