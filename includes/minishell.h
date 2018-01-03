@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/31 02:07:09 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 01:14:30 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	put_error(char *str);
 int		erase_input(t_arg **new);
 int		get_cursor_position(int *x, int *y);
 int		ft_putchar_terminal(char c);
+int		window_info(int info_request);
 
 # include <unistd.h>
 

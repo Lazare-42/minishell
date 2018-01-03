@@ -4,8 +4,9 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-erase_input	ft_print_info.c	/^int	erase_input(void)$/;"	f
+erase_input	ft_print_info.c	/^int	erase_input(t_arg **new)$/;"	f
 fillup_cursor_position	get_cursor_position.c	/^static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)$/;"	f	file:
+fillup_cursor_position	tmp.c	/^static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)$/;"	f	file:
 ft_add_alias	tofind.c	/^void	ft_add_alias(char **alias_name, char **alias_value, char **new_values)$/;"	f
 ft_add_command_to_path	find_path.c	/^static char		**ft_add_command_to_path(char **possible_path, char *arg)$/;"	f	file:
 ft_add_command_to_path	tofind.c	/^static char		**ft_add_command_to_path(char **possible_path, char *arg)$/;"	f	file:
@@ -83,13 +84,14 @@ ft_place_element_in_tern_tree	tofind.c	/^static	void	ft_place_element_in_tern_tr
 ft_print_after_break	tofind.c	/^static void ft_print_after_break(t_arg *line_info, int arg_len)$/;"	f	file:
 ft_print_corresponding_variable	ft_echo.c	/^void	ft_print_corresponding_variable(char *str)$/;"	f
 ft_print_corresponding_variable	tofind.c	/^void	ft_print_corresponding_variable(char *str)$/;"	f
-ft_print_current_directory	ft_print_info.c	/^void ft_print_current_directory(void)$/;"	f
+ft_print_current_directorg_y	ft_print_info.c	/^void ft_print_current_directorg_y(void)$/;"	f
 ft_print_current_directory	tofind.c	/^static void ft_print_current_directory(char *path, char *git)$/;"	f	file:
 ft_put_alias_errors	tofind.c	/^int		ft_put_alias_errors(char **str)$/;"	f
 ft_put_command_errors	ft_print_errors.c	/^void	ft_put_command_errors(char *str)$/;"	f
 ft_put_command_errors	tofind.c	/^void	ft_put_command_errors(char *str)$/;"	f
 ft_put_env	ft_put_env.c	/^void	ft_put_env(void)$/;"	f
 ft_put_env	tofind.c	/^void	ft_put_env(void)$/;"	f
+ft_putchar_terminal	ft_print_info.c	/^int	ft_putchar_terminal(char c)$/;"	f
 ft_recognize_builtin_command	builtin_commands.c	/^int		ft_recognize_builtin_command(char *str)$/;"	f
 ft_recognize_builtin_command	tofind.c	/^int		ft_recognize_builtin_command(char *str)$/;"	f
 ft_recognize_processes	ft_launch_processes.c	/^void	ft_recognize_processes(char *str, t_arg **first)$/;"	f
@@ -108,7 +110,7 @@ ft_standby	ft_complete_command.c	/^void	ft_standby(void)$/;"	f
 ft_standby	tofind.c	/^void	ft_standby(void)$/;"	f
 ft_store_args	ft_store.c	/^t_arg			*ft_store_args(t_arg *first, t_arg *new_arg)$/;"	f
 ft_store_args	tofind.c	/^t_arg			*ft_store_args(t_arg *first, t_arg *new_arg)$/;"	f
-ft_store_command_historic	ft_store.c	/^static	t_arg	*ft_store_command_historic(t_arg *first)$/;"	f	file:
+ft_store_command_historic	ft_store.c	/^	t_arg	*ft_store_command_historic(t_arg *first)$/;"	f
 ft_store_command_historic	tofind.c	/^static	t_arg	*ft_store_command_historic(t_arg *first)$/;"	f	file:
 ft_unsetenv	ft_unsetenv.c	/^void			ft_unsetenv(char **str)$/;"	f
 ft_unsetenv	tofind.c	/^void			ft_unsetenv(char **str)$/;"	f
@@ -116,9 +118,13 @@ g_commands	builtin_commands.c	/^static char *g_commands[9] = {"echo", "cd", "set
 g_commands	tofind.c	/^static char *g_commands[9] = {"echo", "cd", "setenv", "unsetenv", "env",$/;"	v	file:
 g_print_size	ft_location_info.c	/^static int g_print_size;$/;"	v	file:
 g_print_size	tofind.c	/^static int g_print_size;$/;"	v	file:
-g_to_find	ft_check_input_for_ctrl_keys.c	/^static	t_arg	*g_to_find = NULL;$/;"	v	file:
+g_to_find	operate_special_input.c	/^static	t_arg	*g_to_find = NULL;$/;"	v	file:
 g_to_find	tofind.c	/^static	t_arg	*g_to_find = NULL;$/;"	v	file:
+g_x	ft_print_info.c	/^static int g_x = 0;$/;"	v	file:
+g_y	ft_print_info.c	/^static int g_y = 0;$/;"	v	file:
 get_cursor_position	get_cursor_position.c	/^int		get_cursor_position(int *x, int *y)$/;"	f
+get_cursor_position	tmp.c	/^int		get_cursor_position(int *x, int *y)$/;"	f
+get_file_descriptor	ft_read_input.c	/^static int get_file_descriptor(void)$/;"	f	file:
 get_last_part	ft_location_info.c	/^static	char	*get_last_part(char *tmp)$/;"	f	file:
 get_last_part	tofind.c	/^static	char	*get_last_part(char *tmp)$/;"	f	file:
 get_terminal_description	ft_get_terminfo.c	/^int	get_terminal_description(void)$/;"	f
@@ -126,19 +132,18 @@ main	main.c	/^int		main(void)$/;"	f
 main	tofind.c	/^int		main(void)$/;"	f
 new_arg	ft_lst_operations.c	/^t_arg	*new_arg(void)$/;"	f
 new_arg	tofind.c	/^t_arg	*new_arg(void)$/;"	f
-operate_cr	ft_check_input_for_ctrl_keys.c	/^static void	operate_cr(t_arg **new, int buf, t_arg **first)$/;"	f	file:
-operate_key_left	ft_check_input_for_ctrl_keys.c	/^static void	operate_key_left(t_arg **new)$/;"	f	file:
-operate_key_right	ft_check_input_for_ctrl_keys.c	/^static void	operate_key_right(t_arg **new)$/;"	f	file:
-operate_special_input	ft_check_input_for_ctrl_keys.c	/^int			operate_special_input(t_arg **new, int buf, t_arg **first)$/;"	f
+operate_cr	operate_special_input.c	/^static void	operate_cr(t_arg **new, t_arg **first)$/;"	f	file:
+operate_special_input	operate_special_input.c	/^int			operate_special_input(t_arg **new, char *buf, t_arg **first)$/;"	f
 put_error	ft_print_errors.c	/^void	put_error(char *str)$/;"	f
 put_fatal_error	ft_print_errors.c	/^int		put_fatal_error(char *str)$/;"	f
 read_cursor	get_cursor_position.c	/^static int 		read_cursor(int fd)$/;"	f	file:
+read_cursor	tmp.c	/^static int 		read_cursor(int fd)$/;"	f	file:
 reset_terminal	get_cursor_position.c	/^static int reset_terminal(struct termios *saved, char *error_message, int fd)$/;"	f	file:
+reset_terminal	tmp.c	/^static int reset_terminal(struct termios *saved, char *error_message, int fd)$/;"	f	file:
 set_non_canonical_input	main.c	/^static int	set_non_canonical_input(void)$/;"	f	file:
 set_non_canonical_input	tofind.c	/^static int	set_non_canonical_input(void)$/;"	f	file:
 set_pwd_var	ft_location_info.c	/^static int		set_pwd_var(void)$/;"	f	file:
 set_pwd_var	tofind.c	/^static int		set_pwd_var(void)$/;"	f	file:
 set_terminal	get_cursor_position.c	/^static	int set_terminal(struct termios *saved, int fd)$/;"	f	file:
-window_info	ft_print_info.c	/^int window_info(int info_request)$/;"	f
-x	ft_print_info.c	/^static int x = 0;$/;"	v	file:
-y	ft_print_info.c	/^static int y = 0;$/;"	v	file:
+set_terminal	tmp.c	/^static	int set_terminal(struct termios *saved, int fd)$/;"	f	file:
+window_info	print_info2.c	/^int window_info(int info_request)$/;"	f

@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 06:19:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/31 02:18:14 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 04:13:50 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,16 +62,14 @@ int			operate_special_input(t_arg **new, char *buf, t_arg **first)
 		operate_cr(new, first);
 	else if (buf[0] == 127 && (*new)->arg && *(*new)->arg)
 		erase_input(new);	
-	else if (buf[0] == 27 && buf[1] == '[')
+	else if ( buf[0] && buf [1] && buf[2] && buf[0] == 27 && buf[1] == '[')
 	{
 		if (buf[2] == 'A')
-			debug();
-		if (buf[2] == 'B')
-			ft_putstr("hey down");
-		/*
 		   ft_advance_lst_to(*first, *new, &g_to_find, 1);
-		   if (buf == KEY_DOWN && *first && g_to_find)
+		if (buf[2] == 'B')
 		   ft_advance_lst_to(*first, *new, &g_to_find, 0);
+		/*
+		   if (buf == KEY_DOWN && *first && g_to_find)
 		   if (buf == KEY_LEFT && (*new)->arg && *(*new)->arg)
 		   operate_key_left(new);
 		   if (buf == KEY_RIGHT && (*new)->arg && *(*new)->arg)
