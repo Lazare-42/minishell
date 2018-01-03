@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 09:21:23 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 13:04:21 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 14:14:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 #include <sys/wait.h>
 #include <time.h>
 #include <stdlib.h>
+#define _POSIX_SOURCE
+#include <termios.h>
+#include <errno.h>
+#include <string.h>
+#include <stdio.h>
 
 static int g_x = 0;
 static int g_y = 0;
@@ -94,46 +99,18 @@ int	erase_input()
 	}
 	return (1);
 }
-static int get_file_descriptor(void)
-{
-
-	char		*dev;
-	int         fd;
-
-	dev = NULL;
-	fd = -1;
-	dev = ttyname(STDIN_FILENO);
-	if ((fd = open(dev, O_RDWR | O_NOCTTY)) != -1)
-		return (fd);
-	else
-		return (-1);
-}
 
 void	print_handler(int fd, char c, int print)
 {
-	struct flock	lock;
-	int 			forkk;
-
-	forkk = -1;
-	fd = get_file_descriptor();
-	if (!(forkk = fork()))
+	if (!(tcflow(fd, TCOOFF)))
 	{
-		lock.l_type = F_WRLCK | F_RDLCK;
-		lock.l_whence = SEEK_SET;
-		lock.l_start = 0;
-		lock.l_len = 0;
-		if (fcntl (fd, F_SETLK, &lock) == -1)
-		{
-			put_fatal_error("couldn't lock the fd to write on it");
-			exit (0);
-		}
-		if (print)
-			ft_putchar_terminal(c);
-		else
-			erase_input();
-		fcntl(fd, F_UNLCK, &lock);
-		exit (0);
+		perror("put fatal error");
+		put_fatal_error("WHYYYY");
+		return ;
 	}
+	if (print)
+		ft_putchar_terminal(c);
 	else
-		wait (&forkk);
+		erase_input();
+	tcflow(fd, TCOON);
 }

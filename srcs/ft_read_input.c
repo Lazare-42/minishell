@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 10:12:06 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 13:07:05 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 14:14:44 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@
 #include <curses.h>
 #include <stdlib.h>
 #include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <sys/uio.h>
 
 void	ft_replace_old_line(t_arg *new)
 {
@@ -51,14 +47,9 @@ int		ft_file_to_string(t_arg *first)
 	int		ret;
 	t_arg	*new;
 	int		fd;
-	int		write_fd;
-	struct stat stat_buf;
-	off_t offset;
 
 	ret = 1;
 	new = NULL;
-	write_fd = 0;
-	offset = 0;
 	if (!(new = new_arg()))
 		return (put_fatal_error("could not malloc a new argument"));
 	if ((fd = get_file_descriptor()) == -1)
@@ -66,17 +57,13 @@ int		ft_file_to_string(t_arg *first)
 	while (ret && new)
 	{
 		ret = read(fd, &buf, 4);
-		fstat(ret, &stat_buf);
-		if (!(write_fd))
-			write_fd = open("Users/lazrossi/minishell", O_WRONLY | O_CREAT, stat_buf.st_mode);
-		sendfile(write_fd, ret, offset, &stat_buf.st_size, NULL, 0);
 		if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
 		{
-			print_handler(write_fd, buf[0], 1);
+			print_handler(fd, buf[0], 1);
 			if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
 				return (put_fatal_error("could not malloc a char*"));
 		}
-		else if (!(operate_special_input(&new, buf, &first, write_fd)))
+		else if (!(operate_special_input(&new, buf, &first, fd)))
 			return (0);
 		/*
 		   if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)

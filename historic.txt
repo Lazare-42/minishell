@@ -13260,3 +13260,19 @@ exit
 exit
 exit
 git add .
+git commit -m "version de avec la fonction sendfile() interressante....mais non fonctionelle"
+git push
+exit
+exit
+skjdnckn
+skjc;ksjnc;kjsnc;'
+lkfnkjnkjnkjnjknnnnnnnnnnnnnnnnnndfvk;jndfvkjndfv
+make
+exit
+make
+exit
+exit
+exit
+exit
+exit
+dlj
