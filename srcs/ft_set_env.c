@@ -6,13 +6,13 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:59:50 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 15:44:26 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 12:29:39 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 
-static size_t	ft_pathlen(char *str)
+size_t			ft_pathlen(char *str)
 {
 	size_t i;
 

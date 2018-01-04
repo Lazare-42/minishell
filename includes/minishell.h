@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/04 11:35:54 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 14:21:27 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,7 @@
 # define KEY_LEFT 4479771
 
 # include "../libft/include/libft.h"
-
-typedef struct	s_arg
-{
-	char			*arg;
-	char			*line_right;
-	char			*old_line;
-	struct s_arg	*next;
-	struct s_arg	*previous;
-}				t_arg;
+# include "../includes/struct.h"
 
 int		ft_recognize_builtin_command(char *str);
 void	ft_put_command_errors(char *str);
@@ -38,7 +30,7 @@ void	ft_change_dir(char *str);
 int		ft_file_to_string(t_arg *first);
 void	ft_echo(char **str);
 void	ft_put_env();
-char	**ft_sort_setenv(char **args);
+void	ft_sort_setenv(char **args);
 char	**ft_setenv(char **name, int new_environ_size, char **environ_tocpy);
 t_arg	*ft_store_args(t_arg *first, t_arg *new_arg);
 void	ft_launch_processes(char **arguments, t_arg **first, char **new_env);
@@ -60,8 +52,6 @@ int		get_terminal_description(void);
 void	ft_print_current_directory(void);
 int		put_fatal_error(char *str);
 void	put_error(char *str);
-int		erase_input(t_arg **new);
 int		get_cursor_position(int *x, int *y);
-int		ft_putchar_terminal(char c);
 size_t	ft_pathlen(char *str);
 #endif

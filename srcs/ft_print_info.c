@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 09:21:23 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/04 11:47:43 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 12:23:26 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ static int	ft_putchar_terminal(char c)
 	int	window_col;
 
 	window_col = 0;
-	window_col = window_info(1);
 	g_x = 0;
 	g_y = 0;
 	get_cursor_position(&g_x, &g_y);
@@ -96,8 +95,6 @@ static int	erase_input(void)
 	{
 		tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
 		tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
-		tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, g_y - 2),
-				0, &int_ft_putchar);
 	}
 	return (1);
 }
