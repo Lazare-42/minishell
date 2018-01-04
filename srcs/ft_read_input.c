@@ -1,10 +1,12 @@
+/* ************************************************************************** */
+/*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_file_to_string.c                                :+:      :+:    :+:   */
+/*   ft_read_input.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoipom <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   ndeated: 2017/04/26 17:20:48 by antoipom          #+#    #+#             */
-/*   Updated: 2017/12/31 02:18:12 by lazrossi         ###   ########.fr       */
+/*   Created: 2018/01/04 11:27:02 by lazrossi          #+#    #+#             */
+/*   Updated: 2018/01/04 11:29:02 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +17,10 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-static int get_file_descriptor(void)
+static int	get_file_descriptor(void)
 {
-
-	char *dev;
-	int         fd;
+	char	*dev;
+	int		fd;
 
 	dev = ttyname(STDIN_FILENO);
 	if ((fd = open(dev, O_RDWR | O_NOCTTY)) != -1)
@@ -28,12 +29,10 @@ static int get_file_descriptor(void)
 		return (-1);
 }
 
-
-
-int		ft_file_to_string(t_arg *first)
+int			ft_file_to_string(t_arg *first)
 {
 	char	*buf;
-	int 	fd;
+	int		fd;
 
 	buf = NULL;
 	first = NULL;
@@ -42,7 +41,7 @@ int		ft_file_to_string(t_arg *first)
 	while (42)
 	{
 		if (get_next_line(fd, &buf, '\n'))
-				operate_special_input(NULL, buf, NULL);
+			operate_special_input(NULL, buf, NULL);
 	}
 	return (put_fatal_error("read or malloc error in ft_file_to_string()"));
 }

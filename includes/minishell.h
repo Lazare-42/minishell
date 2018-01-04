@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 09:13:02 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/31 02:07:09 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:35:54 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 
 # define BUFF_SIZE 2056
 # define KEY_UP 4283163
-# define KEY_DOWN 4348699 
+# define KEY_DOWN 4348699
 # define KEY_RIGHT 4414235
 # define KEY_LEFT 4479771
 
 # include "../libft/include/libft.h"
 
-typedef struct 		s_arg
+typedef struct	s_arg
 {
 	char			*arg;
 	char			*line_right;
 	char			*old_line;
-	struct 	s_arg	*next;
-	struct	s_arg	*previous;
-}					t_arg;
+	struct s_arg	*next;
+	struct s_arg	*previous;
+}				t_arg;
 
 int		ft_recognize_builtin_command(char *str);
 void	ft_put_command_errors(char *str);
@@ -41,8 +41,7 @@ void	ft_put_env();
 char	**ft_sort_setenv(char **args);
 char	**ft_setenv(char **name, int new_environ_size, char **environ_tocpy);
 t_arg	*ft_store_args(t_arg *first, t_arg *new_arg);
-void		ft_launch_processes(char **arguments, t_arg **first,
-		char **new_env);
+void	ft_launch_processes(char **arguments, t_arg **first, char **new_env);
 void	ft_complete_command(int quote_type, char **command_line, t_arg **first);
 int		ft_check_commas(char *str);
 void	ft_recognize_processes(char *str, t_arg **first);
@@ -52,8 +51,7 @@ void	ft_unsetenv(char **str);
 void	ft_env(char **args, t_arg **first);
 int		ft_new_environ_size(char **args, char **environ_tocpy);
 int		ft_look_inside(char *line, t_arg **first);
-void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg ** to_find,
-		int dir_up);
+void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg **t_find, int dir_up);
 void	ft_get_location_info(char **path, char **git);
 int		operate_special_input(t_arg **new, char *buf, t_arg **first_arg);
 t_arg	*new_arg();
@@ -65,7 +63,5 @@ void	put_error(char *str);
 int		erase_input(t_arg **new);
 int		get_cursor_position(int *x, int *y);
 int		ft_putchar_terminal(char c);
-
-# include <unistd.h>
-
-#endif 
+size_t	ft_pathlen(char *str);
+#endif

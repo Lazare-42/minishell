@@ -6,24 +6,11 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:59:50 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 15:44:26 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:36:18 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
-
-static size_t	ft_pathlen(char *str)
-{
-	size_t i;
-
-	i = 0;
-	while (str[i] && str[i] != '=')
-		i++;
-	if (str[i])
-		return (i);
-	else
-		return (0);
-}
 
 static char		*ft_add_env_var(char *env_location, char *new_env)
 {
@@ -83,10 +70,10 @@ char	**ft_setenv(char **args, int new_environ_size,
 		var_len = ft_pathlen(args[i]);
 		new_env = (!ft_strchr(args[i], '=')) ? add(new_env, args[i]) : new_env;
 		while (var_len && new_env[j] &&
-		(((ft_pathlen(new_env[j]) < var_len
-			|| new_env[j][var_len] != '='
-			|| ft_memcmp(args[i], new_env[j], var_len)))
-	|| (new_env[j] && var_len >= ft_strlen(new_env[j]))))
+				(((ft_pathlen(new_env[j]) < var_len
+				   || new_env[j][var_len] != '='
+				   || ft_memcmp(args[i], new_env[j], var_len)))
+				 || (new_env[j] && var_len >= ft_strlen(new_env[j]))))
 			j++;
 		if (var_len)
 			new_env[j] = ft_add_env_var(new_env[j], args[i]);

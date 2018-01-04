@@ -6,15 +6,18 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 18:38:34 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 15:44:24 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:08:48 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 
-static void		ft_launch_forkk(t_arg **first, char **args, char **environ)
+static void		ft_launch_forkk(t_arg **first, char **args, char **environ,
+		int go)
 {
-	ft_launch_processes(args, first, environ);
+	if (go)
+		ft_launch_processes(args, first, environ);
+	ft_tabdel(environ);
 }
 
 static void		ft_env_options(char **args, t_arg **first)
@@ -32,10 +35,8 @@ static void		ft_env_options(char **args, t_arg **first)
 		if (args[i][0] && args[i][0] == '-' && (!args[i][1]))
 			new_environ = NULL;
 		while (args[i][++j])
-		{
 			if (args[i][j] == 'i')
 				new_environ = NULL;
-		}
 	}
 	while (args[i] && ft_strchr(args[i], '='))
 	{
@@ -43,7 +44,8 @@ static void		ft_env_options(char **args, t_arg **first)
 					new_environ), new_environ);
 		i++;
 	}
-	(args[i]) ? ft_launch_forkk(first, &args[i], new_environ) : ft_tabdel(new_environ);
+	(args[i]) ? ft_launch_forkk(first, &args[i], new_environ, 1) :
+		ft_launch_forkk(first, &args[i], new_environ, 1);
 }
 
 void			ft_env(char **args, t_arg **first)

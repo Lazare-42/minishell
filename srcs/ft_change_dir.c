@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 15:20:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 14:55:13 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:24:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../includes/minishell.h"
 #include <unistd.h>
 
-void	ft_call_to_chdir(char *str)
+static void	ft_call_to_chdir(char *str)
 {
 	char			path[1025];
 	char			*tmp;
@@ -41,17 +41,14 @@ void	ft_call_to_chdir(char *str)
 	}
 }
 
-int		ft_go_to_home(void)
+static int	ft_go_to_home(int i)
 {
-	extern char **environ;
-	int			i;
 	char			path[1025];
 	char			*tmp;
+	extern char		**environ;
 
-	i = 0;
-	while (environ[i] && ft_memcmp(environ[i], "HOME=", 5))
-		i++;
-	tmp = NULL;
+	while (environ[++i] && ft_memcmp(environ[i], "HOME=", 5))
+		tmp = NULL;
 	if (!(getcwd(path, 1025)) || (!(tmp = ft_strjoin("OLDPWD=", path))))
 		return (-1);
 	if (environ[i])
@@ -73,7 +70,7 @@ int		ft_go_to_home(void)
 	return (0);
 }
 
-void	ft_change_dir(char *str)
+void		ft_change_dir(char *str)
 {
 	extern char	**environ;
 	int			i;
@@ -81,7 +78,8 @@ void	ft_change_dir(char *str)
 	i = 0;
 	if (!str || (str[0] == '~' && !(str[1])))
 	{
-		if (!(i = ft_go_to_home()))
+		i = -1;
+		if (!(i = ft_go_to_home(i)))
 			ft_putstr_fd("Inexistant Home variable\n", 2);
 		else if (i == -1)
 			put_fatal_error("malloc error in ft_go_to_home");

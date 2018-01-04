@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:50:14 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/31 03:13:18 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:37:54 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int		main(void)
 {
 	extern char **environ;
-	t_arg	*first;
+	t_arg		*first;
 
 	first = NULL;
 	first = ft_store_args(first, NULL);

@@ -22,6 +22,7 @@ SOURCES = ./builtin_commands.c \
 ./ft_get_terminfo.c \
 ./ft_check_commas.c \
 ./get_cursor_position.c \
+./ft_pathlen.c \
 
 LIBDIR = libft
 SDIR = srcs
