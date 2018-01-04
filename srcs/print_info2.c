@@ -6,14 +6,14 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 01:12:30 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 03:45:26 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:52:19 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 #include <sys/ioctl.h>
 
-int window_info(int info_request)
+int	window_info(int info_request)
 {
 	struct winsize window;
 

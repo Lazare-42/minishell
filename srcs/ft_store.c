@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 21:53:48 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 10:42:52 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:51:28 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static	void	ft_place_element_in_tern_tree(t_arg **first, t_arg *new)
 	*first = new;
 }
 
-	t_arg	*ft_store_command_historic(t_arg *first)
+t_arg			*ft_store_command_historic(t_arg *first)
 {
 	int		fd;
 	char	*historic_commands;
@@ -45,11 +45,14 @@ static	void	ft_place_element_in_tern_tree(t_arg **first, t_arg *new)
 			else
 				first = new;
 		}
-	if (new)
-		ft_memdel((void**)&new);
+	(new) ? ft_memdel((void**)&new) : 0;
 	close(fd);
 	return (first);
 }
+
+/*
+** return (ft_store_command_historic(first));
+*/
 
 t_arg			*ft_store_args(t_arg *first, t_arg *new_arg)
 {
@@ -59,7 +62,6 @@ t_arg			*ft_store_args(t_arg *first, t_arg *new_arg)
 	if (!first)
 	{
 		return (first = new_arg);
-	//	return (ft_store_command_historic(first));
 	}
 	fd = open("/Users/lazrossi/Documents/42/minishell/historic.txt", O_WRONLY);
 	if (fd != -1)

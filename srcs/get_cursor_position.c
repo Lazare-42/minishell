@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 04:15:03 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 14:14:45 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 12:06:16 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #include <termios.h>
 #include <fcntl.h>
 
-static int 		read_cursor(int fd)
+static int	read_cursor(int fd)
 {
-	char buffer[4];
-	int n;
+	char	buffer[4];
+	int		n;
 
 	n = 0;
 	while (1)
@@ -27,12 +27,12 @@ static int 		read_cursor(int fd)
 		n = read(fd, &buffer, 1);
 		if (n > 0)
 			return (buffer[0]);
-		else 
-			return(0);
+		else
+			return (0);
 	}
 }
 
-static	int set_terminal(struct termios *saved, int fd)
+static	int	set_terminal(struct termios *saved, int fd)
 {
 	struct termios	temporary;
 
@@ -57,7 +57,7 @@ static	int set_terminal(struct termios *saved, int fd)
 	return (1);
 }
 
-static int reset_terminal(struct termios *saved, char *error_message, int fd)
+static int	reset_terminal(struct termios *saved, char *error_message, int fd)
 {
 	if (error_message)
 	{
@@ -78,7 +78,7 @@ static int reset_terminal(struct termios *saved, char *error_message, int fd)
 	return (1);
 }
 
-static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
+static int	fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 {
 	int				result;
 
@@ -106,10 +106,10 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 	return (1);
 }
 
-int		get_cursor_position(int *x, int *y)
+int			get_cursor_position(int *x, int *y)
 {
 	struct termios	saved;
-	int fd;
+	int				fd;
 
 	fd = 0;
 	if (!(set_terminal(&saved, fd)))

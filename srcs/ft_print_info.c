@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 09:21:23 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/03 14:14:43 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:47:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@
 static int g_x = 0;
 static int g_y = 0;
 
-int	ft_putchar_terminal(char c)
+static int	ft_putchar_terminal(char c)
 {
-	int	window_col = 0;
+	int	window_col;
 
+	window_col = 0;
 	window_col = window_info(1);
 	g_x = 0;
 	g_y = 0;
@@ -52,7 +53,7 @@ int	ft_putchar_terminal(char c)
 	return (1);
 }
 
-void ft_print_current_directory(void)
+void		ft_print_current_directory(void)
 {
 	char	*path;
 	char	*git;
@@ -79,7 +80,7 @@ void ft_print_current_directory(void)
 		ft_memdel((void**)&git);
 }
 
-int	erase_input()
+static int	erase_input(void)
 {
 	g_x = 0;
 	g_y = 0;
@@ -95,12 +96,13 @@ int	erase_input()
 	{
 		tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
 		tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
-		tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, g_y - 2), 0, &int_ft_putchar);
+		tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, g_y - 2),
+				0, &int_ft_putchar);
 	}
 	return (1);
 }
 
-void	print_handler(int fd, char c, int print)
+void		print_handler(int fd, char c, int print)
 {
 	if (!(tcflow(fd, TCOOFF)))
 	{

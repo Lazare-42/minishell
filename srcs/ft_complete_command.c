@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 17:32:05 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/28 13:27:57 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:42:55 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	ft_complete_command(int quote_type, char **command_line, t_arg **first)
 	}
 	comma_presence = ft_check_commas(*command_line);
 	ft_putchar('\n');
-	(comma_presence != quote_type) ? ft_recognize_processes(*command_line, first) :
-		ft_complete_command(quote_type, command_line, first);
+	(comma_presence != quote_type) ?
+		ft_recognize_processes(*command_line, first)
+		: ft_complete_command(quote_type, command_line, first);
 }
