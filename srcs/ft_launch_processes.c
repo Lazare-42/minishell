@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 20:59:40 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/30 21:47:31 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:44:12 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-void	ft_recognize_processes(char *str, t_arg **first)
+void		ft_recognize_processes(char *str, t_arg **first)
 {
 	char			**arguments;
 
@@ -30,7 +30,7 @@ void	ft_recognize_processes(char *str, t_arg **first)
 	(arguments) ? ft_tabdel(arguments) : 0;
 }
 
-int		ft_look_inside(char *line, t_arg **first)
+int			ft_look_inside(char *line, t_arg **first)
 {
 	int		comma_presence;
 
@@ -61,7 +61,7 @@ static void	ft_launch_ext_command(char **arguments, char **environ)
 		while (possible_path && possible_path[i] && execve(possible_path[i],
 					arguments, environ) == -1)
 			i++;
-		execve(arguments[0], arguments, environ); 
+		execve(arguments[0], arguments, environ);
 		ft_put_command_errors(arguments[0]);
 		(possible_path) ? ft_tabdel(possible_path) : 0;
 		exit(0);
@@ -89,7 +89,7 @@ static void	ft_launch_builtin_processes(int command_number,
 
 void		ft_launch_processes(char **arguments, t_arg **first, char **new_env)
 {
-	int	command_number;
+	int				command_number;
 	extern char		**environ;
 
 	command_number = -1;

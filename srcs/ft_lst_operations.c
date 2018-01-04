@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 07:21:24 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/30 21:04:19 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:54:13 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ static char	*ft_define_cmp(t_arg *tmp, t_arg *new)
 	return (cmp);
 }
 
-void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg **to_find, int forwrd)
+void		ft_advance_lst_to(t_arg *first,
+		t_arg *new, t_arg **to_find, int forwrd)
 {
 	t_arg	*tmp;
 	int		cmp_size;
@@ -64,7 +65,7 @@ void	ft_advance_lst_to(t_arg *first, t_arg *new, t_arg **to_find, int forwrd)
 	}
 }
 
-void	ft_listdel(t_arg **first)
+void		ft_listdel(t_arg **first)
 {
 	t_arg	*tmp;
 
@@ -80,7 +81,7 @@ void	ft_listdel(t_arg **first)
 	}
 }
 
-t_arg	*new_arg(void)
+t_arg		*new_arg(void)
 {
 	t_arg	*new;
 

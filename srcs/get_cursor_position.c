@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_cursor_position.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/03 04:15:03 by lazrossi          #+#    #+#             */
+/*   Updated: 2018/01/04 12:06:16 by lazrossi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/minishell.h"
 #include "../libft/include/libft.h"
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <fcntl.h>
 
-static int 		read_cursor(int fd)
+static int	read_cursor(int fd)
 {
-	char buffer[4];
-	int n;
+	char	buffer[4];
+	int		n;
 
 	n = 0;
 	while (1)
@@ -15,12 +27,12 @@ static int 		read_cursor(int fd)
 		n = read(fd, &buffer, 1);
 		if (n > 0)
 			return (buffer[0]);
-		else 
-			return(0);
+		else
+			return (0);
 	}
 }
 
-static	int set_terminal(struct termios *saved, int fd)
+static	int	set_terminal(struct termios *saved, int fd)
 {
 	struct termios	temporary;
 
@@ -45,7 +57,7 @@ static	int set_terminal(struct termios *saved, int fd)
 	return (1);
 }
 
-static int reset_terminal(struct termios *saved, char *error_message, int fd)
+static int	reset_terminal(struct termios *saved, char *error_message, int fd)
 {
 	if (error_message)
 	{
@@ -66,15 +78,15 @@ static int reset_terminal(struct termios *saved, char *error_message, int fd)
 	return (1);
 }
 
-static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
+static int	fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 {
 	int				result;
 
 	result = 0;
 	if ((result = read_cursor(fd)) != 27)
-		return (reset_terminal(&saved, "not an escape sequence", fd));
+		return (0);
 	if ((result = read_cursor(fd)) != '[')
-		return (reset_terminal(&saved, "not a [", fd));
+		return (reset_terminal(&saved, NULL, fd));
 	result = read_cursor(fd);
 	while (result >= '0' && result <= '9')
 	{
@@ -82,7 +94,7 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 		result = read_cursor(fd);
 	}
 	if (result != ';')
-		return (reset_terminal(&saved, "not a ;", fd));
+		return (reset_terminal(&saved, NULL, fd));
 	result = read_cursor(fd);
 	while (result >= '0' && result <= '9')
 	{
@@ -90,14 +102,14 @@ static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
 		result = read_cursor(fd);
 	}
 	if (result != 'R')
-		return (reset_terminal(&saved, "not a R", fd));
+		return (reset_terminal(&saved, NULL, fd));
 	return (1);
 }
 
-int		get_cursor_position(int *x, int *y)
+int			get_cursor_position(int *x, int *y)
 {
 	struct termios	saved;
-	int fd;
+	int				fd;
 
 	fd = 0;
 	if (!(set_terminal(&saved, fd)))
@@ -108,6 +120,6 @@ int		get_cursor_position(int *x, int *y)
 			return (0);
 	}
 	else
-		return (reset_terminal(&saved, "unable to write to fd", fd));
+		return (reset_terminal(&saved, NULL, fd));
 	return (reset_terminal(&saved, NULL, fd));
 }

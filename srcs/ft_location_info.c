@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 05:22:58 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/27 16:25:40 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 11:48:56 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,8 @@ static int		set_pwd_var(void)
 
 void			ft_get_location_info(char **path, char **git)
 {
-	int		i;
-	extern	char **environ;
+	int				i;
+	extern	char	**environ;
 
 	i = 0;
 	g_print_size = 0;

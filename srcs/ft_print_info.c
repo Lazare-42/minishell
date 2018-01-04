@@ -5,50 +5,55 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/18 05:26:19 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/31 03:42:49 by lazrossi         ###   ########.fr       */
+/*   Created: 2018/01/03 09:21:23 by lazrossi          #+#    #+#             */
+/*   Updated: 2018/01/04 11:47:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 #include "../libft/include/libft.h"
-#include <sys/ioctl.h>
 #include <term.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <stdlib.h>
+#define _POSIX_SOURCE
+#include <termios.h>
+#include <errno.h>
+#include <string.h>
+#include <stdio.h>
 
+static int g_x = 0;
+static int g_y = 0;
 
-int window_info(int info_request)
+static int	ft_putchar_terminal(char c)
 {
-	struct winsize window;
+	int	window_col;
 
-	if (ioctl(1, TIOCGWINSZ, &window) == -1)
-		put_error("ioctl error");
-	if (info_request == 1)
-		return (window.ws_col);
-	if (info_request == 2)
-		return (window.ws_row);
-	return (0);
-}
-
-int	ft_putchar_terminal(char c)
-{
-	int	window_col = 0;
-	int x = 0;
-	int y = 0;
-
+	window_col = 0;
 	window_col = window_info(1);
-	if (!(get_terminal_description()) || (!(get_cursor_position(&x, &y))))
-			return (0);
-	if (window_col > x)
+	g_x = 0;
+	g_y = 0;
+	get_cursor_position(&g_x, &g_y);
+	if (!(get_terminal_description()))
+		return (0);
+	if (window_col > g_x)
+	{
 		ft_putchar(c);
+		g_x++;
+	}
 	else
 	{
+		g_x = 2;
+		g_y++;
 		ft_putchar('\n');
 		ft_putchar(c);
 	}
 	return (1);
 }
 
-void ft_print_current_directory(void)
+void		ft_print_current_directory(void)
 {
 	char	*path;
 	char	*git;
@@ -75,27 +80,39 @@ void ft_print_current_directory(void)
 		ft_memdel((void**)&git);
 }
 
-int	erase_input(t_arg **new)
+static int	erase_input(void)
 {
-	int x;
-	int y;
-
-	x = 0;
-	y = 0;
-	if (!(get_cursor_position(&x, &y)))
+	g_x = 0;
+	g_y = 0;
+	get_cursor_position(&g_x, &g_y);
+	if (!(get_terminal_description()))
 		return (0);
-	get_terminal_description();
-	(*new)->arg[ft_strlen((*new)->arg) - 1] = '\0';
-	if (x != 2)
+	if (g_x != 2)
 	{
 		tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
 		tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
 	}
-	else if (x == 2)
+	else if (g_x == 2)
 	{
 		tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
 		tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
-		tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, y - 2), 0, &int_ft_putchar);
+		tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, g_y - 2),
+				0, &int_ft_putchar);
 	}
 	return (1);
+}
+
+void		print_handler(int fd, char c, int print)
+{
+	if (!(tcflow(fd, TCOOFF)))
+	{
+		perror("put fatal error");
+		put_fatal_error("WHYYYY");
+		return ;
+	}
+	if (print)
+		ft_putchar_terminal(c);
+	else
+		erase_input();
+	tcflow(fd, TCOON);
 }

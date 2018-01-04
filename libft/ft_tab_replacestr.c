@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/27 11:43:16 by lazrossi          #+#    #+#             */
-/*   Updated: 2017/12/29 14:58:24 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/04 12:19:51 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	**ft_tab_replacestr(char ***tab, char **to_replace, char *cmp)
 		ft_memdel((void**)to_replace);
 		return (*tab);
 	}
-	else 
+	else
 	{
 		if (!((*tab) = ft_tabdup_add_free(tab, to_replace, 'B')))
 			return (NULL);
