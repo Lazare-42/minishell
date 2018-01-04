@@ -48,7 +48,7 @@ mkbin:
 
 $(NAME): $(OBJS)
 	@echo "Compiling  ..."
-	@-$(CC) $(CFLAGS)  -o $(NAME) $(OBJS) -I$(INCDIR) $(LDFLAGS) $(LNCURSES)
+	@-$(CC) $(CFLAGS)   -o $(NAME) $(OBJS) -I$(INCDIR) $(LDFLAGS) $(CDEBUG) $(LNCURSES)
 	@$(OK)
 
 $(ODIR)/%.o : $(SDIR)/%.c

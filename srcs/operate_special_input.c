@@ -15,17 +15,18 @@
 
 static	t_arg	*g_to_find = NULL;
 
-static void	operate_cr(t_arg **new, t_arg **first)
+static void	operate_cr(char *str)
 {
-	ft_putchar('\n');
-	if ((*new)->arg)
+	if (str)
 	{
 		g_to_find = NULL;
-		((*new)->old_line) ? ft_memdel((void**)&(*new)->old_line) : NULL;
-		(*new)->arg = ((*new)->line_right) ? ft_strjoinfree(&(*new)->arg, &(*new)->line_right, 'B') : (*new)->arg;
-		*first = (*((*new)->arg)) ? ft_store_args(*first, *new) : *first;
-		(*(*new)->arg) ? ft_look_inside((*new)->arg, first) : 0;
-		(*new) = new_arg();
+//		((*new)->old_line) ? ft_memdel((void**)&(*new)->old_line) : NULL;
+//		(*new)->arg = ((*new)->line_right) ? ft_strjoinfree(&(*new)->arg, &(*new)->line_right, 'B') : (*new)->arg;
+//		*first = (*((*new)->arg)) ? ft_store_args(*first, *new) : *first;
+//		(*(*new)->arg) ? ft_look_inside((*new)->arg, first) : 0;
+		ft_look_inside(str, NULL);
+		ft_memdel((void**)&str);
+//		(*new) = new_arg();
 	}
 	ft_print_current_directory();
 }
@@ -58,16 +59,17 @@ static void	operate_cr(t_arg **new, t_arg **first)
 
 int			operate_special_input(t_arg **new, char *buf, t_arg **first)
 {
-	if (buf[0] == '\n')
-		operate_cr(new, first);
-	else if (buf[0] == 127 && (*new)->arg && *(*new)->arg)
-		erase_input(new);	
-	else if (buf[0] == 27 && buf[1] == '[')
-	{
-		if (buf[2] == 'A')
-			debug();
-		if (buf[2] == 'B')
-			ft_putstr("hey down");
+	operate_cr(buf);
+	first = NULL;
+	new = NULL;
+//	else if (buf[0] == 127 && (*new)->arg && *(*new)->arg)
+//		erase_input(new);	
+//	else if (buf[0] == 27 && buf[1] == '[')
+//	{
+//		if (buf[2] == 'A')
+//			debug();
+//		if (buf[2] == 'B')
+//			ft_putstr("hey down");
 		/*
 		   ft_advance_lst_to(*first, *new, &g_to_find, 1);
 		   if (buf == KEY_DOWN && *first && g_to_find)
@@ -78,6 +80,6 @@ int			operate_special_input(t_arg **new, char *buf, t_arg **first)
 		   operate_key_right(new);
 		   }
 		 */
-	}
+//	}
 		return (1);
 }

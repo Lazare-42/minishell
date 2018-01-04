@@ -43,14 +43,28 @@ int				ft_new_environ_size(char **args, char **environ_tocpy)
 	j = ft_tabsize(environ_tocpy);
 	while (args[i])
 	{
-		if (ft_strchr(args[i], '='))
-			j++;
+		j++;
 		i++;
 	}
 	return (j + 1);
 }
 
-char			**ft_setenv(char **args, int new_environ_size,
+char	**add(char **new_env, char *str)
+{
+	int i;
+
+	i = 0;
+	while (new_env[i])
+	{
+		if (!ft_strcmp(new_env[i], str))
+			return(new_env);
+		i++;
+	}
+	new_env[i] = ft_add_env_var(new_env[i], str);
+	return(new_env);
+}
+
+char	**ft_setenv(char **args, int new_environ_size,
 		char **environ_tocpy)
 {
 	int			i;
@@ -67,6 +81,7 @@ char			**ft_setenv(char **args, int new_environ_size,
 	{
 		j = 0;
 		var_len = ft_pathlen(args[i]);
+		new_env = (!ft_strchr(args[i], '=')) ? add(new_env, args[i]) : new_env;
 		while (var_len && new_env[j] &&
 		(((ft_pathlen(new_env[j]) < var_len
 			|| new_env[j][var_len] != '='
@@ -79,7 +94,7 @@ char			**ft_setenv(char **args, int new_environ_size,
 	return (new_env);
 }
 
-void			ft_sort_setenv(char **args)
+char	**ft_sort_setenv(char **args)
 {
 	int			i;
 	extern char	**environ;
@@ -88,10 +103,11 @@ void			ft_sort_setenv(char **args)
 	if (!args[0])
 	{
 		(ft_putabs(environ, '\n'));
-		return ;
+		return (environ);
 	}
 	else if (!ft_isalpha(args[0][0]))
 		ft_putstr_fd("setenv: Variable name must begin with a letter.\n", 2);
 	else if (args && args[0])
-		environ = ft_setenv(args, ft_new_environ_size(args, environ), environ);
+		return (environ = ft_setenv(args, ft_new_environ_size(args, environ), environ));
+	return (0);
 }

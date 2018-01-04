@@ -12,8 +12,8 @@
 
 #include "minishell.h"
 
-static char *g_commands[9] = {"echo", "cd", "setenv", "unsetenv", "env",
-	"exit", "chdir", "alias"};
+static char *g_commands[8] = {"echo", "cd", "setenv", "unsetenv", "env",
+	"exit", "chdir"};
 
 int		ft_recognize_builtin_command(char *str)
 {

@@ -38,7 +38,7 @@ void	ft_change_dir(char *str);
 int		ft_file_to_string(t_arg *first);
 void	ft_echo(char **str);
 void	ft_put_env();
-void	ft_sort_setenv(char **args);
+char	**ft_sort_setenv(char **args);
 char	**ft_setenv(char **name, int new_environ_size, char **environ_tocpy);
 t_arg	*ft_store_args(t_arg *first, t_arg *new_arg);
 void		ft_launch_processes(char **arguments, t_arg **first,

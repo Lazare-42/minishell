@@ -43,7 +43,7 @@ static void		ft_env_options(char **args, t_arg **first)
 					new_environ), new_environ);
 		i++;
 	}
-	(args[i]) ? ft_launch_forkk(first, &args[i], new_environ) : 0;
+	(args[i]) ? ft_launch_forkk(first, &args[i], new_environ) : ft_tabdel(new_environ);
 }
 
 void			ft_env(char **args, t_arg **first)

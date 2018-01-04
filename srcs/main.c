@@ -14,21 +14,6 @@
 #include "../includes/minishell.h"
 #include <term.h>
 
-static int	set_non_canonical_input(void)
-{
-	struct termios termios_cpy;
-
-	if (tcgetattr(0, &termios_cpy) != 0)
-		return (0);
-	termios_cpy.c_cc[VMIN] = 1;
-	termios_cpy.c_cc[VTIME] = 0;
-	termios_cpy.c_lflag &= (IGNBRK);
-	termios_cpy.c_lflag &= (ICANON);
-	if (tcsetattr(0, TCSANOW, &termios_cpy) != 0)
-		return (0);
-	return (1);
-}
-
 int		main(void)
 {
 	extern char **environ;
@@ -36,8 +21,6 @@ int		main(void)
 
 	first = NULL;
 	first = ft_store_args(first, NULL);
-	if (!(set_non_canonical_input()))
-		return (put_fatal_error("could not set non-canonical input"));
 	if (!(environ = ft_tabdup(environ, ft_tabsize(environ))))
 		return (put_fatal_error("malloc error while copying tab"));
 	ft_print_current_directory();
