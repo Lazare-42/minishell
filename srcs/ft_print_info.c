@@ -13,16 +13,6 @@
 #include "../includes/minishell.h"
 #include "../libft/include/libft.h"
 #include <term.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <sys/wait.h>
-#include <time.h>
-#include <stdlib.h>
-#define _POSIX_SOURCE
-#include <termios.h>
-#include <errno.h>
-#include <string.h>
-#include <stdio.h>
 
 static int g_x = 0;
 static int g_y = 0;
@@ -30,19 +20,11 @@ static int g_y = 0;
 int	ft_putchar_terminal(char c, int fd)
 {
 	int	window_col = 0;
-	int	forkk;
 
 	window_col = window_info(1);
 	g_x = 0;
 	g_y = 0;
-	forkk = 1;
-	if (!(forkk = fork()))
-	{
-		get_cursor_position(&g_x, &g_y, fd);
-		exit (0);
-	}
-	else
-		wait(&forkk);
+	get_cursor_position(&g_x, &g_y, fd);
 	if (!(get_terminal_description()))
 		return (0);
 	if (window_col > g_x)
@@ -87,19 +69,11 @@ void ft_print_current_directory(void)
 		ft_memdel((void**)&git);
 }
 
-int	erase_input(int fd)
+int		erase_input(int fd)
 {
 	g_x = 0;
 	g_y = 0;
-	int	forkk;
-
-	if (!(forkk = fork()))
-	{
-		get_cursor_position(&g_x, &g_y, fd);
-		exit (0);
-	}
-	else
-		wait(&forkk);
+	get_cursor_position(&g_x, &g_y, fd);
 	if (!(get_terminal_description()))
 		return (0);
 	if (g_x != 2)
@@ -116,10 +90,36 @@ int	erase_input(int fd)
 	return (1);
 }
 
-void	print_handler(char c, int print, int fd)
+void	putstr_historic(char *str, int fd)
 {
-	if (print)
-		ft_putchar_terminal(c, fd);
-	else
+	if (!(get_terminal_description()))
+		return ;
+	tputs(tgoto(tgetstr("cm", NULL), 0, g_y - 1), 0, &int_ft_putchar);
+	tputs(tgetstr("cd", NULL), 0, &int_ft_putchar);
+	ft_print_current_directory();
+	ft_putstr_fd(str, fd);
+}
+
+void	print_handler(char *c, int print, int fd)
+{
+	static int first_historic;
+
+	first_historic = 0;
+	if (print == 1)
+		ft_putchar_terminal(*c, fd);
+	else if (print == -1)
 		erase_input(fd);
+	else if (print == HISTORIC)
+	{
+		if (!first_historic)
+		{
+			g_x = 0;
+			g_y = 0;
+			get_cursor_position(&g_x, &g_y, fd);
+			first_historic = 1;
+		}
+		putstr_historic(c, fd);
+	}
+	if (print == 1 || print == -1 || print == RESET_HISTORIC)
+		first_historic = 0;
 }
