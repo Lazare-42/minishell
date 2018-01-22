@@ -20,8 +20,6 @@ static int	set_non_canonical_input(void)
 
 	if (tcgetattr(0, &termios_cpy) != 0)
 		return (0);
-	cfsetispeed(&termios_cpy, B50);
-	cfsetospeed(&termios_cpy, B50);
 	termios_cpy.c_cc[VMIN] = 1;
 	termios_cpy.c_cc[VTIME] = 0;
 	termios_cpy.c_lflag &= (IGNBRK);

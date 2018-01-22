@@ -21,7 +21,7 @@ static	void	ft_place_element_in_tern_tree(t_arg **first, t_arg *new)
 	*first = new;
 }
 
-t_arg			*ft_store_command_historic(t_arg *first)
+static t_arg	*ft_store_command_historic(t_arg *first)
 {
 	int		fd;
 	char	*historic_commands;
@@ -50,19 +50,13 @@ t_arg			*ft_store_command_historic(t_arg *first)
 	return (first);
 }
 
-/*
-** return (ft_store_command_historic(first));
-*/
-
 t_arg			*ft_store_args(t_arg *first, t_arg *new_arg)
 {
 	int		fd;
 
 	fd = -1;
 	if (!first)
-	{
-		return (first = new_arg);
-	}
+		return (ft_store_command_historic(first));
 	fd = open("/Users/lazrossi/Documents/42/minishell/historic.txt", O_WRONLY);
 	if (fd != -1)
 	{

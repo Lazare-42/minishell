@@ -6,7 +6,7 @@
 /*   By: lazrossi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 09:21:23 by lazrossi          #+#    #+#             */
-/*   Updated: 2018/01/04 11:47:43 by lazrossi         ###   ########.fr       */
+/*   Updated: 2018/01/03 14:14:43 by lazrossi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,11 @@
 static int g_x = 0;
 static int g_y = 0;
 
-<<<<<<< HEAD
 int	ft_putchar_terminal(char c, int fd)
 {
 	int	window_col = 0;
 	int	forkk;
-=======
-static int	ft_putchar_terminal(char c)
-{
-	int	window_col;
->>>>>>> new_read
 
-	window_col = 0;
 	window_col = window_info(1);
 	g_x = 0;
 	g_y = 0;
@@ -67,7 +60,7 @@ static int	ft_putchar_terminal(char c)
 	return (1);
 }
 
-void		ft_print_current_directory(void)
+void ft_print_current_directory(void)
 {
 	char	*path;
 	char	*git;
@@ -94,11 +87,7 @@ void		ft_print_current_directory(void)
 		ft_memdel((void**)&git);
 }
 
-<<<<<<< HEAD
 int	erase_input(int fd)
-=======
-static int	erase_input(void)
->>>>>>> new_read
 {
 	g_x = 0;
 	g_y = 0;
@@ -122,17 +111,12 @@ static int	erase_input(void)
 	{
 		tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
 		tputs(tgetstr("dc", NULL), 0, &int_ft_putchar);
-		tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, g_y - 2),
-				0, &int_ft_putchar);
+		tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, g_y - 2), 0, &int_ft_putchar);
 	}
 	return (1);
 }
 
-<<<<<<< HEAD
 void	print_handler(char c, int print, int fd)
-=======
-void		print_handler(int fd, char c, int print)
->>>>>>> new_read
 {
 	if (print)
 		ft_putchar_terminal(c, fd);

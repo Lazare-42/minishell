@@ -39,8 +39,6 @@ static int get_file_descriptor(void)
 		return (-1);
 }
 
-
-
 int		ft_file_to_string(t_arg *first)
 {
 	char	buf[5];
