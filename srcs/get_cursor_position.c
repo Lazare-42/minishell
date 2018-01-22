@@ -15,24 +15,27 @@
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <fcntl.h>
+#include <stdio.h>
 
-static int 		read_cursor(int fd)
+static FILE	*g_stream;
+
+static char		read_cursor(void)
 {
-	char buffer[4];
+	char buffer;
 	int n;
 
 	n = 0;
 	while (1)
 	{
-		n = read(fd, &buffer, 1);
+		n = read(0, &buffer, 1);
 		if (n > 0)
-			return (buffer[0]);
+			return (buffer);
 		else 
 			return(0);
 	}
 }
 
-static	int set_terminal(struct termios *saved, int fd)
+int set_terminal(struct termios *saved, int fd)
 {
 	struct termios	temporary;
 
@@ -57,7 +60,7 @@ static	int set_terminal(struct termios *saved, int fd)
 	return (1);
 }
 
-static int reset_terminal(struct termios *saved, char *error_message, int fd)
+int reset_terminal(struct termios *saved, char *error_message, int fd)
 {
 	if (error_message)
 	{
@@ -78,48 +81,54 @@ static int reset_terminal(struct termios *saved, char *error_message, int fd)
 	return (1);
 }
 
-static int fillup_cursor_position(int *x, int *y, struct termios saved, int fd)
+static int fillup_cursor_position(int *x, int *y)
 {
 	int				result;
 
 	result = 0;
-	if ((result = read_cursor(fd)) != 27)
-		return (0);
-	if ((result = read_cursor(fd)) != '[')
-		return (reset_terminal(&saved, NULL, fd));
-	result = read_cursor(fd);
+	result = read_cursor();
+	while (result != 27)
+		result = read_cursor();
+	result = read_cursor();
+	while (result != '[')
+		result = read_cursor();
+	result = read_cursor();
 	while (result >= '0' && result <= '9')
 	{
 		*y = 10 * *y + result - '0';
-		result = read_cursor(fd);
+		result = read_cursor();
 	}
-	if (result != ';')
-		return (reset_terminal(&saved, NULL, fd));
-	result = read_cursor(fd);
+	while (result != ';')
+		result = read_cursor();
+	result = read_cursor();
 	while (result >= '0' && result <= '9')
 	{
 		*x = 10 * *x + result - '0';
-		result = read_cursor(fd);
+		result = read_cursor();
 	}
-	if (result != 'R')
-		return (reset_terminal(&saved, NULL, fd));
+	while (result != 'R')
+		result = read_cursor();
 	return (1);
 }
 
-int		get_cursor_position(int *x, int *y)
+int		get_cursor_position(int *x, int *y, int fd)
 {
-	struct termios	saved;
-	int fd;
+	//	struct termios	saved;
 
-	fd = 0;
-	if (!(set_terminal(&saved, fd)))
-		return (put_fatal_error("could'nt set termios in get cursor position"));
-	if (write(fd, "\033[6n", 4) != -1)
+	g_stream = NULL;
+	if (!(g_stream = fdopen(fd, "a+")))
+		return (put_fatal_error("could not open a buffer g_stream"));
+	//	if (tcgetattr(fd, &saved) != 0)
+	//		return (0);
+	//	if (!(set_terminal(&saved, fd)))
+	//		return (put_fatal_error("could'nt set termios in get cursor position"));
+	if (write(fd, "\033[6n", 4))
 	{
-		if (!(fillup_cursor_position(x, y, saved, fd)))
+		if (!(fillup_cursor_position(x, y)))
 			return (0);
 	}
-	else
-		return (reset_terminal(&saved, NULL, fd));
-	return (reset_terminal(&saved, NULL, fd));
+	return (1);
+	//	else
+	//		return (reset_terminal(&saved, NULL, fd));
+	//	return (reset_terminal(&saved, NULL, fd));
 }

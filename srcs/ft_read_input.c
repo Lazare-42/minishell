@@ -59,16 +59,17 @@ int		ft_file_to_string(t_arg *first)
 		ret = read(fd, &buf, 4);
 		if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
 		{
-			print_handler(fd, buf[0], 1);
+			print_handler(buf[0], 1, fd);
 			if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
 				return (put_fatal_error("could not malloc a char*"));
 		}
 		else if (!(operate_special_input(&new, buf, &first, fd)))
 			return (0);
 		/*
-		   if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
-		   ft_replace_old_line(new);
-		   */
+		if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
+			ft_replace_old_line(new);
+		*/
+
 	}
 	return (put_fatal_error("read or malloc error in ft_file_to_string()"));
 }

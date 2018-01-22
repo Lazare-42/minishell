@@ -63,12 +63,12 @@ int			operate_special_input(t_arg **new, char *buf, t_arg **first, int fd)
 	else if (buf[0] == 127 && (*new)->arg && *(*new)->arg)
 	{
 		(*new)->arg[ft_strlen((*new)->arg) - 1] = '\0';
-		print_handler(fd, buf[0], 0);
+		print_handler(buf[0], 0, fd);
 	}
 	else if ( buf[0] && buf [1] && buf[2] && buf[0] == 27 && buf[1] == '[')
 	{
 		if (buf[2] == 'A')
-		   ft_advance_lst_to(*first, *new, &g_to_find, 1);
+			ft_advance_lst_to(*first, *new, &g_to_find, 1);
 		if (buf[2] == 'B')
 		   ft_advance_lst_to(*first, *new, &g_to_find, 0);
 		/*

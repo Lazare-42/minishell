@@ -27,14 +27,22 @@
 static int g_x = 0;
 static int g_y = 0;
 
-int	ft_putchar_terminal(char c)
+int	ft_putchar_terminal(char c, int fd)
 {
 	int	window_col = 0;
+	int	forkk;
 
 	window_col = window_info(1);
 	g_x = 0;
 	g_y = 0;
-	get_cursor_position(&g_x, &g_y);
+	forkk = 1;
+	if (!(forkk = fork()))
+	{
+		get_cursor_position(&g_x, &g_y, fd);
+		exit (0);
+	}
+	else
+		wait(&forkk);
 	if (!(get_terminal_description()))
 		return (0);
 	if (window_col > g_x)
@@ -79,11 +87,19 @@ void ft_print_current_directory(void)
 		ft_memdel((void**)&git);
 }
 
-int	erase_input()
+int	erase_input(int fd)
 {
 	g_x = 0;
 	g_y = 0;
-	get_cursor_position(&g_x, &g_y);
+	int	forkk;
+
+	if (!(forkk = fork()))
+	{
+		get_cursor_position(&g_x, &g_y, fd);
+		exit (0);
+	}
+	else
+		wait(&forkk);
 	if (!(get_terminal_description()))
 		return (0);
 	if (g_x != 2)
@@ -100,17 +116,10 @@ int	erase_input()
 	return (1);
 }
 
-void	print_handler(int fd, char c, int print)
+void	print_handler(char c, int print, int fd)
 {
-	if (!(tcflow(fd, TCOOFF)))
-	{
-		perror("put fatal error");
-		put_fatal_error("WHYYYY");
-		return ;
-	}
 	if (print)
-		ft_putchar_terminal(c);
+		ft_putchar_terminal(c, fd);
 	else
-		erase_input();
-	tcflow(fd, TCOON);
+		erase_input(fd);
 }
