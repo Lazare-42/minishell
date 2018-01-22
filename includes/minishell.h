@@ -62,7 +62,7 @@ int		get_terminal_description(void);
 void	ft_print_current_directory(void);
 int		put_fatal_error(char *str);
 void	put_error(char *str);
-int		get_cursor_position(int *x, int *y, int fd);
+void	get_cursor_position(int *x, int *y, int fd);
 int		window_info(int info_request);
 void	print_handler(char c, int print, int fd); 
 
