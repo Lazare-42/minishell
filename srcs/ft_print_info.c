@@ -92,8 +92,6 @@ int		erase_input(int fd)
 
 void	putstr_historic(char *str, int fd)
 {
-	if (!(get_terminal_description()))
-		return ;
 	tputs(tgoto(tgetstr("cm", NULL), 0, g_y - 1), 0, &int_ft_putchar);
 	tputs(tgetstr("cd", NULL), 0, &int_ft_putchar);
 	ft_print_current_directory();
@@ -102,9 +100,8 @@ void	putstr_historic(char *str, int fd)
 
 void	print_handler(char *c, int print, int fd)
 {
-	static int first_historic;
+	static int first_historic = 0;
 
-	first_historic = 0;
 	if (print == 1)
 		ft_putchar_terminal(*c, fd);
 	else if (print == -1)
