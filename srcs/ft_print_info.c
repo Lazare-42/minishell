@@ -92,6 +92,10 @@ int		erase_input(int fd)
 
 void	putstr_historic(char *str, int fd)
 {
+	int		strlen;
+
+	strlen = ft_strlen(str);
+	if (strlen > window_info(1) &&
 	tputs(tgoto(tgetstr("cm", NULL), 0, g_y - 1), 0, &int_ft_putchar);
 	tputs(tgetstr("cd", NULL), 0, &int_ft_putchar);
 	ft_print_current_directory();

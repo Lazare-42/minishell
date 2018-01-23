@@ -13529,3 +13529,8 @@ make
 exit
 clear
 git add .
+git commit -m "Affichage de lhistorique fonctionnel"
+git push
+ls -Rl ..
+ls -lu
+exit

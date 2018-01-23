@@ -83,5 +83,5 @@ int			operate_special_input(t_arg **new, char *buf, t_arg **first, int fd)
 		if (buf[2] == 'D' && (*new)->arg && *(*new)->arg)
 			operate_key_left(new);
 	}
-return (1);
+	return (1);
 }
