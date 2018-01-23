@@ -63,10 +63,8 @@ int		ft_file_to_string(t_arg *first)
 		}
 		else if (!(operate_special_input(&new, buf, &first, fd)))
 			return (0);
-		/*
-		if (new && buf[0] != KEY_UP && buf[0] != KEY_DOWN && new->arg && *new->arg)
+		if (new && buf[0] && buf[1] && buf[2] && buf[2] != 'A' && buf[2] != 'B' && new->arg)
 			ft_replace_old_line(new);
-			*/
 	}
 	return (put_fatal_error("read or malloc error in ft_file_to_string()"));
 }
