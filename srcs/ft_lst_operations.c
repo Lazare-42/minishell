@@ -63,6 +63,8 @@ void		ft_advance_lst_to(t_arg *first,
 		(new)->arg = tmp->arg;
 		*to_find = tmp;
 	}
+	else if (!tmp)
+		new->arg = NULL;
 }
 
 void		ft_listdel(t_arg **first)

@@ -12,7 +12,7 @@ SOURCES = ./builtin_commands.c \
 ./ft_location_info.c \
 ./ft_lst_operations.c \
 ./ft_print_errors.c \
-./ft_print_info.c \
+./termcaps.c \
 ./ft_put_env.c \
 ./ft_read_input.c \
 ./ft_set_env.c \

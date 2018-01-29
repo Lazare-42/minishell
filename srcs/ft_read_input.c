@@ -58,8 +58,10 @@ int		ft_file_to_string(t_arg *first)
 		if (buf[0] != 27 && buf[0] != '\n' && buf[0] != 127)
 		{
 			print_handler(buf, 1, fd);
+			(new->line_right) ? print_handler(new->line_right, 2 , fd) : 0;
 			if (!(new->arg = ft_strjoinfree_str_char(&((new)->arg), buf[0])))
 				return (put_fatal_error("could not malloc a char*"));
+			new->old_line = NULL;
 		}
 		else if (!(operate_special_input(&new, buf, &first, fd)))
 			return (0);

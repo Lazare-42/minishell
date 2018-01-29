@@ -25,3 +25,30 @@ int	window_info(int info_request)
 		return (window.ws_row);
 	return (0);
 }
+
+void ft_print_current_directory(void)
+{
+	char	*path;
+	char	*git;
+
+	path = NULL;
+	git = NULL;
+	ft_get_location_info(&path, &git);
+	if (path)
+	{
+		ft_putstr("\e[0;91m");
+		ft_putchar('/');
+		ft_putstr(path);
+		if (git)
+		{
+			ft_putstr("\e[0m");
+			ft_putstr("\e[0;90m");
+			git ? ft_putstr("[git@]") : 0;
+			git ? ft_putstr(git) : 0;
+		}
+	}
+	ft_putstr("\\ ");
+	ft_putstr("\e[0m");
+	if (git)
+		ft_memdel((void**)&git);
+}

@@ -59,8 +59,9 @@ void	ft_complete_command(int quote_type, char **command_line, t_arg **first)
 			*command_line = ft_del_one(*command_line, write_from);
 		else if (buf == '\n')
 			break ;
-		else if (buf != 127 && buf != KEY_UP && buf
-				!= KEY_DOWN && buf != KEY_LEFT && buf != KEY_RIGHT)
+		// i deleted buf != KEY_UP LEFT DOWN RIGHT
+		else if (buf != 127 
+				)
 			*command_line = ft_join_print(*command_line, buf, write_from);
 	}
 	comma_presence = ft_check_commas(*command_line);

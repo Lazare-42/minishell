@@ -42,31 +42,27 @@ int	ft_putchar_terminal(char c, int fd)
 	return (1);
 }
 
-void ft_print_current_directory(void)
+void ft_putstr_terminal(char *str, int fd)
 {
-	char	*path;
-	char	*git;
+	int new_cursor_pos;
 
-	path = NULL;
-	git = NULL;
-	ft_get_location_info(&path, &git);
-	if (path)
+	new_cursor_pos = 0;
+	g_x = 0;
+	g_y = 0;
+	get_cursor_position(&g_x, &g_y, fd);
+	new_cursor_pos = g_x + (int)ft_strlen(str) - 1;
+	if (g_y == window_info(2))
 	{
-		ft_putstr("\e[0;91m");
-		ft_putchar('/');
-		ft_putstr(path);
-		if (git)
+		while (new_cursor_pos > window_info(1)) 
 		{
-			ft_putstr("\e[0m");
-			ft_putstr("\e[0;90m");
-			git ? ft_putstr("[git@]") : 0;
-			git ? ft_putstr(git) : 0;
+			new_cursor_pos -= window_info(1);
+			g_y--;
 		}
 	}
-	ft_putstr("\\ ");
-	ft_putstr("\e[0m");
-	if (git)
-		ft_memdel((void**)&git);
+	if (((g_x + (int)ft_strlen(str)) / window_info(1)) > (window_info(2) - g_y))
+		g_y--;
+	ft_putstr_fd(str, fd);
+	tputs(tgoto(tgetstr("cm", NULL), g_x - 1, g_y - 1), 0, &int_ft_putchar);
 }
 
 int		erase_input(int fd)
@@ -116,8 +112,42 @@ void	print_handler(char *c, int print, int fd)
 
 	if (print == 1)
 		ft_putchar_terminal(*c, fd);
+	else if (print == 2)
+		ft_putstr_terminal(c, fd);
 	else if (print == -1)
 		erase_input(fd);
+	else if (print == KEY_LEFT)
+	{
+		g_x = 0;
+		g_y = 0;
+		get_cursor_position(&g_x, &g_y, fd);
+		if (g_x == 1)
+		{
+			tputs(tgoto(tgetstr("cm", NULL), window_info(1) - 1, g_y - 2), 0, &int_ft_putchar);
+			tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
+		}
+		else 
+			tputs(tgetstr("le", NULL), 0, &int_ft_putchar);
+		g_x = 0;
+		g_y = 0;
+		get_cursor_position(&g_x, &g_y, fd);
+	}
+	else if (print == KEY_RIGHT)
+	{
+		g_x = 0;
+		g_y = 0;
+		get_cursor_position(&g_x, &g_y, fd);
+		if (g_x == window_info(1))
+		{
+			tputs(tgoto(tgetstr("cm", NULL), 0, g_y), 0, &int_ft_putchar);
+			get_cursor_position(&g_x, &g_y, fd);
+		}
+		else 
+			tputs(tgetstr("nd", NULL), 0, &int_ft_putchar);
+		g_x = 0;
+		g_y = 0;
+		get_cursor_position(&g_x, &g_y, fd);
+	}
 	else if (print == HISTORIC)
 	{
 		if (!first_historic)
