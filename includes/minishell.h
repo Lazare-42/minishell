@@ -67,6 +67,4 @@ void	get_cursor_position(int *x, int *y, int fd);
 int		window_info(int info_request);
 void	print_handler(char *c, int print, int fd); 
 
-# include <unistd.h>
-
 #endif 
