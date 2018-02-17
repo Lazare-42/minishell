@@ -76,44 +76,57 @@ SRC = ft_atoi.c \
 	  ft_strtrim.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
-	  ./ft_putabs.c \
-	  ./ft_advance_for_quotes.c \
-	  ./get_next_line.c  \
-	  ./ft_split_whitespaces_nokots.c \
-	  ./ft_str_isalpha.c \
-	  ./ft_tabdup.c \
-	  ./ft_tabsize.c \
-	  ./ft_putwhites.c \
-	  ./ft_tabdup_and_add.c \
-	  ./ft_split_char.c \
-	  ./ft_strjoinfree_str_char.c \
-	  ./ft_strjoinfree_char_str.c \
-	  ./ft_strdupfrom_free.c \
-	  ./ft_tabdup_add_free.c \
-	  ./ft_strjoinfree_one.c \
-	  ./ft_tab_replacestr.c \
-      ./ft_str_is_printable.c \
-	  ./int_ft_putchar.c \
-	  ./ft_debug.c \
+	  ft_putabs.c \
+	  ft_advance_for_quotes.c \
+	  get_next_line.c  \
+	  ft_split_whitespaces_nokots.c \
+	  ft_str_isalpha.c \
+	  ft_tabdup.c \
+	  ft_tabsize.c \
+	  ft_putwhites.c \
+	  ft_tabdup_and_add.c \
+	  ft_split_char.c \
+	  ft_strjoinfree_str_char.c \
+	  ft_strjoinfree_char_str.c \
+	  ft_strdupfrom_free.c \
+	  ft_tabdup_add_free.c \
+	  ft_strjoinfree_one.c \
+	  ft_tab_replacestr.c \
+      ft_str_is_printable.c \
+	  int_ft_putchar.c \
+	  ft_debug.c \
+	  ft_put_fatal_error.c \
 
-OBJECT = $(SRC:.c=.o)
+ODIR = bin
 
-CLEAN = /bin/rm -f
+SDIR = srcs
 
-CC = gcc -Wall -Wextra -Werror -c 
+SRCS = $(addprefix $(SDIR)/, $(SRC:.c=.o))
+
+OBJECT = $(addprefix $(ODIR)/, $(SRC:.c=.o))
+
+CLEAN = /bin/rm -rf $(ODIR)
+
+CC = gcc -Wall -Wextra -Werror -c
 
 ARCH = ar rc
 
-all: $(NAME)
+all: mkbin $(NAME)
+
+mkbin:
+	@mkdir -p $(ODIR)
 
 $(NAME): $(OBJECT)
-	@- $(CC) $(SRC)
-	@- $(ARCH) $(NAME) $(OBJECT)
+	@ echo "[35m Archiving library...[0m"
+	@$(ARCH) $(NAME) $(OBJECT)
 
-$(OBJECT): %.o: %.c
+$(ODIR)/%.o : $(SDIR)/%.c
+	@ echo "[34m Assembling libft object: [0m" $@
+	@ $(CC) -o $@ $<
 
 clean: 
-	@-$(CLEAN) $(OBJECT)
+	@ echo "[31m Cleaning libft... [0m"
+	@-$(CLEAN)
 
 fclean: clean
 	@-$(CLEAN) $(NAME)

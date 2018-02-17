@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 #include <sys/xattr.h>
 #include <sys/dir.h>
 #include <fcntl.h>

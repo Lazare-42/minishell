@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 
 static char		**ft_add_command_to_path(char **possible_path, char *arg)
 {

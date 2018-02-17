@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <fcntl.h>

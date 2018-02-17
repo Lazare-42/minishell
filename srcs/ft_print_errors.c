@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 #include "../includes/minishell.h"
 
 void	ft_put_command_errors(char *str)

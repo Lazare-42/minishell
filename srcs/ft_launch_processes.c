@@ -27,7 +27,7 @@ void		ft_recognize_processes(char *str, t_arg **first)
 			return ;
 		ft_launch_processes(arguments, first, NULL);
 	}
-	(arguments) ? ft_tabdel(arguments) : 0;
+	(arguments) ? ft_tabdel((void**)arguments) : 0;
 }
 
 int			ft_look_inside(char *line, t_arg **first)
@@ -63,7 +63,7 @@ static void	ft_launch_ext_command(char **arguments, char **environ)
 			i++;
 		execve(arguments[0], arguments, environ);
 		ft_put_command_errors(arguments[0]);
-		(possible_path) ? ft_tabdel(possible_path) : 0;
+		(possible_path) ? ft_tabdel((void**)possible_path) : 0;
 		exit(0);
 	}
 	if (forkk)

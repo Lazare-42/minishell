@@ -431,3 +431,8 @@ exit
 exit
 clear
 exit
+l
+l
+l
+ls
+exit

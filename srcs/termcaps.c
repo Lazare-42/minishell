@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 #include <term.h>
 
 static int g_x = 0;

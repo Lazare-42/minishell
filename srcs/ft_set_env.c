@@ -62,7 +62,7 @@ char			**ft_setenv(char **args, int new_environ_size,
 	i = -1;
 	var_len = 0;
 	new_env = ft_tabdup(environ_tocpy, new_environ_size);
-	(environ_tocpy) ? ft_tabdel(environ_tocpy) : 0;
+	(environ_tocpy) ? ft_tabdel((void**)environ_tocpy) : 0;
 	while (args[++i])
 	{
 		j = 0;

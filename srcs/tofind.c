@@ -40,7 +40,7 @@ int		ft_recognize_builtin_command(char *str)
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 
 static char		**ft_add_command_to_path(char **possible_path, char *arg)
 {
@@ -128,7 +128,7 @@ char	*ft_advance_string_for_quote(char *str)
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 #include "../includes/minishell.h"
 #include <unistd.h>
 
@@ -591,7 +591,7 @@ void		ft_launch_processes(char **arguments, t_arg **first)
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 #include <sys/xattr.h>
 #include <sys/dir.h>
 #include <fcntl.h>
@@ -889,7 +889,7 @@ void	ft_new_alias(char **new_values)
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../libft/include/libft.h"
+# include "../libft/includes/libft.h"
 
 void	ft_put_command_errors(char *str)
 {
@@ -953,7 +953,7 @@ int		ft_put_alias_errors(char **str)
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 #include <sys/ioctl.h>
 
 static int	ft_compare_string_to_win(char *path, char *git, t_arg *line_info)
@@ -1381,7 +1381,7 @@ void			ft_unsetenv(char **str)
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/include/libft.h"
+#include "../libft/includes/libft.h"
 #include "minishell.h"
 
 int		ft_check_commas(char *str)

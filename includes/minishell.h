@@ -20,7 +20,7 @@
 # define KEY_LEFT 200
 # define HISTORIC 100
 
-# include "../libft/include/libft.h"
+# include "../libft/includes/libft.h"
 
 typedef struct 		s_arg
 {
